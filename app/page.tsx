@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   description: "Professional retail shelving, display cases, and custom store fixtures. 15+ years experience, free 3D design, global shipping."
 };
 
-// Product categories for showcase
-const productCategories = [
+// Product categories (6 products)
+const products = [
   {
     name: "Gondola Shelving",
     description: "Versatile double-sided shelving for supermarkets and retail stores",
@@ -49,6 +49,58 @@ const productCategories = [
   },
 ];
 
+// Industry solutions (6 solutions)
+const solutions = [
+  {
+    name: "Pop Culture Store",
+    subtitle: "潮玩店",
+    description: "Display collectibles, figures, and trendy items",
+    icon: "🎮",
+    href: "/solutions/pop-culture",
+    image: "/images/solutions/pop-culture.jpg"
+  },
+  {
+    name: "Stationery Store",
+    subtitle: "文具店",
+    description: "Organized displays for pens, notebooks, and accessories",
+    icon: "✏️",
+    href: "/solutions/stationery",
+    image: "/images/solutions/stationery.jpg"
+  },
+  {
+    name: "Jewelry Store",
+    subtitle: "珠宝店",
+    description: "Secure, elegant showcases for precious items",
+    icon: "💎",
+    href: "/solutions/jewelry-store",
+    image: "/images/solutions/jewelry.jpg"
+  },
+  {
+    name: "Boutique",
+    subtitle: "精品店",
+    description: "Fashion-forward displays for clothing and accessories",
+    icon: "👗",
+    href: "/solutions/boutique",
+    image: "/images/solutions/boutique.jpg"
+  },
+  {
+    name: "Toy Store",
+    subtitle: "玩具店",
+    description: "Fun, safe, and accessible toy displays",
+    icon: "🧸",
+    href: "/solutions/toy-store",
+    image: "/images/solutions/toy-store.jpg"
+  },
+  {
+    name: "Lifestyle Store",
+    subtitle: "生活馆",
+    description: "Home goods and lifestyle product displays",
+    icon: "🏠",
+    href: "/solutions/lifestyle",
+    image: "/images/solutions/lifestyle.jpg"
+  },
+];
+
 // Trust indicators
 const stats = [
   { number: "500+", label: "Stores Delivered" },
@@ -57,17 +109,65 @@ const stats = [
   { number: "24h", label: "3D Design Delivery" },
 ];
 
-// Industries served
-const industries = [
-  { name: "Pop Culture Store (潮玩店)", icon: "🎮", href: "/solutions/pop-culture" },
-  { name: "Stationery Store (文具店)", icon: "✏️", href: "/solutions/stationery" },
-  { name: "Jewelry Store (珠宝店)", icon: "💎", href: "/solutions/jewelry-store" },
-  { name: "Boutique (精品店)", icon: "👗", href: "/solutions/boutique" },
-  { name: "Toy Store (玩具店)", icon: "🧸", href: "/solutions/toy-store" },
-  { name: "Lifestyle Store (生活馆)", icon: "🏠", href: "/solutions/lifestyle" },
+// Customer testimonials
+const testimonials = [
+  {
+    quote: "The quality exceeded our expectations. Our jewelry store looks absolutely stunning with these display cases.",
+    name: "Sarah Chen",
+    title: "Owner, Sparkle Jewelry",
+    avatar: "👩‍💼",
+  },
+  {
+    quote: "Fast delivery and excellent communication. The gondola shelving transformed our supermarket layout completely.",
+    name: "Michael Wong",
+    title: "Manager, Fresh Mart",
+    avatar: "👨‍💼",
+  },
+  {
+    quote: "The free 3D design service helped us visualize our store before ordering. Highly professional team!",
+    name: "Emily Rodriguez",
+    title: "Founder, Trendy Toys",
+    avatar: "👩‍🦰",
+  },
 ];
 
-// Features
+// FAQ data
+const faqs = [
+  {
+    question: "Can you make a design for my store?",
+    answer: "Yes, we have professional designers to make 3D renderings and engineering drawings. This service is completely free."
+  },
+  {
+    question: "How long does it take to produce?",
+    answer: "Generally, it takes 2 to 4 weeks after you approve the drawings, depending on order complexity."
+  },
+  {
+    question: "How much time for a custom design?",
+    answer: "Our team typically delivers 3D designs within 24 hours of receiving your store dimensions and requirements."
+  },
+  {
+    question: "What materials do you use?",
+    answer: "We use high-quality materials including tempered glass, stainless steel 304, aluminum alloy, and MDF with various finishes."
+  },
+  {
+    question: "Is it possible to fully customize?",
+    answer: "Absolutely! We can customize size, color, material, lighting, and any specific features you need."
+  },
+  {
+    question: "Do I need to install locally?",
+    answer: "We provide detailed installation guides and video tutorials. Most fixtures are designed for easy DIY assembly."
+  },
+  {
+    question: "I haven't imported from China, how to order?",
+    answer: "We handle everything - from design to shipping. Many first-time importers work with us successfully."
+  },
+  {
+    question: "What if items get damaged in shipping?",
+    answer: "We use triple-layer packaging and offer insurance. Any damage claims are resolved within 48 hours."
+  },
+];
+
+// Why choose us features
 const features = [
   {
     title: "Free 3D Design",
@@ -96,7 +196,6 @@ export default function Home() {
     <div className="pt-16">
       {/* Hero Section */}
       <section className="gradient-hero min-h-[90vh] flex items-center relative overflow-hidden">
-        {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
@@ -141,75 +240,91 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What We Offer */}
-      <section className="py-20 bg-gray-50">
+      {/* Solutions Gallery - Horizontal Scroll (See It In Action style) */}
+      <section className="py-16 bg-gray-50">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Complete Store Display Solutions
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              From single shelving units to complete store fit-outs, we provide everything you need
-              to create a stunning retail environment.
-            </p>
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Industry Solutions</h2>
+            <p className="text-gray-600">Tailored fixtures for every retail sector</p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {productCategories.map((category) => (
+          <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide">
+            {solutions.map((solution) => (
               <Link
-                key={category.name}
-                href={category.href}
-                className="card p-6 group"
+                key={solution.name}
+                href={solution.href}
+                className="flex-shrink-0 w-72 snap-center group"
               >
-                <div className="text-4xl mb-4">{category.icon}</div>
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">
-                  {category.name}
-                </h3>
-                <p className="text-gray-600">{category.description}</p>
-                <div className="mt-4 text-blue-600 font-medium flex items-center gap-2">
-                  Learn more
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                <div className="relative aspect-[4/3] bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl overflow-hidden mb-4">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-white text-7xl group-hover:scale-110 transition-transform">{solution.icon}</span>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                    <h3 className="text-white font-semibold">{solution.name}</h3>
+                    <p className="text-gray-300 text-sm">{solution.subtitle}</p>
+                  </div>
                 </div>
+                <p className="text-gray-600 text-sm group-hover:text-blue-600 transition">{solution.description}</p>
               </Link>
             ))}
+          </div>
+          <div className="text-center mt-6">
+            <Link href="/solutions" className="text-blue-600 font-medium hover:underline">
+              View All Solutions →
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Industries We Serve */}
+      {/* Products Table (Standard vs comparison style) */}
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Industry-Specific Solutions
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              We understand that different retail sectors have unique display requirements.
-              Explore solutions tailored for your industry.
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Our Products</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Complete range of retail fixtures, from shelving to custom displays
             </p>
           </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {industries.map((industry) => (
-              <Link
-                key={industry.name}
-                href={industry.href}
-                className="card p-4 text-center group hover:border-blue-500"
-              >
-                <div className="text-3xl mb-2">{industry.icon}</div>
-                <h3 className="font-medium text-sm group-hover:text-blue-600 transition-colors">
-                  {industry.name}
-                </h3>
+          <div className="max-w-4xl mx-auto">
+            <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-gray-900 text-white">
+                    <th className="py-4 px-6 text-left font-semibold">Product</th>
+                    <th className="py-4 px-6 text-left font-semibold hidden md:table-cell">Description</th>
+                    <th className="py-4 px-6 text-right font-semibold">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {products.map((product, index) => (
+                    <tr
+                      key={product.name}
+                      className={`${index % 2 === 0 ? "bg-white" : "bg-gray-50"} border-b border-gray-100 hover:bg-blue-50 transition`}
+                    >
+                      <td className="py-4 px-6">
+                        <div className="flex items-center gap-3">
+                          <span className="text-2xl">{product.icon}</span>
+                          <span className="font-medium text-gray-900">{product.name}</span>
+                        </div>
+                      </td>
+                      <td className="py-4 px-6 text-gray-600 hidden md:table-cell">{product.description}</td>
+                      <td className="py-4 px-6 text-right">
+                        <Link
+                          href={product.href}
+                          className="text-blue-600 font-medium hover:underline"
+                        >
+                          View →
+                        </Link>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="text-center mt-6">
+              <Link href="/products" className="btn btn-secondary">
+                View All Products
               </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <Link href="/solutions" className="btn btn-secondary">
-              View All Solutions
-            </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -234,6 +349,147 @@ export default function Home() {
                 <p className="text-blue-200">{feature.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials (Our Happy Clients style) */}
+      <section className="py-20 bg-gray-800">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Our Happy Clients</h2>
+            <div className="w-16 h-1 bg-blue-500 mx-auto"></div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.map((testimonial) => (
+              <div
+                key={testimonial.name}
+                className="bg-gray-700/50 backdrop-blur rounded-xl p-8 relative"
+              >
+                <div className="text-blue-400 text-4xl mb-4">"</div>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {testimonial.quote}
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center text-2xl">
+                    {testimonial.avatar}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-gray-400 text-sm">{testimonial.title}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section (Two-column accordion style) */}
+      <section className="py-20 bg-gray-50">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Frequently Asked Questions</h2>
+            <p className="text-gray-600">We help you with every step of the project</p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-sm p-8">
+              <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
+                {faqs.map((faq, index) => (
+                  <div key={index} className="border-b border-gray-100 pb-4">
+                    <details className="group">
+                      <summary className="flex justify-between items-center cursor-pointer list-none">
+                        <span className="font-medium text-gray-900 pr-4">{faq.question}</span>
+                        <span className="text-blue-600 group-open:rotate-180 transition-transform">
+                          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </span>
+                      </summary>
+                      <p className="text-gray-600 mt-3 text-sm">{faq.answer}</p>
+                    </details>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="text-center mt-8">
+              <Link href="/faq" className="text-blue-600 font-medium hover:underline">
+                View More FAQs →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section (Simplified dark style) */}
+      <section className="py-20 bg-gray-900 relative overflow-hidden">
+        {/* Background overlay */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-gray-900"></div>
+        </div>
+
+        <div className="container relative z-10">
+          <div className="max-w-xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Get a Free Consultation
+            </h2>
+            <p className="text-gray-400 mb-8">
+              Free store layout | Free store design ideas | Free project estimate
+            </p>
+
+            <form
+              action="https://formsubmit.co/henry879128@gmail.com"
+              method="POST"
+              className="space-y-4"
+            >
+              {/* FormSubmit Configuration */}
+              <input type="hidden" name="_subject" value="New Inquiry from Goodok Website Homepage" />
+              <input type="hidden" name="_next" value="https://www.goodokshop.com/contact?success=true" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+
+              <div>
+                <label className="block text-white font-medium mb-2">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition"
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div>
+                <label className="block text-white font-medium mb-2">Email*</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition"
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              <div>
+                <label className="block text-white font-medium mb-2">Message*</label>
+                <textarea
+                  name="message"
+                  rows={4}
+                  required
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition resize-none"
+                  placeholder="Tell us about your project..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 rounded-lg transition-colors text-lg"
+              >
+                Get My Consultation Now
+              </button>
+            </form>
           </div>
         </div>
       </section>
