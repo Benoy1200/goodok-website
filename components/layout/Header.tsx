@@ -13,11 +13,12 @@ const productItems = [
     { name: "Store Design", href: "/free-3d-design" },
 ];
 
+// Navigation order: Solutions → Products → About → Resources → Contact
 const navigation = [
     { name: "Solutions", href: "/solutions" },
     { name: "Products", href: "/products", hasDropdown: true },
-    { name: "Resources", href: "/resources/blog" },
     { name: "About", href: "/about" },
+    { name: "Resources", href: "/resources/blog" },
     { name: "Contact", href: "/contact" },
 ];
 
