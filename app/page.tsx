@@ -236,6 +236,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Industry Solutions - Horizontal Scroll Gallery (ABOVE Products) */}
+      <section className="py-16 bg-white">
+        <div className="container">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">Industry Solutions</h2>
+            <p className="text-gray-600">Tailored fixtures for every retail sector</p>
+          </div>
+          <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide -mx-4 px-4">
+            {solutions.map((solution) => (
+              <Link
+                key={solution.name}
+                href={solution.href}
+                className="flex-shrink-0 w-64 snap-center group"
+              >
+                <div className="relative aspect-[4/3] bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl overflow-hidden mb-3">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-white text-6xl group-hover:scale-110 transition-transform">{solution.icon}</span>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                    <h3 className="text-white font-semibold">{solution.name}</h3>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm group-hover:text-blue-600 transition">{solution.description}</p>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-4">
+            <Link href="/solutions" className="text-blue-600 font-medium hover:underline">
+              View All Solutions →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Products - Card Grid Style (2 rows x 3 cols) */}
       <section className="py-20 bg-gray-50">
         <div className="container">
@@ -345,49 +379,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Solutions - Card Grid (No Chinese) */}
-      <section className="py-20 bg-gray-50">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Industry Solutions
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              We understand that different retail sectors have unique display requirements.
-              Explore solutions tailored for your industry.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {solutions.map((solution) => (
-              <Link
-                key={solution.name}
-                href={solution.href}
-                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition group"
-              >
-                <div className="text-4xl mb-4">{solution.icon}</div>
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">
-                  {solution.name}
-                </h3>
-                <p className="text-gray-600 mb-4">{solution.description}</p>
-                <div className="text-blue-600 font-medium flex items-center gap-2">
-                  Explore Solutions
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <Link href="/solutions" className="btn btn-secondary">
-              View All Solutions
-            </Link>
           </div>
         </div>
       </section>

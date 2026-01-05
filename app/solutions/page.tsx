@@ -14,42 +14,42 @@ export const metadata: Metadata = {
 
 const solutions = [
     {
-        name: "Pop Culture Store (潮玩店)",
+        name: "Pop Culture Store",
         description: "Display solutions for anime, gaming, and collectibles stores. Secure cases for valuable items.",
         href: "/solutions/pop-culture",
         icon: "🎮",
         color: "from-violet-600 to-purple-600",
     },
     {
-        name: "Toy Store (玩具店)",
+        name: "Toy Store",
         description: "Kid-friendly displays with safety features. Interactive demo areas and colorful fixtures.",
         href: "/solutions/toy-store",
         icon: "🧸",
         color: "from-orange-500 to-yellow-500",
     },
     {
-        name: "Jewelry Store (珠宝店)",
+        name: "Jewelry Store",
         description: "Premium glass showcases with LED lighting and security locks for precious items.",
         href: "/solutions/jewelry-store",
         icon: "💎",
         color: "from-amber-600 to-yellow-600",
     },
     {
-        name: "Boutique (精品店)",
+        name: "Boutique",
         description: "Elegant clothing racks and display tables for fashion and accessories stores.",
         href: "/solutions/boutique",
         icon: "👗",
         color: "from-rose-600 to-pink-600",
     },
     {
-        name: "Lifestyle Store (生活馆)",
+        name: "Lifestyle Store",
         description: "Flexible display systems for home goods, gifts, and lifestyle products.",
         href: "/solutions/lifestyle",
         icon: "🏠",
         color: "from-teal-500 to-emerald-500",
     },
     {
-        name: "Stationery Store (文具店)",
+        name: "Stationery Store",
         description: "Organized shelving and display racks for stationery, art supplies, and office products.",
         href: "/solutions/stationery",
         icon: "✏️",
