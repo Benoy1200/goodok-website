@@ -237,33 +237,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800">
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Store?
-          </h2>
-          <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-            Get your free 3D store design and see exactly how your new fixtures will look
-            before you order. No commitment required.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/free-3d-design"
-              className="btn bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4"
-            >
-              Get Free 3D Design
-            </Link>
-            <Link
-              href="/contact"
-              className="btn border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4"
-            >
-              Contact Sales Team
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
