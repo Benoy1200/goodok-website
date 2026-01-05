@@ -14,10 +14,20 @@ export const metadata: Metadata = {
 };
 
 const products = [
-    { name: "Wall Shelving (墙面货架)", desc: "Maximize vertical space", icon: "📐" },
-    { name: "Gondola Displays (中岛展示)", desc: "Double-sided browsing", icon: "📦" },
-    { name: "Pen & Pencil Racks (笔架)", desc: "Organized display", icon: "✏️" },
-    { name: "Book Displays (书架)", desc: "For notebooks and journals", icon: "📚" },
+    { name: "Wall Shelving", desc: "Maximize vertical space", icon: "📐" },
+    { name: "Gondola Displays", desc: "Double-sided browsing", icon: "📦" },
+    { name: "Pen & Pencil Racks", desc: "Organized display", icon: "✏️" },
+    { name: "Book Displays", desc: "For notebooks and journals", icon: "📚" },
+];
+
+const caseStudies = [
+    {
+        name: "Stationery Paradise",
+        location: "Tokyo, Japan",
+        description: "A colorful 90㎡ stationery store with organized category zones and bright displays.",
+        highlights: ["Color-coded sections", "Wall shelving systems", "Demo areas"],
+        href: "#",
+    },
 ];
 
 export default function StationerySolutionPage() {
@@ -30,7 +40,7 @@ export default function StationerySolutionPage() {
                         <div>
                             <span className="text-blue-200 text-sm font-medium">Solutions / Stationery Store</span>
                             <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
-                                Stationery Store (文具店)
+                                Stationery Store
                             </h1>
                             <p className="text-xl text-blue-100 mb-8">
                                 Create an organized and inspiring shopping experience for students,
@@ -38,14 +48,11 @@ export default function StationerySolutionPage() {
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Link href="/free-3d-design" className="btn bg-white text-blue-800 hover:bg-blue-50">
-                                    Get Free 3D Design (获取免费设计)
+                                    Get Free 3D Design
                                 </Link>
-                                <a
-                                    href="https://api.whatsapp.com/send?phone=8613822102050&text=Hi%20I%20need%20fixtures%20for%20stationery%20store"
-                                    className="btn border-2 border-white text-white hover:bg-white hover:text-blue-800"
-                                >
-                                    WhatsApp Us
-                                </a>
+                                <Link href="/contact" className="btn border-2 border-white text-white hover:bg-white hover:text-blue-800">
+                                    Contact Us
+                                </Link>
                             </div>
                         </div>
                         <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
@@ -57,15 +64,48 @@ export default function StationerySolutionPage() {
                 </div>
             </section>
 
-            {/* Products */}
+            {/* Case Studies */}
             <section className="py-20">
                 <div className="container">
+                    <h2 className="text-3xl font-bold text-center mb-4">Store Case Studies</h2>
+                    <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                        See how we&apos;ve helped stationery store owners create organized retail spaces
+                    </p>
+                    <div className="max-w-2xl mx-auto">
+                        {caseStudies.map((study) => (
+                            <div key={study.name} className="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div className="aspect-video bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center">
+                                    <span className="text-6xl">✏️</span>
+                                </div>
+                                <div className="p-6">
+                                    <div className="flex items-center justify-between mb-2">
+                                        <h3 className="text-xl font-bold">{study.name}</h3>
+                                        <span className="text-sm text-gray-500">{study.location}</span>
+                                    </div>
+                                    <p className="text-gray-600 mb-4">{study.description}</p>
+                                    <div className="flex flex-wrap gap-2">
+                                        {study.highlights.map((h) => (
+                                            <span key={h} className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                                                {h}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Products */}
+            <section className="py-20 bg-gray-50">
+                <div className="container">
                     <h2 className="text-3xl font-bold text-center mb-12">
-                        Recommended Products (推荐产品)
+                        Recommended Products
                     </h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {products.map((product) => (
-                            <div key={product.name} className="bg-gray-50 rounded-xl p-6 text-center">
+                            <div key={product.name} className="bg-white rounded-xl p-6 text-center shadow-sm">
                                 <span className="text-4xl mb-4 block">{product.icon}</span>
                                 <h3 className="font-bold mb-2">{product.name}</h3>
                                 <p className="text-gray-600 text-sm">{product.desc}</p>
@@ -76,24 +116,24 @@ export default function StationerySolutionPage() {
             </section>
 
             {/* Features */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-20">
                 <div className="container">
                     <div className="max-w-3xl mx-auto text-center">
-                        <h2 className="text-3xl font-bold mb-8">Key Features (核心特点)</h2>
+                        <h2 className="text-3xl font-bold mb-8">Key Features</h2>
                         <div className="grid md:grid-cols-3 gap-8">
                             <div>
                                 <span className="text-4xl mb-3 block">📋</span>
-                                <h3 className="font-bold mb-2">Organization (分类陈列)</h3>
+                                <h3 className="font-bold mb-2">Organization</h3>
                                 <p className="text-gray-600 text-sm">Clear category zones for easy browsing</p>
                             </div>
                             <div>
                                 <span className="text-4xl mb-3 block">🎨</span>
-                                <h3 className="font-bold mb-2">Colorful (色彩丰富)</h3>
+                                <h3 className="font-bold mb-2">Colorful</h3>
                                 <p className="text-gray-600 text-sm">Bright displays attract students</p>
                             </div>
                             <div>
                                 <span className="text-4xl mb-3 block">📏</span>
-                                <h3 className="font-bold mb-2">Adjustable (可调整)</h3>
+                                <h3 className="font-bold mb-2">Adjustable</h3>
                                 <p className="text-gray-600 text-sm">Flexible shelves for various products</p>
                             </div>
                         </div>
@@ -105,13 +145,13 @@ export default function StationerySolutionPage() {
             <section className="py-20 bg-blue-800 text-white">
                 <div className="container text-center">
                     <h2 className="text-3xl font-bold mb-4">
-                        Design Your Stationery Store (设计您的文具店)
+                        Design Your Stationery Store
                     </h2>
                     <p className="text-blue-200 mb-8">
                         Free 3D design and factory-direct pricing.
                     </p>
                     <Link href="/free-3d-design" className="btn bg-white text-blue-800 hover:bg-blue-50">
-                        Get Started (开始)
+                        Get Started
                     </Link>
                 </div>
             </section>

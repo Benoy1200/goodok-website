@@ -15,10 +15,20 @@ export const metadata: Metadata = {
 };
 
 const products = [
-    { name: "Display Shelving (展示货架)", desc: "For home decor items", icon: "🏠" },
-    { name: "Nesting Tables (展示台)", desc: "Multi-level displays", icon: "🔲" },
-    { name: "Wall Systems (墙面系统)", desc: "Art and decor display", icon: "🖼️" },
-    { name: "Gift Displays (礼品展示)", desc: "Highlight gifts and accessories", icon: "🎁" },
+    { name: "Display Shelving", desc: "For home decor items", icon: "🏠" },
+    { name: "Nesting Tables", desc: "Multi-level displays", icon: "🔲" },
+    { name: "Wall Systems", desc: "Art and decor display", icon: "🖼️" },
+    { name: "Gift Displays", desc: "Highlight gifts and accessories", icon: "🎁" },
+];
+
+const caseStudies = [
+    {
+        name: "Modern Living Concept Store",
+        location: "Melbourne, Australia",
+        description: "A 120㎡ lifestyle store with warm wood fixtures and flexible display systems.",
+        highlights: ["Wood shelving units", "Modular displays", "Gift section"],
+        href: "#",
+    },
 ];
 
 export default function LifestyleSolutionPage() {
@@ -31,7 +41,7 @@ export default function LifestyleSolutionPage() {
                         <div>
                             <span className="text-teal-200 text-sm font-medium">Solutions / Lifestyle Store</span>
                             <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
-                                Lifestyle Store (生活馆)
+                                Lifestyle Store
                             </h1>
                             <p className="text-xl text-teal-100 mb-8">
                                 Create inspiring spaces for home goods, gifts, and lifestyle products.
@@ -39,14 +49,11 @@ export default function LifestyleSolutionPage() {
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Link href="/free-3d-design" className="btn bg-white text-teal-800 hover:bg-teal-50">
-                                    Get Free 3D Design (获取免费设计)
+                                    Get Free 3D Design
                                 </Link>
-                                <a
-                                    href="https://api.whatsapp.com/send?phone=8613822102050&text=Hi%20I%20need%20fixtures%20for%20lifestyle%20store"
-                                    className="btn border-2 border-white text-white hover:bg-white hover:text-teal-800"
-                                >
-                                    WhatsApp Us
-                                </a>
+                                <Link href="/contact" className="btn border-2 border-white text-white hover:bg-white hover:text-teal-800">
+                                    Contact Us
+                                </Link>
                             </div>
                         </div>
                         <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
@@ -58,15 +65,48 @@ export default function LifestyleSolutionPage() {
                 </div>
             </section>
 
-            {/* Products */}
+            {/* Case Studies */}
             <section className="py-20">
                 <div className="container">
+                    <h2 className="text-3xl font-bold text-center mb-4">Store Case Studies</h2>
+                    <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                        See how we&apos;ve helped lifestyle store owners create inspiring retail spaces
+                    </p>
+                    <div className="max-w-2xl mx-auto">
+                        {caseStudies.map((study) => (
+                            <div key={study.name} className="bg-white rounded-xl shadow-lg overflow-hidden">
+                                <div className="aspect-video bg-gradient-to-br from-teal-100 to-cyan-100 flex items-center justify-center">
+                                    <span className="text-6xl">🏠</span>
+                                </div>
+                                <div className="p-6">
+                                    <div className="flex items-center justify-between mb-2">
+                                        <h3 className="text-xl font-bold">{study.name}</h3>
+                                        <span className="text-sm text-gray-500">{study.location}</span>
+                                    </div>
+                                    <p className="text-gray-600 mb-4">{study.description}</p>
+                                    <div className="flex flex-wrap gap-2">
+                                        {study.highlights.map((h) => (
+                                            <span key={h} className="text-xs bg-teal-100 text-teal-700 px-2 py-1 rounded">
+                                                {h}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Products */}
+            <section className="py-20 bg-gray-50">
+                <div className="container">
                     <h2 className="text-3xl font-bold text-center mb-12">
-                        Recommended Products (推荐产品)
+                        Recommended Products
                     </h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {products.map((product) => (
-                            <div key={product.name} className="bg-gray-50 rounded-xl p-6 text-center">
+                            <div key={product.name} className="bg-white rounded-xl p-6 text-center shadow-sm">
                                 <span className="text-4xl mb-4 block">{product.icon}</span>
                                 <h3 className="font-bold mb-2">{product.name}</h3>
                                 <p className="text-gray-600 text-sm">{product.desc}</p>
@@ -77,24 +117,24 @@ export default function LifestyleSolutionPage() {
             </section>
 
             {/* Vibe */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-20">
                 <div className="container">
                     <div className="max-w-3xl mx-auto text-center">
-                        <h2 className="text-3xl font-bold mb-8">Create the Vibe (打造氛围)</h2>
+                        <h2 className="text-3xl font-bold mb-8">Create the Vibe</h2>
                         <div className="grid md:grid-cols-3 gap-8">
                             <div>
                                 <span className="text-4xl mb-3 block">🌿</span>
-                                <h3 className="font-bold mb-2">Natural (自然风)</h3>
+                                <h3 className="font-bold mb-2">Natural</h3>
                                 <p className="text-gray-600 text-sm">Wood and organic materials</p>
                             </div>
                             <div>
                                 <span className="text-4xl mb-3 block">⬜</span>
-                                <h3 className="font-bold mb-2">Minimalist (极简风)</h3>
+                                <h3 className="font-bold mb-2">Minimalist</h3>
                                 <p className="text-gray-600 text-sm">Clean lines and white space</p>
                             </div>
                             <div>
                                 <span className="text-4xl mb-3 block">🎨</span>
-                                <h3 className="font-bold mb-2">Eclectic (混搭风)</h3>
+                                <h3 className="font-bold mb-2">Eclectic</h3>
                                 <p className="text-gray-600 text-sm">Mix of styles and textures</p>
                             </div>
                         </div>
@@ -106,13 +146,13 @@ export default function LifestyleSolutionPage() {
             <section className="py-20 bg-teal-800 text-white">
                 <div className="container text-center">
                     <h2 className="text-3xl font-bold mb-4">
-                        Design Your Lifestyle Store (设计您的生活馆)
+                        Design Your Lifestyle Store
                     </h2>
                     <p className="text-teal-200 mb-8">
                         Free 3D design and factory-direct pricing.
                     </p>
                     <Link href="/free-3d-design" className="btn bg-white text-teal-800 hover:bg-teal-50">
-                        Get Started (开始)
+                        Get Started
                     </Link>
                 </div>
             </section>

@@ -15,10 +15,28 @@ export const metadata: Metadata = {
 };
 
 const products = [
-    { name: "Glass Display Cases (玻璃展柜)", desc: "For premium collectibles", icon: "💎" },
-    { name: "Wall Shelving (墙面货架)", desc: "Maximize vertical display", icon: "📐" },
-    { name: "Trading Card Displays (卡牌展示)", desc: "Secure card showcases", icon: "🎴" },
-    { name: "Themed Fixtures (主题装置)", desc: "Custom branded displays", icon: "🎨" },
+    { name: "Glass Display Cases", desc: "For premium collectibles", icon: "💎" },
+    { name: "Wall Shelving", desc: "Maximize vertical display", icon: "📐" },
+    { name: "Trading Card Displays", desc: "Secure card showcases", icon: "🎴" },
+    { name: "Themed Fixtures", desc: "Custom branded displays", icon: "🎨" },
+];
+
+// Store case studies for this industry
+const caseStudies = [
+    {
+        name: "Trendy Toys Store",
+        location: "Dubai, UAE",
+        description: "A 200㎡ pop culture store featuring anime figures, trading cards, and gaming accessories.",
+        highlights: ["Custom LED showcases", "Interactive demo area", "Secure lockable displays"],
+        href: "/projects/trendy-toys-store",
+    },
+    {
+        name: "Anime Paradise",
+        location: "Singapore",
+        description: "Premium collectibles store with high-end display cases for limited edition figures.",
+        highlights: ["Glass tower displays", "Themed wall units", "Card display systems"],
+        href: "#",
+    },
 ];
 
 export default function PopCultureSolutionPage() {
@@ -31,7 +49,7 @@ export default function PopCultureSolutionPage() {
                         <div>
                             <span className="text-violet-300 text-sm font-medium">Solutions / Pop Culture Store</span>
                             <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
-                                Pop Culture Store (潮玩店)
+                                Pop Culture Store
                             </h1>
                             <p className="text-xl text-violet-100 mb-8">
                                 Create the ultimate destination for anime fans, gamers, and collectors.
@@ -39,14 +57,11 @@ export default function PopCultureSolutionPage() {
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Link href="/free-3d-design" className="btn bg-white text-violet-900 hover:bg-violet-50">
-                                    Get Free 3D Design (获取免费设计)
+                                    Get Free 3D Design
                                 </Link>
-                                <a
-                                    href="https://api.whatsapp.com/send?phone=8613822102050&text=Hi%20I%20need%20fixtures%20for%20pop%20culture%20store"
-                                    className="btn border-2 border-white text-white hover:bg-white hover:text-violet-900"
-                                >
-                                    WhatsApp Us
-                                </a>
+                                <Link href="/contact" className="btn border-2 border-white text-white hover:bg-white hover:text-violet-900">
+                                    Contact Us
+                                </Link>
                             </div>
                         </div>
                         <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
@@ -58,15 +73,53 @@ export default function PopCultureSolutionPage() {
                 </div>
             </section>
 
-            {/* Products */}
+            {/* Case Studies */}
             <section className="py-20">
                 <div className="container">
+                    <h2 className="text-3xl font-bold text-center mb-4">Store Case Studies</h2>
+                    <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                        See how we&apos;ve helped pop culture store owners create stunning retail spaces
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {caseStudies.map((study) => (
+                            <div key={study.name} className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition">
+                                <div className="aspect-video bg-gradient-to-br from-violet-100 to-purple-100 flex items-center justify-center">
+                                    <span className="text-6xl">🏪</span>
+                                </div>
+                                <div className="p-6">
+                                    <div className="flex items-center justify-between mb-2">
+                                        <h3 className="text-xl font-bold">{study.name}</h3>
+                                        <span className="text-sm text-gray-500">{study.location}</span>
+                                    </div>
+                                    <p className="text-gray-600 mb-4">{study.description}</p>
+                                    <div className="flex flex-wrap gap-2 mb-4">
+                                        {study.highlights.map((h) => (
+                                            <span key={h} className="text-xs bg-violet-100 text-violet-700 px-2 py-1 rounded">
+                                                {h}
+                                            </span>
+                                        ))}
+                                    </div>
+                                    {study.href !== "#" && (
+                                        <Link href={study.href} className="text-violet-600 font-medium hover:underline">
+                                            View Project Details →
+                                        </Link>
+                                    )}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Products */}
+            <section className="py-20 bg-gray-50">
+                <div className="container">
                     <h2 className="text-3xl font-bold text-center mb-12">
-                        Recommended Products (推荐产品)
+                        Recommended Products
                     </h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {products.map((product) => (
-                            <div key={product.name} className="bg-gray-50 rounded-xl p-6 text-center">
+                            <div key={product.name} className="bg-white rounded-xl p-6 text-center shadow-sm">
                                 <span className="text-4xl mb-4 block">{product.icon}</span>
                                 <h3 className="font-bold mb-2">{product.name}</h3>
                                 <p className="text-gray-600 text-sm">{product.desc}</p>
@@ -77,24 +130,24 @@ export default function PopCultureSolutionPage() {
             </section>
 
             {/* Features */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-20">
                 <div className="container">
                     <div className="max-w-3xl mx-auto text-center">
-                        <h2 className="text-3xl font-bold mb-8">Why Choose Us (选择我们的理由)</h2>
+                        <h2 className="text-3xl font-bold mb-8">Why Choose Us</h2>
                         <div className="grid md:grid-cols-3 gap-8">
                             <div>
                                 <span className="text-4xl mb-3 block">🔒</span>
-                                <h3 className="font-bold mb-2">Security (安全)</h3>
+                                <h3 className="font-bold mb-2">Security</h3>
                                 <p className="text-gray-600 text-sm">Locking cases for high-value items</p>
                             </div>
                             <div>
                                 <span className="text-4xl mb-3 block">💡</span>
-                                <h3 className="font-bold mb-2">Lighting (照明)</h3>
+                                <h3 className="font-bold mb-2">Lighting</h3>
                                 <p className="text-gray-600 text-sm">LED lighting to highlight products</p>
                             </div>
                             <div>
                                 <span className="text-4xl mb-3 block">🎨</span>
-                                <h3 className="font-bold mb-2">Custom (定制)</h3>
+                                <h3 className="font-bold mb-2">Custom</h3>
                                 <p className="text-gray-600 text-sm">Themed designs for your brand</p>
                             </div>
                         </div>
@@ -106,13 +159,13 @@ export default function PopCultureSolutionPage() {
             <section className="py-20 bg-violet-900 text-white">
                 <div className="container text-center">
                     <h2 className="text-3xl font-bold mb-4">
-                        Start Your Pop Culture Store (开始您的潮玩店)
+                        Start Your Pop Culture Store
                     </h2>
                     <p className="text-violet-200 mb-8">
                         Free 3D design within 24 hours. Factory-direct pricing.
                     </p>
                     <Link href="/free-3d-design" className="btn bg-white text-violet-900 hover:bg-violet-50">
-                        Get Started (开始)
+                        Get Started
                     </Link>
                 </div>
             </section>
