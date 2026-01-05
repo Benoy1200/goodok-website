@@ -89,12 +89,20 @@ const solutions = [
   },
 ];
 
-// Trust indicators
-const stats = [
+// Hero stats
+const heroStats = [
   { number: "500+", label: "Stores Delivered" },
   { number: "15+", label: "Years Experience" },
   { number: "50+", label: "Countries Served" },
   { number: "24h", label: "3D Design Delivery" },
+];
+
+// About stats (Ujoy style - larger numbers)
+const aboutStats = [
+  { number: "15+", label: "Years of Excellence" },
+  { number: "15,000", label: "Square Meters Factory" },
+  { number: "500+", label: "Projects Completed" },
+  { number: "50+", label: "Countries Served" },
 ];
 
 // Customer testimonials
@@ -217,7 +225,7 @@ export default function Home() {
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {stats.map((stat) => (
+              {heroStats.map((stat) => (
                 <div key={stat.label} className="text-center md:text-left">
                   <div className="text-3xl md:text-4xl font-bold text-white">{stat.number}</div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -265,31 +273,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section - Ujoy Style */}
+      {/* About Section - Ujoy Style (Title + Stats + Content) */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left - Image Placeholder */}
-            <div className="relative">
-              <div className="aspect-[4/3] bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <span className="text-8xl block mb-4">🏭</span>
-                  <p className="text-gray-500 text-sm">Factory Image Placeholder</p>
-                </div>
-              </div>
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -right-4 bg-blue-600 text-white rounded-xl p-4 shadow-lg">
-                <div className="text-3xl font-bold">15+</div>
-                <div className="text-sm text-blue-200">Years Experience</div>
-              </div>
-            </div>
+          {/* Centered Title */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">About Goodok</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Professional retail display manufacturer with 15+ years of experience
+            </p>
+            <div className="w-20 h-1 bg-blue-600 mx-auto mt-6"></div>
+          </div>
 
-            {/* Right - Content */}
+          {/* Stats Row - Ujoy Style */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+            {aboutStats.map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                <div className="text-gray-600">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Two Column Layout */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Content */}
             <div>
-              <span className="text-blue-600 font-medium text-sm uppercase tracking-wider">About Goodok</span>
-              <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6">
                 Your Trusted Partner in Retail Display Solutions
-              </h2>
+              </h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Founded in 2009, Goodok Shopfitting has grown from a small workshop to a 15,000㎡
                 manufacturing facility serving over 500 stores worldwide. We specialize in designing
@@ -301,29 +313,37 @@ export default function Home() {
                 installation support, we&apos;re with you every step of the way.
               </p>
 
-              {/* Key Points */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-xl">🏭</div>
-                  <span className="font-medium">15,000㎡ Factory</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-xl">👥</div>
-                  <span className="font-medium">Expert Team</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-xl">🌍</div>
-                  <span className="font-medium">50+ Countries</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-xl">✅</div>
-                  <span className="font-medium">Quality Assured</span>
-                </div>
-              </div>
-
               <Link href="/about" className="btn btn-primary">
                 Learn More About Us
               </Link>
+            </div>
+
+            {/* Right - Image Grid (Ujoy style - multiple images) */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="aspect-square bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl flex items-center justify-center">
+                <div className="text-center">
+                  <span className="text-5xl block mb-2">🏭</span>
+                  <p className="text-gray-500 text-xs">Factory</p>
+                </div>
+              </div>
+              <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-50 rounded-xl flex items-center justify-center">
+                <div className="text-center">
+                  <span className="text-5xl block mb-2">🔧</span>
+                  <p className="text-gray-500 text-xs">Workshop</p>
+                </div>
+              </div>
+              <div className="aspect-square bg-gradient-to-br from-purple-100 to-purple-50 rounded-xl flex items-center justify-center">
+                <div className="text-center">
+                  <span className="text-5xl block mb-2">👥</span>
+                  <p className="text-gray-500 text-xs">Team</p>
+                </div>
+              </div>
+              <div className="aspect-square bg-gradient-to-br from-green-100 to-green-50 rounded-xl flex items-center justify-center">
+                <div className="text-center">
+                  <span className="text-5xl block mb-2">📦</span>
+                  <p className="text-gray-500 text-xs">Shipping</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
