@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { useState } from "react";
 
-// Products with images for dropdown (Ujoy style)
+// Products for simple text dropdown
 const productItems = [
-    { name: "Gondola Shelving", href: "/products/gondola-shelving", icon: "🏪" },
-    { name: "Wall Shelving", href: "/products/wall-shelving", icon: "📐" },
-    { name: "Display Cases", href: "/products/display-cases", icon: "💎" },
-    { name: "Clothing Racks", href: "/products/clothing-racks", icon: "👔" },
-    { name: "Custom Fixtures", href: "/products/custom-fixtures", icon: "✨" },
-    { name: "Store Design", href: "/free-3d-design", icon: "🎨" },
+    { name: "Gondola Shelving", href: "/products/gondola-shelving" },
+    { name: "Wall Shelving", href: "/products/wall-shelving" },
+    { name: "Display Cases", href: "/products/display-cases" },
+    { name: "Clothing Racks", href: "/products/clothing-racks" },
+    { name: "Custom Fixtures", href: "/products/custom-fixtures" },
+    { name: "Store Design", href: "/free-3d-design" },
 ];
 
 const navigation = [
@@ -59,32 +59,19 @@ export default function Header() {
                                     </svg>
                                 </Link>
 
-                                {/* Products Dropdown - Ujoy Style Grid */}
+                                {/* Products Dropdown - Simple Text List */}
                                 {productsDropdownOpen && (
-                                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[600px]">
-                                        <div className="bg-white rounded-xl shadow-xl border border-gray-100 p-6">
-                                            <div className="grid grid-cols-3 gap-4">
-                                                {productItems.map((product) => (
-                                                    <Link
-                                                        key={product.name}
-                                                        href={product.href}
-                                                        className="group block"
-                                                    >
-                                                        {/* Image placeholder */}
-                                                        <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-50 rounded-lg mb-2 flex items-center justify-center overflow-hidden">
-                                                            <span className="text-4xl group-hover:scale-110 transition-transform">{product.icon}</span>
-                                                        </div>
-                                                        <p className="text-sm font-medium text-center text-gray-700 group-hover:text-blue-600 transition-colors">
-                                                            {product.name}
-                                                        </p>
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                            <div className="mt-4 pt-4 border-t border-gray-100 text-center">
-                                                <Link href="/products" className="text-blue-600 font-medium hover:underline text-sm">
-                                                    View All Products →
+                                    <div className="absolute top-full left-0 pt-2 w-48">
+                                        <div className="bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+                                            {productItems.map((product) => (
+                                                <Link
+                                                    key={product.name}
+                                                    href={product.href}
+                                                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+                                                >
+                                                    {product.name}
                                                 </Link>
-                                            </div>
+                                            ))}
                                         </div>
                                     </div>
                                 )}
@@ -140,7 +127,7 @@ export default function Header() {
                                     className="text-gray-500 hover:text-blue-600 py-1 text-sm block"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
-                                    {product.icon} {product.name}
+                                    {product.name}
                                 </Link>
                             ))}
                         </div>
