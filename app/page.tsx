@@ -49,55 +49,43 @@ const products = [
   },
 ];
 
-// Industry solutions (6 solutions)
+// Industry solutions (6 solutions) - NO Chinese text
 const solutions = [
   {
     name: "Pop Culture Store",
-    subtitle: "潮玩店",
     description: "Display collectibles, figures, and trendy items",
     icon: "🎮",
     href: "/solutions/pop-culture",
-    image: "/images/solutions/pop-culture.jpg"
   },
   {
     name: "Stationery Store",
-    subtitle: "文具店",
     description: "Organized displays for pens, notebooks, and accessories",
     icon: "✏️",
     href: "/solutions/stationery",
-    image: "/images/solutions/stationery.jpg"
   },
   {
     name: "Jewelry Store",
-    subtitle: "珠宝店",
     description: "Secure, elegant showcases for precious items",
     icon: "💎",
     href: "/solutions/jewelry-store",
-    image: "/images/solutions/jewelry.jpg"
   },
   {
     name: "Boutique",
-    subtitle: "精品店",
     description: "Fashion-forward displays for clothing and accessories",
     icon: "👗",
     href: "/solutions/boutique",
-    image: "/images/solutions/boutique.jpg"
   },
   {
     name: "Toy Store",
-    subtitle: "玩具店",
     description: "Fun, safe, and accessible toy displays",
     icon: "🧸",
     href: "/solutions/toy-store",
-    image: "/images/solutions/toy-store.jpg"
   },
   {
     name: "Lifestyle Store",
-    subtitle: "生活馆",
     description: "Home goods and lifestyle product displays",
     icon: "🏠",
     href: "/solutions/lifestyle",
-    image: "/images/solutions/lifestyle.jpg"
   },
 ];
 
@@ -240,91 +228,146 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Solutions Gallery - Horizontal Scroll (See It In Action style) */}
-      <section className="py-16 bg-gray-50">
+      {/* Products - Card Grid Style (2 rows x 3 cols) */}
+      <section className="py-20 bg-gray-50">
         <div className="container">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">Industry Solutions</h2>
-            <p className="text-gray-600">Tailored fixtures for every retail sector</p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Complete Store Display Solutions
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              From single shelving units to complete store fit-outs, we provide everything you need
+              to create a stunning retail environment.
+            </p>
           </div>
-          <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide">
-            {solutions.map((solution) => (
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {products.map((product) => (
               <Link
-                key={solution.name}
-                href={solution.href}
-                className="flex-shrink-0 w-72 snap-center group"
+                key={product.name}
+                href={product.href}
+                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition group"
               >
-                <div className="relative aspect-[4/3] bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl overflow-hidden mb-4">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-white text-7xl group-hover:scale-110 transition-transform">{solution.icon}</span>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                    <h3 className="text-white font-semibold">{solution.name}</h3>
-                    <p className="text-gray-300 text-sm">{solution.subtitle}</p>
-                  </div>
+                <div className="text-4xl mb-4">{product.icon}</div>
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">
+                  {product.name}
+                </h3>
+                <p className="text-gray-600 mb-4">{product.description}</p>
+                <div className="text-blue-600 font-medium flex items-center gap-2">
+                  Learn more
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </div>
-                <p className="text-gray-600 text-sm group-hover:text-blue-600 transition">{solution.description}</p>
               </Link>
             ))}
-          </div>
-          <div className="text-center mt-6">
-            <Link href="/solutions" className="text-blue-600 font-medium hover:underline">
-              View All Solutions →
-            </Link>
           </div>
         </div>
       </section>
 
-      {/* Products Table (Standard vs comparison style) */}
-      <section className="py-20">
+      {/* About Section - Ujoy Style */}
+      <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">Our Products</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Complete range of retail fixtures, from shelving to custom displays
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
-              <table className="w-full">
-                <thead>
-                  <tr className="bg-gray-900 text-white">
-                    <th className="py-4 px-6 text-left font-semibold">Product</th>
-                    <th className="py-4 px-6 text-left font-semibold hidden md:table-cell">Description</th>
-                    <th className="py-4 px-6 text-right font-semibold">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {products.map((product, index) => (
-                    <tr
-                      key={product.name}
-                      className={`${index % 2 === 0 ? "bg-white" : "bg-gray-50"} border-b border-gray-100 hover:bg-blue-50 transition`}
-                    >
-                      <td className="py-4 px-6">
-                        <div className="flex items-center gap-3">
-                          <span className="text-2xl">{product.icon}</span>
-                          <span className="font-medium text-gray-900">{product.name}</span>
-                        </div>
-                      </td>
-                      <td className="py-4 px-6 text-gray-600 hidden md:table-cell">{product.description}</td>
-                      <td className="py-4 px-6 text-right">
-                        <Link
-                          href={product.href}
-                          className="text-blue-600 font-medium hover:underline"
-                        >
-                          View →
-                        </Link>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Image Placeholder */}
+            <div className="relative">
+              <div className="aspect-[4/3] bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl flex items-center justify-center">
+                <div className="text-center">
+                  <span className="text-8xl block mb-4">🏭</span>
+                  <p className="text-gray-500 text-sm">Factory Image Placeholder</p>
+                </div>
+              </div>
+              {/* Floating badge */}
+              <div className="absolute -bottom-4 -right-4 bg-blue-600 text-white rounded-xl p-4 shadow-lg">
+                <div className="text-3xl font-bold">15+</div>
+                <div className="text-sm text-blue-200">Years Experience</div>
+              </div>
             </div>
-            <div className="text-center mt-6">
-              <Link href="/products" className="btn btn-secondary">
-                View All Products
+
+            {/* Right - Content */}
+            <div>
+              <span className="text-blue-600 font-medium text-sm uppercase tracking-wider">About Goodok</span>
+              <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">
+                Your Trusted Partner in Retail Display Solutions
+              </h2>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Founded in 2009, Goodok Shopfitting has grown from a small workshop to a 15,000㎡
+                manufacturing facility serving over 500 stores worldwide. We specialize in designing
+                and producing high-quality retail fixtures that help store owners maximize their sales potential.
+              </p>
+              <p className="text-gray-600 mb-8 leading-relaxed">
+                Our team of experienced designers and craftsmen work together to deliver custom solutions
+                that perfectly match your brand identity and business needs. From initial design to final
+                installation support, we&apos;re with you every step of the way.
+              </p>
+
+              {/* Key Points */}
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-xl">🏭</div>
+                  <span className="font-medium">15,000㎡ Factory</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-xl">👥</div>
+                  <span className="font-medium">Expert Team</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-xl">🌍</div>
+                  <span className="font-medium">50+ Countries</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-xl">✅</div>
+                  <span className="font-medium">Quality Assured</span>
+                </div>
+              </div>
+
+              <Link href="/about" className="btn btn-primary">
+                Learn More About Us
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions - Card Grid (No Chinese) */}
+      <section className="py-20 bg-gray-50">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Industry Solutions
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              We understand that different retail sectors have unique display requirements.
+              Explore solutions tailored for your industry.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {solutions.map((solution) => (
+              <Link
+                key={solution.name}
+                href={solution.href}
+                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition group"
+              >
+                <div className="text-4xl mb-4">{solution.icon}</div>
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">
+                  {solution.name}
+                </h3>
+                <p className="text-gray-600 mb-4">{solution.description}</p>
+                <div className="text-blue-600 font-medium flex items-center gap-2">
+                  Explore Solutions
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <Link href="/solutions" className="btn btn-secondary">
+              View All Solutions
+            </Link>
           </div>
         </div>
       </section>
@@ -367,7 +410,7 @@ export default function Home() {
                 key={testimonial.name}
                 className="bg-gray-700/50 backdrop-blur rounded-xl p-8 relative"
               >
-                <div className="text-blue-400 text-4xl mb-4">"</div>
+                <div className="text-blue-400 text-4xl mb-4">&ldquo;</div>
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {testimonial.quote}
                 </p>
@@ -425,7 +468,6 @@ export default function Home() {
 
       {/* Contact Form Section (Simplified dark style) */}
       <section className="py-20 bg-gray-900 relative overflow-hidden">
-        {/* Background overlay */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-gray-900"></div>
         </div>
@@ -444,7 +486,6 @@ export default function Home() {
               method="POST"
               className="space-y-4"
             >
-              {/* FormSubmit Configuration */}
               <input type="hidden" name="_subject" value="New Inquiry from Goodok Website Homepage" />
               <input type="hidden" name="_next" value="https://www.goodokshop.com/contact?success=true" />
               <input type="hidden" name="_captcha" value="false" />
