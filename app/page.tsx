@@ -236,19 +236,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Industry Solutions - Horizontal Scroll Gallery (ABOVE Products) */}
-      <section className="py-16 bg-white">
+      {/* Industry Solutions - Auto-scrolling Marquee */}
+      <section className="py-16 bg-white overflow-hidden">
         <div className="container">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Industry Solutions</h2>
             <p className="text-gray-600">Tailored fixtures for every retail sector</p>
           </div>
-          <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide -mx-4 px-4">
-            {solutions.map((solution) => (
+        </div>
+        {/* Auto-scrolling container */}
+        <div className="relative">
+          <div className="flex gap-6 animate-marquee hover:pause-animation">
+            {/* Double the items for seamless loop */}
+            {[...solutions, ...solutions].map((solution, idx) => (
               <Link
-                key={solution.name}
+                key={`${solution.name}-${idx}`}
                 href={solution.href}
-                className="flex-shrink-0 w-64 snap-center group"
+                className="flex-shrink-0 w-64 group"
               >
                 <div className="relative aspect-[4/3] bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl overflow-hidden mb-3">
                   <div className="absolute inset-0 flex items-center justify-center">
@@ -262,13 +266,16 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <div className="text-center mt-4">
+        </div>
+        <div className="container">
+          <div className="text-center mt-8">
             <Link href="/solutions" className="text-blue-600 font-medium hover:underline">
               View All Solutions →
             </Link>
           </div>
         </div>
       </section>
+
 
       {/* Products - Card Grid Style (2 rows x 3 cols) */}
       <section className="py-20 bg-gray-50">
