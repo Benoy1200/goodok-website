@@ -2,7 +2,7 @@
 
 > **项目名称 (Project Name)**：Goodok Shopfitting 官网建设与 SEO 内容运营
 > **网站地址 (Website URL)**：https://www.goodokshop.com
-> **最后更新 (Last Updated)**：2026-01-04 21:15
+> **最后更新 (Last Updated)**：2026-01-05 18:05
 
 ---
 
@@ -306,8 +306,12 @@ E:\retail-miniapp-backend\goodok-website\
 ## 📅 更新日志 (Update Log)
 
 ### 2026-01-05
-### 2026-01-05 (最新)
+### 2026-01-05 (最新 - 基础设施重构)
 
+- ✅ **紧急仓库修复**: 解决仓库混淆问题，回滚 `jewelry-display-website` 并创建独立仓库 `Benoy1200/goodok-website`
+- ✅ **表单系统升级**: Contact 页面从 Resend 迁移至 **FormSubmit** (免验证/更稳定/直达 Gmail)
+- ✅ **邮箱路由扩容**: 新增 `design@goodokshop.com` 转发至 Gmail
+- ✅ **Vercel 重连**: 重新关联生产环境到新仓库，确保自动部署正常
 - ✅ **邮箱配置**: 完成 Cloudflare 域名邮箱转发 (info@goodokshop.com)
 - ✅ **SEO 优化**: 全站添加 Schema 结构化数据 (Organization/FAQ)
 - ✅ **页面功能**: 创建 4 个 Projects 独立案例页并更新列表交互
