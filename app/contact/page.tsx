@@ -1,6 +1,10 @@
-"use client";
+import type { Metadata } from "next";
 
-import { useState } from "react";
+export const metadata: Metadata = {
+    title: "Contact Us | Get a Free Quote | Goodok Shopfitting",
+    description: "Contact Goodok for retail display solutions. Get a free 3D store design, request quotes for gondola shelving, display cases, and custom fixtures. WhatsApp: +86 138 2210 2050",
+    keywords: ["contact goodok", "retail fixtures quote", "store design consultation", "display solutions inquiry"],
+};
 
 const contactMethods = [
     {
@@ -39,60 +43,6 @@ const officeInfo = {
 };
 
 export default function ContactPage() {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        country: "",
-        inquiry: "",
-        message: "",
-    });
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        setSubmitStatus("idle");
-
-        try {
-            const response = await fetch("/api/contact", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                setSubmitStatus("success");
-                setFormData({
-                    name: "",
-                    email: "",
-                    phone: "",
-                    country: "",
-                    inquiry: "",
-                    message: "",
-                });
-            } else {
-                setSubmitStatus("error");
-            }
-        } catch {
-            setSubmitStatus("error");
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
-
-    const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-    ) => {
-        setFormData((prev) => ({
-            ...prev,
-            [e.target.name]: e.target.value,
-        }));
-    };
-
     return (
         <div className="pt-24">
             {/* Hero Section */}
@@ -119,8 +69,8 @@ export default function ContactPage() {
                             <div
                                 key={method.title}
                                 className={`rounded-2xl p-8 ${method.primary
-                                        ? "bg-green-50 border-2 border-green-200"
-                                        : "bg-white border border-gray-200"
+                                    ? "bg-green-50 border-2 border-green-200"
+                                    : "bg-white border border-gray-200"
                                     }`}
                             >
                                 <div className="text-4xl mb-4">{method.icon}</div>
@@ -142,7 +92,7 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* Quick Inquiry Form */}
+            {/* Quick Inquiry Form - Using FormSubmit */}
             <section className="py-16 bg-gray-50">
                 <div className="container">
                     <div className="max-w-2xl mx-auto">
@@ -154,23 +104,17 @@ export default function ContactPage() {
                             </p>
                         </div>
 
-                        {submitStatus === "success" && (
-                            <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6 text-center">
-                                <p className="text-green-800 font-medium">
-                                    ✅ Message sent successfully! We&apos;ll get back to you within 24 hours.
-                                </p>
-                            </div>
-                        )}
+                        <form
+                            action="https://formsubmit.co/henry879128@gmail.com"
+                            method="POST"
+                            className="bg-white rounded-2xl p-8 shadow-sm"
+                        >
+                            {/* FormSubmit Configuration */}
+                            <input type="hidden" name="_subject" value="New Inquiry from Goodok Website" />
+                            <input type="hidden" name="_next" value="https://www.goodokshop.com/contact?success=true" />
+                            <input type="hidden" name="_captcha" value="false" />
+                            <input type="hidden" name="_template" value="table" />
 
-                        {submitStatus === "error" && (
-                            <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6 text-center">
-                                <p className="text-red-800 font-medium">
-                                    ❌ Failed to send message. Please try WhatsApp or email directly.
-                                </p>
-                            </div>
-                        )}
-
-                        <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-sm">
                             <div className="grid md:grid-cols-2 gap-6 mb-6">
                                 <div>
                                     <label
@@ -184,8 +128,6 @@ export default function ContactPage() {
                                         id="name"
                                         name="name"
                                         required
-                                        value={formData.name}
-                                        onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                                         placeholder="John Smith"
                                     />
@@ -202,8 +144,6 @@ export default function ContactPage() {
                                         id="email"
                                         name="email"
                                         required
-                                        value={formData.email}
-                                        onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                                         placeholder="john@example.com"
                                     />
@@ -222,8 +162,6 @@ export default function ContactPage() {
                                         type="tel"
                                         id="phone"
                                         name="phone"
-                                        value={formData.phone}
-                                        onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                                         placeholder="+1 234 567 8900"
                                     />
@@ -240,8 +178,6 @@ export default function ContactPage() {
                                         id="country"
                                         name="country"
                                         required
-                                        value={formData.country}
-                                        onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                                         placeholder="United States"
                                     />
@@ -259,17 +195,15 @@ export default function ContactPage() {
                                     id="inquiry"
                                     name="inquiry"
                                     required
-                                    value={formData.inquiry}
-                                    onChange={handleChange}
                                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
                                 >
                                     <option value="">Select an option</option>
-                                    <option value="3d-design">Free 3D Store Design</option>
-                                    <option value="gondola">Gondola Shelving</option>
-                                    <option value="display-cases">Display Cases</option>
-                                    <option value="custom">Custom Fixtures</option>
-                                    <option value="full-fitout">Complete Store Fit-out</option>
-                                    <option value="other">Other</option>
+                                    <option value="Free 3D Store Design">Free 3D Store Design</option>
+                                    <option value="Gondola Shelving">Gondola Shelving</option>
+                                    <option value="Display Cases">Display Cases</option>
+                                    <option value="Custom Fixtures">Custom Fixtures</option>
+                                    <option value="Complete Store Fit-out">Complete Store Fit-out</option>
+                                    <option value="Other">Other</option>
                                 </select>
                             </div>
 
@@ -285,8 +219,6 @@ export default function ContactPage() {
                                     name="message"
                                     rows={5}
                                     required
-                                    value={formData.message}
-                                    onChange={handleChange}
                                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition resize-none"
                                     placeholder="Tell us about your project, store dimensions, or any questions you have..."
                                 ></textarea>
@@ -294,10 +226,9 @@ export default function ContactPage() {
 
                             <button
                                 type="submit"
-                                disabled={isSubmitting}
-                                className="btn btn-primary w-full text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="btn btn-primary w-full text-lg py-4"
                             >
-                                {isSubmitting ? "Sending..." : "Send Message"}
+                                Send Message
                             </button>
 
                             <p className="text-center text-gray-500 text-sm mt-4">
