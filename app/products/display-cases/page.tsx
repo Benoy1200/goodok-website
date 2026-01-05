@@ -19,25 +19,25 @@ export const metadata: Metadata = {
 const sceneGallery = [
     {
         title: "Jewelry Store",
-        subtitle: "高端珠宝店",
+        subtitle: "Luxury Jewelry",
         description: "Elegant showcases that make diamonds sparkle",
         image: "/images/scenes/jewelry-store.jpg",
     },
     {
         title: "Watch Boutique",
-        subtitle: "钟表精品店",
+        subtitle: "Premium Watches",
         description: "Precision displays for precision timepieces",
         image: "/images/scenes/watch-store.jpg",
     },
     {
         title: "Cosmetics Counter",
-        subtitle: "化妆品柜台",
+        subtitle: "Beauty Counter",
         description: "Illuminated beauty that sells",
         image: "/images/scenes/cosmetics-store.jpg",
     },
     {
         title: "Museum Exhibition",
-        subtitle: "博物馆展览",
+        subtitle: "Museum Display",
         description: "Protect and present priceless artifacts",
         image: "/images/scenes/museum.jpg",
     },
@@ -108,7 +108,7 @@ export default function DisplayCasesPage() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
                             <span className="inline-block bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                                Display Cases • 玻璃展示柜
+                                Display Cases • Glass Showcases
                             </span>
                             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                                 Make Your Products
@@ -239,7 +239,7 @@ export default function DisplayCasesPage() {
                 <div className="container">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold mb-3">Why 500+ Store Owners Trust Us</h2>
-                        <p className="text-gray-600">不仅仅是展示柜，更是您生意的加速器</p>
+                        <p className="text-gray-600">More than display cases - they're your business accelerator</p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {whyChooseUs.map((item) => (
@@ -258,7 +258,7 @@ export default function DisplayCasesPage() {
                 <div className="container">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold mb-3">Real Businesses. Real Results.</h2>
-                        <p className="text-gray-600">看看其他店主是如何使用我们的展示柜提升业绩的</p>
+                        <p className="text-gray-600">See how other store owners boosted their sales with our showcases</p>
                     </div>
                     <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         {caseStudies.map((study) => (
@@ -286,11 +286,6 @@ export default function DisplayCasesPage() {
                                 </div>
                             </Link>
                         ))}
-                    </div>
-                    <div className="text-center mt-8">
-                        <Link href="/projects" className="text-purple-600 font-medium hover:underline">
-                            View All Case Studies →
-                        </Link>
                     </div>
                 </div>
             </section>
