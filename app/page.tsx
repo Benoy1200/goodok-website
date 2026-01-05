@@ -1,0 +1,280 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Goodok Shopfitting | Professional Retail Display & Store Fixtures",
+    template: "%s | Goodok Shopfitting"
+  },
+  description: "Professional retail shelving, display cases, and custom store fixtures. 15+ years experience, free 3D design, global shipping."
+};
+
+// Product categories for showcase
+const productCategories = [
+  {
+    name: "Gondola Shelving",
+    description: "Versatile double-sided shelving for supermarkets and retail stores",
+    href: "/products/gondola-shelving",
+    icon: "🏪",
+  },
+  {
+    name: "Wall Shelving",
+    description: "Space-saving wall-mounted display systems",
+    href: "/products/wall-shelving",
+    icon: "📐",
+  },
+  {
+    name: "Display Cases",
+    description: "Glass showcases for jewelry, cosmetics, and premium products",
+    href: "/products/display-cases",
+    icon: "💎",
+  },
+  {
+    name: "Clothing Racks",
+    description: "Elegant garment displays for boutiques and fashion stores",
+    href: "/products/clothing-racks",
+    icon: "👔",
+  },
+  {
+    name: "Custom Fixtures",
+    description: "Bespoke solutions designed for your unique store concept",
+    href: "/products/custom-fixtures",
+    icon: "✨",
+  },
+  {
+    name: "Store Design",
+    description: "Complete store layout planning and 3D visualization",
+    href: "/free-3d-design",
+    icon: "🎨",
+  },
+];
+
+// Trust indicators
+const stats = [
+  { number: "500+", label: "Stores Delivered" },
+  { number: "15+", label: "Years Experience" },
+  { number: "50+", label: "Countries Served" },
+  { number: "24h", label: "3D Design Delivery" },
+];
+
+// Industries served
+const industries = [
+  { name: "Pop Culture Store (潮玩店)", icon: "🎮", href: "/solutions/pop-culture" },
+  { name: "Stationery Store (文具店)", icon: "✏️", href: "/solutions/stationery" },
+  { name: "Jewelry Store (珠宝店)", icon: "💎", href: "/solutions/jewelry-store" },
+  { name: "Boutique (精品店)", icon: "👗", href: "/solutions/boutique" },
+  { name: "Toy Store (玩具店)", icon: "🧸", href: "/solutions/toy-store" },
+  { name: "Lifestyle Store (生活馆)", icon: "🏠", href: "/solutions/lifestyle" },
+];
+
+// Features
+const features = [
+  {
+    title: "Free 3D Design",
+    description: "Get a professional 3D store layout within 24 hours. Visualize your dream store before ordering.",
+    icon: "🎯",
+  },
+  {
+    title: "Factory Direct Pricing",
+    description: "Cut out the middleman. Work directly with our manufacturing facility for the best prices.",
+    icon: "💰",
+  },
+  {
+    title: "Global Shipping",
+    description: "We ship to over 50 countries. Professional packing ensures safe delivery worldwide.",
+    icon: "🌍",
+  },
+  {
+    title: "Installation Support",
+    description: "Step-by-step installation guides and video tutorials. Remote support when you need it.",
+    icon: "🔧",
+  },
+];
+
+export default function Home() {
+  return (
+    <div className="pt-16">
+      {/* Hero Section */}
+      <section className="gradient-hero min-h-[90vh] flex items-center relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container relative z-10 py-20">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm mb-6">
+              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              Now Serving USA, Middle East &amp; Southeast Asia
+            </div>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              Transform Empty Rooms Into
+              <span className="text-blue-400"> Profitable Stores</span>
+            </h1>
+
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl">
+              Professional retail display solutions from China&apos;s leading manufacturer.
+              Get your <strong className="text-white">FREE 3D store design</strong> in 24 hours.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Link
+                href="/free-3d-design"
+                className="btn bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4"
+              >
+                Get Free 3D Design
+              </Link>
+              <a
+                href="https://api.whatsapp.com/send?phone=8613822102050&text=Hi%20I%20need%20a%203D%20store%20design"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp text-lg px-8 py-4 gap-2"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Chat Now
+              </a>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {stats.map((stat) => (
+                <div key={stat.label} className="text-center md:text-left">
+                  <div className="text-3xl md:text-4xl font-bold text-white">{stat.number}</div>
+                  <div className="text-gray-400 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Offer */}
+      <section className="py-20 bg-gray-50">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Complete Store Display Solutions
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              From single shelving units to complete store fit-outs, we provide everything you need
+              to create a stunning retail environment.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {productCategories.map((category) => (
+              <Link
+                key={category.name}
+                href={category.href}
+                className="card p-6 group"
+              >
+                <div className="text-4xl mb-4">{category.icon}</div>
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">
+                  {category.name}
+                </h3>
+                <p className="text-gray-600">{category.description}</p>
+                <div className="mt-4 text-blue-600 font-medium flex items-center gap-2">
+                  Learn more
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries We Serve */}
+      <section className="py-20">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Industry-Specific Solutions
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              We understand that different retail sectors have unique display requirements.
+              Explore solutions tailored for your industry.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {industries.map((industry) => (
+              <Link
+                key={industry.name}
+                href={industry.href}
+                className="card p-4 text-center group hover:border-blue-500"
+              >
+                <div className="text-3xl mb-2">{industry.icon}</div>
+                <h3 className="font-medium text-sm group-hover:text-blue-600 transition-colors">
+                  {industry.name}
+                </h3>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <Link href="/solutions" className="btn btn-secondary">
+              View All Solutions
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-blue-900 text-white">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Why Store Owners Choose Goodok
+            </h2>
+            <p className="text-blue-200 text-lg max-w-2xl mx-auto">
+              We&apos;re not just a supplier – we&apos;re your partner in creating successful retail spaces.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature) => (
+              <div key={feature.title} className="text-center">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p className="text-blue-200">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800">
+        <div className="container text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Store?
+          </h2>
+          <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+            Get your free 3D store design and see exactly how your new fixtures will look
+            before you order. No commitment required.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/free-3d-design"
+              className="btn bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4"
+            >
+              Get Free 3D Design
+            </Link>
+            <Link
+              href="/contact"
+              className="btn border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4"
+            >
+              Contact Sales Team
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
