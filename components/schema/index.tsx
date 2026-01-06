@@ -76,6 +76,9 @@ export function ProductSchema({
             "@type": "Offer",
             availability: "https://schema.org/InStock",
             priceCurrency: "USD",
+            price: "0",
+            priceValidUntil: "2026-12-31",
+            url: "https://www.goodokshop.com/free-3d-design",
             seller: {
                 "@type": "Organization",
                 name: "Goodok Shopfitting",

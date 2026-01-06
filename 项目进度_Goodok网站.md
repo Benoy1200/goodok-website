@@ -2,7 +2,7 @@
 
 > **项目名称 (Project Name)**：Goodok Shopfitting 官网建设与 SEO 内容运营
 > **网站地址 (Website URL)**：https://www.goodokshop.com
-> **最后更新 (Last Updated)**：2026-01-05 18:05
+> **最后更新 (Last Updated)**：2026-01-06 14:35
 
 ---
 
@@ -51,6 +51,10 @@
 | 8  | Accessories Fixtures (配饰店陈列)         | accessories fixtures   | ✅   |
 | 9  | Gondola vs Wall Shelving (中岛vs墙面货架) | gondola shelving       | ✅   |
 | 10 | Fixtures Wholesale Guide (货架批发指南)   | fixtures wholesale     | ✅   |
+| 11 | Retail Shelving Cost Guide (货架成本指南)  | retail shelving cost   | ✅   |
+| 12 | Gondola Shelving Dimensions (货架尺寸指南)| gondola dimensions     | ✅   |
+| 13 | Store Fixtures vs Custom (标准vs定制)     | standard vs custom     | ✅   |
+| 14 | How to Choose Display Cases (展柜挑选指南) | choose display cases   | ✅   |
 
 ### 第三阶段：产品和解决方案页 (Phase 3: Product & Solution Pages)
 
@@ -101,6 +105,13 @@
 | Cloudflare DNS 托管                       | ✅   | 提升全球访问速度与安全               |
 | 企业邮箱配置 (Cloudflare Email Routing)   | ✅   | info@goodokshop.com -> 企微邮箱      |
 | Solutions 首页链接修复                    | ✅   | 6大行业入口全部打通                  |
+| **WhatsApp 交互升级 (Chat Dialog)**       | ✅   | 弹出式文字对话框，模拟真实对话体验   |
+| **GA4 关键事件追踪 (Event Tracking)**     | ✅   | 对话框打开及消息发送事件已埋点       |
+| **首页 Marquee 动画**                     | ✅   | Industry Solutions 实现无限自动滚动     |
+| **博客内链优化**                          | ✅   | 建立博客 -> 产品页的权重传递路径     |
+| **产品页专业 Schema**                     | ✅   | 为 Display Cases 添加 Product/FAQ 结构化数据 |
+| **社区外链建设 (Reddit)**                  | ✅   | [r/smallbusiness 经验分享贴](https://www.reddit.com/r/smallbusiness/comments/1q1o4nn/started_showing_my_actual_costs_to_customers_and/) |
+| **社区外链建设 (Quora)**                   | ✅   | [How much money does it take to open a boutique?](https://www.quora.com/How-much-money-does-it-take-to-open-a-boutique/answer/Bin-Ting-1?prompt_topic_bio=1) |
 
 ---
 
@@ -150,6 +161,10 @@
   - `https://www.goodokshop.com/resources/blog/accessories-store-fixtures`
   - `https://www.goodokshop.com/resources/blog/gondola-vs-wall-shelving`
   - `https://www.goodokshop.com/resources/blog/retail-fixtures-wholesale-guide`
+  - `https://www.goodokshop.com/resources/blog/retail-shelving-cost-guide`
+  - `https://www.goodokshop.com/resources/blog/gondola-shelving-dimensions`
+  - `https://www.goodokshop.com/resources/blog/store-fixtures-vs-custom`
+  - `https://www.goodokshop.com/resources/blog/how-to-choose-display-cases`
 ---
 
 ## 🖼️ 待添加图片需求清单 (Image Requirement List)
@@ -253,6 +268,7 @@
 | ------ | ------------------------ | ------- |
 | 🟢     | 继续博客内容创作 Phase 2 | ⏳ 待做 |
 | 🟢 完成 | Google Analytics 集成    | ✅ 已上线 |
+| 🟢     | **Reddit/Quora 社区推广**| 🔄 进行中 |
 | 🟢     | 开始 TikTok 内容发布     | ⏳ 待做 |
 
 ---
@@ -306,7 +322,18 @@ E:\retail-miniapp-backend\goodok-website\
 ## 📅 更新日志 (Update Log)
 
 ### 2026-01-05
-### 2026-01-05 (最新 - 基础设施重构)
+### 2026-01-06 (最新 - 转化与 SEO 深化)
+
+- ✅ **WhatsApp 客服升级**: 实现了点击图标弹出对话框，支持用户预载/输入文字并发送至 WhatsApp，极大提升了用户体验。
+- ✅ **GA4 转化追踪**: 在 Google Analytics 4 中成功采集到 `whatsapp_dialog_open` 和 `whatsapp_message_sent` 事件，数据流正式连通。
+- ✅ **SEO 内容扩充 (长尾词)**: 新增 4 篇针对高意向关键词的博客文章，使全站博客总数达到 14 篇。
+- ✅ **结构化数据 (Schema)**: 为核心产品页 (`Display Cases`) 部署了 `Product` 和 `FAQ` 结构化数据，争取搜索结果富文本展示。
+- ✅ **内链架构优化**: 手动优化了博客与产品页之间的链接通路，提升核心产品页的权重。
+- ✅ **移动端交互优化**: 对 WhatsApp 弹窗组件进行了不同尺寸手机的适配测试，确保 iPhone/Android 体验良好。
+- ✅ **首页交互增强**: "Industry Solutions" 模块加入无限自动滚动 (Marquee) 动画效果，增强吸引力。
+- ✅ **社区外链建设**: 在 Reddit (r/smallbusiness) 和 Quora 完成了首批专业内容植入，建立了高质量外部链接。
+
+### 2026-01-05 (基础设施重构)
 
 - ✅ **紧急仓库修复**: 解决仓库混淆问题，回滚 `jewelry-display-website` 并创建独立仓库 `Benoy1200/goodok-website`
 - ✅ **表单系统升级**: Contact 页面从 Resend 迁移至 **FormSubmit** (免验证/更稳定/直达 Gmail)
@@ -320,6 +347,8 @@ E:\retail-miniapp-backend\goodok-website\
 - ✅ 整理详细图片需求清单 (Image List)
 - ✅ 整理 GSC 手动提交 URL 清单 (URL List)
 - ✅ 确认网站技术架构及 SEO 部署完成
+- ✅ **样式修复**: 修复了 Footer 在已访问状态下链接不可见的 bug (text-white)
+- ✅ **Marquee 实现**: 首页 "Industry Solutions" 实现无限自动滚动及悬停暂停功能
 
 ### 2026-01-04 (第二次更新)
 
