@@ -191,9 +191,9 @@ const features = [
 export default function Home() {
   return (
     <div className="pt-16">
-      {/* Hero Section */}
-      <section className="min-h-[90vh] flex items-center relative overflow-hidden">
-        {/* Background Image */}
+      {/* Hero Section - 推荐背景图比例 16:9 (1920x1080) */}
+      <section className="h-[80vh] relative overflow-hidden">
+        {/* Background Image - 无蒙版 */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero-bg.jpg"
@@ -202,43 +202,28 @@ export default function Home() {
             priority
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gray-900/70"></div>
         </div>
 
-        <div className="container relative z-10 py-20">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm mb-6">
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-              Now Serving USA, Middle East &amp; Southeast Asia
-            </div>
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Transform Empty Rooms Into
-              <span className="text-blue-400"> Profitable Stores</span>
-            </h1>
-
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-              Professional retail display solutions from China&apos;s leading manufacturer.
-              Get your <strong className="text-white">FREE 3D store design</strong> in 24 hours.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+        {/* 底部内容区 */}
+        <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-20 pb-8">
+          <div className="container">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+              {/* 左侧文字 */}
+              <div>
+                <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                  Professional Retail Display Solutions
+                </h1>
+                <p className="text-gray-300 text-sm md:text-base">
+                  Free 3D Design · Factory Direct · Global Shipping
+                </p>
+              </div>
+              {/* 右侧按钮 */}
               <Link
                 href="/free-3d-design"
-                className="btn bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4"
+                className="btn bg-white text-gray-900 hover:bg-gray-100 px-6 py-3 whitespace-nowrap"
               >
                 Get Free 3D Design
               </Link>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {heroStats.map((stat) => (
-                <div key={stat.label} className="text-center md:text-left">
-                  <div className="text-3xl md:text-4xl font-bold text-white">{stat.number}</div>
-                  <div className="text-gray-400 text-sm">{stat.label}</div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
