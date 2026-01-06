@@ -205,19 +205,19 @@ export default function Home() {
         </div>
 
         {/* 底部内容区 */}
-        <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-20 pb-8">
+        <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16 pb-8">
           <div className="container">
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div className="flex flex-col md:flex-row md:items-center gap-4">
               {/* 左侧文字 */}
-              <div>
-                <h1 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              <div className="flex-1">
+                <h1 className="text-2xl md:text-3xl font-bold text-white mb-1">
                   Professional Retail Display Solutions
                 </h1>
                 <p className="text-gray-300 text-sm md:text-base">
                   Free 3D Design · Factory Direct · Global Shipping
                 </p>
               </div>
-              {/* 右侧按钮 */}
+              {/* 按钮 */}
               <Link
                 href="/free-3d-design"
                 className="btn bg-white text-gray-900 hover:bg-gray-100 px-6 py-3 whitespace-nowrap"
