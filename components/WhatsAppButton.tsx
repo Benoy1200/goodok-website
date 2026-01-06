@@ -2,17 +2,31 @@
 
 import { useState, useEffect } from "react";
 
-const WHATSAPP_LINK = "https://wa.me/message/BUYXXY5BWYOWE1";
+const WHATSAPP_NUMBER = "8613822102050";
 
 export default function WhatsAppButton() {
     const [isVisible, setIsVisible] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+    const [message, setMessage] = useState("");
 
     useEffect(() => {
         // Show button after a short delay for better UX
         const timer = setTimeout(() => setIsVisible(true), 1000);
         return () => clearTimeout(timer);
     }, []);
+
+    const handleSend = () => {
+        const text = message.trim() || "Hi, I need help with retail fixtures";
+        const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+        window.open(whatsappUrl, "_blank");
+    };
+
+    const handleKeyPress = (e: React.KeyboardEvent) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            handleSend();
+        }
+    };
 
     if (!isVisible) return null;
 
@@ -22,20 +36,27 @@ export default function WhatsAppButton() {
             {isOpen && (
                 <div className="absolute bottom-20 left-0 w-80 bg-white rounded-2xl shadow-2xl overflow-hidden animate-fadeInUp">
                     {/* Header */}
-                    <div className="bg-[#075E54] px-4 py-4">
+                    <div className="bg-[#075E54] px-4 py-4 relative">
                         <div className="flex items-center gap-3">
                             <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-                                <span className="text-2xl">G</span>
+                                <span className="text-white text-xl font-bold">G</span>
                             </div>
                             <div>
                                 <h4 className="text-white font-semibold">Goodok Support</h4>
                                 <p className="text-green-200 text-xs">Typically replies within minutes</p>
                             </div>
                         </div>
+                        {/* Close button */}
+                        <button
+                            onClick={() => setIsOpen(false)}
+                            className="absolute top-2 right-2 w-6 h-6 rounded-full text-white/70 hover:text-white flex items-center justify-center transition"
+                        >
+                            ×
+                        </button>
                     </div>
 
                     {/* Chat Content */}
-                    <div className="p-4 bg-[#ECE5DD]">
+                    <div className="p-4 bg-[#ECE5DD] min-h-[100px]">
                         <div className="bg-white rounded-lg p-3 shadow-sm max-w-[85%]">
                             <p className="text-gray-700 text-sm">
                                 👋 How may I help you? :)
@@ -46,33 +67,23 @@ export default function WhatsAppButton() {
 
                     {/* Input Area */}
                     <div className="p-3 bg-[#F0F0F0] flex items-center gap-2">
-                        <a
-                            href={WHATSAPP_LINK}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex-1 bg-white rounded-full px-4 py-2 text-gray-500 text-sm hover:bg-gray-50 transition flex items-center gap-2"
-                        >
-                            <span>Write your message...</span>
-                        </a>
-                        <a
-                            href={WHATSAPP_LINK}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center hover:bg-[#128C7E] transition"
+                        <input
+                            type="text"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                            onKeyPress={handleKeyPress}
+                            placeholder="Write your message..."
+                            className="flex-1 bg-white rounded-full px-4 py-2 text-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                        />
+                        <button
+                            onClick={handleSend}
+                            className="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center hover:bg-[#128C7E] transition flex-shrink-0"
                         >
                             <svg className="w-5 h-5 fill-white" viewBox="0 0 24 24">
                                 <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
                             </svg>
-                        </a>
+                        </button>
                     </div>
-
-                    {/* Close button */}
-                    <button
-                        onClick={() => setIsOpen(false)}
-                        className="absolute top-2 right-2 w-6 h-6 rounded-full bg-black/20 text-white flex items-center justify-center hover:bg-black/30 transition"
-                    >
-                        ×
-                    </button>
                 </div>
             )}
 
