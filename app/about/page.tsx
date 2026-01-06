@@ -40,10 +40,10 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Gallery - 3 Images Full Width */}
+            {/* Gallery - 3 Full Width Images */}
             <section className="py-0">
-                {/* Office Team - Full Width */}
-                <div className="relative h-[60vh] min-h-[400px]">
+                {/* Office Team */}
+                <div className="relative h-[70vh] min-h-[500px]">
                     <Image
                         src="/images/about/office-team.jpg"
                         alt="Goodok professional team - designers and sales staff"
@@ -58,36 +58,33 @@ export default function AboutPage() {
                     </div>
                 </div>
 
-                {/* Two Column: Factory + Warehouse */}
-                <div className="grid md:grid-cols-2">
-                    {/* Factory Workshop */}
-                    <div className="relative h-[50vh] min-h-[350px]">
-                        <Image
-                            src="/images/about/factory-workshop.jpg"
-                            alt="Goodok factory workshop - manufacturing facility"
-                            fill
-                            className="object-cover"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                        <div className="absolute bottom-8 left-8 text-white">
-                            <h2 className="text-2xl md:text-3xl font-bold mb-2">Factory</h2>
-                            <p className="text-gray-200">15,000 sqm manufacturing facility</p>
-                        </div>
+                {/* Factory Workshop */}
+                <div className="relative h-[70vh] min-h-[500px]">
+                    <Image
+                        src="/images/about/factory-workshop.jpg"
+                        alt="Goodok factory workshop - manufacturing facility"
+                        fill
+                        className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-8 left-8 text-white">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-2">Factory</h2>
+                        <p className="text-lg text-gray-200">15,000 sqm manufacturing facility in Foshan</p>
                     </div>
+                </div>
 
-                    {/* Warehouse */}
-                    <div className="relative h-[50vh] min-h-[350px]">
-                        <Image
-                            src="/images/about/warehouse.jpg"
-                            alt="Goodok warehouse - products ready for global shipping"
-                            fill
-                            className="object-cover"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                        <div className="absolute bottom-8 left-8 text-white">
-                            <h2 className="text-2xl md:text-3xl font-bold mb-2">Warehouse</h2>
-                            <p className="text-gray-200">Ready for global shipping</p>
-                        </div>
+                {/* Warehouse */}
+                <div className="relative h-[70vh] min-h-[500px]">
+                    <Image
+                        src="/images/about/warehouse.jpg"
+                        alt="Goodok warehouse - products ready for global shipping"
+                        fill
+                        className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-8 left-8 text-white">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-2">Warehouse</h2>
+                        <p className="text-lg text-gray-200">Ready for global shipping to 50+ countries</p>
                     </div>
                 </div>
             </section>
