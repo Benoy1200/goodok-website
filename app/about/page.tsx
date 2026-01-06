@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
     return (
-        <div className="pt-24 pb-16">
-            <div className="container max-w-5xl mx-auto space-y-8">
+        <div className="pt-24">
+            <div className="container max-w-5xl mx-auto">
                 {/* Image 1: Office Team */}
-                <div className="relative aspect-[2/3] rounded-xl overflow-hidden shadow-lg">
+                <div className="relative aspect-[2/3] overflow-hidden">
                     <Image
                         src="/images/about/office-team.jpg"
                         alt="Goodok professional team"
@@ -23,7 +23,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Image 2: Factory Workshop */}
-                <div className="relative aspect-[2/3] rounded-xl overflow-hidden shadow-lg">
+                <div className="relative aspect-[2/3] overflow-hidden">
                     <Image
                         src="/images/about/factory-workshop.jpg"
                         alt="Goodok factory workshop"
@@ -33,7 +33,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Image 3: Warehouse */}
-                <div className="relative aspect-[2/3] rounded-xl overflow-hidden shadow-lg">
+                <div className="relative aspect-[2/3] overflow-hidden">
                     <Image
                         src="/images/about/warehouse.jpg"
                         alt="Goodok warehouse"
