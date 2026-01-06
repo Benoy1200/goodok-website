@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import HeroCarousel from "@/components/HeroCarousel";
 
 export const metadata: Metadata = {
   title: {
@@ -191,18 +191,10 @@ const features = [
 export default function Home() {
   return (
     <div className="pt-16">
-      {/* Hero Section - 推荐背景图比例 16:9 (1920x1080) */}
+      {/* Hero Section - 5张图片轮播 */}
       <section className="h-[80vh] relative overflow-hidden">
-        {/* Background Image - 无蒙版 */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero-bg.jpg"
-            alt="Retail store display"
-            fill
-            priority
-            className="object-cover"
-          />
-        </div>
+        {/* Background Carousel */}
+        <HeroCarousel />
 
         {/* 底部内容区 */}
         <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16 pb-8">
