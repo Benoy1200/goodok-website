@@ -8,107 +8,31 @@ export const metadata: Metadata = {
         "Learn about Goodok Shopfitting - China's leading retail display manufacturer with 15+ years experience, serving 500+ stores in over 50 countries worldwide.",
 };
 
-const milestones = [
-    { year: "2009", event: "Founded in Guangdong, China" },
-    { year: "2012", event: "First international export to Southeast Asia" },
-    { year: "2015", event: "Expanded to Middle East market" },
-    { year: "2018", event: "Reached 200+ stores delivered milestone" },
-    { year: "2020", event: "Launched 3D design visualization service" },
-    { year: "2023", event: "500+ stores delivered globally" },
-    { year: "2024", event: "Opened USA distribution partnerships" },
-];
-
-const values = [
-    {
-        icon: "🎯",
-        title: "Quality First",
-        description:
-            "Every fixture leaves our factory after rigorous quality checks. We use premium materials and manufacturing processes.",
-    },
-    {
-        icon: "🤝",
-        title: "Customer Partnership",
-        description:
-            "We're not just suppliers — we're partners in your success. Your store's performance is our priority.",
-    },
-    {
-        icon: "💡",
-        title: "Innovation",
-        description:
-            "From 3D design visualization to smart shelving solutions, we continuously evolve to serve you better.",
-    },
-    {
-        icon: "🌍",
-        title: "Global Reach",
-        description:
-            "Serving stores across 50+ countries with reliable shipping and local support when you need it.",
-    },
-];
-
-const certifications = [
-    "ISO 9001:2015 Quality Management",
-    "ISO 14001 Environmental Management",
-    "CE Certified Products",
-    "SGS Tested Materials",
-];
-
 export default function AboutPage() {
     return (
         <div className="pt-24">
-            {/* Hero Section */}
-            <section className="bg-gray-50 py-16">
+            {/* Hero with Stats */}
+            <section className="bg-gradient-to-br from-blue-900 to-gray-900 text-white py-20">
                 <div className="container">
-                    <div className="max-w-3xl">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                            About Goodok Shopfitting
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                            Goodok Shopfitting
                         </h1>
-                        <p className="text-xl text-gray-600 mb-8">
-                            For over 15 years, we&apos;ve been helping store owners around the
-                            world create stunning retail environments that drive sales and
-                            delight customers.
+                        <p className="text-xl md:text-2xl text-blue-200 mb-12">
+                            Professional Retail Display Manufacturer Since 2009
                         </p>
-                    </div>
-                </div>
-            </section>
 
-            {/* Story Section */}
-            <section className="py-16">
-                <div className="container">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <h2 className="text-3xl font-bold mb-6">Our Story</h2>
-                            <div className="space-y-4 text-gray-600">
-                                <p>
-                                    Goodok Shopfitting began in 2009 with a simple mission: to make
-                                    professional retail display solutions accessible to store owners
-                                    everywhere — not just big chains with big budgets.
-                                </p>
-                                <p>
-                                    Starting from a small workshop in Guangdong, China, we&apos;ve grown
-                                    into a full-scale manufacturing facility serving customers across
-                                    6 continents. Our team of 50+ craftsmen and designers work together
-                                    to bring your store vision to life.
-                                </p>
-                                <p>
-                                    What sets us apart? We believe every store owner deserves the same
-                                    level of service that major retailers receive. That&apos;s why we offer
-                                    free 3D design consultations, factory-direct pricing, and dedicated
-                                    support from inquiry to installation.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Stats */}
-                        <div className="grid grid-cols-2 gap-6">
+                        {/* Stats Row */}
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
                             {[
-                                { number: "500+", label: "Stores Delivered" },
-                                { number: "15+", label: "Years Experience" },
-                                { number: "50+", label: "Countries Served" },
-                                { number: "50+", label: "Team Members" },
+                                { number: "15+", label: "Years" },
+                                { number: "500+", label: "Stores" },
+                                { number: "50+", label: "Countries" },
+                                { number: "50+", label: "Team" },
                             ].map((stat) => (
-                                <div key={stat.label} className="bg-blue-50 rounded-xl p-6 text-center">
-                                    <div className="text-4xl font-bold text-blue-600">{stat.number}</div>
-                                    <div className="text-gray-600">{stat.label}</div>
+                                <div key={stat.label} className="text-center">
+                                    <div className="text-4xl md:text-5xl font-bold text-white">{stat.number}</div>
+                                    <div className="text-blue-300 text-sm uppercase tracking-wide">{stat.label}</div>
                                 </div>
                             ))}
                         </div>
@@ -116,184 +40,73 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Values */}
-            <section className="py-16 bg-gray-50">
-                <div className="container">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold mb-4">Our Values</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
-                            The principles that guide everything we do
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {values.map((value) => (
-                            <div key={value.title} className="text-center">
-                                <div className="text-5xl mb-4">{value.icon}</div>
-                                <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-                                <p className="text-gray-600">{value.description}</p>
-                            </div>
-                        ))}
+            {/* Gallery - 3 Images Full Width */}
+            <section className="py-0">
+                {/* Office Team - Full Width */}
+                <div className="relative h-[60vh] min-h-[400px]">
+                    <Image
+                        src="/images/about/office-team.jpg"
+                        alt="Goodok professional team - designers and sales staff"
+                        fill
+                        priority
+                        className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-8 left-8 text-white">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-2">Our Team</h2>
+                        <p className="text-lg text-gray-200">50+ professionals dedicated to your success</p>
                     </div>
                 </div>
-            </section>
 
-            {/* Factory & Team Section */}
-            <section className="py-16">
-                <div className="container">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold mb-4">Our Factory & Team</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
-                            A glimpse into our manufacturing facility and the dedicated team behind every project
-                        </p>
+                {/* Two Column: Factory + Warehouse */}
+                <div className="grid md:grid-cols-2">
+                    {/* Factory Workshop */}
+                    <div className="relative h-[50vh] min-h-[350px]">
+                        <Image
+                            src="/images/about/factory-workshop.jpg"
+                            alt="Goodok factory workshop - manufacturing facility"
+                            fill
+                            className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                        <div className="absolute bottom-8 left-8 text-white">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-2">Factory</h2>
+                            <p className="text-gray-200">15,000 sqm manufacturing facility</p>
+                        </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {/* Factory Workshop */}
-                        <div className="relative h-64 rounded-xl overflow-hidden group">
-                            <Image
-                                src="/images/about/factory-workshop.jpg"
-                                alt="Goodok factory workshop - manufacturing facility"
-                                fill
-                                className="object-cover transition-transform group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                            <div className="absolute bottom-4 left-4 text-white">
-                                <div className="font-semibold">Factory Workshop</div>
-                                <div className="text-sm text-gray-300">Foshan, Guangdong</div>
-                            </div>
-                        </div>
-
-                        {/* Production Line */}
-                        <div className="relative h-64 rounded-xl overflow-hidden group">
-                            <Image
-                                src="/images/about/production-line.jpg"
-                                alt="Goodok production line - workers manufacturing retail fixtures"
-                                fill
-                                className="object-cover transition-transform group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                            <div className="absolute bottom-4 left-4 text-white">
-                                <div className="font-semibold">Production Line</div>
-                                <div className="text-sm text-gray-300">Skilled craftsmen at work</div>
-                            </div>
-                        </div>
-
-                        {/* Office Team */}
-                        <div className="relative h-64 rounded-xl overflow-hidden group">
-                            <Image
-                                src="/images/about/office-team.jpg"
-                                alt="Goodok office team - professional designers and staff"
-                                fill
-                                className="object-cover transition-transform group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                            <div className="absolute bottom-4 left-4 text-white">
-                                <div className="font-semibold">Our Team</div>
-                                <div className="text-sm text-gray-300">50+ professionals</div>
-                            </div>
-                        </div>
-
-                        {/* Warehouse */}
-                        <div className="relative h-64 rounded-xl overflow-hidden group">
-                            <Image
-                                src="/images/about/warehouse.jpg"
-                                alt="Goodok warehouse - finished products ready for shipping"
-                                fill
-                                className="object-cover transition-transform group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                            <div className="absolute bottom-4 left-4 text-white">
-                                <div className="font-semibold">Warehouse</div>
-                                <div className="text-sm text-gray-300">Ready for global shipping</div>
-                            </div>
+                    {/* Warehouse */}
+                    <div className="relative h-[50vh] min-h-[350px]">
+                        <Image
+                            src="/images/about/warehouse.jpg"
+                            alt="Goodok warehouse - products ready for global shipping"
+                            fill
+                            className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                        <div className="absolute bottom-8 left-8 text-white">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-2">Warehouse</h2>
+                            <p className="text-gray-200">Ready for global shipping</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Timeline */}
-            <section className="py-16 bg-gray-50">
-                <div className="container">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold mb-4">Our Journey</h2>
-                    </div>
-
-                    <div className="max-w-3xl mx-auto">
-                        <div className="space-y-6">
-                            {milestones.map((milestone, index) => (
-                                <div key={milestone.year} className="flex gap-6">
-                                    <div className="flex flex-col items-center">
-                                        <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
-                                            {milestone.year.slice(-2)}
-                                        </div>
-                                        {index < milestones.length - 1 && (
-                                            <div className="w-0.5 h-full bg-blue-200 my-2"></div>
-                                        )}
-                                    </div>
-                                    <div className="pb-8">
-                                        <div className="text-sm text-blue-600 font-semibold">{milestone.year}</div>
-                                        <div className="text-lg font-medium">{milestone.event}</div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Certifications */}
-            <section className="py-16 bg-gray-50">
-                <div className="container">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold mb-4">Quality Certifications</h2>
-                        <p className="text-gray-600">
-                            Our commitment to quality is backed by international certifications
-                        </p>
-                    </div>
-
-                    <div className="flex flex-wrap justify-center gap-4">
-                        {certifications.map((cert) => (
-                            <div
-                                key={cert}
-                                className="flex items-center gap-2 bg-white border border-gray-200 rounded-lg px-6 py-4"
-                            >
-                                <svg
-                                    className="w-5 h-5 text-green-500"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                                    />
-                                </svg>
-                                <span className="font-medium">{cert}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section className="py-16 bg-gray-900 text-white">
+            {/* Simple CTA */}
+            <section className="py-16 bg-blue-600 text-white">
                 <div className="container text-center">
                     <h2 className="text-3xl font-bold mb-4">
-                        Let&apos;s Build Something Great Together
+                        Ready to Transform Your Store?
                     </h2>
-                    <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                        Whether you&apos;re opening a new store or renovating an existing space,
-                        we&apos;re here to help you create a retail environment that works.
+                    <p className="text-blue-100 mb-8 max-w-xl mx-auto">
+                        Get a free 3D store design and factory-direct pricing
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href="/free-3d-design" className="btn bg-white text-gray-900 hover:bg-gray-100">
-                            Get Free Store Design
+                        <Link href="/free-3d-design" className="btn bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8">
+                            Get Free 3D Design
                         </Link>
-                        <Link href="/contact" className="btn border-2 border-white text-white hover:bg-white hover:text-gray-900">
-                            Contact Our Team
+                        <Link href="/contact" className="btn border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8">
+                            Contact Us
                         </Link>
                     </div>
                 </div>
