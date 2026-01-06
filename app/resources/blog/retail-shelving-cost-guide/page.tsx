@@ -94,27 +94,27 @@ export default function RetailShelvingCostGuide() {
                                         </thead>
                                         <tbody>
                                             <tr className="border-t">
-                                                <td className="px-4 py-3">Gondola Shelving</td>
+                                                <td className="px-4 py-3"><Link href="/products/gondola-shelving" className="text-green-600 hover:underline">Gondola Shelving</Link></td>
                                                 <td className="px-4 py-3">$150 - $600</td>
                                                 <td className="px-4 py-3">Supermarkets, convenience stores</td>
                                             </tr>
                                             <tr className="border-t">
-                                                <td className="px-4 py-3">Wall Shelving</td>
+                                                <td className="px-4 py-3"><Link href="/products/wall-shelving" className="text-green-600 hover:underline">Wall Shelving</Link></td>
                                                 <td className="px-4 py-3">$80 - $350</td>
                                                 <td className="px-4 py-3">Boutiques, small retail</td>
                                             </tr>
                                             <tr className="border-t">
-                                                <td className="px-4 py-3">Glass Display Cases</td>
+                                                <td className="px-4 py-3"><Link href="/products/display-cases" className="text-green-600 hover:underline">Glass Display Cases</Link></td>
                                                 <td className="px-4 py-3">$200 - $1,500+</td>
                                                 <td className="px-4 py-3">Jewelry, electronics, collectibles</td>
                                             </tr>
                                             <tr className="border-t">
-                                                <td className="px-4 py-3">Clothing Racks</td>
+                                                <td className="px-4 py-3"><Link href="/products/clothing-racks" className="text-green-600 hover:underline">Clothing Racks</Link></td>
                                                 <td className="px-4 py-3">$50 - $300</td>
                                                 <td className="px-4 py-3">Fashion retail, apparel</td>
                                             </tr>
                                             <tr className="border-t">
-                                                <td className="px-4 py-3">Custom Fixtures</td>
+                                                <td className="px-4 py-3"><Link href="/products/custom-fixtures" className="text-green-600 hover:underline">Custom Fixtures</Link></td>
                                                 <td className="px-4 py-3">$500 - $5,000+</td>
                                                 <td className="px-4 py-3">Brand stores, unique displays</td>
                                             </tr>

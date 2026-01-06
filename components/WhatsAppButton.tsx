@@ -2,6 +2,13 @@
 
 import { useState, useEffect } from "react";
 
+// Extend Window interface for gtag
+declare global {
+    interface Window {
+        gtag?: (command: string, action: string, params?: Record<string, unknown>) => void;
+    }
+}
+
 const WHATSAPP_NUMBER = "8613822102050";
 
 export default function WhatsAppButton() {
@@ -15,9 +22,33 @@ export default function WhatsAppButton() {
         return () => clearTimeout(timer);
     }, []);
 
+    // Track WhatsApp dialog open
+    const handleToggle = () => {
+        const newState = !isOpen;
+        setIsOpen(newState);
+
+        // GA4 Event: WhatsApp dialog opened
+        if (newState && typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'whatsapp_dialog_open', {
+                event_category: 'engagement',
+                event_label: 'WhatsApp Chat Widget',
+            });
+        }
+    };
+
     const handleSend = () => {
         const text = message.trim() || "Hi, I need help with retail fixtures";
         const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+
+        // GA4 Event: WhatsApp message sent (conversion event)
+        if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'whatsapp_message_sent', {
+                event_category: 'conversion',
+                event_label: 'WhatsApp Lead',
+                value: 1,
+            });
+        }
+
         window.open(whatsappUrl, "_blank");
     };
 
@@ -89,7 +120,7 @@ export default function WhatsAppButton() {
 
             {/* WhatsApp Icon Button */}
             <button
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={handleToggle}
                 className="group relative"
                 aria-label="Chat on WhatsApp"
             >
