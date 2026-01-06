@@ -13,6 +13,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.goodokshop.com"),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     default: "Goodok Shopfitting | Retail Display & Store Fixture Manufacturer",
     template: "%s | Goodok Shopfitting",
