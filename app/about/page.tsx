@@ -148,40 +148,42 @@ export default function AboutPage() {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-6">
-                        {/* Factory Images */}
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {/* Factory Workshop */}
                         <div className="relative h-64 rounded-xl overflow-hidden group">
                             <Image
-                                src="/images/factory-1.jpg"
-                                alt="Goodok factory floor - manufacturing facility"
+                                src="/images/about/factory-workshop.jpg"
+                                alt="Goodok factory workshop - manufacturing facility"
                                 fill
                                 className="object-cover transition-transform group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                             <div className="absolute bottom-4 left-4 text-white">
-                                <div className="font-semibold">Manufacturing Facility</div>
+                                <div className="font-semibold">Factory Workshop</div>
                                 <div className="text-sm text-gray-300">Foshan, Guangdong</div>
                             </div>
                         </div>
 
+                        {/* Production Line */}
                         <div className="relative h-64 rounded-xl overflow-hidden group">
                             <Image
-                                src="/images/factory-2.jpg"
-                                alt="Goodok workshop - production area"
+                                src="/images/about/production-line.jpg"
+                                alt="Goodok production line - workers manufacturing retail fixtures"
                                 fill
                                 className="object-cover transition-transform group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                             <div className="absolute bottom-4 left-4 text-white">
-                                <div className="font-semibold">Production Workshop</div>
-                                <div className="text-sm text-gray-300">5000 sqm facility</div>
+                                <div className="font-semibold">Production Line</div>
+                                <div className="text-sm text-gray-300">Skilled craftsmen at work</div>
                             </div>
                         </div>
 
+                        {/* Office Team */}
                         <div className="relative h-64 rounded-xl overflow-hidden group">
                             <Image
-                                src="/images/team-1.jpg"
-                                alt="Goodok team - professional designers and craftsmen"
+                                src="/images/about/office-team.jpg"
+                                alt="Goodok office team - professional designers and staff"
                                 fill
                                 className="object-cover transition-transform group-hover:scale-105"
                             />
@@ -189,6 +191,21 @@ export default function AboutPage() {
                             <div className="absolute bottom-4 left-4 text-white">
                                 <div className="font-semibold">Our Team</div>
                                 <div className="text-sm text-gray-300">50+ professionals</div>
+                            </div>
+                        </div>
+
+                        {/* Warehouse */}
+                        <div className="relative h-64 rounded-xl overflow-hidden group">
+                            <Image
+                                src="/images/about/warehouse.jpg"
+                                alt="Goodok warehouse - finished products ready for shipping"
+                                fill
+                                className="object-cover transition-transform group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div className="absolute bottom-4 left-4 text-white">
+                                <div className="font-semibold">Warehouse</div>
+                                <div className="text-sm text-gray-300">Ready for global shipping</div>
                             </div>
                         </div>
                     </div>
