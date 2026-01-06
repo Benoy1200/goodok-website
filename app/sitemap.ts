@@ -34,6 +34,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         "/resources/blog/accessories-store-fixtures",
         "/resources/blog/gondola-vs-wall-shelving",
         "/resources/blog/retail-fixtures-wholesale-guide",
+        "/resources/blog/retail-shelving-cost-guide",
+        "/resources/blog/gondola-shelving-dimensions",
+        "/resources/blog/store-fixtures-vs-custom",
+        "/resources/blog/how-to-choose-display-cases",
         "/privacy",
         "/terms",
     ];
