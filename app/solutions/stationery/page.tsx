@@ -38,11 +38,11 @@ export default function StationerySolutionPage() {
                 <div className="container">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <span className="text-[#F4E7CF] text-sm font-medium">Solutions / Stationery Store</span>
+                            <span className="text-white text-sm font-medium">Solutions / Stationery Store</span>
                             <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
                                 Stationery Store
                             </h1>
-                            <p className="text-xl text-[#F8F1E3] mb-8">
+                            <p className="text-xl text-white mb-8">
                                 Create an organized and inspiring shopping experience for students,
                                 artists, and office professionals with our specialized fixtures.
                             </p>

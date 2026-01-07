@@ -65,7 +65,7 @@ export default function CosmeticsRetailPage() {
 
                         {/* Featured Image */}
                         <div className="aspect-video bg-gradient-to-br from-[#f8f9fa] to-[#f8f9fa] rounded-xl flex items-center justify-center mb-12">
-                            <span className="text-8xl">馃拕</span>
+                            <span className="text-8xl">💄</span>
                         </div>
 
                         {/* Key Features */}
@@ -79,14 +79,14 @@ export default function CosmeticsRetailPage() {
                                 </p>
                             </div>
                             <div className="bg-gray-50 rounded-xl p-6">
-                                <span className="text-4xl mb-4 block">馃挕</span>
+                                <span className="text-4xl mb-4 block">💡</span>
                                 <h3 className="font-bold mb-2">LED Lighting</h3>
                                 <p className="text-gray-600 text-sm">
                                     Premium LED lighting to highlight products and create an inviting atmosphere.
                                 </p>
                             </div>
                             <div className="bg-gray-50 rounded-xl p-6">
-                                <span className="text-4xl mb-4 block">馃И</span>
+                                <span className="text-4xl mb-4 block">🪞</span>
                                 <h3 className="font-bold mb-2">Testing Stations</h3>
                                 <p className="text-gray-600 text-sm">
                                     Custom makeup testing stations with mirrors and proper lighting.

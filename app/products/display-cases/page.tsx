@@ -78,17 +78,17 @@ const caseStudies = [
 // Why choose us points
 const whyChooseUs = [
     {
-        icon: "馃彮",
+        icon: "🏭",
         title: "Factory Direct",
-        description: "Cut out middlemen. Work directly with our 15,000銕?manufacturing facility.",
+        description: "Cut out middlemen. Work directly with our 15,000㎡ manufacturing facility.",
     },
     {
-        icon: "馃摝",
+        icon: "📦",
         title: "Safe Delivery",
         description: "Triple-layer packaging. We've shipped to 50+ countries without a single damage claim.",
     },
     {
-        icon: "馃帹",
+        icon: "🎨",
         title: "Free 3D Design",
         description: "See your showcase in your store before ordering. 24-hour turnaround.",
     },

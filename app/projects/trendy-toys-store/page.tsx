@@ -65,28 +65,28 @@ export default function TrendyToysStorePage() {
 
                         {/* Featured Image */}
                         <div className="aspect-video bg-gradient-to-br from-[#f8f9fa] to-[#f8f9fa] rounded-xl flex items-center justify-center mb-12">
-                            <span className="text-8xl">馃彧</span>
+                            <span className="text-8xl">🏪</span>
                         </div>
 
                         {/* Key Features */}
                         <h2 className="text-3xl font-bold mb-8">Key Features</h2>
                         <div className="grid md:grid-cols-3 gap-6 mb-12">
                             <div className="bg-gray-50 rounded-xl p-6">
-                                <span className="text-4xl mb-4 block">馃挕</span>
+                                <span className="text-4xl mb-4 block">💡</span>
                                 <h3 className="font-bold mb-2">Custom LED Showcases</h3>
                                 <p className="text-gray-600 text-sm">
                                     High-quality LED lighting to highlight premium collectibles and create an immersive atmosphere.
                                 </p>
                             </div>
                             <div className="bg-gray-50 rounded-xl p-6">
-                                <span className="text-4xl mb-4 block">馃幃</span>
+                                <span className="text-4xl mb-4 block">🎬</span>
                                 <h3 className="font-bold mb-2">Interactive Demo Area</h3>
                                 <p className="text-gray-600 text-sm">
                                     Dedicated space for customers to try products with accessible displays and comfortable seating.
                                 </p>
                             </div>
                             <div className="bg-gray-50 rounded-xl p-6">
-                                <span className="text-4xl mb-4 block">馃敀</span>
+                                <span className="text-4xl mb-4 block">🔒</span>
                                 <h3 className="font-bold mb-2">Secure Lockable Displays</h3>
                                 <p className="text-gray-600 text-sm">
                                     Tempered glass cases with secure locks for high-value items and limited edition figures.

@@ -39,11 +39,11 @@ export default function BoutiqueSolutionPage() {
                 <div className="container">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <span className="text-[#f8f9fa] text-sm font-medium">Solutions / Boutique</span>
+                            <span className="text-white text-sm font-medium">Solutions / Boutique</span>
                             <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
                                 Boutique Store
                             </h1>
-                            <p className="text-xl text-[#F8F1E3] mb-8">
+                            <p className="text-xl text-white mb-8">
                                 Create an elegant shopping experience for fashion-forward customers.
                                 Premium fixtures that match your brand aesthetic.
                             </p>

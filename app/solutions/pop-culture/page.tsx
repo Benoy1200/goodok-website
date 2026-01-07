@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 };
 
 const products = [
-    { name: "Glass Display Cases", desc: "For premium collectibles", icon: "馃拵" },
-    { name: "Wall Shelving", desc: "Maximize vertical display", icon: "馃搻" },
-    { name: "Trading Card Displays", desc: "Secure card showcases", icon: "馃幋" },
-    { name: "Themed Fixtures", desc: "Custom branded displays", icon: "馃帹" },
+    { name: "Glass Display Cases", desc: "For premium collectibles", icon: "🔐" },
+    { name: "Wall Shelving", desc: "Maximize vertical display", icon: "📐" },
+    { name: "Trading Card Displays", desc: "Secure card showcases", icon: "🃏" },
+    { name: "Themed Fixtures", desc: "Custom branded displays", icon: "🎨" },
 ];
 
 // Store case studies for this industry

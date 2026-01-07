@@ -65,7 +65,7 @@ export default function AnimeParadisePage() {
 
                         {/* Featured Image */}
                         <div className="aspect-video bg-gradient-to-br from-[#f8f9fa] to-[#f8f9fa] rounded-xl flex items-center justify-center mb-12">
-                            <span className="text-8xl">馃帉</span>
+                            <span className="text-8xl">🎌</span>
                         </div>
 
                         {/* Key Features */}
@@ -79,14 +79,14 @@ export default function AnimeParadisePage() {
                                 </p>
                             </div>
                             <div className="bg-gray-50 rounded-xl p-6">
-                                <span className="text-4xl mb-4 block">馃帹</span>
+                                <span className="text-4xl mb-4 block">🎨</span>
                                 <h3 className="font-bold mb-2">Themed Wall Units</h3>
                                 <p className="text-gray-600 text-sm">
                                     Custom-designed wall units with anime themes and integrated LED lighting.
                                 </p>
                             </div>
                             <div className="bg-gray-50 rounded-xl p-6">
-                                <span className="text-4xl mb-4 block">馃幋</span>
+                                <span className="text-4xl mb-4 block">🃏</span>
                                 <h3 className="font-bold mb-2">Card Display Systems</h3>
                                 <p className="text-gray-600 text-sm">
                                     Specialized displays for trading cards with protective sleeves and easy access.

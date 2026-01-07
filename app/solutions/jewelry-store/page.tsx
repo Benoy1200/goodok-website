@@ -39,11 +39,11 @@ export default function JewelryStoreSolutionPage() {
                 <div className="container">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <span className="text-amber-300 text-sm font-medium">Solutions / Jewelry Store</span>
+                            <span className="text-white text-sm font-medium">Solutions / Jewelry Store</span>
                             <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
                                 Jewelry Store
                             </h1>
-                            <p className="text-xl text-amber-100 mb-8">
+                            <p className="text-xl text-white mb-8">
                                 Create an elegant showcase for precious jewelry and watches.
                                 Premium displays with security and lighting features.
                             </p>

@@ -39,11 +39,11 @@ export default function LifestyleSolutionPage() {
                 <div className="container">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <span className="text-teal-200 text-sm font-medium">Solutions / Lifestyle Store</span>
+                            <span className="text-white text-sm font-medium">Solutions / Lifestyle Store</span>
                             <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
                                 Lifestyle Store
                             </h1>
-                            <p className="text-xl text-teal-100 mb-8">
+                            <p className="text-xl text-white mb-8">
                                 Create inspiring spaces for home goods, gifts, and lifestyle products.
                                 Flexible displays that adapt to changing collections.
                             </p>

@@ -16,32 +16,32 @@ export const metadata: Metadata = {
 
 const benefits = [
     {
-        icon: "馃帹",
+        icon: "🎨",
         title: "Professional 3D Visualization",
         description: "See exactly how your store will look before placing any orders",
     },
     {
-        icon: "馃搻",
+        icon: "📐",
         title: "Complete Layout Plan",
         description: "Optimized product placement for maximum sales and customer flow",
     },
     {
-        icon: "馃挕",
+        icon: "💡",
         title: "Lighting Recommendations",
         description: "Strategic lighting to highlight products and create ambiance",
     },
     {
-        icon: "馃摝",
+        icon: "📦",
         title: "Product Specifications",
         description: "Detailed list of all fixtures with dimensions and quantities",
     },
     {
-        icon: "馃挵",
+        icon: "💰",
         title: "Transparent Pricing",
         description: "Complete cost breakdown with no hidden fees",
     },
     {
-        icon: "馃殮",
+        icon: "🚚",
         title: "Shipping Estimate",
         description: "Delivery timeline and logistics planning for your location",
     },
