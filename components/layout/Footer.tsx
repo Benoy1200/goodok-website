@@ -34,7 +34,7 @@ export default function Footer() {
                     <div className="col-span-2 md:col-span-1">
                         <div className="relative h-10 w-[140px] mb-6">
                             <Image
-                                src="/images/goodok-logo.jpg"
+                                src="/images/goodok-logo-v2.png"
                                 alt="Goodok Shopfitting"
                                 fill
                                 className="object-contain object-left rounded-sm"

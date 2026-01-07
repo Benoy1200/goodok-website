@@ -115,7 +115,7 @@ const faqs = [
   },
   {
     question: "How long does it take to produce?",
-    answer: "Generally, it takes 2 to 4 weeks after you approve the drawings, depending on order complexity."
+    answer: "Generally, it takes 2 to 4 weeks after you approve drawings, depending on order complexity."
   },
   {
     question: "How much time for a custom design?",
@@ -148,34 +148,34 @@ const features = [
   {
     title: "Free 3D Design",
     description: "Get a professional 3D store layout within 24 hours. Visualize your dream store before ordering.",
-    icon: "馃幆",
+    icon: "🎯",
   },
   {
     title: "Factory Direct Pricing",
     description: "Cut out the middleman. Work directly with our manufacturing facility for the best prices.",
-    icon: "馃挵",
+    icon: "💰",
   },
   {
     title: "Global Shipping",
     description: "We ship to over 50 countries. Professional packing ensures safe delivery worldwide.",
-    icon: "馃實",
+    icon: "🌍",
   },
   {
     title: "Installation Support",
     description: "Step-by-step installation guides and video tutorials. Remote support when you need it.",
-    icon: "馃敡",
+    icon: "🔧",
   },
 ];
 
 export default function Home() {
   return (
     <div className="pt-16">
-      {/* Hero Section - 5寮犲浘鐗囪疆鎾?*/}
+      {/* Hero Section */}
       <section className="h-[80vh] relative overflow-hidden">
         {/* Background Carousel */}
         <HeroCarousel />
 
-        {/* 搴曢儴鍐呭鍖?*/}
+        {/* Bottom content area */}
         <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16 pb-8">
           <div className="container">
             <div className="flex flex-col items-center text-center gap-2 md:gap-3 max-w-3xl mx-auto">
@@ -183,7 +183,7 @@ export default function Home() {
                 Professional Retail Display Solutions
               </h1>
               <p className="text-gray-300 text-sm md:text-base">
-                Free 3D Design 路 Factory Direct 路 Global Shipping
+                Free 3D Design · Factory Direct · Global Shipping
               </p>
               <Link
                 href="/free-3d-design"
@@ -230,7 +230,8 @@ export default function Home() {
         <div className="container">
           <div className="text-center mt-8">
             <Link href="/solutions" className="text-[var(--accent)] font-medium hover:underline">
-              View All Solutions 鈫?            </Link>
+              View All Solutions →
+            </Link>
           </div>
         </div>
       </section>
@@ -284,7 +285,6 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* Why Choose Us */}
       <section className="py-20 bg-[#004499] text-white">
         <div className="container">
@@ -293,7 +293,7 @@ export default function Home() {
               Why Store Owners Choose Goodok
             </h2>
             <p className="text-[#f8f9fa] text-lg max-w-2xl mx-auto">
-              We&apos;re not just a supplier 鈥?we&apos;re your partner in creating successful retail spaces.
+              We're not just a supplier - we're your partner in creating successful retail spaces.
             </p>
           </div>
 
@@ -321,7 +321,7 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Frequently Asked Questions</h2>
-            <p className="text-gray-600">We help you with every step of the project</p>
+            <p className="text-gray-600">We help you with every step of project</p>
           </div>
 
           <div className="max-w-5xl mx-auto">
@@ -336,7 +336,7 @@ export default function Home() {
                       <span className="font-semibold text-gray-900 pr-4">{faq.question}</span>
                       <span className="text-[var(--accent)] group-open:rotate-180 transition-transform duration-300 bg-[#f8f9fa] p-1 rounded-full">
                         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7" />
                         </svg>
                       </span>
                     </summary>
@@ -349,7 +349,8 @@ export default function Home() {
             </div>
             <div className="text-center mt-8">
               <Link href="/faq" className="text-[var(--accent)] font-medium hover:underline">
-                View More FAQs 鈫?              </Link>
+                View More FAQs →
+              </Link>
             </div>
           </div>
         </div>
@@ -426,4 +427,3 @@ export default function Home() {
     </div>
   );
 }
-
