@@ -38,6 +38,12 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--foreground);
 }
 
+.text-outline-white {
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+  text-stroke: 1px #ffffff;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;

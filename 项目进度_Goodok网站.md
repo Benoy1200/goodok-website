@@ -39,21 +39,21 @@
 
 ### 第二阶段：内容创作 - 10篇博客 (Phase 2: Content - 10 Blogs)
 
-| #  | 文章标题 (Title)                          | 核心关键词 (Keyword)   | 状态 |
-| -- | ----------------------------------------- | ---------------------- | ---- |
-| 1  | Cosmetics Store Design (化妆品店设计)     | cosmetics store design | ✅   |
-| 2  | Toy Store Shelving (玩具店货架)           | toy store shelving     | ✅   |
-| 3  | Pop Culture Store (潮玩店开店指南)        | pop culture store      | ✅   |
-| 4  | Jewelry Display Ideas (珠宝陈列创意)      | jewelry display ideas  | ✅   |
-| 5  | How to Open a Boutique (开精品店指南)     | how to open boutique   | ✅   |
-| 6  | Collectibles Store Design (收藏品店设计)  | collectibles store     | ✅   |
-| 7  | Toy Store Layout (玩具店布局)             | toy store layout       | ✅   |
-| 8  | Accessories Fixtures (配饰店陈列)         | accessories fixtures   | ✅   |
-| 9  | Gondola vs Wall Shelving (中岛vs墙面货架) | gondola shelving       | ✅   |
-| 10 | Fixtures Wholesale Guide (货架批发指南)   | fixtures wholesale     | ✅   |
+| #  | 文章标题 (Title)                           | 核心关键词 (Keyword)   | 状态 |
+| -- | ------------------------------------------ | ---------------------- | ---- |
+| 1  | Cosmetics Store Design (化妆品店设计)      | cosmetics store design | ✅   |
+| 2  | Toy Store Shelving (玩具店货架)            | toy store shelving     | ✅   |
+| 3  | Pop Culture Store (潮玩店开店指南)         | pop culture store      | ✅   |
+| 4  | Jewelry Display Ideas (珠宝陈列创意)       | jewelry display ideas  | ✅   |
+| 5  | How to Open a Boutique (开精品店指南)      | how to open boutique   | ✅   |
+| 6  | Collectibles Store Design (收藏品店设计)   | collectibles store     | ✅   |
+| 7  | Toy Store Layout (玩具店布局)              | toy store layout       | ✅   |
+| 8  | Accessories Fixtures (配饰店陈列)          | accessories fixtures   | ✅   |
+| 9  | Gondola vs Wall Shelving (中岛vs墙面货架)  | gondola shelving       | ✅   |
+| 10 | Fixtures Wholesale Guide (货架批发指南)    | fixtures wholesale     | ✅   |
 | 11 | Retail Shelving Cost Guide (货架成本指南)  | retail shelving cost   | ✅   |
-| 12 | Gondola Shelving Dimensions (货架尺寸指南)| gondola dimensions     | ✅   |
-| 13 | Store Fixtures vs Custom (标准vs定制)     | standard vs custom     | ✅   |
+| 12 | Gondola Shelving Dimensions (货架尺寸指南) | gondola dimensions     | ✅   |
+| 13 | Store Fixtures vs Custom (标准vs定制)      | standard vs custom     | ✅   |
 | 14 | How to Choose Display Cases (展柜挑选指南) | choose display cases   | ✅   |
 
 ### 第三阶段：产品和解决方案页 (Phase 3: Product & Solution Pages)
@@ -97,21 +97,21 @@
 
 ### 第四阶段：优化与配置 (Phase 4: Optimization & Configuration)
 
-| 任务 (Task)                               | 状态 | 说明                                 |
-| ----------------------------------------- | ---- | ------------------------------------ |
-| 全站结构化数据 (Schema Markup)            | ✅   | Organization, FAQ, Breadcrumb 已配置 |
-| Google Analytics 4 集成                   | ✅   | 统计代码已部署                       |
-| Projects 列表页优化                       | ✅   | 交互式卡片链接                       |
-| Cloudflare DNS 托管                       | ✅   | 提升全球访问速度与安全               |
-| 企业邮箱配置 (Cloudflare Email Routing)   | ✅   | info@goodokshop.com -> 企微邮箱      |
-| Solutions 首页链接修复                    | ✅   | 6大行业入口全部打通                  |
-| **WhatsApp 交互升级 (Chat Dialog)**       | ✅   | 弹出式文字对话框，模拟真实对话体验   |
-| **GA4 关键事件追踪 (Event Tracking)**     | ✅   | 对话框打开及消息发送事件已埋点       |
-| **首页 Marquee 动画**                     | ✅   | Industry Solutions 实现无限自动滚动     |
-| **博客内链优化**                          | ✅   | 建立博客 -> 产品页的权重传递路径     |
-| **产品页专业 Schema**                     | ✅   | 为 Display Cases 添加 Product/FAQ 结构化数据 |
-| **社区外链建设 (Reddit)**                  | ✅   | [r/smallbusiness 经验分享贴](https://www.reddit.com/r/smallbusiness/comments/1q1o4nn/started_showing_my_actual_costs_to_customers_and/) |
-| **社区外链建设 (Quora)**                   | ✅   | [How much money does it take to open a boutique?](https://www.quora.com/How-much-money-does-it-take-to-open-a-boutique/answer/Bin-Ting-1?prompt_topic_bio=1) |
+| 任务 (Task)                                 | 状态 | 说明                                                                                                                                                      |
+| ------------------------------------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 全站结构化数据 (Schema Markup)              | ✅   | Organization, FAQ, Breadcrumb 已配置                                                                                                                      |
+| Google Analytics 4 集成                     | ✅   | 统计代码已部署                                                                                                                                            |
+| Projects 列表页优化                         | ✅   | 交互式卡片链接                                                                                                                                            |
+| Cloudflare DNS 托管                         | ✅   | 提升全球访问速度与安全                                                                                                                                    |
+| 企业邮箱配置 (Cloudflare Email Routing)     | ✅   | info@goodokshop.com -> 企微邮箱                                                                                                                           |
+| Solutions 首页链接修复                      | ✅   | 6大行业入口全部打通                                                                                                                                       |
+| **WhatsApp 交互升级 (Chat Dialog)**   | ✅   | 弹出式文字对话框，模拟真实对话体验                                                                                                                        |
+| **GA4 关键事件追踪 (Event Tracking)** | ✅   | 对话框打开及消息发送事件已埋点                                                                                                                            |
+| **首页 Marquee 动画**                 | ✅   | Industry Solutions 实现无限自动滚动                                                                                                                       |
+| **博客内链优化**                      | ✅   | 建立博客 -> 产品页的权重传递路径                                                                                                                          |
+| **产品页专业 Schema**                 | ✅   | 为 Display Cases 添加 Product/FAQ 结构化数据                                                                                                              |
+| **社区外链建设 (Reddit)**             | ✅   | [r/smallbusiness 经验分享贴](https://www.reddit.com/r/smallbusiness/comments/1q1o4nn/started_showing_my_actual_costs_to_customers_and/)                      |
+| **社区外链建设 (Quora)**              | ✅   | [How much money does it take to open a boutique?](https://www.quora.com/How-much-money-does-it-take-to-open-a-boutique/answer/Bin-Ting-1?prompt_topic_bio=1) |
 
 ---
 
@@ -134,6 +134,7 @@
 4. **监控 Search Console** - 每周检查收录进度和错误
 
 #### 📝 需手动提交的 URL 清单 (GSC Submission List)
+
 - **核心页**:
   - `https://www.goodokshop.com/`
   - `https://www.goodokshop.com/faq`
@@ -165,6 +166,7 @@
   - `https://www.goodokshop.com/resources/blog/gondola-shelving-dimensions`
   - `https://www.goodokshop.com/resources/blog/store-fixtures-vs-custom`
   - `https://www.goodokshop.com/resources/blog/how-to-choose-display-cases`
+
 ---
 
 ## 🖼️ 待添加图片需求清单 (Image Requirement List)
@@ -172,11 +174,13 @@
 为了提升网站的「真实感」和「转化率」，建议尽快准备以下图片素材替换占位符。
 
 ### 1. 首页 (Homepage)
+
 - [ ] **Hero Banner**: 展现工厂实力或精美店铺全景的高清图 (2560x1080px)
 - [ ] **6大行业图**: 为「潮玩、玩具、珠宝、精品、生活馆、文具」各准备一张精美实景图 (800x600px)
 - [ ] **产品分类图**: 中岛货架、展示柜、服装架等的代表性单品图 (600x600px)
 
 ### 2. 产品详情页 (Product Sub-pages)
+
 - [ ] **Gondola Shelving**: 不同颜色/配置的中岛货架实拍 (800x800px)
 - [ ] **Wall Shelving**: 装好货物的墙面架实景
 - [ ] **Display Cases**: 亮灯后的精品/珠宝展柜细节
@@ -184,14 +188,17 @@
 - [ ] **Custom Fixtures**: 展示定制能力的异形货架或特殊项目图
 
 ### 3. 解决方案页 (Solution Pages)
+
 - [ ] **行业实景案例**: 为每个行业提供至少 2-3 张真实的整店装修效果图或完工实拍图。
   - 潮玩展示灯效、玩具店展示明亮色调、珠宝展示高端质感。
 
 ### 4. 客户案例 (Projects/Cases)
+
 - [ ] **Before/After 对比图**: 如果有，这对于 B2B 客户最有说服力。
 - [ ] **项目特写**: 货架安装细节图、整店交付效果。
 
 ### 5. 博客文章 (Blog Featured Images)
+
 - [ ] **10张封面图**: 为目前发布的 10 篇文章各配一张相关的主题图 (1200x630px)。
 
 ---
@@ -248,11 +255,11 @@
 
 ### 本周任务 (This Week)
 
-| 优先级 | 任务 (Task)           | 状态          |
-| ------ | --------------------- | ------------- |
+| 优先级  | 任务 (Task)           | 状态          |
+| ------- | --------------------- | ------------- |
 | 🟢 完成 | 部署最新更新到 Vercel | ✅ 已上线     |
-| 🔴 高  | 添加产品真实图片      | ⏳ 需要您提供 |
-| 🔴 高  | 添加客户案例照片      | ⏳ 需要您提供 |
+| 🔴 高   | 添加产品真实图片      | ⏳ 需要您提供 |
+| 🔴 高   | 添加客户案例照片      | ⏳ 需要您提供 |
 
 ### 下周任务 (Next Week)
 
@@ -264,12 +271,12 @@
 
 ### 月度任务 (This Month)
 
-| 优先级 | 任务 (Task)              | 状态    |
-| ------ | ------------------------ | ------- |
-| 🟢     | 继续博客内容创作 Phase 2 | ⏳ 待做 |
-| 🟢 完成 | Google Analytics 集成    | ✅ 已上线 |
-| 🟢     | **Reddit/Quora 社区推广**| 🔄 进行中 |
-| 🟢     | 开始 TikTok 内容发布     | ⏳ 待做 |
+| 优先级  | 任务 (Task)                     | 状态      |
+| ------- | ------------------------------- | --------- |
+| 🟢      | 继续博客内容创作 Phase 2        | ⏳ 待做   |
+| 🟢 完成 | Google Analytics 集成           | ✅ 已上线 |
+| 🟢      | **Reddit/Quora 社区推广** | 🔄 进行中 |
+| 🟢      | 开始 TikTok 内容发布            | ⏳ 待做   |
 
 ---
 
@@ -322,6 +329,7 @@ E:\retail-miniapp-backend\goodok-website\
 ## 📅 更新日志 (Update Log)
 
 ### 2026-01-05
+
 ### 2026-01-06 (最新 - 转化与 SEO 深化)
 
 - ✅ **WhatsApp 客服升级**: 实现了点击图标弹出对话框，支持用户预载/输入文字并发送至 WhatsApp，极大提升了用户体验。

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ClientTestimonials from "@/components/ClientTestimonials";
 import HeroCarousel from "@/components/HeroCarousel";
 
 export const metadata: Metadata = {
@@ -106,28 +107,6 @@ const aboutStats = [
   { number: "50+", label: "Countries Served" },
 ];
 
-// Customer testimonials
-const testimonials = [
-  {
-    quote: "The quality exceeded our expectations. Our jewelry store looks absolutely stunning with these display cases.",
-    name: "Sarah Chen",
-    title: "Owner, Sparkle Jewelry",
-    avatar: "👩‍💼",
-  },
-  {
-    quote: "Fast delivery and excellent communication. The gondola shelving transformed our supermarket layout completely.",
-    name: "Michael Wong",
-    title: "Manager, Fresh Mart",
-    avatar: "👨‍💼",
-  },
-  {
-    quote: "The free 3D design service helped us visualize our store before ordering. Highly professional team!",
-    name: "Emily Rodriguez",
-    title: "Founder, Trendy Toys",
-    avatar: "👩‍🦰",
-  },
-];
-
 // FAQ data
 const faqs = [
   {
@@ -199,17 +178,13 @@ export default function Home() {
         {/* 底部内容区 */}
         <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16 pb-8">
           <div className="container">
-            <div className="flex flex-col md:flex-row md:items-center gap-4">
-              {/* 左侧文字 */}
-              <div className="flex-1">
-                <h1 className="text-2xl md:text-3xl font-bold text-white mb-1">
-                  Professional Retail Display Solutions
-                </h1>
-                <p className="text-gray-300 text-sm md:text-base">
-                  Free 3D Design · Factory Direct · Global Shipping
-                </p>
-              </div>
-              {/* 按钮 */}
+            <div className="flex flex-col items-center text-center gap-2 md:gap-3 max-w-3xl mx-auto">
+              <h1 className="text-2xl md:text-3xl font-bold text-outline-white">
+                Professional Retail Display Solutions
+              </h1>
+              <p className="text-gray-300 text-sm md:text-base">
+                Free 3D Design · Factory Direct · Global Shipping
+              </p>
               <Link
                 href="/free-3d-design"
                 className="btn bg-white text-gray-900 hover:bg-gray-100 px-6 py-3 whitespace-nowrap"
@@ -299,6 +274,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials (Our Happy Clients style - Animated) */}
+      <section className="py-20 bg-gray-800">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Our Happy Clients</h2>
+            <div className="w-16 h-1 bg-blue-500 mx-auto"></div>
+          </div>
+          <ClientTestimonials />
+        </div>
+      </section>
+
 
       {/* Why Choose Us */}
       <section className="py-20 bg-blue-900 text-white">
@@ -324,38 +310,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials (Our Happy Clients style) */}
-      <section className="py-20 bg-gray-800">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Our Happy Clients</h2>
-            <div className="w-16 h-1 bg-blue-500 mx-auto"></div>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial) => (
-              <div
-                key={testimonial.name}
-                className="bg-gray-700/50 backdrop-blur rounded-xl p-8 relative"
-              >
-                <div className="text-blue-400 text-4xl mb-4">&ldquo;</div>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {testimonial.quote}
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center text-2xl">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-gray-400 text-sm">{testimonial.title}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Section (Two-column accordion style) */}
       <section className="py-20 bg-gray-50">
