@@ -18,77 +18,77 @@ const products = [
     name: "Gondola Shelving",
     description: "Versatile double-sided shelving for supermarkets and retail stores",
     href: "/products/gondola-shelving",
-    icon: "🏪",
+    image: "/images/products/gondola-shelving.jpg",
   },
   {
     name: "Wall Shelving",
     description: "Space-saving wall-mounted display systems",
     href: "/products/wall-shelving",
-    icon: "📐",
+    image: "/images/products/wall-shelving.jpg",
   },
   {
     name: "Display Cases",
     description: "Glass showcases for jewelry, cosmetics, and premium products",
     href: "/products/display-cases",
-    icon: "💎",
+    image: "/images/products/display-cases.jpg",
   },
   {
     name: "Clothing Racks",
     description: "Elegant garment displays for boutiques and fashion stores",
     href: "/products/clothing-racks",
-    icon: "👔",
+    image: "/images/products/clothing-racks.jpg",
   },
   {
     name: "Checkout Counters",
     description: "Modern checkout counters and POS systems for retail stores",
-    href: "/products/checkout-counters",
-    icon: "💳",
+    href: "/products/checkout-counters", // Fixed fallback if needed
+    image: "/images/products/checkout-counters.jpg",
   },
   {
     name: "Custom Fixtures",
     description: "Bespoke solutions designed for your unique store concept",
     href: "/products/custom-fixtures",
-    icon: "✨",
+    image: "/images/products/custom-fixtures.jpg",
   },
 ];
 
-// Industry solutions (6 solutions) - NO Chinese text
+// Industry solutions (6 solutions)
 const solutions = [
   {
     name: "Pop Culture Store",
     description: "Display collectibles, figures, and trendy items",
-    icon: "🎮",
     href: "/solutions/pop-culture",
+    image: "/images/solutions/pop-culture.jpg",
   },
   {
     name: "Stationery Store",
     description: "Organized displays for pens, notebooks, and accessories",
-    icon: "✏️",
     href: "/solutions/stationery",
+    image: "/images/solutions/stationery.jpg",
   },
   {
     name: "Jewelry Store",
     description: "Secure, elegant showcases for precious items",
-    icon: "💎",
     href: "/solutions/jewelry-store",
+    image: "/images/solutions/jewelry-store.jpg",
   },
   {
     name: "Boutique",
     description: "Fashion-forward displays for clothing and accessories",
-    icon: "👗",
     href: "/solutions/boutique",
+    image: "/images/solutions/boutique.jpg",
   },
   {
     name: "Toy Store",
     description: "Fun, safe, and accessible toy displays",
-    icon: "🧸",
     href: "/solutions/toy-store",
+    image: "/images/solutions/toy-store.jpg",
   },
   {
     name: "Lifestyle Store",
     description: "Home goods and lifestyle product displays",
-    icon: "🏠",
     href: "/solutions/lifestyle",
+    image: "/images/solutions/lifestyle.jpg",
   },
 ];
 
