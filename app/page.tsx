@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import ClientTestimonials from "@/components/ClientTestimonials";
 import HeroCarousel from "@/components/HeroCarousel";
 
@@ -196,48 +197,58 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Industry Solutions - Auto-scrolling Marquee */}
-      <section className="py-16 bg-white overflow-hidden">
+      {/* Industry Solutions - Image Grid */}
+      <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">Industry Solutions</h2>
-            <p className="text-gray-600">Tailored fixtures for every retail sector</p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Industry Solutions</h2>
+            <p className="text-gray-600 text-lg">Tailored fixtures for every retail sector</p>
           </div>
-        </div>
-        {/* Auto-scrolling container */}
-        <div className="relative">
-          <div className="flex gap-6 animate-marquee hover:pause-animation">
-            {/* Double the items for seamless loop */}
-            {[...solutions, ...solutions].map((solution, idx) => (
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {solutions.map((solution) => (
               <Link
-                key={`${solution.name}-${idx}`}
+                key={solution.name}
                 href={solution.href}
-                className="flex-shrink-0 w-64 group"
+                className="group relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <div className="relative aspect-[4/3] bg-gradient-to-br from-[#004499] to-[#ff6b35] rounded-xl overflow-hidden mb-3">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-white text-6xl group-hover:scale-110 transition-transform">{solution.icon}</span>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                    <h3 className="text-white font-semibold">{solution.name}</h3>
-                  </div>
+                {/* Background Image */}
+                <Image
+                  src={solution.image}
+                  alt={solution.name}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-colors duration-300"></div>
+
+                {/* Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-2">{solution.name}</h3>
+                  <p className="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                    {solution.description}
+                  </p>
                 </div>
-                <p className="text-gray-600 text-sm group-hover:text-[var(--accent)] transition">{solution.description}</p>
               </Link>
             ))}
           </div>
-        </div>
-        <div className="container">
-          <div className="text-center mt-8">
-            <Link href="/solutions" className="text-[var(--accent)] font-medium hover:underline">
-              View All Solutions →
+
+          {/* View All Link */}
+          <div className="text-center mt-10">
+            <Link href="/solutions" className="inline-flex items-center gap-2 text-[var(--accent)] font-semibold hover:gap-3 transition-all">
+              View All Solutions
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
           </div>
+
         </div>
       </section>
 
 
-      {/* Products - Card Grid Style (2 rows x 3 cols) */}
+      {/* Complete Store Display Solutions - Image Grid Style */}
       <section className="py-20 bg-[#f8f9fa]">
         <div className="container">
           <div className="text-center mb-12">
@@ -250,23 +261,38 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product) => (
               <Link
                 key={product.name}
                 href={product.href}
-                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition group"
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col"
               >
-                <div className="text-4xl mb-4">{product.icon}</div>
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors">
-                  {product.name}
-                </h3>
-                <p className="text-gray-600 mb-4">{product.description}</p>
-                <div className="text-[var(--accent)] font-medium flex items-center gap-2">
-                  Learn more
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                {/* Image Area */}
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+                </div>
+
+                {/* Content Area */}
+                <div className="p-6 flex-1 flex flex-col">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-[var(--accent)] transition-colors">
+                    {product.name}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1">
+                    {product.description}
+                  </p>
+                  <div className="text-[var(--accent)] font-semibold text-sm flex items-center gap-2 mt-auto">
+                    View Products
+                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </div>
               </Link>
             ))}

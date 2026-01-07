@@ -154,7 +154,7 @@ export default function ProductsPage() {
                             <div key={category.id} className="card group">
                                 {/* Product Image Placeholder */}
                                 <div className="h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                                    <span className="text-6xl opacity-30">馃摝</span>
+                                    <span className="text-6xl opacity-30">📦</span>
                                 </div>
 
                                 <div className="p-6">
