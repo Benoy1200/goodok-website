@@ -24,7 +24,7 @@ const blogPosts = [
         date: "2026-01-04",
         readTime: "12 min read",
         featured: true,
-        image: "/images/product-1.jpg",
+        image: "/images/How to Design a Cosmetics Store Complete Guide 2025.jpg",
     },
     {
         slug: "how-to-open-pop-culture-store",
@@ -35,7 +35,7 @@ const blogPosts = [
         date: "2026-01-04",
         readTime: "15 min read",
         featured: true,
-        image: "/images/product-2.jpg",
+        image: "/images/How to Open a Pop Culture Store Complete Guide 2025.jpg",
     },
     {
         slug: "toy-store-shelving-ideas",
@@ -46,7 +46,7 @@ const blogPosts = [
         date: "2026-01-04",
         readTime: "10 min read",
         featured: true,
-        image: "/images/product-3.jpg",
+        image: "/images/Toy Store Shelving Ideas Maximize Display & Sales.jpg",
     },
     {
         slug: "jewelry-store-display-ideas",
@@ -57,7 +57,7 @@ const blogPosts = [
         date: "2026-01-04",
         readTime: "12 min read",
         featured: true,
-        image: "/images/product-1.jpg",
+        image: "/images/Jewelry Store Display Ideas That Drive Sales.jpg",
     },
     {
         slug: "how-to-open-boutique",
@@ -68,7 +68,7 @@ const blogPosts = [
         date: "2026-01-04",
         readTime: "15 min read",
         featured: true,
-        image: "/images/product-2.jpg",
+        image: "/images/How to Open a Boutique Complete Store Setup Guide 2025.jpg",
     },
     {
         slug: "collectibles-store-design",
