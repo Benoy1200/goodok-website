@@ -58,37 +58,37 @@ const solutions = [
     name: "Pop Culture Store",
     description: "Display collectibles, figures, and trendy items",
     href: "/solutions/pop-culture",
-    image: "/images/solutions/pop-culture.jpg",
+    image: "/images/scenes/pop-culture.jpg",
   },
   {
     name: "Stationery Store",
     description: "Organized displays for pens, notebooks, and accessories",
     href: "/solutions/stationery",
-    image: "/images/solutions/stationery.jpg",
+    image: "/images/scenes/watch-shop.jpg",
   },
   {
     name: "Jewelry Store",
     description: "Secure, elegant showcases for precious items",
     href: "/solutions/jewelry-store",
-    image: "/images/solutions/jewelry-store.jpg",
+    image: "/images/scenes/jewelry-store.jpg",
   },
   {
     name: "Boutique",
     description: "Fashion-forward displays for clothing and accessories",
     href: "/solutions/boutique",
-    image: "/images/solutions/boutique.jpg",
+    image: "/images/scenes/boutique-shop.jpg",
   },
   {
     name: "Toy Store",
     description: "Fun, safe, and accessible toy displays",
     href: "/solutions/toy-store",
-    image: "/images/solutions/toy-store.jpg",
+    image: "/images/scenes/toy-store.jpg",
   },
   {
     name: "Lifestyle Store",
     description: "Home goods and lifestyle product displays",
     href: "/solutions/lifestyle",
-    image: "/images/solutions/lifestyle.jpg",
+    image: "/images/scenes/cosmetics-store.jpg",
   },
 ];
 
