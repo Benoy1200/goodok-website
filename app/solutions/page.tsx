@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Industry Solutions | Retail Store Fixtures by Industry | Goodok",
+    title: "Industry Solutions | Retail Store Fixtures by Goodok",
     description: "Discover our specialized retail fixture solutions for different industries. Pop culture stores, toy shops, jewelry stores, boutiques, and lifestyle stores.",
     keywords: [
         "retail store solutions",
@@ -16,61 +16,67 @@ const solutions = [
     {
         name: "Pop Culture Store",
         description: "Display solutions for anime, gaming, and collectibles stores. Secure cases for valuable items.",
+        icon: "🎮",
+        image: "/images/scenes/pop-culture.jpg",
         href: "/solutions/pop-culture",
-        icon: "馃幃",
+        color: "from-[#004499] to-[#ff6b35]",
+    },
+    {
+        name: "Stationery Store",
+        description: "Organized displays for pens, notebooks, and accessories.",
+        icon: "✏️",
+        image: "/images/scenes/watch-shop.jpg",
+        href: "/solutions/stationery",
+        color: "from-[#004499] to-[#0066cc]",
+    },
+    {
+        name: "Jewelry Store",
+        description: "Secure, elegant showcases for precious items. LED lighting and security locks.",
+        icon: "💎",
+        image: "/images/scenes/jewelry-store.jpg",
+        href: "/solutions/jewelry-store",
+        color: "from-[#004499] to-[#0066cc]",
+    },
+    {
+        name: "Boutique",
+        description: "Fashion-forward displays for clothing and accessories stores. Elegant racks and glass cases.",
+        icon: "👗",
+        image: "/images/scenes/boutique-shop.jpg",
+        href: "/solutions/boutique",
         color: "from-[#004499] to-[#ff6b35]",
     },
     {
         name: "Toy Store",
         description: "Kid-friendly displays with safety features. Interactive demo areas and colorful fixtures.",
+        icon: "🧸",
+        image: "/images/scenes/toy-store.jpg",
         href: "/solutions/toy-store",
-        icon: "馃Ц",
-        color: "from-orange-500 to-yellow-500",
-    },
-    {
-        name: "Jewelry Store",
-        description: "Premium glass showcases with LED lighting and security locks for precious items.",
-        href: "/solutions/jewelry-store",
-        icon: "馃拵",
-        color: "from-amber-600 to-yellow-600",
-    },
-    {
-        name: "Boutique",
-        description: "Elegant clothing racks and display tables for fashion and accessories stores.",
-        href: "/solutions/boutique",
-        icon: "馃憲",
-        color: "from-[#004499] to-[#ff6b35]",
+        color: "from-[#ff6b35] to-[#ff9500]",
     },
     {
         name: "Lifestyle Store",
         description: "Flexible display systems for home goods, gifts, and lifestyle products.",
+        icon: "🏠",
+        image: "/images/scenes/lifestyle-store.jpg",
         href: "/solutions/lifestyle",
-        icon: "馃彔",
-        color: "from-teal-500 to-emerald-500",
-    },
-    {
-        name: "Stationery Store",
-        description: "Organized shelving and display racks for stationery, art supplies, and office products.",
-        href: "/solutions/stationery",
-        icon: "鉁忥笍",
-        color: "from-[#004499] to-[#0066cc]",
+        color: "from-[#0066cc] to-[#008844]",
     },
 ];
 
 export default function SolutionsPage() {
     return (
-        <div className="pt-16">
-            {/* Hero Section */}
-            <section className="gradient-hero py-20">
+        <div className="pt-24">
+            {/* Hero */}
+            <section className="bg-gradient-to-br from-[#004499] to-[#0066cc] text-white py-20">
                 <div className="container">
-                    <div className="max-w-3xl">
-                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <span className="text-[#f8f9fa] text-sm font-medium">Solutions / All Solutions</span>
+                        <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
                             Industry-Specific Display Solutions
                         </h1>
-                        <p className="text-xl text-gray-300">
-                            Every retail sector has unique requirements. We&apos;ve developed specialized
-                            fixture solutions for different industries, ensuring your store stands out
-                            and sells more.
+                        <p className="text-xl text-[#f8f1e3] mb-8">
+                            Every retail sector has unique requirements. We've developed specialized
+                            fixture solutions to ensure your store stands out and sells more.
                         </p>
                     </div>
                 </div>
@@ -84,21 +90,32 @@ export default function SolutionsPage() {
                             <Link
                                 key={solution.name}
                                 href={solution.href}
-                                className="group relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300"
+                                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
                             >
-                                <div className={`absolute inset-0 bg-gradient-to-br ${solution.color} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
-                                <div className="p-8">
-                                    <div className="text-5xl mb-4">{solution.icon}</div>
-                                    <h2 className="text-2xl font-bold mb-3 group-hover:text-[var(--accent)] transition-colors">
+                                <div className={`relative aspect-[4/3] bg-gradient-to-br ${solution.color} rounded-xl overflow-hidden`}>
+                                    {solution.image && (
+                                        <img
+                                            src={solution.image}
+                                            alt={solution.name}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    )}
+                                    <div className="absolute inset-0 flex items-center justify-center">
+                                        <span className="text-6xl group-hover:scale-110 transition-transform">{solution.icon}</span>
+                                    </div>
+                                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                                        <h3 className="text-white font-semibold">{solution.name}</h3>
+                                    </div>
+                                </div>
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold mb-2 group-hover:text-[var(--accent)] transition-colors">
                                         {solution.name}
-                                    </h2>
-                                    <p className="text-gray-600 mb-4">
-                                        {solution.description}
-                                    </p>
-                                    <div className="flex items-center text-[var(--accent)] font-medium">
-                                        Explore Solutions
-                                        <svg className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </h3>
+                                    <p className="text-gray-600 mb-4">{solution.description}</p>
+                                    <div className="text-[var(--accent)] font-medium flex items-center gap-2">
+                                        Explore Solution
+                                        <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4-7-7 7" />
                                         </svg>
                                     </div>
                                 </div>
@@ -108,13 +125,13 @@ export default function SolutionsPage() {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-20 bg-gray-50">
+            {/* CTA */}
+            <section className="py-20 bg-[#004499] text-white">
                 <div className="container text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                    <h2 className="text-3xl font-bold mb-4">
                         Not Sure Which Solution Fits Your Store?
                     </h2>
-                    <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
+                    <p className="text-[#f8f9fa] text-lg mb-8 max-w-2xl mx-auto">
                         Our team can help you identify the perfect display solutions for your specific
                         retail environment. Get a free consultation today.
                     </p>
@@ -137,8 +154,3 @@ export default function SolutionsPage() {
         </div>
     );
 }
-
-
-
-
-
