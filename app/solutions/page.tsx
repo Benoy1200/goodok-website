@@ -100,12 +100,7 @@ export default function SolutionsPage() {
                                             className="w-full h-full object-cover"
                                         />
                                     )}
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <span className="text-6xl group-hover:scale-110 transition-transform">{solution.icon}</span>
-                                    </div>
-                                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                                        <h3 className="text-white font-semibold">{solution.name}</h3>
-                                    </div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                                 </div>
                                 <div className="p-6">
                                     <h3 className="text-xl font-bold mb-2 group-hover:text-[var(--accent)] transition-colors">
