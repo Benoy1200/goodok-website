@@ -47,7 +47,7 @@ export default function AccessoriesStoreFixturesGuide() {
                         </p>
 
                         <div className="flex items-center gap-6 text-sm text-gray-500">
-                            <span>馃搮 January 4, 2026</span>
+                            <span>📅 January 4, 2026</span>
                             <span>鈴憋笍 11 min read</span>
                         </div>
                     </div>
@@ -62,7 +62,7 @@ export default function AccessoriesStoreFixturesGuide() {
                             <div className="prose prose-lg max-w-none">
                                 {/* TOC */}
                                 <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">馃搵 In This Guide</h2>
+                                    <h2 className="text-lg font-bold mb-4">📖 In This Guide</h2>
                                     <ul className="space-y-2 text-gray-600">
                                         <li><a href="#fixtures-by-type" className="hover:text-[var(--accent)]">1. Fixtures by Accessory Type</a></li>
                                         <li><a href="#display-stands" className="hover:text-[var(--accent)]">2. Display Stands & Tables</a></li>
@@ -168,7 +168,7 @@ export default function AccessoriesStoreFixturesGuide() {
 
                                 <div className="bg-[#f8f9fa] border-l-4 border-[#ff6b35] p-4 my-6">
                                     <p className="font-medium text-[var(--primary)]">
-                                        馃挕 Pro Tip: Use mannequin forms to show how accessories complement
+                                        💡 Pro Tip: Use mannequin forms to show how accessories complement
                                         outfits. A complete &quot;look&quot; sells more than individual items.
                                     </p>
                                 </div>
@@ -386,7 +386,7 @@ export default function AccessoriesStoreFixturesGuide() {
                                 </div>
 
                                 <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">馃挰 Need Help?</h3>
+                                    <h3 className="font-bold mb-3">❓ Need Help?</h3>
                                     <p className="text-gray-600 text-sm mb-4">
                                         Chat with our display experts.
                                     </p>
@@ -401,7 +401,7 @@ export default function AccessoriesStoreFixturesGuide() {
                                 </div>
 
                                 <div className="bg-gray-50 rounded-xl p-6">
-                                    <h3 className="font-bold mb-4">馃摎 Related Articles</h3>
+                                    <h3 className="font-bold mb-4">📚 Related Articles</h3>
                                     <ul className="space-y-3">
                                         <li>
                                             <Link href="/resources/blog/jewelry-store-display-ideas" className="text-gray-600 hover:text-[var(--accent)] text-sm">
@@ -443,6 +443,7 @@ export default function AccessoriesStoreFixturesGuide() {
         </article>
     );
 }
+
 
 
 

@@ -47,7 +47,7 @@ export default function HowToChooseDisplayCasesGuide() {
                         </p>
 
                         <div className="flex items-center gap-6 text-sm text-gray-500">
-                            <span>馃搮 January 6, 2026</span>
+                            <span>📅 January 6, 2026</span>
                             <span>鈴憋笍 11 min read</span>
                         </div>
                     </div>
@@ -62,7 +62,7 @@ export default function HowToChooseDisplayCasesGuide() {
                             <div className="prose prose-lg max-w-none">
                                 {/* TOC */}
                                 <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">馃搵 In This Guide</h2>
+                                    <h2 className="text-lg font-bold mb-4">📖 In This Guide</h2>
                                     <ul className="space-y-2 text-gray-600">
                                         <li><a href="#types" className="hover:text-[var(--accent)]">1. Types of Display Cases</a></li>
                                         <li><a href="#glass" className="hover:text-[var(--accent)]">2. Glass Options</a></li>
@@ -158,7 +158,7 @@ export default function HowToChooseDisplayCasesGuide() {
                                 </div>
 
                                 <p className="bg-[#f8f9fa] border-l-4 border-[#ff6b35] p-4 rounded-r">
-                                    馃拵 <strong>Pro Tip:</strong> For jewelry and watches, low-iron glass is worth
+                                    💎 <strong>Pro Tip:</strong> For jewelry and watches, low-iron glass is worth
                                     the extra cost. Standard glass has a slight green tint that dulls sparkle.
                                 </p>
 
@@ -259,7 +259,7 @@ export default function HowToChooseDisplayCasesGuide() {
                                 {/* Section 6 */}
                                 <h2 id="products">6. Best Cases by Product Type</h2>
 
-                                <h3>馃拲 Jewelry & Watches</h3>
+                                <h3>💍 Jewelry & Watches</h3>
                                 <ul>
                                     <li><strong>Case type:</strong> Counter or tower</li>
                                     <li><strong>Glass:</strong> Low-iron ultra-clear</li>
@@ -267,7 +267,7 @@ export default function HowToChooseDisplayCasesGuide() {
                                     <li><strong>Security:</strong> Electronic/fingerprint lock, alarm</li>
                                 </ul>
 
-                                <h3>馃幃 Electronics & Gaming</h3>
+                                <h3>🎬 Electronics & Gaming</h3>
                                 <ul>
                                     <li><strong>Case type:</strong> Floor showcase or wall</li>
                                     <li><strong>Glass:</strong> Standard tempered</li>
@@ -275,7 +275,7 @@ export default function HowToChooseDisplayCasesGuide() {
                                     <li><strong>Security:</strong> Plunger lock, cable locks inside</li>
                                 </ul>
 
-                                <h3>馃帹 Collectibles & Art</h3>
+                                <h3>🎨 Collectibles & Art</h3>
                                 <ul>
                                     <li><strong>Case type:</strong> Tower pedestal</li>
                                     <li><strong>Glass:</strong> Anti-reflective if possible</li>
@@ -283,7 +283,7 @@ export default function HowToChooseDisplayCasesGuide() {
                                     <li><strong>Security:</strong> Base anchored, alarm sensors</li>
                                 </ul>
 
-                                <h3>馃拕 Cosmetics</h3>
+                                <h3>💄 Cosmetics</h3>
                                 <ul>
                                     <li><strong>Case type:</strong> Counter display</li>
                                     <li><strong>Glass:</strong> Standard tempered</li>
@@ -339,7 +339,7 @@ export default function HowToChooseDisplayCasesGuide() {
                                 </div>
 
                                 <div className="bg-[#f8f9fa] border border-[#f8f9fa] rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">馃挰 Questions?</h3>
+                                    <h3 className="font-bold mb-3">❓ Questions?</h3>
                                     <p className="text-gray-600 text-sm mb-4">
                                         Chat with our display case experts.
                                     </p>
@@ -354,7 +354,7 @@ export default function HowToChooseDisplayCasesGuide() {
                                 </div>
 
                                 <div className="bg-gray-50 rounded-xl p-6">
-                                    <h3 className="font-bold mb-4">馃摎 Related Articles</h3>
+                                    <h3 className="font-bold mb-4">📚 Related Articles</h3>
                                     <ul className="space-y-3">
                                         <li>
                                             <Link href="/resources/blog/jewelry-store-display-ideas" className="text-gray-600 hover:text-[var(--accent)] text-sm">
@@ -401,5 +401,6 @@ export default function HowToChooseDisplayCasesGuide() {
         </article>
     );
 }
+
 
 

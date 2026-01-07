@@ -47,7 +47,7 @@ export default function GondolaShelvingDimensionsGuide() {
                         </p>
 
                         <div className="flex items-center gap-6 text-sm text-gray-500">
-                            <span>馃搮 January 6, 2026</span>
+                            <span>📅 January 6, 2026</span>
                             <span>鈴憋笍 7 min read</span>
                         </div>
                     </div>
@@ -62,7 +62,7 @@ export default function GondolaShelvingDimensionsGuide() {
                             <div className="prose prose-lg max-w-none">
                                 {/* TOC */}
                                 <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">馃搵 Quick Navigation</h2>
+                                    <h2 className="text-lg font-bold mb-4">📖 Quick Navigation</h2>
                                     <ul className="space-y-2 text-gray-600">
                                         <li><a href="#standard" className="hover:text-[var(--accent)]">1. Standard Dimensions</a></li>
                                         <li><a href="#heights" className="hover:text-[var(--accent)]">2. Height Options</a></li>
@@ -222,7 +222,7 @@ export default function GondolaShelvingDimensionsGuide() {
 
                                 <h3>Quick Formula</h3>
                                 <p className="bg-[#f8f9fa] border-l-4 border-[#ff6b35] p-4 rounded-r">
-                                    馃搹 <strong>Store width 梅 (gondola width + aisle width)</strong> =
+                                    📋 <strong>Store width 梅 (gondola width + aisle width)</strong> =
                                     Number of gondola rows that fit
                                 </p>
 
@@ -268,7 +268,7 @@ export default function GondolaShelvingDimensionsGuide() {
                                 </div>
 
                                 <div className="bg-[#f8f9fa] border border-[#f8f9fa] rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">馃挰 Questions on Sizing?</h3>
+                                    <h3 className="font-bold mb-3">❓ Questions on Sizing?</h3>
                                     <p className="text-gray-600 text-sm mb-4">
                                         Chat with our team for sizing advice.
                                     </p>
@@ -283,7 +283,7 @@ export default function GondolaShelvingDimensionsGuide() {
                                 </div>
 
                                 <div className="bg-gray-50 rounded-xl p-6">
-                                    <h3 className="font-bold mb-4">馃摎 Related Articles</h3>
+                                    <h3 className="font-bold mb-4">📚 Related Articles</h3>
                                     <ul className="space-y-3">
                                         <li>
                                             <Link href="/resources/blog/gondola-vs-wall-shelving" className="text-gray-600 hover:text-[var(--accent)] text-sm">
@@ -330,5 +330,6 @@ export default function GondolaShelvingDimensionsGuide() {
         </article>
     );
 }
+
 
 

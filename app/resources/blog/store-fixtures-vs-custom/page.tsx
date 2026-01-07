@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export default function StoreFixturesVsCustomGuide() {
                     <div className="max-w-3xl">
                         <div className="flex items-center gap-3 mb-4">
                             <Link href="/resources/blog" className="text-sm text-gray-500 hover:text-gray-700">
-                                ← Back to Blog
+                                鈫?Back to Blog
                             </Link>
                             <span className="text-xs font-medium text-orange-600 bg-orange-100 px-2 py-1 rounded">
                                 Buying Guide
@@ -48,7 +48,7 @@ export default function StoreFixturesVsCustomGuide() {
 
                         <div className="flex items-center gap-6 text-sm text-gray-500">
                             <span>📅 January 6, 2026</span>
-                            <span>⏱️ 9 min read</span>
+                            <span>鈴憋笍 9 min read</span>
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ export default function StoreFixturesVsCustomGuide() {
                             <div className="prose prose-lg max-w-none">
                                 {/* TOC */}
                                 <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">📋 Guide Contents</h2>
+                                    <h2 className="text-lg font-bold mb-4">📖 Guide Contents</h2>
                                     <ul className="space-y-2 text-gray-600">
                                         <li><a href="#overview" className="hover:text-orange-600">1. Quick Comparison</a></li>
                                         <li><a href="#standard" className="hover:text-orange-600">2. Standard Fixtures Pros & Cons</a></li>
@@ -129,7 +129,7 @@ export default function StoreFixturesVsCustomGuide() {
                                 {/* Section 2 */}
                                 <h2 id="standard">2. Standard Fixtures Pros & Cons</h2>
 
-                                <h3>✅ Advantages</h3>
+                                <h3>鉁?Advantages</h3>
                                 <ul>
                                     <li><strong>Cost-effective:</strong> Mass production = lower per-unit cost</li>
                                     <li><strong>Fast delivery:</strong> Often in stock, ships quickly</li>
@@ -139,7 +139,7 @@ export default function StoreFixturesVsCustomGuide() {
                                     <li><strong>Resale value:</strong> Can sell if you close or renovate</li>
                                 </ul>
 
-                                <h3>❌ Disadvantages</h3>
+                                <h3>鉂?Disadvantages</h3>
                                 <ul>
                                     <li><strong>Generic look:</strong> Same as many other stores</li>
                                     <li><strong>Limited sizes:</strong> May not fit unusual spaces</li>
@@ -150,7 +150,7 @@ export default function StoreFixturesVsCustomGuide() {
                                 {/* Section 3 */}
                                 <h2 id="custom">3. Custom Fixtures Pros & Cons</h2>
 
-                                <h3>✅ Advantages</h3>
+                                <h3>鉁?Advantages</h3>
                                 <ul>
                                     <li><strong>Unique brand identity:</strong> Stand out from competitors</li>
                                     <li><strong>Perfect fit:</strong> Made for your exact space</li>
@@ -160,7 +160,7 @@ export default function StoreFixturesVsCustomGuide() {
                                     <li><strong>Conversation starter:</strong> Customers comment on design</li>
                                 </ul>
 
-                                <h3>❌ Disadvantages</h3>
+                                <h3>鉂?Disadvantages</h3>
                                 <ul>
                                     <li><strong>Higher cost:</strong> 2-5x standard fixture pricing</li>
                                     <li><strong>Longer lead time:</strong> Design + manufacturing takes weeks</li>
@@ -249,7 +249,7 @@ export default function StoreFixturesVsCustomGuide() {
                                     Most successful retailers use a <strong>mix of both</strong>:
                                 </p>
 
-                                <h3>High-Impact Areas → Custom</h3>
+                                <h3>High-Impact Areas 鈫?Custom</h3>
                                 <ul>
                                     <li><strong>Entry zone:</strong> First impression, worth the investment</li>
                                     <li><strong>Checkout counter:</strong> Branded, memorable experience</li>
@@ -257,7 +257,7 @@ export default function StoreFixturesVsCustomGuide() {
                                     <li><strong>Window displays:</strong> Attract foot traffic</li>
                                 </ul>
 
-                                <h3>Functional Areas → Standard</h3>
+                                <h3>Functional Areas 鈫?Standard</h3>
                                 <ul>
                                     <li><strong>Back of store:</strong> Less visible, standard is fine</li>
                                     <li><strong>Storage/stock areas:</strong> Function over form</li>
@@ -274,7 +274,7 @@ export default function StoreFixturesVsCustomGuide() {
 
                                 <p>
                                     We offer <strong>both standard and custom fixtures</strong>. Send us your
-                                    floor plan and requirements—we&apos;ll recommend the right mix and provide
+                                    floor plan and requirements鈥攚e&apos;ll recommend the right mix and provide
                                     a complete quote with options at different budget levels.
                                 </p>
                             </div>
@@ -299,7 +299,7 @@ export default function StoreFixturesVsCustomGuide() {
                                 </div>
 
                                 <div className="bg-orange-50 border border-orange-200 rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">💬 Need Advice?</h3>
+                                    <h3 className="font-bold mb-3">❓ Need Advice?</h3>
                                     <p className="text-gray-600 text-sm mb-4">
                                         Discuss your store concept with our team.
                                     </p>
@@ -318,12 +318,12 @@ export default function StoreFixturesVsCustomGuide() {
                                     <ul className="space-y-3">
                                         <li>
                                             <Link href="/resources/blog/retail-shelving-cost-guide" className="text-gray-600 hover:text-orange-600 text-sm">
-                                                → Retail Shelving Cost Guide
+                                                鈫?Retail Shelving Cost Guide
                                             </Link>
                                         </li>
                                         <li>
                                             <Link href="/products/custom-fixtures" className="text-gray-600 hover:text-orange-600 text-sm">
-                                                → Custom Fixtures Products
+                                                鈫?Custom Fixtures Products
                                             </Link>
                                         </li>
                                     </ul>
@@ -341,7 +341,7 @@ export default function StoreFixturesVsCustomGuide() {
                         Get Your Custom Quote
                     </h2>
                     <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                        Standard fixtures, custom designs, or a mix—we do it all.
+                        Standard fixtures, custom designs, or a mix鈥攚e do it all.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link href="/free-3d-design" className="btn bg-white text-gray-900 hover:bg-gray-100">
@@ -356,3 +356,4 @@ export default function StoreFixturesVsCustomGuide() {
         </article>
     );
 }
+

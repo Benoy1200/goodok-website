@@ -47,7 +47,7 @@ export default function JewelryStoreDisplayGuide() {
                         </p>
 
                         <div className="flex items-center gap-6 text-sm text-gray-500">
-                            <span>馃搮 January 4, 2026</span>
+                            <span>📅 January 4, 2026</span>
                             <span>鈴憋笍 12 min read</span>
                         </div>
                     </div>
@@ -62,7 +62,7 @@ export default function JewelryStoreDisplayGuide() {
                             <div className="prose prose-lg max-w-none">
                                 {/* TOC */}
                                 <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">馃搵 In This Guide</h2>
+                                    <h2 className="text-lg font-bold mb-4">📖 In This Guide</h2>
                                     <ul className="space-y-2 text-gray-600">
                                         <li><a href="#types" className="hover:text-[var(--accent)]">1. Types of Jewelry Display Cases</a></li>
                                         <li><a href="#lighting" className="hover:text-[var(--accent)]">2. Lighting for Jewelry</a></li>
@@ -128,7 +128,7 @@ export default function JewelryStoreDisplayGuide() {
 
                                 <div className="bg-amber-50 border-l-4 border-amber-500 p-4 my-6">
                                     <p className="font-medium text-amber-800">
-                                        馃挕 Lighting is 50% of jewelry presentation. The wrong lighting can make
+                                        💡 Lighting is 50% of jewelry presentation. The wrong lighting can make
                                         diamonds look dull and gold look cheap.
                                     </p>
                                 </div>
@@ -345,7 +345,7 @@ export default function JewelryStoreDisplayGuide() {
                                 </div>
 
                                 <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">馃挰 Have Questions?</h3>
+                                    <h3 className="font-bold mb-3">❓ Have Questions?</h3>
                                     <p className="text-gray-600 text-sm mb-4">
                                         Chat with our jewelry display experts.
                                     </p>
@@ -360,7 +360,7 @@ export default function JewelryStoreDisplayGuide() {
                                 </div>
 
                                 <div className="bg-gray-50 rounded-xl p-6">
-                                    <h3 className="font-bold mb-4">馃摎 Related Articles</h3>
+                                    <h3 className="font-bold mb-4">📚 Related Articles</h3>
                                     <ul className="space-y-3">
                                         <li>
                                             <Link href="/resources/blog/how-to-design-cosmetics-store" className="text-gray-600 hover:text-[var(--accent)] text-sm">
@@ -402,4 +402,5 @@ export default function JewelryStoreDisplayGuide() {
         </article>
     );
 }
+
 

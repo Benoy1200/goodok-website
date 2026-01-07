@@ -48,7 +48,7 @@ export default function ToyStoreShelvingGuide() {
                         </p>
 
                         <div className="flex items-center gap-6 text-sm text-gray-500">
-                            <span>馃搮 January 4, 2026</span>
+                            <span>📅 January 4, 2026</span>
                             <span>鈴憋笍 10 min read</span>
                         </div>
                     </div>
@@ -63,7 +63,7 @@ export default function ToyStoreShelvingGuide() {
                             <div className="prose prose-lg max-w-none">
                                 {/* TOC */}
                                 <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">馃搵 What You&apos;ll Learn</h2>
+                                    <h2 className="text-lg font-bold mb-4">📖 What You&apos;ll Learn</h2>
                                     <ul className="space-y-2 text-gray-600">
                                         <li><a href="#types" className="hover:text-[var(--accent)]">1. Types of Toy Store Shelving</a></li>
                                         <li><a href="#layout" className="hover:text-[var(--accent)]">2. Layout Strategies</a></li>
@@ -131,7 +131,7 @@ export default function ToyStoreShelvingGuide() {
 
                                 <div className="bg-orange-50 border-l-4 border-orange-500 p-4 my-6">
                                     <p className="font-medium text-orange-800">
-                                        馃挕 Key Principle: Design your layout for TWO audiences 鈥?children (who
+                                        💡 Key Principle: Design your layout for TWO audiences 鈥?children (who
                                         influence purchases) and parents (who make purchases).
                                     </p>
                                 </div>
@@ -300,7 +300,7 @@ export default function ToyStoreShelvingGuide() {
 
                                 <div className="bg-[#f8f9fa] border-l-4 border-[#ff6b35] p-4 my-6">
                                     <p className="font-medium text-[var(--primary)]">
-                                        馃挵 Pro Tip: Buying directly from a manufacturer (like us!) can save
+                                        💰 Pro Tip: Buying directly from a manufacturer (like us!) can save
                                         you 30-50% compared to buying through distributors.
                                     </p>
                                 </div>
@@ -342,7 +342,7 @@ export default function ToyStoreShelvingGuide() {
                                 </div>
 
                                 <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">馃挰 Quick Questions?</h3>
+                                    <h3 className="font-bold mb-3">❓ Quick Questions?</h3>
                                     <p className="text-gray-600 text-sm mb-4">
                                         Chat with us on WhatsApp for instant answers.
                                     </p>
@@ -357,7 +357,7 @@ export default function ToyStoreShelvingGuide() {
                                 </div>
 
                                 <div className="bg-gray-50 rounded-xl p-6">
-                                    <h3 className="font-bold mb-4">馃摎 Related Articles</h3>
+                                    <h3 className="font-bold mb-4">📚 Related Articles</h3>
                                     <ul className="space-y-3">
                                         <li>
                                             <Link href="/resources/blog/how-to-design-cosmetics-store" className="text-gray-600 hover:text-[var(--accent)] text-sm">
@@ -399,5 +399,6 @@ export default function ToyStoreShelvingGuide() {
         </article>
     );
 }
+
 
 

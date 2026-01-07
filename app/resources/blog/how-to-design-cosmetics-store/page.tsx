@@ -54,9 +54,9 @@ export default function CosmeticsStoreDesignGuide() {
                         </p>
 
                         <div className="flex items-center gap-6 text-sm text-gray-500">
-                            <span>馃搮 January 4, 2026</span>
+                            <span>📅 January 4, 2026</span>
                             <span>鈴憋笍 12 min read</span>
-                            <span>馃憗锔?Store Design</span>
+                            <span>📚?Store Design</span>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ export default function CosmeticsStoreDesignGuide() {
                             <div className="prose prose-lg max-w-none">
                                 {/* Table of Contents */}
                                 <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">馃搵 Table of Contents</h2>
+                                    <h2 className="text-lg font-bold mb-4">📖 Table of Contents</h2>
                                     <ul className="space-y-2 text-gray-600">
                                         <li><a href="#understanding" className="hover:text-[var(--accent)]">1. Understanding the Cosmetics Retail Market</a></li>
                                         <li><a href="#layout" className="hover:text-[var(--accent)]">2. Store Layout Planning</a></li>
@@ -109,7 +109,7 @@ export default function CosmeticsStoreDesignGuide() {
 
                                 <div className="bg-[#f8f9fa] border-l-4 border-[#ff6b35] p-4 my-6">
                                     <p className="font-medium text-[var(--primary)]">
-                                        馃挕 Key Insight: 85% of cosmetics purchases are influenced by in-store testing.
+                                        💡 Key Insight: 85% of cosmetics purchases are influenced by in-store testing.
                                         Your store design should prioritize product accessibility and testing areas.
                                     </p>
                                 </div>
@@ -150,7 +150,7 @@ export default function CosmeticsStoreDesignGuide() {
 
                                 <div className="bg-[#f8f9fa] border-l-4 border-[#ff6b35] p-4 my-6">
                                     <p className="font-medium text-[var(--primary)]">
-                                        馃搻 Pro Tip: Allocate at least 20% of your floor space to aisles and walkways.
+                                        📋 Pro Tip: Allocate at least 20% of your floor space to aisles and walkways.
                                         Cramped stores discourage browsing and reduce time spent in-store.
                                     </p>
                                 </div>
@@ -411,7 +411,7 @@ export default function CosmeticsStoreDesignGuide() {
 
                                 {/* WhatsApp CTA */}
                                 <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">馃挰 Quick Questions?</h3>
+                                    <h3 className="font-bold mb-3">❓ Quick Questions?</h3>
                                     <p className="text-gray-600 text-sm mb-4">
                                         Chat with us on WhatsApp for instant answers about cosmetics
                                         store fixtures and design.
@@ -428,7 +428,7 @@ export default function CosmeticsStoreDesignGuide() {
 
                                 {/* Related Articles */}
                                 <div className="bg-gray-50 rounded-xl p-6">
-                                    <h3 className="font-bold mb-4">馃摎 Related Articles</h3>
+                                    <h3 className="font-bold mb-4">📚 Related Articles</h3>
                                     <ul className="space-y-3">
                                         <li>
                                             <Link href="/resources/blog/toy-store-shelving-ideas" className="text-gray-600 hover:text-[var(--accent)] text-sm">
@@ -476,6 +476,7 @@ export default function CosmeticsStoreDesignGuide() {
         </article>
     );
 }
+
 
 
 

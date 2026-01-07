@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export default function RetailShelvingCostGuide() {
                     <div className="max-w-3xl">
                         <div className="flex items-center gap-3 mb-4">
                             <Link href="/resources/blog" className="text-sm text-gray-500 hover:text-gray-700">
-                                ← Back to Blog
+                                鈫?Back to Blog
                             </Link>
                             <span className="text-xs font-medium text-green-600 bg-green-100 px-2 py-1 rounded">
                                 Cost Guide
@@ -43,12 +43,12 @@ export default function RetailShelvingCostGuide() {
 
                         <p className="text-xl text-gray-600 mb-6">
                             From budget options to premium fixtures, here&apos;s exactly what you&apos;ll
-                            pay—and how to save 30-50% with factory-direct pricing.
+                            pay鈥攁nd how to save 30-50% with factory-direct pricing.
                         </p>
 
                         <div className="flex items-center gap-6 text-sm text-gray-500">
                             <span>📅 January 6, 2026</span>
-                            <span>⏱️ 10 min read</span>
+                            <span>鈴憋笍 10 min read</span>
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ export default function RetailShelvingCostGuide() {
                             <div className="prose prose-lg max-w-none">
                                 {/* TOC */}
                                 <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">📋 What&apos;s Inside</h2>
+                                    <h2 className="text-lg font-bold mb-4">📖 What&apos;s Inside</h2>
                                     <ul className="space-y-2 text-gray-600">
                                         <li><a href="#overview" className="hover:text-green-600">1. Quick Cost Overview</a></li>
                                         <li><a href="#gondola" className="hover:text-green-600">2. Gondola Shelving Costs</a></li>
@@ -77,7 +77,7 @@ export default function RetailShelvingCostGuide() {
                                 <p>
                                     Opening a retail store? Renovating your current one? Shelving is typically
                                     <strong> 15-25% of your total fixture budget</strong>. Getting pricing right
-                                    can save you thousands—or cost you if you don&apos;t know what to expect.
+                                    can save you thousands鈥攐r cost you if you don&apos;t know what to expect.
                                 </p>
 
                                 {/* Section 1 */}
@@ -257,7 +257,7 @@ export default function RetailShelvingCostGuide() {
 
                                 <h3>What to Prioritize:</h3>
                                 <ol>
-                                    <li><strong>Entry zone:</strong> First impression matters—invest here</li>
+                                    <li><strong>Entry zone:</strong> First impression matters鈥攊nvest here</li>
                                     <li><strong>High-margin displays:</strong> Jewelry, electronics need quality cases</li>
                                     <li><strong>Back of store:</strong> Can use more budget-friendly options</li>
                                 </ol>
@@ -296,7 +296,7 @@ export default function RetailShelvingCostGuide() {
                                 </div>
 
                                 <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">💬 Questions About Pricing?</h3>
+                                    <h3 className="font-bold mb-3">❓ Questions About Pricing?</h3>
                                     <p className="text-gray-600 text-sm mb-4">
                                         Chat with our team for instant quotes.
                                     </p>
@@ -315,12 +315,12 @@ export default function RetailShelvingCostGuide() {
                                     <ul className="space-y-3">
                                         <li>
                                             <Link href="/resources/blog/gondola-vs-wall-shelving" className="text-gray-600 hover:text-green-600 text-sm">
-                                                → Gondola vs Wall Shelving
+                                                鈫?Gondola vs Wall Shelving
                                             </Link>
                                         </li>
                                         <li>
                                             <Link href="/resources/blog/retail-fixtures-wholesale-guide" className="text-gray-600 hover:text-green-600 text-sm">
-                                                → Retail Fixtures Wholesale Guide
+                                                鈫?Retail Fixtures Wholesale Guide
                                             </Link>
                                         </li>
                                     </ul>
@@ -353,3 +353,4 @@ export default function RetailShelvingCostGuide() {
         </article>
     );
 }
+
