@@ -176,7 +176,7 @@ export default function Home() {
         <HeroCarousel />
 
         {/* 底部内容区 */}
-        <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16 pb-8">
+        <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16 pb-8 backdrop-blur-sm">
           <div className="container">
             <div className="flex flex-col items-center text-center gap-2 md:gap-3 max-w-3xl mx-auto">
               <h1 className="text-2xl md:text-3xl font-bold text-outline-white">
