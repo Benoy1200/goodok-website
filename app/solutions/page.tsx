@@ -57,7 +57,7 @@ const solutions = [
         name: "Lifestyle Store",
         description: "Flexible display systems for home goods, gifts, and lifestyle products.",
         icon: "🏠",
-        image: "/images/scenes/lifestyle-store.jpg",
+        image: "/images/scenes/cosmetics-store.jpg",
         href: "/solutions/lifestyle",
         color: "from-[#0066cc] to-[#008844]",
     },
@@ -154,3 +154,4 @@ export default function SolutionsPage() {
         </div>
     );
 }
+
