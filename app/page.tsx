@@ -298,12 +298,17 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature) => (
-              <div key={feature.title} className="text-center">
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-blue-200">{feature.description}</p>
+              <div
+                key={feature.title}
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors duration-300 group"
+              >
+                <div className="w-16 h-16 bg-blue-600/30 rounded-full flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                <p className="text-blue-200 text-sm leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -321,24 +326,27 @@ export default function Home() {
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-sm p-8">
-              <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
-                {faqs.map((faq, index) => (
-                  <div key={index} className="border-b border-gray-100 pb-4">
-                    <details className="group">
-                      <summary className="flex justify-between items-center cursor-pointer list-none">
-                        <span className="font-medium text-gray-900 pr-4">{faq.question}</span>
-                        <span className="text-blue-600 group-open:rotate-180 transition-transform">
-                          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </span>
-                      </summary>
-                      <p className="text-gray-600 mt-3 text-sm">{faq.answer}</p>
-                    </details>
-                  </div>
-                ))}
-              </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 border border-gray-100"
+                >
+                  <details className="group">
+                    <summary className="flex justify-between items-center cursor-pointer list-none">
+                      <span className="font-semibold text-gray-900 pr-4">{faq.question}</span>
+                      <span className="text-blue-600 group-open:rotate-180 transition-transform duration-300 bg-blue-50 p-1 rounded-full">
+                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </span>
+                    </summary>
+                    <p className="text-gray-600 mt-4 text-sm leading-relaxed pl-1 pt-2 border-t border-gray-50/50">
+                      {faq.answer}
+                    </p>
+                  </details>
+                </div>
+              ))}
             </div>
             <div className="text-center mt-8">
               <Link href="/faq" className="text-blue-600 font-medium hover:underline">
