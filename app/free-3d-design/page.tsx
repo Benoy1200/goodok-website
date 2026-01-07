@@ -154,19 +154,19 @@ export default function Free3DDesignPage() {
                             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                                 <div className="aspect-video bg-gradient-to-br from-[#004499]/50 to-[#0066cc]/50 rounded-xl flex items-center justify-center">
                                     <div className="text-center">
-                                        <div className="text-6xl mb-4">馃彧</div>
+                                        <div className="text-6xl mb-4">🏪</div>
                                         <p className="text-white/60">Your 3D Design Preview</p>
                                     </div>
                                 </div>
                                 <div className="mt-6 grid grid-cols-3 gap-4">
                                     <div className="aspect-square bg-white/5 rounded-lg flex items-center justify-center">
-                                        <span className="text-3xl">馃搻</span>
+                                        <span className="text-3xl">📐</span>
                                     </div>
                                     <div className="aspect-square bg-white/5 rounded-lg flex items-center justify-center">
-                                        <span className="text-3xl">馃洅</span>
+                                        <span className="text-3xl">📋</span>
                                     </div>
                                     <div className="aspect-square bg-white/5 rounded-lg flex items-center justify-center">
-                                        <span className="text-3xl">馃挕</span>
+                                        <span className="text-3xl">💡</span>
                                     </div>
                                 </div>
                             </div>
@@ -253,22 +253,22 @@ export default function Free3DDesignPage() {
                             <ul className="space-y-6">
                                 {[
                                     {
-                                        icon: "馃搹",
+                                        icon: "📋",
                                         title: "Store Dimensions",
                                         desc: "Length, width, and height of your space (meters or feet)",
                                     },
                                     {
-                                        icon: "馃摳",
+                                        icon: "📄",
                                         title: "Photos (Optional)",
                                         desc: "Photos of your current space help us understand the layout",
                                     },
                                     {
-                                        icon: "馃彧",
+                                        icon: "🏪",
                                         title: "Store Type",
                                         desc: "What will you be selling? (clothing, jewelry, grocery, etc.)",
                                     },
                                     {
-                                        icon: "馃挱",
+                                        icon: "📋",
                                         title: "Design Preferences",
                                         desc: "Any specific style, colors, or requirements you have in mind",
                                     },

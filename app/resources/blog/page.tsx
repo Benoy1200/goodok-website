@@ -152,7 +152,7 @@ export default function BlogPage() {
                                 <article className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
                                     {/* Featured Image Placeholder */}
                                     <div className="h-48 bg-gradient-to-br from-[#0066cc] to-[#0066cc] flex items-center justify-center">
-                                        <span className="text-6xl">馃摉</span>
+                                        <span className="text-6xl">📚</span>
                                     </div>
 
                                     <div className="p-6">

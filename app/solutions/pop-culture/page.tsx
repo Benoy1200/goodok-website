@@ -66,7 +66,7 @@ export default function PopCultureSolutionPage() {
                         </div>
                         <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
                             <div className="aspect-[4/3] bg-[#0066cc]/50 rounded-xl flex items-center justify-center">
-                                <span className="text-6xl">馃幃</span>
+                                <span className="text-6xl">🎬</span>
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@ export default function PopCultureSolutionPage() {
                         {caseStudies.map((study) => (
                             <div key={study.name} className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition">
                                 <div className="aspect-video bg-gradient-to-br from-[#f8f9fa] to-[#f8f9fa] flex items-center justify-center">
-                                    <span className="text-6xl">馃彧</span>
+                                    <span className="text-6xl">🏪</span>
                                 </div>
                                 <div className="p-6">
                                     <div className="flex items-center justify-between mb-2">
@@ -136,17 +136,17 @@ export default function PopCultureSolutionPage() {
                         <h2 className="text-3xl font-bold mb-8">Why Choose Us</h2>
                         <div className="grid md:grid-cols-3 gap-8">
                             <div>
-                                <span className="text-4xl mb-3 block">馃敀</span>
+                                <span className="text-4xl mb-3 block">🔒</span>
                                 <h3 className="font-bold mb-2">Security</h3>
                                 <p className="text-gray-600 text-sm">Locking cases for high-value items</p>
                             </div>
                             <div>
-                                <span className="text-4xl mb-3 block">馃挕</span>
+                                <span className="text-4xl mb-3 block">💡</span>
                                 <h3 className="font-bold mb-2">Lighting</h3>
                                 <p className="text-gray-600 text-sm">LED lighting to highlight products</p>
                             </div>
                             <div>
-                                <span className="text-4xl mb-3 block">馃帹</span>
+                                <span className="text-4xl mb-3 block">🎨</span>
                                 <h3 className="font-bold mb-2">Custom</h3>
                                 <p className="text-gray-600 text-sm">Themed designs for your brand</p>
                             </div>
