@@ -47,11 +47,11 @@ export default function PopCultureSolutionPage() {
                 <div className="container">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <span className="text-[#f8f9fa] text-sm font-medium">Solutions / Pop Culture Store</span>
+                            <span className="text-white text-sm font-medium">Solutions / Pop Culture Store</span>
                             <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
                                 Pop Culture Store
                             </h1>
-                            <p className="text-xl text-[#F8F1E3] mb-8">
+                            <p className="text-xl text-white mb-8">
                                 Create the ultimate destination for anime fans, gamers, and collectors.
                                 Display solutions that protect and showcase valuable items.
                             </p>
