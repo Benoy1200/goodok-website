@@ -72,7 +72,7 @@ export default function CosmeticsRetailPage() {
                         <h2 className="text-3xl font-bold mb-8">Key Features</h2>
                         <div className="grid md:grid-cols-3 gap-6 mb-12">
                             <div className="bg-gray-50 rounded-xl p-6">
-                                <span className="text-4xl mb-4 block">猬?/span>
+                                <span className="text-4xl mb-4 block">✨</span>
                                 <h3 className="font-bold mb-2">Sleek White Displays</h3>
                                 <p className="text-gray-600 text-sm">
                                     Minimalist white displays that create a clean, modern aesthetic.

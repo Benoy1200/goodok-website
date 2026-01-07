@@ -126,7 +126,7 @@ export default function BoutiqueSolutionPage() {
                         <h2 className="text-3xl font-bold mb-8">Material Options</h2>
                         <div className="grid md:grid-cols-3 gap-8">
                             <div>
-                                <span className="text-4xl mb-3 block">猬?/span>
+                                <span className="text-4xl mb-3 block">✨</span>
                                 <h3 className="font-bold mb-2">Matte Black</h3>
                                 <p className="text-gray-600 text-sm">Modern, premium look</p>
                             </div>

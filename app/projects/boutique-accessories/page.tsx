@@ -72,7 +72,7 @@ export default function BoutiqueAccessoriesPage() {
                         <h2 className="text-3xl font-bold mb-8">Key Features</h2>
                         <div className="grid md:grid-cols-3 gap-6 mb-12">
                             <div className="bg-gray-50 rounded-xl p-6">
-                                <span className="text-4xl mb-4 block">鉁?/span>
+                                <span className="text-4xl mb-4 block">✓</span>
                                 <h3 className="font-bold mb-2">Rose Gold Racks</h3>
                                 <p className="text-gray-600 text-sm">
                                     Elegant rose gold clothing racks that match the boutique's luxury aesthetic.

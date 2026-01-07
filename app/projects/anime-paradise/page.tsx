@@ -72,7 +72,7 @@ export default function AnimeParadisePage() {
                         <h2 className="text-3xl font-bold mb-8">Key Features</h2>
                         <div className="grid md:grid-cols-3 gap-6 mb-12">
                             <div className="bg-gray-50 rounded-xl p-6">
-                                <span className="text-4xl mb-4 block">馃彈锔?/span>
+                                <span className="text-4xl mb-4 block">✨</span>
                                 <h3 className="font-bold mb-2">Glass Tower Displays</h3>
                                 <p className="text-gray-600 text-sm">
                                     Premium glass tower showcases for displaying limited edition figures at eye level.

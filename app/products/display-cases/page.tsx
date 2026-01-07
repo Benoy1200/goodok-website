@@ -164,13 +164,13 @@ export default function DisplayCasesPage() {
                                 {/* Trust badges */}
                                 <div className="flex items-center gap-6 text-sm text-gray-400">
                                     <span className="flex items-center gap-2">
-                                        <span className="text-green-400">鉁?/span> Free 3D Design
+                                        <span className="text-green-400">✓</span> Free 3D Design
                                     </span>
                                     <span className="flex items-center gap-2">
-                                        <span className="text-green-400">鉁?/span> 15+ Years Experience
+                                        <span className="text-green-400">✓</span> 15+ Years Experience
                                     </span>
                                     <span className="flex items-center gap-2">
-                                        <span className="text-green-400">鉁?/span> Global Shipping
+                                        <span className="text-green-400">✓</span> Global Shipping
                                     </span>
                                 </div>
                             </div>
@@ -312,7 +312,7 @@ export default function DisplayCasesPage() {
                                                 </h3>
                                                 <p className="text-gray-500 text-sm">{study.location}</p>
                                             </div>
-                                            <span className="text-[var(--accent)]">鈫?/span>
+                                            <span className="text-[var(--accent)]">→</span>
                                         </div>
                                         <div className="inline-block bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full">
                                             {study.result}
