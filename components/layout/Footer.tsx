@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = {
     products: [
@@ -31,14 +32,13 @@ export default function Footer() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                     {/* Brand Column */}
                     <div className="col-span-2 md:col-span-1">
-                        <div className="flex items-center gap-2 mb-4">
-                            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center">
-                                <span className="text-white font-bold text-xl">G</span>
-                            </div>
-                            <div>
-                                <span className="font-bold text-xl !text-white">Goodok</span>
-                                <span className="text-sm text-gray-400 block -mt-1">Shopfitting</span>
-                            </div>
+                        <div className="relative h-10 w-[140px] mb-6">
+                            <Image
+                                src="/images/goodok-logo.jpg"
+                                alt="Goodok Shopfitting"
+                                fill
+                                className="object-contain object-left rounded-sm"
+                            />
                         </div>
                         <p className="text-gray-400 text-sm mb-4">
                             Professional retail display solutions manufacturer with 15+ years of experience.
