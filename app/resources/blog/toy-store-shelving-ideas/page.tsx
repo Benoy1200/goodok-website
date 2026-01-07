@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -31,7 +31,7 @@ export default function ToyStoreShelvingGuide() {
                     <div className="max-w-3xl">
                         <div className="flex items-center gap-3 mb-4">
                             <Link href="/resources/blog" className="text-sm text-gray-500 hover:text-gray-700">
-                                ← Back to Blog
+                                鈫?Back to Blog
                             </Link>
                             <span className="text-xs font-medium text-orange-600 bg-orange-100 px-2 py-1 rounded">
                                 Shelving Guide
@@ -48,8 +48,8 @@ export default function ToyStoreShelvingGuide() {
                         </p>
 
                         <div className="flex items-center gap-6 text-sm text-gray-500">
-                            <span>📅 January 4, 2026</span>
-                            <span>⏱️ 10 min read</span>
+                            <span>馃搮 January 4, 2026</span>
+                            <span>鈴憋笍 10 min read</span>
                         </div>
                     </div>
                 </div>
@@ -63,19 +63,19 @@ export default function ToyStoreShelvingGuide() {
                             <div className="prose prose-lg max-w-none">
                                 {/* TOC */}
                                 <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">📋 What You&apos;ll Learn</h2>
+                                    <h2 className="text-lg font-bold mb-4">馃搵 What You&apos;ll Learn</h2>
                                     <ul className="space-y-2 text-gray-600">
-                                        <li><a href="#types" className="hover:text-blue-600">1. Types of Toy Store Shelving</a></li>
-                                        <li><a href="#layout" className="hover:text-blue-600">2. Layout Strategies</a></li>
-                                        <li><a href="#zones" className="hover:text-blue-600">3. Product Zoning by Age</a></li>
-                                        <li><a href="#display" className="hover:text-blue-600">4. Display Techniques</a></li>
-                                        <li><a href="#safety" className="hover:text-blue-600">5. Safety Considerations</a></li>
-                                        <li><a href="#budget" className="hover:text-blue-600">6. Budget Planning</a></li>
+                                        <li><a href="#types" className="hover:text-[var(--accent)]">1. Types of Toy Store Shelving</a></li>
+                                        <li><a href="#layout" className="hover:text-[var(--accent)]">2. Layout Strategies</a></li>
+                                        <li><a href="#zones" className="hover:text-[var(--accent)]">3. Product Zoning by Age</a></li>
+                                        <li><a href="#display" className="hover:text-[var(--accent)]">4. Display Techniques</a></li>
+                                        <li><a href="#safety" className="hover:text-[var(--accent)]">5. Safety Considerations</a></li>
+                                        <li><a href="#budget" className="hover:text-[var(--accent)]">6. Budget Planning</a></li>
                                     </ul>
                                 </div>
 
                                 <p>
-                                    Running a successful toy store isn&apos;t just about stocking popular products —
+                                    Running a successful toy store isn&apos;t just about stocking popular products 鈥?
                                     it&apos;s about creating an <strong>immersive shopping experience</strong> that
                                     captivates children and convinces parents to buy. The right shelving and
                                     display strategy can increase your sales by 20-40%.
@@ -83,7 +83,7 @@ export default function ToyStoreShelvingGuide() {
 
                                 <p>
                                     In this guide, we&apos;ll explore everything you need to know about toy store
-                                    shelving — from fixture types to layout strategies to safety considerations.
+                                    shelving 鈥?from fixture types to layout strategies to safety considerations.
                                 </p>
 
                                 {/* Section 1 */}
@@ -104,7 +104,7 @@ export default function ToyStoreShelvingGuide() {
                                 <h3>Wall Shelving Systems</h3>
                                 <p>
                                     Maximizes vertical space along walls. Use adjustable shelves to
-                                    accommodate different toy sizes — from small action figures to large
+                                    accommodate different toy sizes 鈥?from small action figures to large
                                     playsets.
                                 </p>
 
@@ -131,7 +131,7 @@ export default function ToyStoreShelvingGuide() {
 
                                 <div className="bg-orange-50 border-l-4 border-orange-500 p-4 my-6">
                                     <p className="font-medium text-orange-800">
-                                        💡 Key Principle: Design your layout for TWO audiences — children (who
+                                        馃挕 Key Principle: Design your layout for TWO audiences 鈥?children (who
                                         influence purchases) and parents (who make purchases).
                                     </p>
                                 </div>
@@ -230,7 +230,7 @@ export default function ToyStoreShelvingGuide() {
 
                                 <h3>Eye-Level = Buy-Level</h3>
                                 <p>
-                                    Place high-margin items at eye level — but remember, <strong>children&apos;s
+                                    Place high-margin items at eye level 鈥?but remember, <strong>children&apos;s
                                         eye level is different from adults&apos;</strong>. For kid-targeted items,
                                     position products 60-100cm from the floor.
                                 </p>
@@ -240,17 +240,17 @@ export default function ToyStoreShelvingGuide() {
 
                                 <div className="bg-red-50 border-l-4 border-red-500 p-4 my-6">
                                     <p className="font-medium text-red-800">
-                                        ⚠️ Safety is non-negotiable in toy stores. Children will climb, pull,
+                                        鈿狅笍 Safety is non-negotiable in toy stores. Children will climb, pull,
                                         and test the limits of your fixtures.
                                     </p>
                                 </div>
 
                                 <ul>
                                     <li><strong>Anchor all tall shelving</strong> to walls or floor</li>
-                                    <li><strong>Round all edges</strong> — avoid sharp corners at child height</li>
+                                    <li><strong>Round all edges</strong> 鈥?avoid sharp corners at child height</li>
                                     <li><strong>Use anti-tip brackets</strong> on gondola units</li>
                                     <li><strong>Keep heavy items on lower shelves</strong></li>
-                                    <li><strong>Ensure stable base</strong> — wider base = more stability</li>
+                                    <li><strong>Ensure stable base</strong> 鈥?wider base = more stability</li>
                                     <li><strong>Clear sightlines</strong> for staff to monitor the store</li>
                                 </ul>
 
@@ -298,9 +298,9 @@ export default function ToyStoreShelvingGuide() {
                                     </table>
                                 </div>
 
-                                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
-                                    <p className="font-medium text-blue-800">
-                                        💰 Pro Tip: Buying directly from a manufacturer (like us!) can save
+                                <div className="bg-[#f8f9fa] border-l-4 border-[#ff6b35] p-4 my-6">
+                                    <p className="font-medium text-[var(--primary)]">
+                                        馃挵 Pro Tip: Buying directly from a manufacturer (like us!) can save
                                         you 30-50% compared to buying through distributors.
                                     </p>
                                 </div>
@@ -330,7 +330,7 @@ export default function ToyStoreShelvingGuide() {
                                         Free Toy Store Design
                                     </h3>
                                     <p className="text-orange-100 mb-4">
-                                        Send us your store dimensions and we&apos;ll create a 3D layout —
+                                        Send us your store dimensions and we&apos;ll create a 3D layout 鈥?
                                         completely free!
                                     </p>
                                     <Link
@@ -342,7 +342,7 @@ export default function ToyStoreShelvingGuide() {
                                 </div>
 
                                 <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">💬 Quick Questions?</h3>
+                                    <h3 className="font-bold mb-3">馃挰 Quick Questions?</h3>
                                     <p className="text-gray-600 text-sm mb-4">
                                         Chat with us on WhatsApp for instant answers.
                                     </p>
@@ -357,16 +357,16 @@ export default function ToyStoreShelvingGuide() {
                                 </div>
 
                                 <div className="bg-gray-50 rounded-xl p-6">
-                                    <h3 className="font-bold mb-4">📚 Related Articles</h3>
+                                    <h3 className="font-bold mb-4">馃摎 Related Articles</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/resources/blog/how-to-design-cosmetics-store" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → Cosmetics Store Design Guide
+                                            <Link href="/resources/blog/how-to-design-cosmetics-store" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?Cosmetics Store Design Guide
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/resources/blog/how-to-open-pop-culture-store" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → How to Open a Pop Culture Store
+                                            <Link href="/resources/blog/how-to-open-pop-culture-store" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?How to Open a Pop Culture Store
                                             </Link>
                                         </li>
                                     </ul>
@@ -399,3 +399,5 @@ export default function ToyStoreShelvingGuide() {
         </article>
     );
 }
+
+

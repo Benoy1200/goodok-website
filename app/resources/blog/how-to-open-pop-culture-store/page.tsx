@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -25,14 +25,14 @@ export default function PopCultureStoreGuide() {
     return (
         <article className="pt-24">
             {/* Hero */}
-            <section className="bg-gradient-to-br from-purple-50 to-pink-50 py-16">
+            <section className="bg-gradient-to-br from-[#f8f9fa] to-[#f8f9fa] py-16">
                 <div className="container">
                     <div className="max-w-3xl">
                         <div className="flex items-center gap-3 mb-4">
                             <Link href="/resources/blog" className="text-sm text-gray-500 hover:text-gray-700">
-                                ← Back to Blog
+                                鈫?Back to Blog
                             </Link>
-                            <span className="text-xs font-medium text-purple-600 bg-purple-100 px-2 py-1 rounded">
+                            <span className="text-xs font-medium text-[var(--accent)] bg-[#f8f9fa] px-2 py-1 rounded">
                                 Store Design
                             </span>
                         </div>
@@ -42,13 +42,13 @@ export default function PopCultureStoreGuide() {
                         </h1>
 
                         <p className="text-xl text-gray-600 mb-6">
-                            From Funko Pops to anime figures, trading cards to vintage toys —
+                            From Funko Pops to anime figures, trading cards to vintage toys 鈥?
                             learn how to create a pop culture destination that collectors love.
                         </p>
 
                         <div className="flex items-center gap-6 text-sm text-gray-500">
-                            <span>📅 January 4, 2026</span>
-                            <span>⏱️ 15 min read</span>
+                            <span>馃搮 January 4, 2026</span>
+                            <span>鈴憋笍 15 min read</span>
                         </div>
                     </div>
                 </div>
@@ -62,14 +62,14 @@ export default function PopCultureStoreGuide() {
                             <div className="prose prose-lg max-w-none">
                                 {/* TOC */}
                                 <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">📋 In This Guide</h2>
+                                    <h2 className="text-lg font-bold mb-4">馃搵 In This Guide</h2>
                                     <ul className="space-y-2 text-gray-600">
-                                        <li><a href="#market" className="hover:text-blue-600">1. Understanding the Pop Culture Market</a></li>
-                                        <li><a href="#niche" className="hover:text-blue-600">2. Finding Your Niche</a></li>
-                                        <li><a href="#design" className="hover:text-blue-600">3. Store Design & Layout</a></li>
-                                        <li><a href="#fixtures" className="hover:text-blue-600">4. Essential Display Fixtures</a></li>
-                                        <li><a href="#merchandising" className="hover:text-blue-600">5. Visual Merchandising Tips</a></li>
-                                        <li><a href="#budget" className="hover:text-blue-600">6. Startup Budget</a></li>
+                                        <li><a href="#market" className="hover:text-[var(--accent)]">1. Understanding the Pop Culture Market</a></li>
+                                        <li><a href="#niche" className="hover:text-[var(--accent)]">2. Finding Your Niche</a></li>
+                                        <li><a href="#design" className="hover:text-[var(--accent)]">3. Store Design & Layout</a></li>
+                                        <li><a href="#fixtures" className="hover:text-[var(--accent)]">4. Essential Display Fixtures</a></li>
+                                        <li><a href="#merchandising" className="hover:text-[var(--accent)]">5. Visual Merchandising Tips</a></li>
+                                        <li><a href="#budget" className="hover:text-[var(--accent)]">6. Startup Budget</a></li>
                                     </ul>
                                 </div>
 
@@ -82,7 +82,7 @@ export default function PopCultureStoreGuide() {
                                 </p>
 
                                 <p>
-                                    But success in this niche requires more than just inventory — you need to
+                                    But success in this niche requires more than just inventory 鈥?you need to
                                     create an <strong>immersive experience</strong> that resonates with your
                                     target audience. This guide covers everything from store design to display
                                     strategies.
@@ -94,15 +94,15 @@ export default function PopCultureStoreGuide() {
                                 <h3>Market Segments</h3>
                                 <ul>
                                     <li><strong>Collectible Figures</strong>: Funko Pop, NECA, Hot Toys, anime figures</li>
-                                    <li><strong>Trading Cards</strong>: Pokémon, Yu-Gi-Oh!, Magic: The Gathering, sports cards</li>
+                                    <li><strong>Trading Cards</strong>: Pok茅mon, Yu-Gi-Oh!, Magic: The Gathering, sports cards</li>
                                     <li><strong>Anime & Manga</strong>: Figures, apparel, accessories, imported goods</li>
                                     <li><strong>Retro Gaming & Toys</strong>: Vintage games, classic toys, nostalgia items</li>
                                     <li><strong>Pop Art & Apparel</strong>: Licensed clothing, posters, home decor</li>
                                 </ul>
 
-                                <div className="bg-purple-50 border-l-4 border-purple-500 p-4 my-6">
-                                    <p className="font-medium text-purple-800">
-                                        💡 Pro Tip: The most successful pop culture stores don&apos;t try to do
+                                <div className="bg-[#f8f9fa] border-l-4 border-[#ff6b35] p-4 my-6">
+                                    <p className="font-medium text-[var(--primary)]">
+                                        馃挕 Pro Tip: The most successful pop culture stores don&apos;t try to do
                                         everything. They dominate a specific niche and become the go-to destination.
                                     </p>
                                 </div>
@@ -174,7 +174,7 @@ export default function PopCultureStoreGuide() {
                                 <ul>
                                     <li><strong>Theme your store</strong> around your niche (anime aesthetics, retro arcade, comic book style)</li>
                                     <li><strong>Use dramatic lighting</strong> to highlight displays</li>
-                                    <li><strong>Add environmental elements</strong> — murals, props, photo opportunities</li>
+                                    <li><strong>Add environmental elements</strong> 鈥?murals, props, photo opportunities</li>
                                     <li><strong>Play appropriate music/media</strong> that matches your vibe</li>
                                 </ul>
 
@@ -191,11 +191,11 @@ export default function PopCultureStoreGuide() {
 
                                 <h3>Key Zones</h3>
                                 <ul>
-                                    <li><strong>Hero Display</strong>: First thing customers see — showcase your most impressive items</li>
+                                    <li><strong>Hero Display</strong>: First thing customers see 鈥?showcase your most impressive items</li>
                                     <li><strong>New Arrivals</strong>: Dedicated section for latest releases</li>
                                     <li><strong>Limited/Exclusive</strong>: High-value items in secure displays</li>
                                     <li><strong>Deep Dive Aisles</strong>: Organized by franchise/category for serious collectors</li>
-                                    <li><strong>Impulse Zone</strong>: Near checkout — small, affordable items</li>
+                                    <li><strong>Impulse Zone</strong>: Near checkout 鈥?small, affordable items</li>
                                 </ul>
 
                                 {/* Section 4 */}
@@ -256,7 +256,7 @@ export default function PopCultureStoreGuide() {
 
                                 <h3>Group by Franchise</h3>
                                 <p>
-                                    Organize products by franchise (Marvel, DC, Dragon Ball, Pokémon) rather
+                                    Organize products by franchise (Marvel, DC, Dragon Ball, Pok茅mon) rather
                                     than by product type. Fans shop by fandom.
                                 </p>
 
@@ -267,7 +267,7 @@ export default function PopCultureStoreGuide() {
 
                                 <h3>Price Visibility</h3>
                                 <p>
-                                    Always clearly price items. Collectors often compare prices — hidden pricing
+                                    Always clearly price items. Collectors often compare prices 鈥?hidden pricing
                                     kills trust.
                                 </p>
 
@@ -322,7 +322,7 @@ export default function PopCultureStoreGuide() {
                                 <h2>Ready to Build Your Pop Culture Empire?</h2>
 
                                 <p>
-                                    Opening a pop culture store is exciting — but getting the store design right
+                                    Opening a pop culture store is exciting 鈥?but getting the store design right
                                     from day one is crucial. A well-designed space attracts collectors, encourages
                                     exploration, and drives sales.
                                 </p>
@@ -338,23 +338,23 @@ export default function PopCultureStoreGuide() {
                         {/* Sidebar */}
                         <div className="lg:col-span-1">
                             <div className="sticky top-24 space-y-8">
-                                <div className="bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl p-6 text-white">
+                                <div className="bg-gradient-to-br from-[#0066cc] to-[#ff6b35] rounded-xl p-6 text-white">
                                     <h3 className="text-xl font-bold mb-3">
                                         Free Pop Culture Store Design
                                     </h3>
-                                    <p className="text-purple-100 mb-4">
+                                    <p className="text-[#F8F1E3] mb-4">
                                         Send us your floor plan and we&apos;ll create a custom 3D layout!
                                     </p>
                                     <Link
                                         href="/free-3d-design"
-                                        className="block w-full bg-white text-purple-600 font-semibold py-3 px-4 rounded-lg text-center hover:bg-purple-50 transition-colors"
+                                        className="block w-full bg-white text-[var(--accent)] font-semibold py-3 px-4 rounded-lg text-center hover:bg-[#f8f9fa] transition-colors"
                                     >
                                         Get Free Design
                                     </Link>
                                 </div>
 
                                 <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">💬 Have Questions?</h3>
+                                    <h3 className="font-bold mb-3">馃挰 Have Questions?</h3>
                                     <p className="text-gray-600 text-sm mb-4">
                                         Chat with us on WhatsApp.
                                     </p>
@@ -369,16 +369,16 @@ export default function PopCultureStoreGuide() {
                                 </div>
 
                                 <div className="bg-gray-50 rounded-xl p-6">
-                                    <h3 className="font-bold mb-4">📚 Related Articles</h3>
+                                    <h3 className="font-bold mb-4">馃摎 Related Articles</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/resources/blog/toy-store-shelving-ideas" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → Toy Store Shelving Ideas
+                                            <Link href="/resources/blog/toy-store-shelving-ideas" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?Toy Store Shelving Ideas
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/resources/blog/jewelry-store-display-ideas" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → Jewelry Store Display Ideas
+                                            <Link href="/resources/blog/jewelry-store-display-ideas" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?Jewelry Store Display Ideas
                                             </Link>
                                         </li>
                                     </ul>
@@ -411,3 +411,6 @@ export default function PopCultureStoreGuide() {
         </article>
     );
 }
+
+
+

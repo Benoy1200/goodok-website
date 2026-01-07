@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -25,14 +25,14 @@ export default function RetailFixturesWholesaleGuide() {
     return (
         <article className="pt-24">
             {/* Hero */}
-            <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
+            <section className="bg-gradient-to-br from-[#f8f9fa] to-[#f8f9fa] py-16">
                 <div className="container">
                     <div className="max-w-3xl">
                         <div className="flex items-center gap-3 mb-4">
                             <Link href="/resources/blog" className="text-sm text-gray-500 hover:text-gray-700">
-                                ← Back to Blog
+                                鈫?Back to Blog
                             </Link>
-                            <span className="text-xs font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded">
+                            <span className="text-xs font-medium text-[var(--accent)] bg-[#f8f9fa] px-2 py-1 rounded">
                                 Buying Guide
                             </span>
                         </div>
@@ -47,8 +47,8 @@ export default function RetailFixturesWholesaleGuide() {
                         </p>
 
                         <div className="flex items-center gap-6 text-sm text-gray-500">
-                            <span>📅 January 1, 2026</span>
-                            <span>⏱️ 15 min read</span>
+                            <span>馃搮 January 1, 2026</span>
+                            <span>鈴憋笍 15 min read</span>
                         </div>
                     </div>
                 </div>
@@ -62,14 +62,14 @@ export default function RetailFixturesWholesaleGuide() {
                             <div className="prose prose-lg max-w-none">
                                 {/* TOC */}
                                 <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">📋 In This Guide</h2>
+                                    <h2 className="text-lg font-bold mb-4">馃搵 In This Guide</h2>
                                     <ul className="space-y-2 text-gray-600">
-                                        <li><a href="#why-wholesale" className="hover:text-blue-600">1. Why Buy Wholesale?</a></li>
-                                        <li><a href="#finding-suppliers" className="hover:text-blue-600">2. Finding Suppliers</a></li>
-                                        <li><a href="#quality" className="hover:text-blue-600">3. Quality Assessment</a></li>
-                                        <li><a href="#pricing" className="hover:text-blue-600">4. Understanding Pricing</a></li>
-                                        <li><a href="#shipping" className="hover:text-blue-600">5. Shipping & Logistics</a></li>
-                                        <li><a href="#checklist" className="hover:text-blue-600">6. Buying Checklist</a></li>
+                                        <li><a href="#why-wholesale" className="hover:text-[var(--accent)]">1. Why Buy Wholesale?</a></li>
+                                        <li><a href="#finding-suppliers" className="hover:text-[var(--accent)]">2. Finding Suppliers</a></li>
+                                        <li><a href="#quality" className="hover:text-[var(--accent)]">3. Quality Assessment</a></li>
+                                        <li><a href="#pricing" className="hover:text-[var(--accent)]">4. Understanding Pricing</a></li>
+                                        <li><a href="#shipping" className="hover:text-[var(--accent)]">5. Shipping & Logistics</a></li>
+                                        <li><a href="#checklist" className="hover:text-[var(--accent)]">6. Buying Checklist</a></li>
                                     </ul>
                                 </div>
 
@@ -141,9 +141,9 @@ export default function RetailFixturesWholesaleGuide() {
                                     <li><strong>Direct Factory Websites</strong>: Like goodokshop.com</li>
                                 </ul>
 
-                                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
-                                    <p className="font-medium text-blue-800">
-                                        💡 Pro Tip: Working directly with manufacturers (not trading companies)
+                                <div className="bg-[#f8f9fa] border-l-4 border-[#ff6b35] p-4 my-6">
+                                    <p className="font-medium text-[var(--primary)]">
+                                        馃挕 Pro Tip: Working directly with manufacturers (not trading companies)
                                         gives you better prices and more control over quality.
                                     </p>
                                 </div>
@@ -223,7 +223,7 @@ export default function RetailFixturesWholesaleGuide() {
 
                                 <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
                                     <p className="font-medium text-yellow-800">
-                                        ⚠️ Never pay 100% upfront. A reputable supplier will accept standard
+                                        鈿狅笍 Never pay 100% upfront. A reputable supplier will accept standard
                                         30/70 payment terms.
                                     </p>
                                 </div>
@@ -258,28 +258,28 @@ export default function RetailFixturesWholesaleGuide() {
                                 <h2 id="checklist">6. Buying Checklist</h2>
 
                                 <div className="bg-gray-50 rounded-xl p-6 my-6">
-                                    <h3 className="text-lg font-bold mb-4">✅ Before Ordering</h3>
+                                    <h3 className="text-lg font-bold mb-4">鉁?Before Ordering</h3>
                                     <ul className="space-y-2">
-                                        <li>☐ Verified supplier credentials</li>
-                                        <li>☐ Requested and received samples</li>
-                                        <li>☐ Confirmed specifications in writing</li>
-                                        <li>☐ Agreed on payment terms</li>
-                                        <li>☐ Got shipping quote</li>
-                                        <li>☐ Checked import duties for your country</li>
+                                        <li>鈽?Verified supplier credentials</li>
+                                        <li>鈽?Requested and received samples</li>
+                                        <li>鈽?Confirmed specifications in writing</li>
+                                        <li>鈽?Agreed on payment terms</li>
+                                        <li>鈽?Got shipping quote</li>
+                                        <li>鈽?Checked import duties for your country</li>
                                     </ul>
 
-                                    <h3 className="text-lg font-bold mt-6 mb-4">✅ During Production</h3>
+                                    <h3 className="text-lg font-bold mt-6 mb-4">鉁?During Production</h3>
                                     <ul className="space-y-2">
-                                        <li>☐ Request production photos</li>
-                                        <li>☐ Pre-shipment inspection</li>
-                                        <li>☐ Packing list verification</li>
+                                        <li>鈽?Request production photos</li>
+                                        <li>鈽?Pre-shipment inspection</li>
+                                        <li>鈽?Packing list verification</li>
                                     </ul>
 
-                                    <h3 className="text-lg font-bold mt-6 mb-4">✅ After Receiving</h3>
+                                    <h3 className="text-lg font-bold mt-6 mb-4">鉁?After Receiving</h3>
                                     <ul className="space-y-2">
-                                        <li>☐ Inspect all items upon delivery</li>
-                                        <li>☐ Document any damage immediately</li>
-                                        <li>☐ Test assembly</li>
+                                        <li>鈽?Inspect all items upon delivery</li>
+                                        <li>鈽?Document any damage immediately</li>
+                                        <li>鈽?Test assembly</li>
                                     </ul>
                                 </div>
 
@@ -296,23 +296,23 @@ export default function RetailFixturesWholesaleGuide() {
                         {/* Sidebar */}
                         <div className="lg:col-span-1">
                             <div className="sticky top-24 space-y-8">
-                                <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl p-6 text-white">
+                                <div className="bg-gradient-to-br from-[#0066cc] to-[#355C86] rounded-xl p-6 text-white">
                                     <h3 className="text-xl font-bold mb-3">
                                         Get Factory Direct Quote
                                     </h3>
-                                    <p className="text-blue-100 mb-4">
+                                    <p className="text-[#F8F1E3] mb-4">
                                         Save 40-60% with wholesale pricing!
                                     </p>
                                     <Link
                                         href="/free-3d-design"
-                                        className="block w-full bg-white text-blue-600 font-semibold py-3 px-4 rounded-lg text-center hover:bg-blue-50 transition-colors"
+                                        className="block w-full bg-white text-[var(--accent)] font-semibold py-3 px-4 rounded-lg text-center hover:bg-[#f8f9fa] transition-colors"
                                     >
                                         Get Free Quote
                                     </Link>
                                 </div>
 
                                 <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">💬 Questions?</h3>
+                                    <h3 className="font-bold mb-3">馃挰 Questions?</h3>
                                     <p className="text-gray-600 text-sm mb-4">
                                         Chat with our export team.
                                     </p>
@@ -327,16 +327,16 @@ export default function RetailFixturesWholesaleGuide() {
                                 </div>
 
                                 <div className="bg-gray-50 rounded-xl p-6">
-                                    <h3 className="font-bold mb-4">📚 Related Articles</h3>
+                                    <h3 className="font-bold mb-4">馃摎 Related Articles</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/resources/blog/gondola-vs-wall-shelving" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → Gondola vs Wall Shelving
+                                            <Link href="/resources/blog/gondola-vs-wall-shelving" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?Gondola vs Wall Shelving
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/resources/blog/how-to-open-boutique" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → How to Open a Boutique
+                                            <Link href="/resources/blog/how-to-open-boutique" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?How to Open a Boutique
                                             </Link>
                                         </li>
                                     </ul>
@@ -369,3 +369,5 @@ export default function RetailFixturesWholesaleGuide() {
         </article>
     );
 }
+
+

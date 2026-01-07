@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -126,7 +126,7 @@ export default function ClientTestimonials() {
                     className={`bg-gray-700/50 backdrop-blur rounded-xl p-8 relative transition-all duration-500 transform ${fadingIndex === index ? "opacity-0 scale-95" : "opacity-100 scale-100"
                         }`}
                 >
-                    <div className="text-blue-400 text-4xl mb-4">&ldquo;</div>
+                    <div className="text-[#f8f9fa] text-4xl mb-4">&ldquo;</div>
                     <p className="text-gray-300 mb-6 leading-relaxed min-h-[80px]">
                         {testimonial.quote}
                     </p>
@@ -149,3 +149,5 @@ export default function ClientTestimonials() {
         </div>
     );
 }
+
+

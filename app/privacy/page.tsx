@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -85,8 +85,8 @@ export default function PrivacyPolicy() {
                         </ul>
 
                         <div className="mt-8 p-4 bg-gray-100 rounded-lg">
-                            <Link href="/contact" className="text-blue-600 hover:underline">
-                                Contact us with any privacy concerns →
+                            <Link href="/contact" className="text-[var(--accent)] hover:underline">
+                                Contact us with any privacy concerns 鈫?
                             </Link>
                         </div>
                     </div>
@@ -95,3 +95,4 @@ export default function PrivacyPolicy() {
         </div>
     );
 }
+

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export default function KidsToyStoreLayoutGuide() {
                     <div className="max-w-3xl">
                         <div className="flex items-center gap-3 mb-4">
                             <Link href="/resources/blog" className="text-sm text-gray-500 hover:text-gray-700">
-                                ← Back to Blog
+                                鈫?Back to Blog
                             </Link>
                             <span className="text-xs font-medium text-orange-600 bg-orange-100 px-2 py-1 rounded">
                                 Store Layout
@@ -42,13 +42,13 @@ export default function KidsToyStoreLayoutGuide() {
                         </h1>
 
                         <p className="text-xl text-gray-600 mb-6">
-                            The best toy stores aren&apos;t just shops — they&apos;re experiences. Learn
+                            The best toy stores aren&apos;t just shops 鈥?they&apos;re experiences. Learn
                             how to create layouts that excite kids and convert parents.
                         </p>
 
                         <div className="flex items-center gap-6 text-sm text-gray-500">
-                            <span>📅 January 4, 2026</span>
-                            <span>⏱️ 12 min read</span>
+                            <span>馃搮 January 4, 2026</span>
+                            <span>鈴憋笍 12 min read</span>
                         </div>
                     </div>
                 </div>
@@ -62,14 +62,14 @@ export default function KidsToyStoreLayoutGuide() {
                             <div className="prose prose-lg max-w-none">
                                 {/* TOC */}
                                 <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">📋 In This Guide</h2>
+                                    <h2 className="text-lg font-bold mb-4">馃搵 In This Guide</h2>
                                     <ul className="space-y-2 text-gray-600">
-                                        <li><a href="#psychology" className="hover:text-blue-600">1. Psychology of Kid Shopping</a></li>
-                                        <li><a href="#zone-design" className="hover:text-blue-600">2. Zone-Based Layout Design</a></li>
-                                        <li><a href="#traffic-flow" className="hover:text-blue-600">3. Traffic Flow Strategies</a></li>
-                                        <li><a href="#height" className="hover:text-blue-600">4. Height & Accessibility</a></li>
-                                        <li><a href="#interactive" className="hover:text-blue-600">5. Interactive Display Areas</a></li>
-                                        <li><a href="#safety" className="hover:text-blue-600">6. Safety Considerations</a></li>
+                                        <li><a href="#psychology" className="hover:text-[var(--accent)]">1. Psychology of Kid Shopping</a></li>
+                                        <li><a href="#zone-design" className="hover:text-[var(--accent)]">2. Zone-Based Layout Design</a></li>
+                                        <li><a href="#traffic-flow" className="hover:text-[var(--accent)]">3. Traffic Flow Strategies</a></li>
+                                        <li><a href="#height" className="hover:text-[var(--accent)]">4. Height & Accessibility</a></li>
+                                        <li><a href="#interactive" className="hover:text-[var(--accent)]">5. Interactive Display Areas</a></li>
+                                        <li><a href="#safety" className="hover:text-[var(--accent)]">6. Safety Considerations</a></li>
                                     </ul>
                                 </div>
 
@@ -105,8 +105,8 @@ export default function KidsToyStoreLayoutGuide() {
 
                                 <div className="bg-orange-50 border-l-4 border-orange-500 p-4 my-6">
                                     <p className="font-medium text-orange-800">
-                                        💡 The magic formula: Let kids play → Kids get excited → Parents feel
-                                        their child&apos;s joy → Purchase happens naturally.
+                                        馃挕 The magic formula: Let kids play 鈫?Kids get excited 鈫?Parents feel
+                                        their child&apos;s joy 鈫?Purchase happens naturally.
                                     </p>
                                 </div>
 
@@ -243,7 +243,7 @@ export default function KidsToyStoreLayoutGuide() {
 
                                 <h3>Demo Stations</h3>
                                 <p>
-                                    Let kids play with products — it&apos;s your best sales tool:
+                                    Let kids play with products 鈥?it&apos;s your best sales tool:
                                 </p>
                                 <ul>
                                     <li>LEGO/building block tables</li>
@@ -262,9 +262,9 @@ export default function KidsToyStoreLayoutGuide() {
                                     <li>Costume/dress-up areas</li>
                                 </ul>
 
-                                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
-                                    <p className="font-medium text-blue-800">
-                                        📸 Photo zones = free marketing. Parents share on social media,
+                                <div className="bg-[#f8f9fa] border-l-4 border-[#ff6b35] p-4 my-6">
+                                    <p className="font-medium text-[var(--primary)]">
+                                        馃摳 Photo zones = free marketing. Parents share on social media,
                                         tagging your store location.
                                     </p>
                                 </div>
@@ -285,7 +285,7 @@ export default function KidsToyStoreLayoutGuide() {
 
                                 <div className="bg-red-50 border-l-4 border-red-500 p-4 my-6">
                                     <p className="font-medium text-red-800">
-                                        ⚠️ In a kids store, safety is not optional. One accident can destroy
+                                        鈿狅笍 In a kids store, safety is not optional. One accident can destroy
                                         your reputation and business.
                                     </p>
                                 </div>
@@ -347,7 +347,7 @@ export default function KidsToyStoreLayoutGuide() {
                                 </div>
 
                                 <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">💬 Need Help?</h3>
+                                    <h3 className="font-bold mb-3">馃挰 Need Help?</h3>
                                     <p className="text-gray-600 text-sm mb-4">
                                         Chat with our toy store design experts.
                                     </p>
@@ -362,16 +362,16 @@ export default function KidsToyStoreLayoutGuide() {
                                 </div>
 
                                 <div className="bg-gray-50 rounded-xl p-6">
-                                    <h3 className="font-bold mb-4">📚 Related Articles</h3>
+                                    <h3 className="font-bold mb-4">馃摎 Related Articles</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/resources/blog/toy-store-shelving-ideas" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → Toy Store Shelving Ideas
+                                            <Link href="/resources/blog/toy-store-shelving-ideas" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?Toy Store Shelving Ideas
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/resources/blog/how-to-open-pop-culture-store" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → Pop Culture Store Guide
+                                            <Link href="/resources/blog/how-to-open-pop-culture-store" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?Pop Culture Store Guide
                                             </Link>
                                         </li>
                                     </ul>
@@ -404,3 +404,5 @@ export default function KidsToyStoreLayoutGuide() {
         </article>
     );
 }
+
+

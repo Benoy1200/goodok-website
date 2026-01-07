@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -14,17 +14,17 @@ export const metadata: Metadata = {
 };
 
 const products = [
-    { name: "Wall Shelving", desc: "Maximize vertical space", icon: "📐" },
-    { name: "Gondola Displays", desc: "Double-sided browsing", icon: "📦" },
-    { name: "Pen & Pencil Racks", desc: "Organized display", icon: "✏️" },
-    { name: "Book Displays", desc: "For notebooks and journals", icon: "📚" },
+    { name: "Wall Shelving", desc: "Maximize vertical space", icon: "馃搻" },
+    { name: "Gondola Displays", desc: "Double-sided browsing", icon: "馃摝" },
+    { name: "Pen & Pencil Racks", desc: "Organized display", icon: "鉁忥笍" },
+    { name: "Book Displays", desc: "For notebooks and journals", icon: "馃摎" },
 ];
 
 const caseStudies = [
     {
         name: "Stationery Paradise",
         location: "Tokyo, Japan",
-        description: "A colorful 90㎡ stationery store with organized category zones and bright displays.",
+        description: "A colorful 90銕?stationery store with organized category zones and bright displays.",
         highlights: ["Color-coded sections", "Wall shelving systems", "Demo areas"],
         href: "#",
     },
@@ -34,30 +34,30 @@ export default function StationerySolutionPage() {
     return (
         <div className="pt-24">
             {/* Hero */}
-            <section className="bg-gradient-to-br from-blue-800 to-indigo-700 text-white py-20">
+            <section className="bg-gradient-to-br from-[#0066cc] to-[#0066cc] text-white py-20">
                 <div className="container">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <span className="text-blue-200 text-sm font-medium">Solutions / Stationery Store</span>
+                            <span className="text-[#F4E7CF] text-sm font-medium">Solutions / Stationery Store</span>
                             <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
                                 Stationery Store
                             </h1>
-                            <p className="text-xl text-blue-100 mb-8">
+                            <p className="text-xl text-[#F8F1E3] mb-8">
                                 Create an organized and inspiring shopping experience for students,
                                 artists, and office professionals with our specialized fixtures.
                             </p>
                             <div className="flex flex-wrap gap-4">
-                                <Link href="/free-3d-design" className="btn bg-white text-blue-800 hover:bg-blue-50">
+                                <Link href="/free-3d-design" className="btn bg-white text-[var(--primary)] hover:bg-[#f8f9fa]">
                                     Get Free 3D Design
                                 </Link>
-                                <Link href="/contact" className="btn border-2 border-white text-white hover:bg-white hover:text-blue-800">
+                                <Link href="/contact" className="btn border-2 border-white text-white hover:bg-white hover:text-[var(--primary)]">
                                     Contact Us
                                 </Link>
                             </div>
                         </div>
                         <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
-                            <div className="aspect-[4/3] bg-blue-700/50 rounded-xl flex items-center justify-center">
-                                <span className="text-6xl">✏️</span>
+                            <div className="aspect-[4/3] bg-[#0066cc]/50 rounded-xl flex items-center justify-center">
+                                <span className="text-6xl">鉁忥笍</span>
                             </div>
                         </div>
                     </div>
@@ -74,8 +74,8 @@ export default function StationerySolutionPage() {
                     <div className="max-w-2xl mx-auto">
                         {caseStudies.map((study) => (
                             <div key={study.name} className="bg-white rounded-xl shadow-lg overflow-hidden">
-                                <div className="aspect-video bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center">
-                                    <span className="text-6xl">✏️</span>
+                                <div className="aspect-video bg-gradient-to-br from-[#f8f9fa] to-[#f8f9fa] flex items-center justify-center">
+                                    <span className="text-6xl">鉁忥笍</span>
                                 </div>
                                 <div className="p-6">
                                     <div className="flex items-center justify-between mb-2">
@@ -85,7 +85,7 @@ export default function StationerySolutionPage() {
                                     <p className="text-gray-600 mb-4">{study.description}</p>
                                     <div className="flex flex-wrap gap-2">
                                         {study.highlights.map((h) => (
-                                            <span key={h} className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                                            <span key={h} className="text-xs bg-[#f8f9fa] text-[var(--primary)] px-2 py-1 rounded">
                                                 {h}
                                             </span>
                                         ))}
@@ -122,17 +122,17 @@ export default function StationerySolutionPage() {
                         <h2 className="text-3xl font-bold mb-8">Key Features</h2>
                         <div className="grid md:grid-cols-3 gap-8">
                             <div>
-                                <span className="text-4xl mb-3 block">📋</span>
+                                <span className="text-4xl mb-3 block">馃搵</span>
                                 <h3 className="font-bold mb-2">Organization</h3>
                                 <p className="text-gray-600 text-sm">Clear category zones for easy browsing</p>
                             </div>
                             <div>
-                                <span className="text-4xl mb-3 block">🎨</span>
+                                <span className="text-4xl mb-3 block">馃帹</span>
                                 <h3 className="font-bold mb-2">Colorful</h3>
                                 <p className="text-gray-600 text-sm">Bright displays attract students</p>
                             </div>
                             <div>
-                                <span className="text-4xl mb-3 block">📏</span>
+                                <span className="text-4xl mb-3 block">馃搹</span>
                                 <h3 className="font-bold mb-2">Adjustable</h3>
                                 <p className="text-gray-600 text-sm">Flexible shelves for various products</p>
                             </div>
@@ -142,15 +142,15 @@ export default function StationerySolutionPage() {
             </section>
 
             {/* CTA */}
-            <section className="py-20 bg-blue-800 text-white">
+            <section className="py-20 bg-[#0066cc] text-white">
                 <div className="container text-center">
                     <h2 className="text-3xl font-bold mb-4">
                         Design Your Stationery Store
                     </h2>
-                    <p className="text-blue-200 mb-8">
+                    <p className="text-[#F4E7CF] mb-8">
                         Free 3D design and factory-direct pricing.
                     </p>
-                    <Link href="/free-3d-design" className="btn bg-white text-blue-800 hover:bg-blue-50">
+                    <Link href="/free-3d-design" className="btn bg-white text-[var(--primary)] hover:bg-[#f8f9fa]">
                         Get Started
                     </Link>
                 </div>
@@ -158,3 +158,5 @@ export default function StationerySolutionPage() {
         </div>
     );
 }
+
+

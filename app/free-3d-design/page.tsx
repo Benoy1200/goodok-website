@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -16,32 +16,32 @@ export const metadata: Metadata = {
 
 const benefits = [
     {
-        icon: "🎨",
+        icon: "馃帹",
         title: "Professional 3D Visualization",
         description: "See exactly how your store will look before placing any orders",
     },
     {
-        icon: "📐",
+        icon: "馃搻",
         title: "Complete Layout Plan",
         description: "Optimized product placement for maximum sales and customer flow",
     },
     {
-        icon: "💡",
+        icon: "馃挕",
         title: "Lighting Recommendations",
         description: "Strategic lighting to highlight products and create ambiance",
     },
     {
-        icon: "📦",
+        icon: "馃摝",
         title: "Product Specifications",
         description: "Detailed list of all fixtures with dimensions and quantities",
     },
     {
-        icon: "💰",
+        icon: "馃挵",
         title: "Transparent Pricing",
         description: "Complete cost breakdown with no hidden fees",
     },
     {
-        icon: "🚚",
+        icon: "馃殮",
         title: "Shipping Estimate",
         description: "Delivery timeline and logistics planning for your location",
     },
@@ -93,12 +93,12 @@ export default function Free3DDesignPage() {
 
                             <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
                                 Get Your FREE
-                                <span className="text-blue-400"> 3D Store Design</span>
+                                <span className="text-[#f8f9fa]"> 3D Store Design</span>
                             </h1>
 
                             <p className="text-xl text-gray-300 mb-8">
                                 Transform your empty space into a stunning retail environment.
-                                Our design team will create a complete 3D layout — delivered
+                                Our design team will create a complete 3D layout 鈥?delivered
                                 within 24 hours.
                             </p>
 
@@ -152,21 +152,21 @@ export default function Free3DDesignPage() {
                         {/* Visual placeholder for 3D preview */}
                         <div className="hidden lg:block">
                             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                                <div className="aspect-video bg-gradient-to-br from-blue-900/50 to-blue-800/50 rounded-xl flex items-center justify-center">
+                                <div className="aspect-video bg-gradient-to-br from-[#004499]/50 to-[#0066cc]/50 rounded-xl flex items-center justify-center">
                                     <div className="text-center">
-                                        <div className="text-6xl mb-4">🏪</div>
+                                        <div className="text-6xl mb-4">馃彧</div>
                                         <p className="text-white/60">Your 3D Design Preview</p>
                                     </div>
                                 </div>
                                 <div className="mt-6 grid grid-cols-3 gap-4">
                                     <div className="aspect-square bg-white/5 rounded-lg flex items-center justify-center">
-                                        <span className="text-3xl">📐</span>
+                                        <span className="text-3xl">馃搻</span>
                                     </div>
                                     <div className="aspect-square bg-white/5 rounded-lg flex items-center justify-center">
-                                        <span className="text-3xl">🛒</span>
+                                        <span className="text-3xl">馃洅</span>
                                     </div>
                                     <div className="aspect-square bg-white/5 rounded-lg flex items-center justify-center">
-                                        <span className="text-3xl">💡</span>
+                                        <span className="text-3xl">馃挕</span>
                                     </div>
                                 </div>
                             </div>
@@ -217,16 +217,16 @@ export default function Free3DDesignPage() {
                             <div key={item.step} className="relative">
                                 {/* Connector line */}
                                 {index < process.length - 1 && (
-                                    <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-blue-100"></div>
+                                    <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-[#f8f9fa]"></div>
                                 )}
 
                                 <div className="relative z-10 flex flex-col items-center text-center">
-                                    <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                                    <div className="w-16 h-16 bg-[#004499] text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
                                         {item.step}
                                     </div>
                                     <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                                     <p className="text-gray-600 mb-2">{item.description}</p>
-                                    <span className="text-sm text-blue-600 font-medium">
+                                    <span className="text-sm text-[var(--accent)] font-medium">
                                         {item.time}
                                     </span>
                                 </div>
@@ -253,22 +253,22 @@ export default function Free3DDesignPage() {
                             <ul className="space-y-6">
                                 {[
                                     {
-                                        icon: "📏",
+                                        icon: "馃搹",
                                         title: "Store Dimensions",
                                         desc: "Length, width, and height of your space (meters or feet)",
                                     },
                                     {
-                                        icon: "📸",
+                                        icon: "馃摳",
                                         title: "Photos (Optional)",
                                         desc: "Photos of your current space help us understand the layout",
                                     },
                                     {
-                                        icon: "🏪",
+                                        icon: "馃彧",
                                         title: "Store Type",
                                         desc: "What will you be selling? (clothing, jewelry, grocery, etc.)",
                                     },
                                     {
-                                        icon: "💭",
+                                        icon: "馃挱",
                                         title: "Design Preferences",
                                         desc: "Any specific style, colors, or requirements you have in mind",
                                     },
@@ -299,7 +299,7 @@ export default function Free3DDesignPage() {
                                     Or email us at{" "}
                                     <a
                                         href="mailto:design@goodokshop.com"
-                                        className="text-blue-600 hover:underline"
+                                        className="text-[var(--accent)] hover:underline"
                                     >
                                         design@goodokshop.com
                                     </a>
@@ -355,3 +355,6 @@ export default function Free3DDesignPage() {
         </div>
     );
 }
+
+
+

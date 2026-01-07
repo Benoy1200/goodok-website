@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -25,14 +25,14 @@ export default function HowToOpenBoutiqueGuide() {
     return (
         <article className="pt-24">
             {/* Hero */}
-            <section className="bg-gradient-to-br from-pink-50 to-rose-50 py-16">
+            <section className="bg-gradient-to-br from-[#f8f9fa] to-[#f8f9fa] py-16">
                 <div className="container">
                     <div className="max-w-3xl">
                         <div className="flex items-center gap-3 mb-4">
                             <Link href="/resources/blog" className="text-sm text-gray-500 hover:text-gray-700">
-                                ← Back to Blog
+                                鈫?Back to Blog
                             </Link>
-                            <span className="text-xs font-medium text-pink-600 bg-pink-100 px-2 py-1 rounded">
+                            <span className="text-xs font-medium text-[var(--accent)] bg-[#f8f9fa] px-2 py-1 rounded">
                                 Store Setup
                             </span>
                         </div>
@@ -47,8 +47,8 @@ export default function HowToOpenBoutiqueGuide() {
                         </p>
 
                         <div className="flex items-center gap-6 text-sm text-gray-500">
-                            <span>📅 January 4, 2026</span>
-                            <span>⏱️ 15 min read</span>
+                            <span>馃搮 January 4, 2026</span>
+                            <span>鈴憋笍 15 min read</span>
                         </div>
                     </div>
                 </div>
@@ -62,20 +62,20 @@ export default function HowToOpenBoutiqueGuide() {
                             <div className="prose prose-lg max-w-none">
                                 {/* TOC */}
                                 <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">📋 In This Guide</h2>
+                                    <h2 className="text-lg font-bold mb-4">馃搵 In This Guide</h2>
                                     <ul className="space-y-2 text-gray-600">
-                                        <li><a href="#planning" className="hover:text-blue-600">1. Planning Your Boutique</a></li>
-                                        <li><a href="#design" className="hover:text-blue-600">2. Store Design Essentials</a></li>
-                                        <li><a href="#fixtures" className="hover:text-blue-600">3. Essential Fixtures</a></li>
-                                        <li><a href="#layout" className="hover:text-blue-600">4. Layout Strategies</a></li>
-                                        <li><a href="#merchandising" className="hover:text-blue-600">5. Visual Merchandising</a></li>
-                                        <li><a href="#budget" className="hover:text-blue-600">6. Startup Budget</a></li>
+                                        <li><a href="#planning" className="hover:text-[var(--accent)]">1. Planning Your Boutique</a></li>
+                                        <li><a href="#design" className="hover:text-[var(--accent)]">2. Store Design Essentials</a></li>
+                                        <li><a href="#fixtures" className="hover:text-[var(--accent)]">3. Essential Fixtures</a></li>
+                                        <li><a href="#layout" className="hover:text-[var(--accent)]">4. Layout Strategies</a></li>
+                                        <li><a href="#merchandising" className="hover:text-[var(--accent)]">5. Visual Merchandising</a></li>
+                                        <li><a href="#budget" className="hover:text-[var(--accent)]">6. Startup Budget</a></li>
                                     </ul>
                                 </div>
 
                                 <p>
                                     Opening a boutique is a dream for many fashion enthusiasts. The key to
-                                    success isn&apos;t just having great products — it&apos;s creating an
+                                    success isn&apos;t just having great products 鈥?it&apos;s creating an
                                     <strong>unforgettable shopping experience</strong> that keeps customers
                                     coming back.
                                 </p>
@@ -147,9 +147,9 @@ export default function HowToOpenBoutiqueGuide() {
                                     <li><strong>Music</strong>: Curate playlists that match your vibe</li>
                                 </ul>
 
-                                <div className="bg-pink-50 border-l-4 border-pink-500 p-4 my-6">
-                                    <p className="font-medium text-pink-800">
-                                        💡 Pro Tip: Customers should be able to identify your brand&apos;s aesthetic
+                                <div className="bg-[#f8f9fa] border-l-4 border-[#ff6b35] p-4 my-6">
+                                    <p className="font-medium text-[var(--primary)]">
+                                        馃挕 Pro Tip: Customers should be able to identify your brand&apos;s aesthetic
                                         within 5 seconds of entering the store.
                                     </p>
                                 </div>
@@ -238,7 +238,7 @@ export default function HowToOpenBoutiqueGuide() {
 
                                 <h3>Traffic Flow Tips</h3>
                                 <ul>
-                                    <li>Most customers turn right when entering — place key items there</li>
+                                    <li>Most customers turn right when entering 鈥?place key items there</li>
                                     <li>Create clear sightlines to the back of the store</li>
                                     <li>Use mannequins to guide customers through the space</li>
                                 </ul>
@@ -346,23 +346,23 @@ export default function HowToOpenBoutiqueGuide() {
                         {/* Sidebar */}
                         <div className="lg:col-span-1">
                             <div className="sticky top-24 space-y-8">
-                                <div className="bg-gradient-to-br from-pink-500 to-rose-600 rounded-xl p-6 text-white">
+                                <div className="bg-gradient-to-br from-[#004499] to-[#ff6b35] rounded-xl p-6 text-white">
                                     <h3 className="text-xl font-bold mb-3">
                                         Free Boutique Design
                                     </h3>
-                                    <p className="text-pink-100 mb-4">
+                                    <p className="text-[#F8F1E3] mb-4">
                                         We&apos;ll create a stunning 3D layout for your boutique!
                                     </p>
                                     <Link
                                         href="/free-3d-design"
-                                        className="block w-full bg-white text-pink-600 font-semibold py-3 px-4 rounded-lg text-center hover:bg-pink-50 transition-colors"
+                                        className="block w-full bg-white text-[var(--accent)] font-semibold py-3 px-4 rounded-lg text-center hover:bg-[#f8f9fa] transition-colors"
                                     >
                                         Get Free Design
                                     </Link>
                                 </div>
 
                                 <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">💬 Questions?</h3>
+                                    <h3 className="font-bold mb-3">馃挰 Questions?</h3>
                                     <p className="text-gray-600 text-sm mb-4">
                                         Chat with our boutique design experts.
                                     </p>
@@ -377,16 +377,16 @@ export default function HowToOpenBoutiqueGuide() {
                                 </div>
 
                                 <div className="bg-gray-50 rounded-xl p-6">
-                                    <h3 className="font-bold mb-4">📚 Related Articles</h3>
+                                    <h3 className="font-bold mb-4">馃摎 Related Articles</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/resources/blog/jewelry-store-display-ideas" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → Jewelry Store Display Ideas
+                                            <Link href="/resources/blog/jewelry-store-display-ideas" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?Jewelry Store Display Ideas
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/resources/blog/how-to-design-cosmetics-store" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → Cosmetics Store Design Guide
+                                            <Link href="/resources/blog/how-to-design-cosmetics-store" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?Cosmetics Store Design Guide
                                             </Link>
                                         </li>
                                     </ul>
@@ -419,3 +419,7 @@ export default function HowToOpenBoutiqueGuide() {
         </article>
     );
 }
+
+
+
+

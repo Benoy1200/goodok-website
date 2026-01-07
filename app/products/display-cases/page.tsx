@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ProductSchema, FAQSchema } from "@/components/schema";
@@ -78,17 +78,17 @@ const caseStudies = [
 // Why choose us points
 const whyChooseUs = [
     {
-        icon: "🏭",
+        icon: "馃彮",
         title: "Factory Direct",
-        description: "Cut out middlemen. Work directly with our 15,000㎡ manufacturing facility.",
+        description: "Cut out middlemen. Work directly with our 15,000銕?manufacturing facility.",
     },
     {
-        icon: "📦",
+        icon: "馃摝",
         title: "Safe Delivery",
         description: "Triple-layer packaging. We've shipped to 50+ countries without a single damage claim.",
     },
     {
-        icon: "🎨",
+        icon: "馃帹",
         title: "Free 3D Design",
         description: "See your showcase in your store before ordering. 24-hour turnaround.",
     },
@@ -131,32 +131,32 @@ export default function DisplayCasesPage() {
 
             <div className="pt-24">
                 {/* Hero - User-Focused Messaging */}
-                <section className="bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white py-20 relative overflow-hidden">
+                <section className="bg-gradient-to-br from-gray-900 via-[#004499] to-gray-900 text-white py-20 relative overflow-hidden">
                     {/* Background decorative elements */}
                     <div className="absolute inset-0 opacity-20">
-                        <div className="absolute top-10 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
-                        <div className="absolute bottom-10 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
+                        <div className="absolute top-10 right-10 w-96 h-96 bg-[#ff6b35] rounded-full blur-3xl"></div>
+                        <div className="absolute bottom-10 left-10 w-72 h-72 bg-[#0066cc] rounded-full blur-3xl"></div>
                     </div>
 
                     <div className="container relative z-10">
                         <div className="grid lg:grid-cols-2 gap-12 items-center">
                             <div>
-                                <span className="inline-block bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                                    Display Cases • Glass Showcases
+                                <span className="inline-block bg-[#ff6b35]/20 text-[#F0E1C3] px-4 py-2 rounded-full text-sm font-medium mb-6">
+                                    Display Cases 鈥?Glass Showcases
                                 </span>
                                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
                                     Make Your Products
-                                    <span className="text-purple-400 block">Irresistible to Buy</span>
+                                    <span className="text-[#f8f9fa] block">Irresistible to Buy</span>
                                 </h1>
                                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                                    The right display case doesn&apos;t just protect your products—it makes customers
+                                    The right display case doesn&apos;t just protect your products鈥攊t makes customers
                                     <strong className="text-white"> willing to pay 30% more</strong>.
                                     Our showcases are designed to turn browsers into buyers.
                                 </p>
                                 <div className="flex flex-wrap gap-4 mb-8">
                                     <Link
                                         href="/free-3d-design"
-                                        className="btn bg-white text-purple-900 hover:bg-gray-100 text-lg px-8 py-4"
+                                        className="btn bg-white text-[var(--primary)] hover:bg-gray-100 text-lg px-8 py-4"
                                     >
                                         See It In Your Store First
                                     </Link>
@@ -164,27 +164,27 @@ export default function DisplayCasesPage() {
                                 {/* Trust badges */}
                                 <div className="flex items-center gap-6 text-sm text-gray-400">
                                     <span className="flex items-center gap-2">
-                                        <span className="text-green-400">✓</span> Free 3D Design
+                                        <span className="text-green-400">鉁?/span> Free 3D Design
                                     </span>
                                     <span className="flex items-center gap-2">
-                                        <span className="text-green-400">✓</span> 15+ Years Experience
+                                        <span className="text-green-400">鉁?/span> 15+ Years Experience
                                     </span>
                                     <span className="flex items-center gap-2">
-                                        <span className="text-green-400">✓</span> Global Shipping
+                                        <span className="text-green-400">鉁?/span> Global Shipping
                                     </span>
                                 </div>
                             </div>
                             <div className="relative">
                                 {/* Hero image placeholder - will be replaced with real image */}
-                                <div className="aspect-[4/3] bg-gradient-to-br from-purple-800/50 to-gray-800/50 rounded-2xl backdrop-blur-sm border border-purple-500/20 flex items-center justify-center">
+                                <div className="aspect-[4/3] bg-gradient-to-br from-[#0066cc]/50 to-gray-800/50 rounded-2xl backdrop-blur-sm border border-[#ff6b35]/20 flex items-center justify-center">
                                     <div className="text-center">
-                                        <span className="text-8xl block mb-4">💎</span>
-                                        <p className="text-purple-300 text-sm">Premium Showcase Preview</p>
+                                        <span className="text-8xl block mb-4">馃拵</span>
+                                        <p className="text-[#F0E1C3] text-sm">Premium Showcase Preview</p>
                                     </div>
                                 </div>
                                 {/* Floating stats */}
                                 <div className="absolute -bottom-6 -left-6 bg-white text-gray-900 rounded-xl p-4 shadow-xl">
-                                    <div className="text-2xl font-bold text-purple-600">500+</div>
+                                    <div className="text-2xl font-bold text-[var(--accent)]">500+</div>
                                     <div className="text-sm text-gray-600">Stores Equipped</div>
                                 </div>
                             </div>
@@ -207,8 +207,8 @@ export default function DisplayCasesPage() {
                                 >
                                     <div className="relative aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden mb-4">
                                         {/* Placeholder for scene image */}
-                                        <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center">
-                                            <span className="text-white text-6xl">🏪</span>
+                                        <div className="absolute inset-0 bg-gradient-to-br from-[#004499] to-[#0066cc] flex items-center justify-center">
+                                            <span className="text-white text-6xl">馃彧</span>
                                         </div>
                                         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                                             <h3 className="text-white font-semibold">{scene.title}</h3>
@@ -255,7 +255,7 @@ export default function DisplayCasesPage() {
                                             >
                                                 <td className="py-4 px-6 font-medium text-gray-900">{row[0]}</td>
                                                 <td className="py-4 px-6 text-gray-600">{row[1]}</td>
-                                                <td className="py-4 px-6 text-purple-600 font-medium">{row[2]}</td>
+                                                <td className="py-4 px-6 text-[var(--accent)] font-medium">{row[2]}</td>
                                             </tr>
                                         ))}
                                     </tbody>
@@ -269,7 +269,7 @@ export default function DisplayCasesPage() {
                 </section>
 
                 {/* Why Choose Us */}
-                <section className="py-20 bg-purple-50">
+                <section className="py-20 bg-[#f8f9fa]">
                     <div className="container">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold mb-3">Why 500+ Store Owners Trust Us</h2>
@@ -301,18 +301,18 @@ export default function DisplayCasesPage() {
                                     href={study.href}
                                     className="group bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition"
                                 >
-                                    <div className="aspect-video bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center">
-                                        <span className="text-white text-6xl">📸</span>
+                                    <div className="aspect-video bg-gradient-to-br from-[#004499] to-[#0066cc] flex items-center justify-center">
+                                        <span className="text-white text-6xl">馃摳</span>
                                     </div>
                                     <div className="p-6">
                                         <div className="flex justify-between items-start mb-2">
                                             <div>
-                                                <h3 className="font-bold text-lg group-hover:text-purple-600 transition">
+                                                <h3 className="font-bold text-lg group-hover:text-[var(--accent)] transition">
                                                     {study.title}
                                                 </h3>
                                                 <p className="text-gray-500 text-sm">{study.location}</p>
                                             </div>
-                                            <span className="text-purple-600">→</span>
+                                            <span className="text-[var(--accent)]">鈫?/span>
                                         </div>
                                         <div className="inline-block bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full">
                                             {study.result}
@@ -325,18 +325,18 @@ export default function DisplayCasesPage() {
                 </section>
 
                 {/* Final CTA - Simplified */}
-                <section className="py-20 bg-gradient-to-r from-purple-900 to-gray-900 text-white">
+                <section className="py-20 bg-gradient-to-r from-[#004499] to-gray-900 text-white">
                     <div className="container text-center">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4">
                             Tell Us Your Vision
                         </h2>
-                        <p className="text-purple-200 mb-8 max-w-2xl mx-auto text-lg">
+                        <p className="text-[#F4E7CF] mb-8 max-w-2xl mx-auto text-lg">
                             Every great store starts with a conversation. Share your ideas, and we&apos;ll create a
                             free 3D design showing exactly how your display cases will look.
                         </p>
                         <Link
                             href="/contact"
-                            className="btn bg-white text-purple-900 hover:bg-gray-100 text-lg px-10 py-4"
+                            className="btn bg-white text-[var(--primary)] hover:bg-gray-100 text-lg px-10 py-4"
                         >
                             Start the Conversation
                         </Link>
@@ -346,3 +346,7 @@ export default function DisplayCasesPage() {
         </>
     );
 }
+
+
+
+

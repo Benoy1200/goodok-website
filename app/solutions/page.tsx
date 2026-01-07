@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -17,43 +17,43 @@ const solutions = [
         name: "Pop Culture Store",
         description: "Display solutions for anime, gaming, and collectibles stores. Secure cases for valuable items.",
         href: "/solutions/pop-culture",
-        icon: "🎮",
-        color: "from-violet-600 to-purple-600",
+        icon: "馃幃",
+        color: "from-[#004499] to-[#ff6b35]",
     },
     {
         name: "Toy Store",
         description: "Kid-friendly displays with safety features. Interactive demo areas and colorful fixtures.",
         href: "/solutions/toy-store",
-        icon: "🧸",
+        icon: "馃Ц",
         color: "from-orange-500 to-yellow-500",
     },
     {
         name: "Jewelry Store",
         description: "Premium glass showcases with LED lighting and security locks for precious items.",
         href: "/solutions/jewelry-store",
-        icon: "💎",
+        icon: "馃拵",
         color: "from-amber-600 to-yellow-600",
     },
     {
         name: "Boutique",
         description: "Elegant clothing racks and display tables for fashion and accessories stores.",
         href: "/solutions/boutique",
-        icon: "👗",
-        color: "from-rose-600 to-pink-600",
+        icon: "馃憲",
+        color: "from-[#004499] to-[#ff6b35]",
     },
     {
         name: "Lifestyle Store",
         description: "Flexible display systems for home goods, gifts, and lifestyle products.",
         href: "/solutions/lifestyle",
-        icon: "🏠",
+        icon: "馃彔",
         color: "from-teal-500 to-emerald-500",
     },
     {
         name: "Stationery Store",
         description: "Organized shelving and display racks for stationery, art supplies, and office products.",
         href: "/solutions/stationery",
-        icon: "✏️",
-        color: "from-sky-500 to-blue-500",
+        icon: "鉁忥笍",
+        color: "from-[#004499] to-[#0066cc]",
     },
 ];
 
@@ -89,13 +89,13 @@ export default function SolutionsPage() {
                                 <div className={`absolute inset-0 bg-gradient-to-br ${solution.color} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
                                 <div className="p-8">
                                     <div className="text-5xl mb-4">{solution.icon}</div>
-                                    <h2 className="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
+                                    <h2 className="text-2xl font-bold mb-3 group-hover:text-[var(--accent)] transition-colors">
                                         {solution.name}
                                     </h2>
                                     <p className="text-gray-600 mb-4">
                                         {solution.description}
                                     </p>
-                                    <div className="flex items-center text-blue-600 font-medium">
+                                    <div className="flex items-center text-[var(--accent)] font-medium">
                                         Explore Solutions
                                         <svg className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -137,3 +137,8 @@ export default function SolutionsPage() {
         </div>
     );
 }
+
+
+
+
+

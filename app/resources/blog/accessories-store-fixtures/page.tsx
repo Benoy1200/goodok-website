@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -25,14 +25,14 @@ export default function AccessoriesStoreFixturesGuide() {
     return (
         <article className="pt-24">
             {/* Hero */}
-            <section className="bg-gradient-to-br from-rose-50 to-pink-50 py-16">
+            <section className="bg-gradient-to-br from-[#f8f9fa] to-[#f8f9fa] py-16">
                 <div className="container">
                     <div className="max-w-3xl">
                         <div className="flex items-center gap-3 mb-4">
                             <Link href="/resources/blog" className="text-sm text-gray-500 hover:text-gray-700">
-                                ← Back to Blog
+                                鈫?Back to Blog
                             </Link>
-                            <span className="text-xs font-medium text-rose-600 bg-rose-100 px-2 py-1 rounded">
+                            <span className="text-xs font-medium text-[var(--accent)] bg-[#f8f9fa] px-2 py-1 rounded">
                                 Fixtures Guide
                             </span>
                         </div>
@@ -47,8 +47,8 @@ export default function AccessoriesStoreFixturesGuide() {
                         </p>
 
                         <div className="flex items-center gap-6 text-sm text-gray-500">
-                            <span>📅 January 4, 2026</span>
-                            <span>⏱️ 11 min read</span>
+                            <span>馃搮 January 4, 2026</span>
+                            <span>鈴憋笍 11 min read</span>
                         </div>
                     </div>
                 </div>
@@ -62,20 +62,20 @@ export default function AccessoriesStoreFixturesGuide() {
                             <div className="prose prose-lg max-w-none">
                                 {/* TOC */}
                                 <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">📋 In This Guide</h2>
+                                    <h2 className="text-lg font-bold mb-4">馃搵 In This Guide</h2>
                                     <ul className="space-y-2 text-gray-600">
-                                        <li><a href="#fixtures-by-type" className="hover:text-blue-600">1. Fixtures by Accessory Type</a></li>
-                                        <li><a href="#display-stands" className="hover:text-blue-600">2. Display Stands & Tables</a></li>
-                                        <li><a href="#wall-systems" className="hover:text-blue-600">3. Wall Display Systems</a></li>
-                                        <li><a href="#glass-cases" className="hover:text-blue-600">4. Glass Display Cases</a></li>
-                                        <li><a href="#merchandising" className="hover:text-blue-600">5. Visual Merchandising Tips</a></li>
-                                        <li><a href="#budget" className="hover:text-blue-600">6. Budget Planning</a></li>
+                                        <li><a href="#fixtures-by-type" className="hover:text-[var(--accent)]">1. Fixtures by Accessory Type</a></li>
+                                        <li><a href="#display-stands" className="hover:text-[var(--accent)]">2. Display Stands & Tables</a></li>
+                                        <li><a href="#wall-systems" className="hover:text-[var(--accent)]">3. Wall Display Systems</a></li>
+                                        <li><a href="#glass-cases" className="hover:text-[var(--accent)]">4. Glass Display Cases</a></li>
+                                        <li><a href="#merchandising" className="hover:text-[var(--accent)]">5. Visual Merchandising Tips</a></li>
+                                        <li><a href="#budget" className="hover:text-[var(--accent)]">6. Budget Planning</a></li>
                                     </ul>
                                 </div>
 
                                 <p>
                                     Accessories are impulse-driven purchases. A customer might walk in for
-                                    one item and leave with five — <strong>if your displays catch their
+                                    one item and leave with five 鈥?<strong>if your displays catch their
                                         attention</strong>. The right fixtures showcase products, create desire,
                                     and encourage browsing.
                                 </p>
@@ -166,9 +166,9 @@ export default function AccessoriesStoreFixturesGuide() {
                                     <li>Ear displays for earrings</li>
                                 </ul>
 
-                                <div className="bg-rose-50 border-l-4 border-rose-500 p-4 my-6">
-                                    <p className="font-medium text-rose-800">
-                                        💡 Pro Tip: Use mannequin forms to show how accessories complement
+                                <div className="bg-[#f8f9fa] border-l-4 border-[#ff6b35] p-4 my-6">
+                                    <p className="font-medium text-[var(--primary)]">
+                                        馃挕 Pro Tip: Use mannequin forms to show how accessories complement
                                         outfits. A complete &quot;look&quot; sells more than individual items.
                                     </p>
                                 </div>
@@ -370,23 +370,23 @@ export default function AccessoriesStoreFixturesGuide() {
                         {/* Sidebar */}
                         <div className="lg:col-span-1">
                             <div className="sticky top-24 space-y-8">
-                                <div className="bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl p-6 text-white">
+                                <div className="bg-gradient-to-br from-[#f8f9fa]0 to-[#ff6b35] rounded-xl p-6 text-white">
                                     <h3 className="text-xl font-bold mb-3">
                                         Free Store Design
                                     </h3>
-                                    <p className="text-rose-100 mb-4">
+                                    <p className="text-[#F8F1E3] mb-4">
                                         Get a professional 3D layout for your accessories store!
                                     </p>
                                     <Link
                                         href="/free-3d-design"
-                                        className="block w-full bg-white text-rose-600 font-semibold py-3 px-4 rounded-lg text-center hover:bg-rose-50 transition-colors"
+                                        className="block w-full bg-white text-[var(--accent)] font-semibold py-3 px-4 rounded-lg text-center hover:bg-[#f8f9fa] transition-colors"
                                     >
                                         Get Free Design
                                     </Link>
                                 </div>
 
                                 <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">💬 Need Help?</h3>
+                                    <h3 className="font-bold mb-3">馃挰 Need Help?</h3>
                                     <p className="text-gray-600 text-sm mb-4">
                                         Chat with our display experts.
                                     </p>
@@ -401,16 +401,16 @@ export default function AccessoriesStoreFixturesGuide() {
                                 </div>
 
                                 <div className="bg-gray-50 rounded-xl p-6">
-                                    <h3 className="font-bold mb-4">📚 Related Articles</h3>
+                                    <h3 className="font-bold mb-4">馃摎 Related Articles</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/resources/blog/jewelry-store-display-ideas" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → Jewelry Store Display Ideas
+                                            <Link href="/resources/blog/jewelry-store-display-ideas" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?Jewelry Store Display Ideas
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/resources/blog/how-to-open-boutique" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → How to Open a Boutique
+                                            <Link href="/resources/blog/how-to-open-boutique" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?How to Open a Boutique
                                             </Link>
                                         </li>
                                     </ul>
@@ -443,3 +443,9 @@ export default function AccessoriesStoreFixturesGuide() {
         </article>
     );
 }
+
+
+
+
+
+

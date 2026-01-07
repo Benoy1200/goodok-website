@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useState } from "react";
@@ -14,7 +14,7 @@ const productItems = [
     { name: "Store Design", href: "/free-3d-design" },
 ];
 
-// Navigation order: Solutions → Products → About → Resources → Contact
+// Navigation order: Solutions 鈫?Products 鈫?About 鈫?Resources 鈫?Contact
 const navigation = [
     { name: "Solutions", href: "/solutions" },
     { name: "Products", href: "/products", hasDropdown: true },
@@ -55,7 +55,7 @@ export default function Header() {
                             >
                                 <Link
                                     href={item.href}
-                                    className="text-gray-600 hover:text-blue-600 font-medium transition-colors flex items-center gap-1"
+                                    className="text-gray-600 hover:text-[var(--accent)] font-medium transition-colors flex items-center gap-1"
                                 >
                                     {item.name}
                                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -71,7 +71,7 @@ export default function Header() {
                                                 <Link
                                                     key={product.name}
                                                     href={product.href}
-                                                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
+                                                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-[var(--accent)] transition-colors"
                                                 >
                                                     {product.name}
                                                 </Link>
@@ -84,7 +84,7 @@ export default function Header() {
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
+                                className="text-gray-600 hover:text-[var(--accent)] font-medium transition-colors"
                             >
                                 {item.name}
                             </Link>
@@ -116,7 +116,7 @@ export default function Header() {
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                className="text-gray-600 hover:text-blue-600 font-medium py-2"
+                                className="text-gray-600 hover:text-[var(--accent)] font-medium py-2"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 {item.name}
@@ -128,7 +128,7 @@ export default function Header() {
                                 <Link
                                     key={product.name}
                                     href={product.href}
-                                    className="text-gray-500 hover:text-blue-600 py-1 text-sm block"
+                                    className="text-gray-500 hover:text-[var(--accent)] py-1 text-sm block"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     {product.name}
@@ -149,3 +149,4 @@ export default function Header() {
         </header>
     );
 }
+

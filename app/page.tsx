@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import ClientTestimonials from "@/components/ClientTestimonials";
 import HeroCarousel from "@/components/HeroCarousel";
@@ -38,16 +38,16 @@ const products = [
     icon: "👔",
   },
   {
+    name: "Checkout Counters",
+    description: "Modern checkout counters and POS systems for retail stores",
+    href: "/products/checkout-counters",
+    icon: "💳",
+  },
+  {
     name: "Custom Fixtures",
     description: "Bespoke solutions designed for your unique store concept",
     href: "/products/custom-fixtures",
     icon: "✨",
-  },
-  {
-    name: "Store Design",
-    description: "Complete store layout planning and 3D visualization",
-    href: "/free-3d-design",
-    icon: "🎨",
   },
 ];
 
@@ -148,34 +148,34 @@ const features = [
   {
     title: "Free 3D Design",
     description: "Get a professional 3D store layout within 24 hours. Visualize your dream store before ordering.",
-    icon: "🎯",
+    icon: "馃幆",
   },
   {
     title: "Factory Direct Pricing",
     description: "Cut out the middleman. Work directly with our manufacturing facility for the best prices.",
-    icon: "💰",
+    icon: "馃挵",
   },
   {
     title: "Global Shipping",
     description: "We ship to over 50 countries. Professional packing ensures safe delivery worldwide.",
-    icon: "🌍",
+    icon: "馃實",
   },
   {
     title: "Installation Support",
     description: "Step-by-step installation guides and video tutorials. Remote support when you need it.",
-    icon: "🔧",
+    icon: "馃敡",
   },
 ];
 
 export default function Home() {
   return (
     <div className="pt-16">
-      {/* Hero Section - 5张图片轮播 */}
+      {/* Hero Section - 5寮犲浘鐗囪疆鎾?*/}
       <section className="h-[80vh] relative overflow-hidden">
         {/* Background Carousel */}
         <HeroCarousel />
 
-        {/* 底部内容区 */}
+        {/* 搴曢儴鍐呭鍖?*/}
         <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16 pb-8">
           <div className="container">
             <div className="flex flex-col items-center text-center gap-2 md:gap-3 max-w-3xl mx-auto">
@@ -183,7 +183,7 @@ export default function Home() {
                 Professional Retail Display Solutions
               </h1>
               <p className="text-gray-300 text-sm md:text-base">
-                Free 3D Design · Factory Direct · Global Shipping
+                Free 3D Design 路 Factory Direct 路 Global Shipping
               </p>
               <Link
                 href="/free-3d-design"
@@ -214,7 +214,7 @@ export default function Home() {
                 href={solution.href}
                 className="flex-shrink-0 w-64 group"
               >
-                <div className="relative aspect-[4/3] bg-gradient-to-br from-[#1E3A5F] to-[#D6A84F] rounded-xl overflow-hidden mb-3">
+                <div className="relative aspect-[4/3] bg-gradient-to-br from-[#004499] to-[#ff6b35] rounded-xl overflow-hidden mb-3">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="text-white text-6xl group-hover:scale-110 transition-transform">{solution.icon}</span>
                   </div>
@@ -230,15 +230,14 @@ export default function Home() {
         <div className="container">
           <div className="text-center mt-8">
             <Link href="/solutions" className="text-[var(--accent)] font-medium hover:underline">
-              View All Solutions →
-            </Link>
+              View All Solutions 鈫?            </Link>
           </div>
         </div>
       </section>
 
 
       {/* Products - Card Grid Style (2 rows x 3 cols) */}
-      <section className="py-20 bg-[#F7F3EA]">
+      <section className="py-20 bg-[#f8f9fa]">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -287,14 +286,14 @@ export default function Home() {
 
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-[#1E3A5F] text-white">
+      <section className="py-20 bg-[#004499] text-white">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Store Owners Choose Goodok
             </h2>
-            <p className="text-[#EAD9B3] text-lg max-w-2xl mx-auto">
-              We&apos;re not just a supplier – we&apos;re your partner in creating successful retail spaces.
+            <p className="text-[#f8f9fa] text-lg max-w-2xl mx-auto">
+              We&apos;re not just a supplier 鈥?we&apos;re your partner in creating successful retail spaces.
             </p>
           </div>
 
@@ -304,11 +303,11 @@ export default function Home() {
                 key={feature.title}
                 className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors duration-300 group"
               >
-                <div className="w-16 h-16 bg-[#D6A84F]/25 rounded-full flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-[#ff6b35]/25 rounded-full flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-[#EAD9B3] text-sm leading-relaxed">{feature.description}</p>
+                <p className="text-[#f8f9fa] text-sm leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -318,7 +317,7 @@ export default function Home() {
 
 
       {/* FAQ Section (Two-column accordion style) */}
-      <section className="py-20 bg-[#F7F3EA]">
+      <section className="py-20 bg-[#f8f9fa]">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Frequently Asked Questions</h2>
@@ -335,7 +334,7 @@ export default function Home() {
                   <details className="group">
                     <summary className="flex justify-between items-center cursor-pointer list-none">
                       <span className="font-semibold text-gray-900 pr-4">{faq.question}</span>
-                      <span className="text-[var(--accent)] group-open:rotate-180 transition-transform duration-300 bg-[#F4EBD6] p-1 rounded-full">
+                      <span className="text-[var(--accent)] group-open:rotate-180 transition-transform duration-300 bg-[#f8f9fa] p-1 rounded-full">
                         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
@@ -350,8 +349,7 @@ export default function Home() {
             </div>
             <div className="text-center mt-8">
               <Link href="/faq" className="text-[var(--accent)] font-medium hover:underline">
-                View More FAQs →
-              </Link>
+                View More FAQs 鈫?              </Link>
             </div>
           </div>
         </div>
@@ -360,7 +358,7 @@ export default function Home() {
       {/* Contact Form Section (Simplified dark style) */}
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1E3A5F] to-[#141B26]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#004499] to-[#004499]"></div>
         </div>
 
         <div className="container relative z-10">
@@ -428,3 +426,4 @@ export default function Home() {
     </div>
   );
 }
+

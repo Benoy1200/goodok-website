@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -154,15 +154,15 @@ export default function ProductsPage() {
                             <div key={category.id} className="card group">
                                 {/* Product Image Placeholder */}
                                 <div className="h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                                    <span className="text-6xl opacity-30">📦</span>
+                                    <span className="text-6xl opacity-30">馃摝</span>
                                 </div>
 
                                 <div className="p-6">
                                     <div className="flex justify-between items-start mb-3">
-                                        <h2 className="text-xl font-bold group-hover:text-blue-600 transition-colors">
+                                        <h2 className="text-xl font-bold group-hover:text-[var(--accent)] transition-colors">
                                             {category.name}
                                         </h2>
-                                        <span className="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">
+                                        <span className="text-sm font-medium text-[var(--accent)] bg-[#f8f9fa] px-2 py-1 rounded">
                                             {category.priceRange}
                                         </span>
                                     </div>
@@ -214,3 +214,5 @@ export default function ProductsPage() {
         </div>
     );
 }
+
+

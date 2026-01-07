@@ -16,34 +16,34 @@ export const metadata: Metadata = {
 
 const features = [
     {
-        title: "Space Saving (节省空间)",
+        title: "Space Saving",
         description: "Maximize vertical space without taking floor area.",
         icon: "📏",
     },
     {
-        title: "Modular System (模块系统)",
+        title: "Modular System",
         description: "Mix and match components for custom configurations.",
         icon: "🧩",
     },
     {
-        title: "Easy Install (易安装)",
+        title: "Easy Install",
         description: "Simple mounting system for quick installation.",
         icon: "🔧",
     },
     {
-        title: "Multiple Styles (多种风格)",
+        title: "Multiple Styles",
         description: "Slatwall, gridwall, and bracket options available.",
         icon: "🎨",
     },
 ];
 
 const specs = [
-    { label: "Height (高度)", value: "Up to 3000mm" },
-    { label: "Width (宽度)", value: "900mm - 1200mm per panel" },
-    { label: "Shelf Depth (层板深度)", value: "200mm - 400mm" },
-    { label: "Steel Thickness (钢材厚度)", value: "0.8mm - 1.5mm" },
-    { label: "Shelf Load (层板承重)", value: "30kg - 80kg per shelf" },
-    { label: "Finish (表面处理)", value: "Powder Coated" },
+    { label: "Height", value: "Up to 3000mm" },
+    { label: "Width", value: "900mm - 1200mm per panel" },
+    { label: "Shelf Depth", value: "200mm - 400mm" },
+    { label: "Steel Thickness", value: "0.8mm - 1.5mm" },
+    { label: "Shelf Load", value: "30kg - 80kg per shelf" },
+    { label: "Finish", value: "Powder Coated" },
 ];
 
 export default function WallShelvingPage() {
@@ -56,7 +56,7 @@ export default function WallShelvingPage() {
                         <div>
                             <span className="text-green-300 text-sm font-medium">Products / Wall Shelving</span>
                             <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
-                                Wall Shelving (墙面货架)
+                                Wall Shelving
                             </h1>
                             <p className="text-xl text-green-100 mb-8">
                                 Maximize vertical space with our wall-mounted shelving systems.
@@ -64,7 +64,7 @@ export default function WallShelvingPage() {
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Link href="/free-3d-design" className="btn bg-white text-green-900 hover:bg-green-50">
-                                    Get Free Quote (获取报价)
+                                    Get Free Quote
                                 </Link>
                                 <a
                                     href="https://api.whatsapp.com/send?phone=8613822102050&text=Hi%20I%20need%20wall%20shelving%20quote"
@@ -79,7 +79,7 @@ export default function WallShelvingPage() {
                                 <span className="text-6xl">📐</span>
                             </div>
                             <p className="text-center text-green-200 mt-4 text-sm">
-                                [产品图片占位 - Product Image Placeholder]
+                                [Product Image Placeholder]
                             </p>
                         </div>
                     </div>
@@ -90,7 +90,7 @@ export default function WallShelvingPage() {
             <section className="py-20">
                 <div className="container">
                     <h2 className="text-3xl font-bold text-center mb-12">
-                        Key Features (核心优势)
+                        Key Features
                     </h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {features.map((feature) => (
@@ -109,7 +109,7 @@ export default function WallShelvingPage() {
                 <div className="container">
                     <div className="max-w-3xl mx-auto">
                         <h2 className="text-3xl font-bold text-center mb-12">
-                            Specifications (产品规格)
+                            Specifications
                         </h2>
                         <div className="bg-white rounded-xl shadow-sm overflow-hidden">
                             <table className="w-full">
@@ -131,22 +131,22 @@ export default function WallShelvingPage() {
             <section className="py-20">
                 <div className="container">
                     <h2 className="text-3xl font-bold text-center mb-12">
-                        Wall System Types (墙面系统类型)
+                        Wall System Types
                     </h2>
                     <div className="grid md:grid-cols-3 gap-8">
                         <div className="bg-gray-50 rounded-xl p-8 text-center">
                             <span className="text-5xl mb-4 block">📋</span>
-                            <h3 className="text-xl font-bold mb-2">Slatwall (槽板)</h3>
+                            <h3 className="text-xl font-bold mb-2">Slatwall</h3>
                             <p className="text-gray-600">Versatile panels with horizontal grooves for various accessories.</p>
                         </div>
                         <div className="bg-gray-50 rounded-xl p-8 text-center">
                             <span className="text-5xl mb-4 block">🔲</span>
-                            <h3 className="text-xl font-bold mb-2">Gridwall (网格板)</h3>
+                            <h3 className="text-xl font-bold mb-2">Gridwall</h3>
                             <p className="text-gray-600">Wire grid panels for modern, industrial aesthetics.</p>
                         </div>
                         <div className="bg-gray-50 rounded-xl p-8 text-center">
                             <span className="text-5xl mb-4 block">📏</span>
-                            <h3 className="text-xl font-bold mb-2">Bracket System (托架系统)</h3>
+                            <h3 className="text-xl font-bold mb-2">Bracket System</h3>
                             <p className="text-gray-600">Clean wall-mounted brackets with adjustable shelves.</p>
                         </div>
                     </div>
@@ -157,17 +157,17 @@ export default function WallShelvingPage() {
             <section className="py-20 bg-green-900 text-white">
                 <div className="container text-center">
                     <h2 className="text-3xl font-bold mb-4">
-                        Get Your Custom Wall System (定制您的墙面系统)
+                        Get Your Custom Wall System
                     </h2>
                     <p className="text-green-200 mb-8 max-w-2xl mx-auto">
-                        Send us your wall dimensions and we&apos;ll create a custom layout.
+                        Send us your wall dimensions and we'll create a custom layout.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link href="/free-3d-design" className="btn bg-white text-green-900 hover:bg-green-50">
-                            Request Quote (获取报价)
+                            Request Quote
                         </Link>
                         <Link href="/products" className="btn border-2 border-white text-white hover:bg-white hover:text-green-900">
-                            View All Products (查看所有产品)
+                            View All Products
                         </Link>
                     </div>
                 </div>

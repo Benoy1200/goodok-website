@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -28,7 +28,7 @@ export default function CosmeticsStoreDesignGuide() {
     return (
         <article className="pt-24">
             {/* Hero Section */}
-            <section className="bg-gradient-to-br from-pink-50 to-purple-50 py-16">
+            <section className="bg-gradient-to-br from-[#f8f9fa] to-[#f8f9fa] py-16">
                 <div className="container">
                     <div className="max-w-3xl">
                         <div className="flex items-center gap-3 mb-4">
@@ -36,9 +36,9 @@ export default function CosmeticsStoreDesignGuide() {
                                 href="/resources/blog"
                                 className="text-sm text-gray-500 hover:text-gray-700"
                             >
-                                ← Back to Blog
+                                鈫?Back to Blog
                             </Link>
-                            <span className="text-xs font-medium text-pink-600 bg-pink-100 px-2 py-1 rounded">
+                            <span className="text-xs font-medium text-[var(--accent)] bg-[#f8f9fa] px-2 py-1 rounded">
                                 Store Design
                             </span>
                         </div>
@@ -49,14 +49,14 @@ export default function CosmeticsStoreDesignGuide() {
 
                         <p className="text-xl text-gray-600 mb-6">
                             Everything you need to know about creating a successful cosmetics
-                            retail space — from layout planning to fixture selection and
+                            retail space 鈥?from layout planning to fixture selection and
                             lighting optimization.
                         </p>
 
                         <div className="flex items-center gap-6 text-sm text-gray-500">
-                            <span>📅 January 4, 2026</span>
-                            <span>⏱️ 12 min read</span>
-                            <span>👁️ Store Design</span>
+                            <span>馃搮 January 4, 2026</span>
+                            <span>鈴憋笍 12 min read</span>
+                            <span>馃憗锔?Store Design</span>
                         </div>
                     </div>
                 </div>
@@ -71,16 +71,16 @@ export default function CosmeticsStoreDesignGuide() {
                             <div className="prose prose-lg max-w-none">
                                 {/* Table of Contents */}
                                 <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">📋 Table of Contents</h2>
+                                    <h2 className="text-lg font-bold mb-4">馃搵 Table of Contents</h2>
                                     <ul className="space-y-2 text-gray-600">
-                                        <li><a href="#understanding" className="hover:text-blue-600">1. Understanding the Cosmetics Retail Market</a></li>
-                                        <li><a href="#layout" className="hover:text-blue-600">2. Store Layout Planning</a></li>
-                                        <li><a href="#fixtures" className="hover:text-blue-600">3. Display Fixtures Selection</a></li>
-                                        <li><a href="#lighting" className="hover:text-blue-600">4. Lighting Design for Cosmetics</a></li>
-                                        <li><a href="#zones" className="hover:text-blue-600">5. Product Zoning Strategies</a></li>
-                                        <li><a href="#checkout" className="hover:text-blue-600">6. Checkout Area Design</a></li>
-                                        <li><a href="#budget" className="hover:text-blue-600">7. Budget Planning</a></li>
-                                        <li><a href="#mistakes" className="hover:text-blue-600">8. Common Mistakes to Avoid</a></li>
+                                        <li><a href="#understanding" className="hover:text-[var(--accent)]">1. Understanding the Cosmetics Retail Market</a></li>
+                                        <li><a href="#layout" className="hover:text-[var(--accent)]">2. Store Layout Planning</a></li>
+                                        <li><a href="#fixtures" className="hover:text-[var(--accent)]">3. Display Fixtures Selection</a></li>
+                                        <li><a href="#lighting" className="hover:text-[var(--accent)]">4. Lighting Design for Cosmetics</a></li>
+                                        <li><a href="#zones" className="hover:text-[var(--accent)]">5. Product Zoning Strategies</a></li>
+                                        <li><a href="#checkout" className="hover:text-[var(--accent)]">6. Checkout Area Design</a></li>
+                                        <li><a href="#budget" className="hover:text-[var(--accent)]">7. Budget Planning</a></li>
+                                        <li><a href="#mistakes" className="hover:text-[var(--accent)]">8. Common Mistakes to Avoid</a></li>
                                     </ul>
                                 </div>
 
@@ -88,7 +88,7 @@ export default function CosmeticsStoreDesignGuide() {
                                 <p>
                                     Opening a cosmetics store is an exciting venture, but the success of your business
                                     depends heavily on how well you design your retail space. A well-planned cosmetics
-                                    store doesn&apos;t just look beautiful — it drives sales, enhances customer experience,
+                                    store doesn&apos;t just look beautiful 鈥?it drives sales, enhances customer experience,
                                     and builds brand loyalty.
                                 </p>
 
@@ -107,19 +107,19 @@ export default function CosmeticsStoreDesignGuide() {
                                     of e-commerce, customers prefer to test and experience beauty products in person.
                                 </p>
 
-                                <div className="bg-pink-50 border-l-4 border-pink-500 p-4 my-6">
-                                    <p className="font-medium text-pink-800">
-                                        💡 Key Insight: 85% of cosmetics purchases are influenced by in-store testing.
+                                <div className="bg-[#f8f9fa] border-l-4 border-[#ff6b35] p-4 my-6">
+                                    <p className="font-medium text-[var(--primary)]">
+                                        馃挕 Key Insight: 85% of cosmetics purchases are influenced by in-store testing.
                                         Your store design should prioritize product accessibility and testing areas.
                                     </p>
                                 </div>
 
                                 <h3>Key Consumer Trends in 2025</h3>
                                 <ul>
-                                    <li><strong>Experience-driven shopping</strong> — Customers want more than products; they want experiences</li>
-                                    <li><strong>Clean beauty focus</strong> — Sustainable and eco-friendly displays are increasingly important</li>
-                                    <li><strong>Technology integration</strong> — Smart mirrors and AR try-on stations</li>
-                                    <li><strong>Personalization</strong> — Custom consultation areas are essential</li>
+                                    <li><strong>Experience-driven shopping</strong> 鈥?Customers want more than products; they want experiences</li>
+                                    <li><strong>Clean beauty focus</strong> 鈥?Sustainable and eco-friendly displays are increasingly important</li>
+                                    <li><strong>Technology integration</strong> 鈥?Smart mirrors and AR try-on stations</li>
+                                    <li><strong>Personalization</strong> 鈥?Custom consultation areas are essential</li>
                                 </ul>
 
                                 {/* Section 2 */}
@@ -148,9 +148,9 @@ export default function CosmeticsStoreDesignGuide() {
                                     and luxury beauty brands where customer experience is paramount.
                                 </p>
 
-                                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 my-6">
-                                    <p className="font-medium text-blue-800">
-                                        📐 Pro Tip: Allocate at least 20% of your floor space to aisles and walkways.
+                                <div className="bg-[#f8f9fa] border-l-4 border-[#ff6b35] p-4 my-6">
+                                    <p className="font-medium text-[var(--primary)]">
+                                        馃搻 Pro Tip: Allocate at least 20% of your floor space to aisles and walkways.
                                         Cramped stores discourage browsing and reduce time spent in-store.
                                     </p>
                                 </div>
@@ -354,19 +354,19 @@ export default function CosmeticsStoreDesignGuide() {
 
                                 <ol>
                                     <li>
-                                        <strong>Overcrowding displays</strong> — Less is more. Give products room to breathe.
+                                        <strong>Overcrowding displays</strong> 鈥?Less is more. Give products room to breathe.
                                     </li>
                                     <li>
-                                        <strong>Poor lighting at testing stations</strong> — Customers need to see true colors.
+                                        <strong>Poor lighting at testing stations</strong> 鈥?Customers need to see true colors.
                                     </li>
                                     <li>
-                                        <strong>Ignoring the fragrance zone</strong> — Scent spillover affects product perception.
+                                        <strong>Ignoring the fragrance zone</strong> 鈥?Scent spillover affects product perception.
                                     </li>
                                     <li>
-                                        <strong>No clear navigation</strong> — Customers should intuitively know where to go.
+                                        <strong>No clear navigation</strong> 鈥?Customers should intuitively know where to go.
                                     </li>
                                     <li>
-                                        <strong>Forgetting about storage</strong> — Back-of-house space is essential for restocking.
+                                        <strong>Forgetting about storage</strong> 鈥?Back-of-house space is essential for restocking.
                                     </li>
                                 </ol>
 
@@ -374,7 +374,7 @@ export default function CosmeticsStoreDesignGuide() {
                                 <h2>Conclusion</h2>
 
                                 <p>
-                                    Designing a cosmetics store requires careful planning across multiple dimensions —
+                                    Designing a cosmetics store requires careful planning across multiple dimensions 鈥?
                                     layout, fixtures, lighting, and product zoning all work together to create a
                                     successful retail environment. By following the principles outlined in this guide,
                                     you&apos;ll be well on your way to creating a store that not only looks beautiful but
@@ -393,17 +393,17 @@ export default function CosmeticsStoreDesignGuide() {
                         <div className="lg:col-span-1">
                             <div className="sticky top-24 space-y-8">
                                 {/* CTA Card */}
-                                <div className="bg-gradient-to-br from-pink-500 to-purple-600 rounded-xl p-6 text-white">
+                                <div className="bg-gradient-to-br from-[#004499] to-[#ff6b35] rounded-xl p-6 text-white">
                                     <h3 className="text-xl font-bold mb-3">
                                         Need Help Designing Your Cosmetics Store?
                                     </h3>
-                                    <p className="text-pink-100 mb-4">
+                                    <p className="text-[#F8F1E3] mb-4">
                                         Get a free 3D store design from our experts. Send us your
                                         store dimensions and we&apos;ll create a custom layout.
                                     </p>
                                     <Link
                                         href="/free-3d-design"
-                                        className="block w-full bg-white text-pink-600 font-semibold py-3 px-4 rounded-lg text-center hover:bg-pink-50 transition-colors"
+                                        className="block w-full bg-white text-[var(--accent)] font-semibold py-3 px-4 rounded-lg text-center hover:bg-[#f8f9fa] transition-colors"
                                     >
                                         Get Free 3D Design
                                     </Link>
@@ -411,7 +411,7 @@ export default function CosmeticsStoreDesignGuide() {
 
                                 {/* WhatsApp CTA */}
                                 <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">💬 Quick Questions?</h3>
+                                    <h3 className="font-bold mb-3">馃挰 Quick Questions?</h3>
                                     <p className="text-gray-600 text-sm mb-4">
                                         Chat with us on WhatsApp for instant answers about cosmetics
                                         store fixtures and design.
@@ -428,21 +428,21 @@ export default function CosmeticsStoreDesignGuide() {
 
                                 {/* Related Articles */}
                                 <div className="bg-gray-50 rounded-xl p-6">
-                                    <h3 className="font-bold mb-4">📚 Related Articles</h3>
+                                    <h3 className="font-bold mb-4">馃摎 Related Articles</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/resources/blog/toy-store-shelving-ideas" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → Toy Store Shelving Ideas
+                                            <Link href="/resources/blog/toy-store-shelving-ideas" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?Toy Store Shelving Ideas
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/resources/blog/gondola-vs-wall-shelving" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → Gondola vs Wall Shelving
+                                            <Link href="/resources/blog/gondola-vs-wall-shelving" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?Gondola vs Wall Shelving
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/resources/blog/retail-fixtures-wholesale-guide" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → Retail Fixtures Wholesale Guide
+                                            <Link href="/resources/blog/retail-fixtures-wholesale-guide" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?Retail Fixtures Wholesale Guide
                                             </Link>
                                         </li>
                                     </ul>
@@ -476,3 +476,7 @@ export default function CosmeticsStoreDesignGuide() {
         </article>
     );
 }
+
+
+
+

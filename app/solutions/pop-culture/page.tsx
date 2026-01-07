@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 };
 
 const products = [
-    { name: "Glass Display Cases", desc: "For premium collectibles", icon: "💎" },
-    { name: "Wall Shelving", desc: "Maximize vertical display", icon: "📐" },
-    { name: "Trading Card Displays", desc: "Secure card showcases", icon: "🎴" },
-    { name: "Themed Fixtures", desc: "Custom branded displays", icon: "🎨" },
+    { name: "Glass Display Cases", desc: "For premium collectibles", icon: "馃拵" },
+    { name: "Wall Shelving", desc: "Maximize vertical display", icon: "馃搻" },
+    { name: "Trading Card Displays", desc: "Secure card showcases", icon: "馃幋" },
+    { name: "Themed Fixtures", desc: "Custom branded displays", icon: "馃帹" },
 ];
 
 // Store case studies for this industry
@@ -26,7 +26,7 @@ const caseStudies = [
     {
         name: "Trendy Toys Store",
         location: "Dubai, UAE",
-        description: "A 200㎡ pop culture store featuring anime figures, trading cards, and gaming accessories.",
+        description: "A 200銕?pop culture store featuring anime figures, trading cards, and gaming accessories.",
         highlights: ["Custom LED showcases", "Interactive demo area", "Secure lockable displays"],
         href: "/projects/trendy-toys-store",
     },
@@ -43,30 +43,30 @@ export default function PopCultureSolutionPage() {
     return (
         <div className="pt-24">
             {/* Hero */}
-            <section className="bg-gradient-to-br from-violet-900 to-purple-700 text-white py-20">
+            <section className="bg-gradient-to-br from-[#004499] to-[#ff6b35] text-white py-20">
                 <div className="container">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <span className="text-violet-300 text-sm font-medium">Solutions / Pop Culture Store</span>
+                            <span className="text-[#f8f9fa] text-sm font-medium">Solutions / Pop Culture Store</span>
                             <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
                                 Pop Culture Store
                             </h1>
-                            <p className="text-xl text-violet-100 mb-8">
+                            <p className="text-xl text-[#F8F1E3] mb-8">
                                 Create the ultimate destination for anime fans, gamers, and collectors.
                                 Display solutions that protect and showcase valuable items.
                             </p>
                             <div className="flex flex-wrap gap-4">
-                                <Link href="/free-3d-design" className="btn bg-white text-violet-900 hover:bg-violet-50">
+                                <Link href="/free-3d-design" className="btn bg-white text-[var(--primary)] hover:bg-[#f8f9fa]">
                                     Get Free 3D Design
                                 </Link>
-                                <Link href="/contact" className="btn border-2 border-white text-white hover:bg-white hover:text-violet-900">
+                                <Link href="/contact" className="btn border-2 border-white text-white hover:bg-white hover:text-[var(--primary)]">
                                     Contact Us
                                 </Link>
                             </div>
                         </div>
                         <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
-                            <div className="aspect-[4/3] bg-violet-800/50 rounded-xl flex items-center justify-center">
-                                <span className="text-6xl">🎮</span>
+                            <div className="aspect-[4/3] bg-[#0066cc]/50 rounded-xl flex items-center justify-center">
+                                <span className="text-6xl">馃幃</span>
                             </div>
                         </div>
                     </div>
@@ -83,8 +83,8 @@ export default function PopCultureSolutionPage() {
                     <div className="grid md:grid-cols-2 gap-8">
                         {caseStudies.map((study) => (
                             <div key={study.name} className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition">
-                                <div className="aspect-video bg-gradient-to-br from-violet-100 to-purple-100 flex items-center justify-center">
-                                    <span className="text-6xl">🏪</span>
+                                <div className="aspect-video bg-gradient-to-br from-[#f8f9fa] to-[#f8f9fa] flex items-center justify-center">
+                                    <span className="text-6xl">馃彧</span>
                                 </div>
                                 <div className="p-6">
                                     <div className="flex items-center justify-between mb-2">
@@ -94,14 +94,14 @@ export default function PopCultureSolutionPage() {
                                     <p className="text-gray-600 mb-4">{study.description}</p>
                                     <div className="flex flex-wrap gap-2 mb-4">
                                         {study.highlights.map((h) => (
-                                            <span key={h} className="text-xs bg-violet-100 text-violet-700 px-2 py-1 rounded">
+                                            <span key={h} className="text-xs bg-[#f8f9fa] text-[var(--accent)] px-2 py-1 rounded">
                                                 {h}
                                             </span>
                                         ))}
                                     </div>
                                     {study.href !== "#" && (
-                                        <Link href={study.href} className="text-violet-600 font-medium hover:underline">
-                                            View Project Details →
+                                        <Link href={study.href} className="text-[var(--accent)] font-medium hover:underline">
+                                            View Project Details 鈫?
                                         </Link>
                                     )}
                                 </div>
@@ -136,17 +136,17 @@ export default function PopCultureSolutionPage() {
                         <h2 className="text-3xl font-bold mb-8">Why Choose Us</h2>
                         <div className="grid md:grid-cols-3 gap-8">
                             <div>
-                                <span className="text-4xl mb-3 block">🔒</span>
+                                <span className="text-4xl mb-3 block">馃敀</span>
                                 <h3 className="font-bold mb-2">Security</h3>
                                 <p className="text-gray-600 text-sm">Locking cases for high-value items</p>
                             </div>
                             <div>
-                                <span className="text-4xl mb-3 block">💡</span>
+                                <span className="text-4xl mb-3 block">馃挕</span>
                                 <h3 className="font-bold mb-2">Lighting</h3>
                                 <p className="text-gray-600 text-sm">LED lighting to highlight products</p>
                             </div>
                             <div>
-                                <span className="text-4xl mb-3 block">🎨</span>
+                                <span className="text-4xl mb-3 block">馃帹</span>
                                 <h3 className="font-bold mb-2">Custom</h3>
                                 <p className="text-gray-600 text-sm">Themed designs for your brand</p>
                             </div>
@@ -156,15 +156,15 @@ export default function PopCultureSolutionPage() {
             </section>
 
             {/* CTA */}
-            <section className="py-20 bg-violet-900 text-white">
+            <section className="py-20 bg-[#004499] text-white">
                 <div className="container text-center">
                     <h2 className="text-3xl font-bold mb-4">
                         Start Your Pop Culture Store
                     </h2>
-                    <p className="text-violet-200 mb-8">
+                    <p className="text-[#F4E7CF] mb-8">
                         Free 3D design within 24 hours. Factory-direct pricing.
                     </p>
-                    <Link href="/free-3d-design" className="btn bg-white text-violet-900 hover:bg-violet-50">
+                    <Link href="/free-3d-design" className="btn bg-white text-[var(--primary)] hover:bg-[#f8f9fa]">
                         Get Started
                     </Link>
                 </div>
@@ -172,3 +172,6 @@ export default function PopCultureSolutionPage() {
         </div>
     );
 }
+
+
+

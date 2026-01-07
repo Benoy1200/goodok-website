@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ const projects = [
     {
         name: "Trendy Toys Store",
         location: "Dubai, UAE",
-        description: "A 200㎡ pop culture store featuring anime figures, trading cards, and gaming accessories.",
+        description: "A 200銕?pop culture store featuring anime figures, trading cards, and gaming accessories.",
         image: "/images/projects/toy-store.jpg",
         href: "/projects/trendy-toys-store",
         category: "Pop Culture",
@@ -60,14 +60,14 @@ export default function ProjectsPage() {
     return (
         <div className="pt-24">
             {/* Hero */}
-            <section className="bg-gradient-to-br from-blue-900 to-purple-700 text-white py-20">
+            <section className="bg-gradient-to-br from-[#004499] to-[#ff6b35] text-white py-20">
                 <div className="container">
                     <div className="max-w-3xl mx-auto text-center">
-                        <span className="text-blue-300 text-sm font-medium">Our Work</span>
+                        <span className="text-[#F0E1C3] text-sm font-medium">Our Work</span>
                         <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
                             Completed Projects
                         </h1>
-                        <p className="text-xl text-blue-100 mb-8">
+                        <p className="text-xl text-[#F8F1E3] mb-8">
                             Explore our portfolio of retail fixture installations from around the world.
                         </p>
                     </div>
@@ -84,17 +84,17 @@ export default function ProjectsPage() {
                                 href={project.href}
                                 className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition"
                             >
-                                <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                                    <span className="text-6xl">🏪</span>
+                                <div className="aspect-video bg-gradient-to-br from-[#f8f9fa] to-[#f8f9fa] flex items-center justify-center">
+                                    <span className="text-6xl">馃彧</span>
                                 </div>
                                 <div className="p-6">
                                     <div className="flex items-center justify-between mb-2">
-                                        <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                                        <span className="text-xs bg-[#f8f9fa] text-[var(--primary)] px-2 py-1 rounded">
                                             {project.category}
                                         </span>
                                         <span className="text-sm text-gray-500">{project.location}</span>
                                     </div>
-                                    <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition">
+                                    <h3 className="text-xl font-bold mb-2 group-hover:text-[var(--accent)] transition">
                                         {project.name}
                                     </h3>
                                     <p className="text-gray-600 text-sm">{project.description}</p>
@@ -114,7 +114,7 @@ export default function ProjectsPage() {
                     <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
                         Get a free 3D design and consultation for your store. We've helped hundreds of store owners create stunning retail spaces.
                     </p>
-                    <Link href="/free-3d-design" className="btn bg-blue-600 text-white hover:bg-blue-700">
+                    <Link href="/free-3d-design" className="btn bg-[#004499] text-white hover:bg-[#0066cc]">
                         Get Free 3D Design
                     </Link>
                 </div>
@@ -122,3 +122,5 @@ export default function ProjectsPage() {
         </div>
     );
 }
+
+

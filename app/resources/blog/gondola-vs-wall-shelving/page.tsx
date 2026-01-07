@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export default function GondolaVsWallShelvingGuide() {
                     <div className="max-w-3xl">
                         <div className="flex items-center gap-3 mb-4">
                             <Link href="/resources/blog" className="text-sm text-gray-500 hover:text-gray-700">
-                                ← Back to Blog
+                                鈫?Back to Blog
                             </Link>
                             <span className="text-xs font-medium text-slate-600 bg-slate-100 px-2 py-1 rounded">
                                 Product Guide
@@ -47,8 +47,8 @@ export default function GondolaVsWallShelvingGuide() {
                         </p>
 
                         <div className="flex items-center gap-6 text-sm text-gray-500">
-                            <span>📅 January 2, 2026</span>
-                            <span>⏱️ 8 min read</span>
+                            <span>馃搮 January 2, 2026</span>
+                            <span>鈴憋笍 8 min read</span>
                         </div>
                     </div>
                 </div>
@@ -62,13 +62,13 @@ export default function GondolaVsWallShelvingGuide() {
                             <div className="prose prose-lg max-w-none">
                                 {/* TOC */}
                                 <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">📋 Quick Comparison</h2>
+                                    <h2 className="text-lg font-bold mb-4">馃搵 Quick Comparison</h2>
                                     <ul className="space-y-2 text-gray-600">
-                                        <li><a href="#overview" className="hover:text-blue-600">1. Overview</a></li>
-                                        <li><a href="#gondola" className="hover:text-blue-600">2. Gondola Shelving Pros & Cons</a></li>
-                                        <li><a href="#wall" className="hover:text-blue-600">3. Wall Shelving Pros & Cons</a></li>
-                                        <li><a href="#comparison" className="hover:text-blue-600">4. Side-by-Side Comparison</a></li>
-                                        <li><a href="#when-to-use" className="hover:text-blue-600">5. When to Use Each</a></li>
+                                        <li><a href="#overview" className="hover:text-[var(--accent)]">1. Overview</a></li>
+                                        <li><a href="#gondola" className="hover:text-[var(--accent)]">2. Gondola Shelving Pros & Cons</a></li>
+                                        <li><a href="#wall" className="hover:text-[var(--accent)]">3. Wall Shelving Pros & Cons</a></li>
+                                        <li><a href="#comparison" className="hover:text-[var(--accent)]">4. Side-by-Side Comparison</a></li>
+                                        <li><a href="#when-to-use" className="hover:text-[var(--accent)]">5. When to Use Each</a></li>
                                     </ul>
                                 </div>
 
@@ -96,7 +96,7 @@ export default function GondolaVsWallShelvingGuide() {
                                 {/* Section 2 */}
                                 <h2 id="gondola">2. Gondola Shelving Pros & Cons</h2>
 
-                                <h3>✅ Pros</h3>
+                                <h3>鉁?Pros</h3>
                                 <ul>
                                     <li><strong>Double-sided display</strong>: 2x the display area per unit</li>
                                     <li><strong>Flexible placement</strong>: Move and rearrange easily</li>
@@ -105,7 +105,7 @@ export default function GondolaVsWallShelvingGuide() {
                                     <li><strong>Endcap potential</strong>: Prime promotional display space</li>
                                 </ul>
 
-                                <h3>❌ Cons</h3>
+                                <h3>鉂?Cons</h3>
                                 <ul>
                                     <li><strong>Takes floor space</strong>: Reduces walkable area</li>
                                     <li><strong>Height limitations</strong>: Usually max 6-7 feet for visibility</li>
@@ -116,7 +116,7 @@ export default function GondolaVsWallShelvingGuide() {
                                 {/* Section 3 */}
                                 <h2 id="wall">3. Wall Shelving Pros & Cons</h2>
 
-                                <h3>✅ Pros</h3>
+                                <h3>鉁?Pros</h3>
                                 <ul>
                                     <li><strong>Maximizes vertical space</strong>: Can go floor to ceiling</li>
                                     <li><strong>Keeps floor clear</strong>: Opens up store layout</li>
@@ -125,7 +125,7 @@ export default function GondolaVsWallShelvingGuide() {
                                     <li><strong>Better visibility</strong>: See across the entire store</li>
                                 </ul>
 
-                                <h3>❌ Cons</h3>
+                                <h3>鉂?Cons</h3>
                                 <ul>
                                     <li><strong>Fixed location</strong>: Can&apos;t move without reinstalling</li>
                                     <li><strong>Wall requirements</strong>: Needs structural support</li>
@@ -239,7 +239,7 @@ export default function GondolaVsWallShelvingGuide() {
                                 </div>
 
                                 <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">💬 Need Advice?</h3>
+                                    <h3 className="font-bold mb-3">馃挰 Need Advice?</h3>
                                     <p className="text-gray-600 text-sm mb-4">
                                         Chat with our shelving experts.
                                     </p>
@@ -254,16 +254,16 @@ export default function GondolaVsWallShelvingGuide() {
                                 </div>
 
                                 <div className="bg-gray-50 rounded-xl p-6">
-                                    <h3 className="font-bold mb-4">📚 Related Articles</h3>
+                                    <h3 className="font-bold mb-4">馃摎 Related Articles</h3>
                                     <ul className="space-y-3">
                                         <li>
-                                            <Link href="/resources/blog/toy-store-shelving-ideas" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → Toy Store Shelving Ideas
+                                            <Link href="/resources/blog/toy-store-shelving-ideas" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?Toy Store Shelving Ideas
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/resources/blog/retail-fixtures-wholesale-guide" className="text-gray-600 hover:text-blue-600 text-sm">
-                                                → Retail Fixtures Wholesale Guide
+                                            <Link href="/resources/blog/retail-fixtures-wholesale-guide" className="text-gray-600 hover:text-[var(--accent)] text-sm">
+                                                鈫?Retail Fixtures Wholesale Guide
                                             </Link>
                                         </li>
                                     </ul>
@@ -296,3 +296,4 @@ export default function GondolaVsWallShelvingGuide() {
         </article>
     );
 }
+
