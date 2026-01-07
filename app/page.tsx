@@ -187,7 +187,7 @@ export default function Home() {
               </p>
               <Link
                 href="/free-3d-design"
-                className="btn bg-white text-gray-900 hover:bg-gray-100 px-6 py-3 whitespace-nowrap"
+                className="btn btn-accent px-6 py-3 whitespace-nowrap"
               >
                 Get Free 3D Design
               </Link>
