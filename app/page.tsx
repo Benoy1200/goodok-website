@@ -214,7 +214,7 @@ export default function Home() {
                 href={solution.href}
                 className="flex-shrink-0 w-64 group"
               >
-                <div className="relative aspect-[4/3] bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl overflow-hidden mb-3">
+                <div className="relative aspect-[4/3] bg-gradient-to-br from-[#1E3A5F] to-[#D6A84F] rounded-xl overflow-hidden mb-3">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="text-white text-6xl group-hover:scale-110 transition-transform">{solution.icon}</span>
                   </div>
@@ -222,14 +222,14 @@ export default function Home() {
                     <h3 className="text-white font-semibold">{solution.name}</h3>
                   </div>
                 </div>
-                <p className="text-gray-600 text-sm group-hover:text-blue-600 transition">{solution.description}</p>
+                <p className="text-gray-600 text-sm group-hover:text-[var(--accent)] transition">{solution.description}</p>
               </Link>
             ))}
           </div>
         </div>
         <div className="container">
           <div className="text-center mt-8">
-            <Link href="/solutions" className="text-blue-600 font-medium hover:underline">
+            <Link href="/solutions" className="text-[var(--accent)] font-medium hover:underline">
               View All Solutions →
             </Link>
           </div>
@@ -238,7 +238,7 @@ export default function Home() {
 
 
       {/* Products - Card Grid Style (2 rows x 3 cols) */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-[#F7F3EA]">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -258,11 +258,11 @@ export default function Home() {
                 className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition group"
               >
                 <div className="text-4xl mb-4">{product.icon}</div>
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-[var(--accent)] transition-colors">
                   {product.name}
                 </h3>
                 <p className="text-gray-600 mb-4">{product.description}</p>
-                <div className="text-blue-600 font-medium flex items-center gap-2">
+                <div className="text-[var(--accent)] font-medium flex items-center gap-2">
                   Learn more
                   <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -279,7 +279,7 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Our Happy Clients</h2>
-            <div className="w-16 h-1 bg-blue-500 mx-auto"></div>
+            <div className="w-16 h-1 bg-[var(--accent)] mx-auto"></div>
           </div>
           <ClientTestimonials />
         </div>
@@ -287,13 +287,13 @@ export default function Home() {
 
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-blue-900 text-white">
+      <section className="py-20 bg-[#1E3A5F] text-white">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Store Owners Choose Goodok
             </h2>
-            <p className="text-blue-200 text-lg max-w-2xl mx-auto">
+            <p className="text-[#EAD9B3] text-lg max-w-2xl mx-auto">
               We&apos;re not just a supplier – we&apos;re your partner in creating successful retail spaces.
             </p>
           </div>
@@ -304,11 +304,11 @@ export default function Home() {
                 key={feature.title}
                 className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors duration-300 group"
               >
-                <div className="w-16 h-16 bg-blue-600/30 rounded-full flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-[#D6A84F]/25 rounded-full flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-blue-200 text-sm leading-relaxed">{feature.description}</p>
+                <p className="text-[#EAD9B3] text-sm leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -318,7 +318,7 @@ export default function Home() {
 
 
       {/* FAQ Section (Two-column accordion style) */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-[#F7F3EA]">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Frequently Asked Questions</h2>
@@ -335,7 +335,7 @@ export default function Home() {
                   <details className="group">
                     <summary className="flex justify-between items-center cursor-pointer list-none">
                       <span className="font-semibold text-gray-900 pr-4">{faq.question}</span>
-                      <span className="text-blue-600 group-open:rotate-180 transition-transform duration-300 bg-blue-50 p-1 rounded-full">
+                      <span className="text-[var(--accent)] group-open:rotate-180 transition-transform duration-300 bg-[#F4EBD6] p-1 rounded-full">
                         <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
@@ -349,7 +349,7 @@ export default function Home() {
               ))}
             </div>
             <div className="text-center mt-8">
-              <Link href="/faq" className="text-blue-600 font-medium hover:underline">
+              <Link href="/faq" className="text-[var(--accent)] font-medium hover:underline">
                 View More FAQs →
               </Link>
             </div>
@@ -360,7 +360,7 @@ export default function Home() {
       {/* Contact Form Section (Simplified dark style) */}
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-gray-900"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1E3A5F] to-[#141B26]"></div>
         </div>
 
         <div className="container relative z-10">
@@ -388,7 +388,7 @@ export default function Home() {
                   type="text"
                   name="name"
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--accent)] transition"
                   placeholder="Your name"
                 />
               </div>
@@ -399,7 +399,7 @@ export default function Home() {
                   type="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--accent)] transition"
                   placeholder="your@email.com"
                 />
               </div>
@@ -410,7 +410,7 @@ export default function Home() {
                   name="message"
                   rows={4}
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition resize-none"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--accent)] transition resize-none"
                   placeholder="Tell us about your project..."
                 ></textarea>
               </div>

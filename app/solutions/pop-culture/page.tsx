@@ -35,7 +35,7 @@ const caseStudies = [
         location: "Singapore",
         description: "Premium collectibles store with high-end display cases for limited edition figures.",
         highlights: ["Glass tower displays", "Themed wall units", "Card display systems"],
-        href: "#",
+        href: "/projects/anime-paradise",
     },
 ];
 

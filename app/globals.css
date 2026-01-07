@@ -2,18 +2,18 @@
 
 :root {
   /* Brand Colors */
-  --primary: #2563eb;           /* Blue-600 */
-  --primary-dark: #1d4ed8;      /* Blue-700 */
-  --primary-light: #3b82f6;     /* Blue-500 */
-  --secondary: #059669;         /* Emerald-600 */
-  --accent: #f59e0b;            /* Amber-500 */
+  --primary: #1e3a5f;
+  --primary-dark: #162c46;
+  --primary-light: #294b73;
+  --secondary: #d6a84f;
+  --accent: #d6a84f;
   
   /* Neutral Colors */
-  --background: #ffffff;
-  --foreground: #0f172a;        /* Slate-900 */
-  --muted: #64748b;             /* Slate-500 */
-  --muted-foreground: #94a3b8;  /* Slate-400 */
-  --border: #e2e8f0;            /* Slate-200 */
+  --background: #f7f3ea;
+  --foreground: #0f172a;
+  --muted: #6b7280;
+  --muted-foreground: #9ca3af;
+  --border: #e5e0d6;
   
   /* Functional Colors */
   --success: #10b981;
@@ -83,6 +83,17 @@ html {
   color: var(--primary);
 }
 
+.btn-accent {
+  background: var(--accent);
+  color: #1f2937;
+}
+
+.btn-accent:hover {
+  background: #c4922f;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(214, 168, 79, 0.35);
+}
+
 .btn-whatsapp {
   background: #25d366;
   color: white;
@@ -127,11 +138,11 @@ html {
 
 /* Gradient backgrounds */
 .gradient-hero {
-  background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+  background: linear-gradient(135deg, #1e3a5f 0%, #101e2f 100%);
 }
 
 .gradient-cta {
-  background: linear-gradient(135deg, var(--primary) 0%, #1e40af 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, #b8872f 100%);
 }
 
 /* Animation keyframes */
