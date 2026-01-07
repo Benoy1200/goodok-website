@@ -29,7 +29,7 @@ export default function Header() {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-            <nav className="container flex items-center py-3">
+            <nav className="container flex items-center justify-center py-3">
                 {/* Logo */}
                 <Link href="/" className="flex items-center">
                     <div className="relative h-12 w-[160px]">

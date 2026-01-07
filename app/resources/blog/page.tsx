@@ -24,6 +24,7 @@ const blogPosts = [
         date: "2026-01-04",
         readTime: "12 min read",
         featured: true,
+        image: "/images/product-1.jpg",
     },
     {
         slug: "how-to-open-pop-culture-store",
@@ -34,6 +35,7 @@ const blogPosts = [
         date: "2026-01-04",
         readTime: "15 min read",
         featured: true,
+        image: "/images/product-2.jpg",
     },
     {
         slug: "toy-store-shelving-ideas",
@@ -44,6 +46,7 @@ const blogPosts = [
         date: "2026-01-04",
         readTime: "10 min read",
         featured: true,
+        image: "/images/product-3.jpg",
     },
     {
         slug: "jewelry-store-display-ideas",
@@ -54,6 +57,7 @@ const blogPosts = [
         date: "2026-01-04",
         readTime: "12 min read",
         featured: true,
+        image: "/images/product-1.jpg",
     },
     {
         slug: "how-to-open-boutique",
@@ -64,6 +68,7 @@ const blogPosts = [
         date: "2026-01-04",
         readTime: "15 min read",
         featured: true,
+        image: "/images/product-2.jpg",
     },
     {
         slug: "collectibles-store-design",
@@ -74,6 +79,7 @@ const blogPosts = [
         date: "2026-01-04",
         readTime: "14 min read",
         featured: false,
+        image: "/images/product-3.jpg",
     },
     {
         slug: "toy-store-layout",
@@ -84,6 +90,7 @@ const blogPosts = [
         date: "2026-01-04",
         readTime: "12 min read",
         featured: false,
+        image: "/images/product-1.jpg",
     },
     {
         slug: "accessories-store-fixtures",
@@ -94,6 +101,7 @@ const blogPosts = [
         date: "2026-01-04",
         readTime: "11 min read",
         featured: false,
+        image: "/images/product-2.jpg",
     },
     {
         slug: "gondola-vs-wall-shelving",
@@ -104,6 +112,7 @@ const blogPosts = [
         date: "2026-01-02",
         readTime: "8 min read",
         featured: false,
+        image: "/images/product-3.jpg",
     },
     {
         slug: "retail-fixtures-wholesale-guide",
@@ -114,6 +123,7 @@ const blogPosts = [
         date: "2026-01-01",
         readTime: "15 min read",
         featured: false,
+        image: "/images/product-1.jpg",
     },
 ];
 
@@ -150,9 +160,13 @@ export default function BlogPage() {
                                 className="group"
                             >
                                 <article className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
-                                    {/* Featured Image Placeholder */}
-                                    <div className="h-48 bg-gradient-to-br from-[#0066cc] to-[#0066cc] flex items-center justify-center">
-                                        <span className="text-6xl">📚</span>
+                                    {/* Featured Image */}
+                                    <div className="h-48 bg-gray-200 overflow-hidden">
+                                        <img 
+                                            src={post.image} 
+                                            alt={post.title}
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                        />
                                     </div>
 
                                     <div className="p-6">
