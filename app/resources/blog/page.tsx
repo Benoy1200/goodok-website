@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "Retail Display Blog - Store Design Tips & Industry Insights",
@@ -161,11 +162,14 @@ export default function BlogPage() {
                             >
                                 <article className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
                                     {/* Featured Image */}
-                                    <div className="h-48 bg-gray-200 overflow-hidden">
-                                        <img 
+                                    <div className="h-48 bg-gray-200 overflow-hidden relative">
+                                        <Image 
                                             src={post.image} 
                                             alt={post.title}
-                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            quality={75}
                                         />
                                     </div>
 

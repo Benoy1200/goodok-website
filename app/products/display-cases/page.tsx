@@ -67,7 +67,7 @@ const caseStudies = [
         result: "40% increase in collectible sales",
     },
     {
-        title: "Boutique Accessories",
+        title: "Goodok Shopfitting",
         location: "Dubai, UAE",
         image: "/images/projects/boutique.jpg",
         href: "/projects/boutique-accessories",

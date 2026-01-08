@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import dynamic from "next/dynamic";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { OrganizationSchema } from "@/components/schema";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import WebVitalsReporter from "@/components/WebVitalsReporter";
+
+// 动态导入非关键组件
+const WhatsAppButton = dynamic(() => import("@/components/WhatsAppButton"), {
+  loading: () => null,
+  ssr: true,
+});
 
 const inter = Inter({
   variable: "--font-inter",
@@ -91,6 +98,9 @@ export default function RootLayout({
 
         {/* 结构化数据 */}
         <OrganizationSchema />
+
+        {/* Web Vitals 性能监测 */}
+        <WebVitalsReporter />
 
         <Header />
         <main>{children}</main>

@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "Industry Solutions | Retail Store Fixtures by Goodok",
@@ -94,10 +95,13 @@ export default function SolutionsPage() {
                             >
                                 <div className={`relative aspect-[4/3] bg-gradient-to-br ${solution.color} rounded-xl overflow-hidden`}>
                                     {solution.image && (
-                                        <img
+                                        <Image
                                             src={solution.image}
                                             alt={solution.name}
-                                            className="w-full h-full object-cover"
+                                            fill
+                                            className="object-cover"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            quality={80}
                                         />
                                     )}
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>

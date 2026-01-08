@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Boutique Accessories | Fashion Boutique Project | Goodok",
+    title: "Goodok Shopfitting | Fashion Boutique Project | Goodok",
     description: "Fashion-forward boutique in Tokyo with elegant rose gold displays and glass accessory cases.",
     keywords: [
         "boutique design",
@@ -24,7 +24,7 @@ export default function BoutiqueAccessoriesPage() {
                             鈫?Back to Projects
                         </Link>
                         <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-4">
-                            Boutique Accessories
+                            Goodok Shopfitting
                         </h1>
                         <p className="text-xl text-[#F8F1E3] mb-6">
                             Tokyo, Japan 路 Fashion Boutique 路 120銕?

@@ -29,9 +29,9 @@ export default function Footer() {
         <footer className="bg-gray-900 text-gray-300">
             {/* Links Section */}
             <div className="container py-16">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    {/* Brand Column */}
-                    <div className="col-span-2 md:col-span-1">
+                <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-24">
+                    {/* Brand Column - Left Side */}
+                    <div className="lg:max-w-md">
                         <div className="relative h-10 w-[140px] mb-6">
                             <Image
                                 src="/images/goodok-logo-v2.png"
@@ -40,7 +40,7 @@ export default function Footer() {
                                 className="object-contain object-left rounded-sm"
                             />
                         </div>
-                        <p className="text-gray-400 text-sm mb-4">
+                        <p className="text-gray-400 text-sm mb-6 leading-relaxed">
                             Professional retail display solutions manufacturer with 15+ years of experience.
                             Serving 500+ stores worldwide.
                         </p>
@@ -54,54 +54,57 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Products Column */}
-                    <div>
-                        <h4 className="!text-white font-semibold mb-4">Products</h4>
-                        <ul className="space-y-2">
-                            {footerLinks.products.map((link) => (
-                                <li key={link.name}>
-                                    <Link href={link.href} className="text-gray-400 hover:text-white text-sm transition-colors">
-                                        {link.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    {/* Links Section - Right Side */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-16">
+                        {/* Products Column */}
+                        <div>
+                            <h4 className="!text-white font-semibold mb-4">Products</h4>
+                            <ul className="space-y-2">
+                                {footerLinks.products.map((link) => (
+                                    <li key={link.name}>
+                                        <Link href={link.href} className="text-gray-400 hover:text-[var(--accent)] text-sm transition-colors duration-300">
+                                            {link.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
 
-                    {/* Solutions Column */}
-                    <div>
-                        <h4 className="!text-white font-semibold mb-4">Solutions</h4>
-                        <ul className="space-y-2">
-                            {footerLinks.solutions.map((link) => (
-                                <li key={link.name}>
-                                    <Link href={link.href} className="text-gray-400 hover:text-white text-sm transition-colors">
-                                        {link.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                        {/* Solutions Column */}
+                        <div>
+                            <h4 className="!text-white font-semibold mb-4">Solutions</h4>
+                            <ul className="space-y-2">
+                                {footerLinks.solutions.map((link) => (
+                                    <li key={link.name}>
+                                        <Link href={link.href} className="text-gray-400 hover:text-[var(--accent)] text-sm transition-colors duration-300">
+                                            {link.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
 
-                    {/* Company Column */}
-                    <div>
-                        <h4 className="!text-white font-semibold mb-4">Company</h4>
-                        <ul className="space-y-2">
-                            {footerLinks.company.map((link) => (
-                                <li key={link.name}>
-                                    <Link href={link.href} className="text-gray-400 hover:text-white text-sm transition-colors">
-                                        {link.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                        <div className="mt-6">
-                            <h5 className="text-white font-semibold mb-2 text-sm">Contact</h5>
-                            <a
-                                href="mailto:info@goodokshop.com"
-                                className="text-gray-400 hover:text-white text-sm"
-                            >
-                                info@goodokshop.com
-                            </a>
+                        {/* Company Column */}
+                        <div>
+                            <h4 className="!text-white font-semibold mb-4">Company</h4>
+                            <ul className="space-y-2">
+                                {footerLinks.company.map((link) => (
+                                    <li key={link.name}>
+                                        <Link href={link.href} className="text-gray-400 hover:text-[var(--accent)] text-sm transition-colors duration-300">
+                                            {link.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                            <div className="mt-6">
+                                <h5 className="text-white font-semibold mb-2 text-sm">Contact</h5>
+                                <a
+                                    href="mailto:info@goodokshop.com"
+                                    className="text-gray-400 hover:text-[var(--accent)] text-sm transition-colors duration-300"
+                                >
+                                    info@goodokshop.com
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

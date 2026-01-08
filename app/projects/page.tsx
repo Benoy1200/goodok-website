@@ -31,7 +31,7 @@ const projects = [
         category: "Pop Culture",
     },
     {
-        name: "Boutique Accessories",
+        name: "Goodok Shopfitting",
         location: "Tokyo, Japan",
         description: "Fashion-forward boutique with elegant rose gold displays and glass accessory cases.",
         image: "/images/projects/boutique.jpg",

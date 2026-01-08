@@ -180,25 +180,27 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16 pb-8">
           <div className="container">
             <div className="flex flex-col items-center text-center gap-2 md:gap-3 max-w-3xl mx-auto">
-              <h1 className="text-2xl md:text-3xl font-bold text-outline-white">
+              <h1 className="text-2xl md:text-3xl font-bold text-outline-white animate-fadeInUp opacity-0" style={{ animationDelay: '0.1s' }}>
                 Professional Retail Display Solutions
               </h1>
-              <p className="text-gray-300 text-sm md:text-base">
+              <p className="text-gray-300 text-sm md:text-base animate-fadeInUp opacity-0" style={{ animationDelay: '0.3s' }}>
                 Free 3D Design · Factory Direct · Global Shipping
               </p>
-              <Link
-                href="/free-3d-design"
-                className="btn btn-accent px-6 py-3 whitespace-nowrap"
-              >
-                Get Free 3D Design
-              </Link>
+              <div className="animate-fadeInUp opacity-0" style={{ animationDelay: '0.5s' }}>
+                <Link
+                  href="/free-3d-design"
+                  className="btn btn-accent px-6 py-3 whitespace-nowrap hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300"
+                >
+                  Get Free 3D Design
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Industry Solutions - Image Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Industry Solutions</h2>
@@ -210,23 +212,23 @@ export default function Home() {
               <Link
                 key={solution.name}
                 href={solution.href}
-                className="group relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+                className="group relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
               >
                 {/* Background Image */}
                 <Image
                   src={solution.image}
                   alt={solution.name}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 
                 {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-colors duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-300"></div>
 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-2xl font-bold text-white mb-2">{solution.name}</h3>
-                  <p className="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                  <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-md">{solution.name}</h3>
+                  <p className="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0 delay-75">
                     {solution.description}
                   </p>
                 </div>
@@ -249,7 +251,7 @@ export default function Home() {
 
 
       {/* Complete Store Display Solutions - Image Grid Style */}
-      <section className="py-20 bg-[#f8f9fa]">
+      <section className="py-24 bg-[#f8f9fa]">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -266,7 +268,7 @@ export default function Home() {
               <Link
                 key={product.name}
                 href={product.href}
-                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col"
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col hover:-translate-y-1"
               >
                 {/* Image Area */}
                 <div className="relative h-64 overflow-hidden">
@@ -274,9 +276,9 @@ export default function Home() {
                     src={product.image}
                     alt={product.name}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500"></div>
                 </div>
 
                 {/* Content Area */}
@@ -301,10 +303,10 @@ export default function Home() {
       </section>
 
       {/* Testimonials (Our Happy Clients style - Animated) */}
-      <section className="py-20 bg-gray-800">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Our Happy Clients</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Our Happy Clients</h2>
             <div className="w-16 h-1 bg-[var(--accent)] mx-auto"></div>
           </div>
           <ClientTestimonials />
@@ -312,13 +314,13 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-[#004499] text-white">
+      <section className="py-20 bg-[#f8f9fa]">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Store Owners Choose Goodok
             </h2>
-            <p className="text-[#f8f9fa] text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               We're not just a supplier - we're your partner in creating successful retail spaces.
             </p>
           </div>
@@ -327,13 +329,13 @@ export default function Home() {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors duration-300 group"
+                className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
               >
-                <div className="w-16 h-16 bg-[#ff6b35]/25 rounded-full flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-[var(--primary)]/10 rounded-full flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-[#f8f9fa] text-sm leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>

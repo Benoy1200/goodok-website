@@ -1,0 +1,49 @@
+# Roo Code Ignore Rules
+# Reduce token usage and prevent context pollution
+
+# System & Version Control
+.git/
+.svn/
+.DS_Store
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build Outputs
+.next/
+.vercel/
+dist/
+build/
+out/
+coverage/
+
+# Binary & Media Files (Save tokens by not reading these)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.ico
+*.svg
+*.mp4
+*.mp3
+*.pdf
+*.ttf
+*.woff
+*.woff2
+*.eot
+*.pkl
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment (Keep generic samples, ignore real secrets if they exist)
+.env.local
+.env.production
+.env.development

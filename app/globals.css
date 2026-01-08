@@ -188,3 +188,32 @@ html {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Infinite scroll animation for testimonials */
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@layer utilities {
+  .glass-header {
+    @apply bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm supports-[backdrop-filter]:bg-white/60;
+  }
+  
+  .nav-link {
+    @apply relative text-gray-700 font-medium transition-colors hover:text-[var(--primary-dark)];
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 bottom-[-4px] w-full h-[2px] bg-[var(--accent)] scale-x-0 transition-transform duration-300 origin-right;
+  }
+  
+  .nav-link:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+}
