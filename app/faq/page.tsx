@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FAQSchema } from "@/components/schema";
+import { FAQAccordion } from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
     title: "FAQ - Frequently Asked Questions | Goodok Shopfitting",
@@ -130,34 +131,32 @@ export default function FAQPage() {
             <FAQSchema items={allFaqItems} />
 
             {/* Hero */}
-            <section className="bg-gradient-to-br from-gray-800 to-gray-900 text-white py-16">
+            <section className="bg-gradient-to-br from-[#004499] via-[#0066cc] to-[#003366] text-white py-20">
                 <div className="container">
-                    <div className="max-w-3xl">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                            FAQ
+                    <div className="max-w-4xl mx-auto">
+                        <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                            Frequently Asked Questions
                         </h1>
-                        <p className="text-xl text-gray-300">
-                            Find answers to common questions about our products, ordering, shipping, and services.
+                        <p className="text-xl text-[#e8f0ff] leading-relaxed">
+                            Everything you need to know about Goodok retail fixtures, ordering, shipping, and services. Find quick answers below or reach out to our team.
                         </p>
                     </div>
                 </div>
             </section>
 
             {/* FAQ Content */}
-            <section className="py-16">
+            <section className="py-24">
                 <div className="container">
                     <div className="max-w-4xl mx-auto">
                         {faqs.map((category) => (
-                            <div key={category.category} className="mb-12">
-                                <h2 className="text-2xl font-bold mb-6 pb-2 border-b">{category.category}</h2>
-                                <div className="space-y-6">
-                                    {category.questions.map((faq, index) => (
-                                        <div key={index} className="bg-gray-50 rounded-xl p-6">
-                                            <h3 className="font-bold text-lg mb-3">{faq.q}</h3>
-                                            <p className="text-gray-600">{faq.a}</p>
-                                        </div>
-                                    ))}
+                            <div key={category.category} className="mb-20">
+                                <div className="mb-8">
+                                    <h2 className="text-3xl font-bold text-gray-900">
+                                        {category.category}
+                                    </h2>
+                                    <div className="h-1 w-16 bg-gradient-to-r from-[#004499] to-[#0066cc] rounded-full mt-3"></div>
                                 </div>
+                                <FAQAccordion items={category.questions} category={category.category} />
                             </div>
                         ))}
                     </div>
@@ -165,22 +164,22 @@ export default function FAQPage() {
             </section>
 
             {/* Still Have Questions */}
-            <section className="py-16 bg-gray-100">
+            <section className="py-20 bg-gradient-to-br from-[#004499] to-[#003366] text-white">
                 <div className="container text-center">
-                    <h2 className="text-3xl font-bold mb-4">
+                    <h2 className="text-4xl font-bold mb-6">
                         Still Have Questions?
                     </h2>
-                    <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-                        Our team is here to help. Contact us via WhatsApp for quick responses.
+                    <p className="text-lg text-[#e8f0ff] mb-10 max-w-2xl mx-auto leading-relaxed">
+                        Can't find what you're looking for? Our team is here to help. Reach out anytime via WhatsApp or our contact form.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
                             href="https://api.whatsapp.com/send?phone=8613822102050&text=Hi%20I%20have%20a%20question"
-                            className="btn btn-whatsapp"
+                            className="btn btn-whatsapp text-lg px-8 py-4"
                         >
                             Chat on WhatsApp
                         </a>
-                        <Link href="/contact" className="btn bg-gray-900 text-white hover:bg-gray-800">
+                        <Link href="/contact" className="btn btn-secondary text-lg px-8 py-4">
                             Contact Form
                         </Link>
                     </div>
