@@ -28,10 +28,10 @@ export default function Header() {
     const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-            <nav className="container flex items-center justify-center py-3">
+        <header className="fixed top-0 left-0 right-0 z-50 glass-header transition-all duration-300">
+            <nav className="container flex items-center justify-between py-3 lg:grid lg:grid-cols-[1fr_auto_1fr]">
                 {/* Logo */}
-                <Link href="/" className="flex items-center">
+                <Link href="/" className="flex items-center lg:col-start-1">
                     <div className="relative h-12 w-[160px]">
                         <Image
                             src="/images/goodok-logo-v2.png"
@@ -44,7 +44,7 @@ export default function Header() {
                 </Link>
 
                 {/* Desktop Navigation - Close to Logo */}
-                <div className="hidden lg:flex items-center gap-6 ml-8">
+                <div className="hidden lg:flex items-center justify-center gap-6 lg:col-start-2">
                     {navigation.map((item) => (
                         item.hasDropdown ? (
                             <div
@@ -55,7 +55,7 @@ export default function Header() {
                             >
                                 <Link
                                     href={item.href}
-                                    className="text-gray-700 hover:text-[var(--accent)] font-medium transition-colors flex items-center gap-1"
+                                    className="nav-link flex items-center gap-1 group"
                                 >
                                     {item.name}
                                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -84,16 +84,13 @@ export default function Header() {
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                className="text-gray-700 hover:text-[var(--accent)] font-medium transition-colors"
+                                className="nav-link"
                             >
                                 {item.name}
                             </Link>
                         )
                     ))}
                 </div>
-
-                {/* Spacer to push mobile button right */}
-                <div className="flex-1"></div>
 
                 {/* Mobile Menu Button */}
                 <button

@@ -63,22 +63,33 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* 预加载关键资源 */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
-        {/* Google Analytics 4 */}
+        {/* Google Analytics 4 - 延迟加载 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-4RH2V521C5"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
+          async
         />
-        <Script id="google-analytics" strategy="lazyOnload">
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
-            gtag('config', 'G-4RH2V521C5');
+            gtag('config', 'G-4RH2V521C5', {
+              'page_path': window.location.pathname,
+              'anonymize_ip': true,
+            });
           `}
         </Script>
 
+        {/* 结构化数据 */}
         <OrganizationSchema />
 
         <Header />
