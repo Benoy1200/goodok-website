@@ -17,7 +17,7 @@ export default function JewelryStoreGuide() {
                 description="Create stunning jewelry displays that capture attention and boost sales. Glass cases, lighting, and layout strategies."
                 datePublished="2026-01-04"
                 author="Goodok Shopfitting"
-                image="/images/Jewelry Store Display Ideas That Drive Sales.jpg"
+                image="/images/blog/blog_gondola_shelving_1767944001034.png"
             />
             {/* Hero */}
             <section className="bg-white pt-12 pb-8 border-b">
@@ -64,7 +64,7 @@ export default function JewelryStoreGuide() {
                                 {/* Featured Image inside Prose */}
                                 <div className="relative w-full aspect-[4/3] mb-8 rounded-xl overflow-hidden shadow-md not-prose">
                                     <Image 
-                                        src="/images/Jewelry Store Display Ideas That Drive Sales.jpg" 
+                                        src="/images/blog/blog_gondola_shelving_1767944001034.png" 
                                         alt="Jewelry Store Display Ideas That Drive Sales"
                                         fill
                                         className="object-cover"

@@ -54,7 +54,7 @@ export default function ContactPage() {
                                 </p>
 
                                 <form
-                                    action="https://formsubmit.co/henry879128@gmail.com"
+                                    action="https://formsubmit.co/info@goodokshop.com"
                                     method="POST"
                                 >
                                     {/* FormSubmit Configuration */}

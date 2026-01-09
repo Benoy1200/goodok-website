@@ -17,7 +17,7 @@ export default function CosmeticsStoreGuide() {
                 description="Learn everything about designing a successful cosmetics store, from layout planning to display fixtures selection and lighting optimization."
                 datePublished="2026-01-04"
                 author="Goodok Shopfitting"
-                image="/images/How to Design a Cosmetics Store Complete Guide 2025.jpg"
+                image="/images/blog/blog_display_cases_1767944020952.png"
             />
             {/* Hero */}
             <section className="bg-white pt-12 pb-8 border-b">
@@ -64,7 +64,7 @@ export default function CosmeticsStoreGuide() {
                                 {/* Featured Image inside Prose */}
                                 <div className="relative w-full aspect-[4/3] mb-8 rounded-xl overflow-hidden shadow-md not-prose">
                                     <Image 
-                                        src="/images/How to Design a Cosmetics Store Complete Guide 2025.jpg" 
+                                        src="/images/blog/blog_display_cases_1767944020952.png" 
                                         alt="How to Design a Cosmetics Store: Complete Guide 2025"
                                         fill
                                         className="object-cover"

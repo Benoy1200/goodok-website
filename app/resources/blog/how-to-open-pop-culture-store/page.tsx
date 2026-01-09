@@ -17,7 +17,7 @@ export default function PopCultureStoreGuide() {
                 description="Everything you need to know about opening a pop culture, collectibles, or trendy toys store. From store design to display fixtures."
                 datePublished="2026-01-04"
                 author="Goodok Shopfitting"
-                image="/images/How to Open a Pop Culture Store Complete Guide 2025.jpg"
+                image="/images/blog/blog_pop_culture_store_1767944072052.png"
             />
             {/* Hero */}
             <section className="bg-white pt-12 pb-8 border-b">
@@ -64,7 +64,7 @@ export default function PopCultureStoreGuide() {
                                 {/* Featured Image inside Prose */}
                                 <div className="relative w-full aspect-[4/3] mb-8 rounded-xl overflow-hidden shadow-md not-prose">
                                     <Image 
-                                        src="/images/How to Open a Pop Culture Store Complete Guide 2025.jpg" 
+                                        src="/images/blog/blog_pop_culture_store_1767944072052.png" 
                                         alt="How to Open a Pop Culture Store: Complete Guide 2025"
                                         fill
                                         className="object-cover"

@@ -17,7 +17,7 @@ export default function ToyStoreShelvingGuide() {
                 description="Discover the best shelving solutions for toy stores that maximize product visibility and create an engaging shopping experience for families."
                 datePublished="2026-01-04"
                 author="Goodok Shopfitting"
-                image="/images/Toy Store Shelving Ideas Maximize Display & Sales.jpg"
+                image="/images/blog/blog_toy_store_1767944091805.png"
             />
             {/* Hero */}
             <section className="bg-white pt-12 pb-8 border-b">
@@ -64,7 +64,7 @@ export default function ToyStoreShelvingGuide() {
                                 {/* Featured Image inside Prose */}
                                 <div className="relative w-full aspect-[4/3] mb-8 rounded-xl overflow-hidden shadow-md not-prose">
                                     <Image 
-                                        src="/images/Toy Store Shelving Ideas Maximize Display & Sales.jpg" 
+                                        src="/images/blog/blog_toy_store_1767944091805.png" 
                                         alt="Toy Store Shelving Ideas: Maximize Display & Sales"
                                         fill
                                         className="object-cover"
