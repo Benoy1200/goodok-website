@@ -5,7 +5,8 @@ import { useState, useEffect } from "react";
 // Extend Window interface for gtag
 declare global {
     interface Window {
-        gtag?: (command: string, action: string, params?: Record<string, unknown>) => void;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        gtag?: (command: string, ...args: any[]) => void;
     }
 }
 
@@ -128,7 +129,7 @@ export default function WhatsAppButton() {
                 <span className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-25"></span>
 
                 {/* Main button */}
-                <div className="relative flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                <div className="relative flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
                     {isOpen ? (
                         <svg className="w-6 h-6 fill-white" viewBox="0 0 24 24">
                             <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />

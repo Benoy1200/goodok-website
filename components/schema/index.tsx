@@ -1,7 +1,6 @@
 // Schema components for SEO structured data
 // 结构化数据组件
 
-import type { ReactNode } from "react";
 
 interface OrganizationSchemaProps {
     name?: string;
@@ -48,6 +47,8 @@ interface ProductSchemaProps {
     image?: string;
     brand?: string;
     category?: string;
+    price?: string;
+    currency?: string;
 }
 
 export function ProductSchema({
@@ -56,8 +57,10 @@ export function ProductSchema({
     image = "https://www.goodokshop.com/images/product-placeholder.jpg",
     brand = "Goodok",
     category = "Retail Fixtures",
+    price,
+    currency = "USD",
 }: ProductSchemaProps) {
-    const schema = {
+    const schema: Record<string, unknown> = {
         "@context": "https://schema.org",
         "@type": "Product",
         name,
@@ -72,19 +75,23 @@ export function ProductSchema({
             "@type": "Organization",
             name: "Goodok Shopfitting",
         },
-        offers: {
+    };
+
+    // Only add offers if price is provided
+    if (price) {
+        schema.offers = {
             "@type": "Offer",
             availability: "https://schema.org/InStock",
-            priceCurrency: "USD",
-            price: "0",
+            priceCurrency: currency,
+            price,
             priceValidUntil: "2026-12-31",
             url: "https://www.goodokshop.com/free-3d-design",
             seller: {
                 "@type": "Organization",
                 name: "Goodok Shopfitting",
             },
-        },
-    };
+        };
+    }
 
     return (
         <script
@@ -93,6 +100,7 @@ export function ProductSchema({
         />
     );
 }
+
 
 interface ArticleSchemaProps {
     headline: string;

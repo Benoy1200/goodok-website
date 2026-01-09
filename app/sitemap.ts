@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://www.goodokshop.com";
+    const baseUrl = "https://goodokshop.com";
 
     // Static pages
     const staticPages = [
@@ -11,7 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         "/products/wall-shelving",
         "/products/display-cases",
         "/products/clothing-racks",
-        "/products/custom-fixtures",
+        "/products/checkout-counters",
+        "/products/accessories",
         "/solutions",
         "/solutions/pop-culture",
         "/solutions/toy-store",
@@ -22,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         "/about",
         "/contact",
         "/free-3d-design",
+        "/projects",
         "/faq",
         "/resources/blog",
         "/resources/blog/how-to-design-cosmetics-store",

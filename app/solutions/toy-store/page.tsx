@@ -1,162 +1,107 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "Toy Store Fixtures | Kids Retail Display Solutions | Goodok",
     description:
-        "Safe and engaging toy store fixtures. Kid-friendly displays, interactive shelving, and colorful store solutions.",
+        "Complete fixture solutions for toy stores. Safe, colorful displays for games, dolls, action figures, and educational toys.",
     keywords: [
         "toy store fixtures",
-        "toy store shelving",
         "kids store display",
-        "toy shop design",
-        "children store fixtures",
+        "toy shelving",
+        "game store fixtures",
+        "children store layout",
     ],
 };
-
-const products = [
-    { name: "Low Gondolas", desc: "Kid-height displays", icon: "📦" },
-    { name: "Demo Tables", desc: "Interactive play areas", icon: "🎲" },
-    { name: "Wall Displays", desc: "Maximize vertical space", icon: "📐" },
-    { name: "Dump Bins", desc: "For small toys and impulse buys", icon: "🪣" },
-];
-
-const caseStudies = [
-    {
-        name: "Trendy Toys Store",
-        location: "Dubai, UAE",
-        description: "A colorful 150㎡ toy store with interactive demo areas and kid-friendly shelving.",
-        highlights: ["Low-height gondolas", "Play demo areas", "Colorful theming"],
-        href: "/projects/trendy-toys-store",
-    },
-];
 
 export default function ToyStoreSolutionPage() {
     return (
         <div className="pt-24">
-            {/* Hero */}
-            <section className="bg-gradient-to-br from-orange-500 to-yellow-400 text-white py-20">
-                <div className="container">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <span className="text-white text-sm font-medium">Solutions / Toy Store</span>
-                            <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
-                                Toy Store
-                            </h1>
-                            <p className="text-xl text-white mb-8">
-                                Create a magical shopping experience for kids and parents.
-                                Safe, engaging, and sales-optimized layouts.
-                            </p>
-                            <div className="flex flex-wrap gap-4">
-                                <Link href="/free-3d-design" className="btn bg-white text-orange-600 hover:bg-orange-50">
-                                    Get Free 3D Design
-                                </Link>
-                                <Link href="/contact" className="btn border-2 border-white text-white hover:bg-white hover:text-orange-600">
-                                    Contact Us
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="bg-white/20 rounded-2xl p-8 backdrop-blur-sm">
-                            <div className="aspect-[4/3] bg-orange-600/30 rounded-xl flex items-center justify-center">
-                                <span className="text-6xl">🧸</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            {/* Hero Image */}
+            <section className="relative h-[50vh] overflow-hidden">
+                <Image
+                    src="/images/hero-bg-5.jpg"
+                    alt="Toy Store"
+                    fill
+                    className="object-cover"
+                    priority
+                />
             </section>
 
-            {/* Case Studies */}
-            <section className="py-20">
-                <div className="container">
-                    <h2 className="text-3xl font-bold text-center mb-4">Store Case Studies</h2>
-                    <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                        See how we&apos;ve helped toy store owners create engaging retail spaces
-                    </p>
-                    <div className="max-w-2xl mx-auto">
-                        {caseStudies.map((study) => (
-                            <div key={study.name} className="bg-white rounded-xl shadow-lg overflow-hidden">
-                                <div className="aspect-video bg-gradient-to-br from-orange-100 to-yellow-100 flex items-center justify-center">
-                                    <span className="text-6xl">🏪</span>
-                                </div>
-                                <div className="p-6">
-                                    <div className="flex items-center justify-between mb-2">
-                                        <h3 className="text-xl font-bold">{study.name}</h3>
-                                        <span className="text-sm text-gray-500">{study.location}</span>
-                                    </div>
-                                    <p className="text-gray-600 mb-4">{study.description}</p>
-                                    <div className="flex flex-wrap gap-2 mb-4">
-                                        {study.highlights.map((h) => (
-                                            <span key={h} className="text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded">
-                                                {h}
-                                            </span>
-                                        ))}
-                                    </div>
-                                    <Link href={study.href} className="text-orange-600 font-medium hover:underline">
-                                        View Project Details →
-                                    </Link>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Products */}
-            <section className="py-20 bg-gray-50">
-                <div className="container">
-                    <h2 className="text-3xl font-bold text-center mb-12">
-                        Recommended Products
-                    </h2>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {products.map((product) => (
-                            <div key={product.name} className="bg-white rounded-xl p-6 text-center shadow-sm">
-                                <span className="text-4xl mb-4 block">{product.icon}</span>
-                                <h3 className="font-bold mb-2">{product.name}</h3>
-                                <p className="text-gray-600 text-sm">{product.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Safety */}
-            <section className="py-20">
+            {/* Hero Content - Below Image */}
+            <section className="py-16 bg-white">
                 <div className="container">
                     <div className="max-w-3xl mx-auto text-center">
-                        <h2 className="text-3xl font-bold mb-8">Safety First</h2>
-                        <div className="grid md:grid-cols-3 gap-8">
-                            <div>
-                                <span className="text-4xl mb-3 block">🔵</span>
-                                <h3 className="font-bold mb-2">Round Corners</h3>
-                                <p className="text-gray-600 text-sm">No sharp edges for child safety</p>
-                            </div>
-                            <div>
-                                <span className="text-4xl mb-3 block">🔩</span>
-                                <h3 className="font-bold mb-2">Anti-Tip</h3>
-                                <p className="text-gray-600 text-sm">Secured fixtures prevent accidents</p>
-                            </div>
-                            <div>
-                                <span className="text-4xl mb-3 block">👁️</span>
-                                <h3 className="font-bold mb-2">Visibility</h3>
-                                <p className="text-gray-600 text-sm">Low shelves for parent sightlines</p>
-                            </div>
+                        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                            Toy Store Fixtures
+                        </h1>
+                        <p className="text-xl text-gray-600 mb-8">
+                            Create a magical shopping experience that excites kids and gives parents
+                            confidence. Our displays are colorful, safe, and designed for little explorers.
+                        </p>
+                        <div className="flex flex-wrap gap-4 justify-center">
+                            <a href="https://api.whatsapp.com/send?phone=8613822102050" className="btn btn-primary">
+                                Get Free 3D Design
+                            </a>
+                            <Link href="/contact" className="btn btn-secondary">
+                                Contact Us
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="py-20 bg-orange-500 text-white">
-                <div className="container text-center">
-                    <h2 className="text-3xl font-bold mb-4">
-                        Design Your Dream Toy Store
-                    </h2>
-                    <p className="text-orange-100 mb-8">
-                        Free store layout design. Factory-direct pricing.
-                    </p>
-                    <Link href="/free-3d-design" className="btn bg-white text-orange-600 hover:bg-orange-50">
-                        Get Started
-                    </Link>
+            {/* What We Offer */}
+            <section className="py-20 bg-white">
+                <div className="container">
+                    <div className="max-w-3xl mx-auto">
+                        <h2 className="text-3xl font-bold mb-6">Fun & Safe Toy Store Solutions</h2>
+                        <p className="text-gray-600 mb-8 leading-relaxed">
+                            Toy stores are unique: your customers come in pairs—kids who want to play
+                            and parents who make purchasing decisions. Great fixtures engage children
+                            while organizing inventory in a way that helps parents find what they need.
+                        </p>
+                        <p className="text-gray-600 mb-8 leading-relaxed">
+                            We design sturdy shelving at child-friendly heights, demo stations that
+                            encourage hands-on play, and colorful displays that make your store feel
+                            like a destination, not just a shop.
+                        </p>
+                        
+                        <h3 className="text-xl font-bold mb-4">Key Features for Toy Stores:</h3>
+                        <ul className="space-y-3 text-gray-600">
+                            <li className="flex items-start gap-3">
+                                <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span><strong>Child-Safe Design:</strong> Rounded corners and stable bases</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span><strong>Low Shelving:</strong> Reachable displays for little shoppers</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span><strong>Demo Areas:</strong> Interactive play zones that boost sales</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span><strong>Colorful Options:</strong> Bright finishes that create excitement</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span><strong>High Durability:</strong> Built to withstand enthusiastic shoppers</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </div>

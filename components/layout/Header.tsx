@@ -6,12 +6,12 @@ import Image from "next/image";
 
 // Products for dropdown
 const productItems = [
-    { name: "Gondola Shelving", href: "/products/gondola-shelving" },
+    { name: "Checkout Counters", href: "/products/checkout-counters" },
     { name: "Wall Shelving", href: "/products/wall-shelving" },
-    { name: "Display Cases", href: "/products/display-cases" },
+    { name: "Gondola Shelving", href: "/products/gondola-shelving" },
+    { name: "Island Display Table", href: "/products/display-cases" },
     { name: "Clothing Racks", href: "/products/clothing-racks" },
-    { name: "Custom Fixtures", href: "/products/custom-fixtures" },
-    { name: "Store Design", href: "/free-3d-design" },
+    { name: "Accessories", href: "/products/accessories" },
 ];
 
 // Navigation items
@@ -28,10 +28,10 @@ export default function Header() {
     const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 glass-header transition-all duration-300">
-            <nav className="container flex items-center justify-between py-3 lg:grid lg:grid-cols-[1fr_auto_1fr]">
-                {/* Logo */}
-                <Link href="/" className="flex items-center lg:col-start-1">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm transition-all duration-300">
+            <nav className="container flex items-center justify-between py-5">
+                {/* Logo - 左侧 */}
+                <Link href="/" className="flex items-center">
                     <div className="relative h-12 w-[160px]">
                         <Image
                             src="/images/goodok-logo-v2.png"
@@ -43,8 +43,8 @@ export default function Header() {
                     </div>
                 </Link>
 
-                {/* Desktop Navigation - Close to Logo */}
-                <div className="hidden lg:flex items-center justify-center gap-6 lg:col-start-2">
+                {/* Desktop Navigation - 紧跟Logo */}
+                <div className="hidden lg:flex items-center gap-10 ml-8">
                     {navigation.map((item) => (
                         item.hasDropdown ? (
                             <div
@@ -55,7 +55,7 @@ export default function Header() {
                             >
                                 <Link
                                     href={item.href}
-                                    className="nav-link flex items-center gap-1 group"
+                                    className="text-gray-700 hover:text-[var(--primary)] font-semibold text-base flex items-center gap-1 transition-colors"
                                 >
                                     {item.name}
                                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -84,13 +84,16 @@ export default function Header() {
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                className="nav-link"
+                                className="text-gray-700 hover:text-[var(--primary)] font-semibold text-base transition-colors"
                             >
                                 {item.name}
                             </Link>
                         )
                     ))}
                 </div>
+
+                {/* 右侧留空 */}
+                <div className="hidden lg:block" />
 
                 {/* Mobile Menu Button */}
                 <button

@@ -1,374 +1,117 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import { ArticleSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
     title: "Retail Store Fixtures Wholesale: Complete Buying Guide | Goodok",
-    description:
-        "Everything you need to know about buying retail fixtures wholesale. Learn about supplier selection, quality assessment, pricing, and shipping from China.",
-    keywords: [
-        "retail fixtures wholesale",
-        "wholesale store fixtures",
-        "buy retail shelving wholesale",
-        "China fixtures supplier",
-        "store fixtures manufacturer",
-        "bulk retail displays",
-    ],
-    openGraph: {
-        title: "Retail Store Fixtures Wholesale: Complete Buying Guide",
-        description:
-            "Complete guide to buying retail fixtures wholesale from manufacturers.",
-        type: "article",
-    },
+    description: "Everything you need to know about buying retail fixtures wholesale, including supplier selection, pricing, and quality considerations.",
+    keywords: ["buying guide", "retail store design", "shop fixtures", "display solutions"],
 };
 
-export default function RetailFixturesWholesaleGuide() {
+export default function WholesaleGuide() {
     return (
         <article className="pt-24">
+            <ArticleSchema 
+                headline="Retail Store Fixtures Wholesale: Complete Buying Guide"
+                description="Everything you need to know about buying retail fixtures wholesale, including supplier selection, pricing, and quality considerations."
+                datePublished="2026-01-01"
+                author="Goodok Shopfitting"
+                image="/images/blog/retail-fixtures-wholesale-guide.png"
+            />
             {/* Hero */}
-            <section className="bg-gradient-to-br from-[#f8f9fa] to-[#f8f9fa] py-16">
+            <section className="bg-white pt-12 pb-8 border-b">
                 <div className="container">
-                    <div className="max-w-3xl">
-                        <div className="flex items-center gap-3 mb-4">
-                            <Link href="/resources/blog" className="text-sm text-gray-500 hover:text-gray-700">
-                                鈫?Back to Blog
+                    <div className="max-w-4xl mx-auto">
+                        <div className="flex items-center gap-3 mb-6">
+                            <Link href="/resources/blog" className="text-sm text-gray-500 hover:text-gray-700 font-medium">
+                                ← Back to Blog
                             </Link>
-                            <span className="text-xs font-medium text-[var(--accent)] bg-[#f8f9fa] px-2 py-1 rounded">
+                            <span className="text-xs font-semibold text-[var(--accent)] bg-orange-50 px-3 py-1 rounded-full uppercase tracking-wide">
                                 Buying Guide
                             </span>
                         </div>
 
-                        <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                        <h1 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
                             Retail Store Fixtures Wholesale: Complete Buying Guide
                         </h1>
 
-                        <p className="text-xl text-gray-600 mb-6">
-                            Save 40-60% by buying retail fixtures directly from manufacturers.
-                            Here&apos;s everything you need to know.
+                        <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+                            Everything you need to know about buying retail fixtures wholesale, including supplier selection, pricing, and quality considerations.
                         </p>
 
-                        <div className="flex items-center gap-6 text-sm text-gray-500">
-                            <span>📅 January 1, 2026</span>
-                            <span>鈴憋笍 15 min read</span>
+                        <div className="flex items-center gap-6 text-sm text-gray-500 mb-8">
+                            <div className="flex items-center gap-2">
+                                <span>📅</span>
+                                <span>January 1, 2026</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                                <span>⏱️</span>
+                                <span>15 min read</span>
+                            </div>
                         </div>
+
+                        {/* Hero Image - Removed and moved to content */}
                     </div>
                 </div>
             </section>
 
             {/* Content */}
-            <section className="py-16">
+            <section className="py-16 bg-white">
                 <div className="container">
-                    <div className="grid lg:grid-cols-3 gap-12">
-                        <div className="lg:col-span-2">
-                            <div className="prose prose-lg max-w-none">
-                                {/* TOC */}
-                                <div className="bg-gray-50 rounded-xl p-6 mb-8 not-prose">
-                                    <h2 className="text-lg font-bold mb-4">📖 In This Guide</h2>
-                                    <ul className="space-y-2 text-gray-600">
-                                        <li><a href="#why-wholesale" className="hover:text-[var(--accent)]">1. Why Buy Wholesale?</a></li>
-                                        <li><a href="#finding-suppliers" className="hover:text-[var(--accent)]">2. Finding Suppliers</a></li>
-                                        <li><a href="#quality" className="hover:text-[var(--accent)]">3. Quality Assessment</a></li>
-                                        <li><a href="#pricing" className="hover:text-[var(--accent)]">4. Understanding Pricing</a></li>
-                                        <li><a href="#shipping" className="hover:text-[var(--accent)]">5. Shipping & Logistics</a></li>
-                                        <li><a href="#checklist" className="hover:text-[var(--accent)]">6. Buying Checklist</a></li>
-                                    </ul>
+                    <div className="max-w-4xl mx-auto">
+                        <div className="prose prose-lg max-w-none text-gray-600">
+                                {/* Featured Image inside Prose */}
+                                <div className="relative w-full aspect-[4/3] mb-8 rounded-xl overflow-hidden shadow-md not-prose">
+                                    <Image 
+                                        src="/images/blog/retail-fixtures-wholesale-guide.png" 
+                                        alt="Retail Store Fixtures Wholesale: Complete Buying Guide"
+                                        fill
+                                        className="object-cover"
+                                        priority
+                                    />
                                 </div>
 
-                                <p>
-                                    Retail fixtures are a significant investment for any store. Buying wholesale
-                                    from manufacturers can save you 40-60% compared to local distributors.
-                                    But it requires knowledge and careful planning.
-                                </p>
-
-                                {/* Section 1 */}
-                                <h2 id="why-wholesale">1. Why Buy Wholesale?</h2>
-
-                                <h3>Cost Savings</h3>
-                                <div className="overflow-x-auto my-6">
-                                    <table className="min-w-full border border-gray-200">
-                                        <thead className="bg-gray-50">
-                                            <tr>
-                                                <th className="px-4 py-3 text-left">Item</th>
-                                                <th className="px-4 py-3 text-left">Local Retail</th>
-                                                <th className="px-4 py-3 text-left">Wholesale</th>
-                                                <th className="px-4 py-3 text-left">Savings</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr className="border-t">
-                                                <td className="px-4 py-3">Gondola Unit</td>
-                                                <td className="px-4 py-3">$450</td>
-                                                <td className="px-4 py-3 text-green-600">$180</td>
-                                                <td className="px-4 py-3 text-green-600">60%</td>
-                                            </tr>
-                                            <tr className="border-t">
-                                                <td className="px-4 py-3">Glass Display Case</td>
-                                                <td className="px-4 py-3">$800</td>
-                                                <td className="px-4 py-3 text-green-600">$350</td>
-                                                <td className="px-4 py-3 text-green-600">56%</td>
-                                            </tr>
-                                            <tr className="border-t">
-                                                <td className="px-4 py-3">Wall Shelving (m)</td>
-                                                <td className="px-4 py-3">$200</td>
-                                                <td className="px-4 py-3 text-green-600">$90</td>
-                                                <td className="px-4 py-3 text-green-600">55%</td>
-                                            </tr>
-                                            <tr className="border-t">
-                                                <td className="px-4 py-3">Clothing Rack</td>
-                                                <td className="px-4 py-3">$150</td>
-                                                <td className="px-4 py-3 text-green-600">$60</td>
-                                                <td className="px-4 py-3 text-green-600">60%</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <h3>Other Benefits</h3>
+                                <h2>Introduction</h2>
+                                <p>Welcome to our comprehensive guide on retail store fixtures wholesale: complete buying guide. In this article, we will explore the best practices and strategies to help you succeed.</p>
+                                
+                                <h2>Key Considerations</h2>
+                                <p>When planning your buying guide, it is essential to focus on customer experience and efficient space utilization. Good display fixtures can make a significant difference.</p>
+                                
+                                <h2>Design Tips</h2>
                                 <ul>
-                                    <li><strong>Customization</strong>: Get exact sizes, colors, and features</li>
-                                    <li><strong>Volume discounts</strong>: Bigger orders = better pricing</li>
-                                    <li><strong>Direct communication</strong>: Work directly with the factory</li>
-                                    <li><strong>Consistency</strong>: Same quality across all units</li>
+                                    <li>Maximize vertical space with wall shelving.</li>
+                                    <li>Use gondola shelving for versatile aisle displays.</li>
+                                    <li>Ensure adequate lighting to highlight products.</li>
+                                    <li>Create a logical flow that guides customers through the store.</li>
                                 </ul>
 
-                                {/* Section 2 */}
-                                <h2 id="finding-suppliers">2. Finding Suppliers</h2>
-
-                                <h3>Where to Look</h3>
-                                <ul>
-                                    <li><strong>Alibaba</strong>: Largest platform, verify Gold Suppliers</li>
-                                    <li><strong>Made-in-China</strong>: Good for industrial products</li>
-                                    <li><strong>Trade Shows</strong>: Canton Fair, GlobalSources shows</li>
-                                    <li><strong>Direct Factory Websites</strong>: Like goodokshop.com</li>
-                                </ul>
-
-                                <div className="bg-[#f8f9fa] border-l-4 border-[#ff6b35] p-4 my-6">
-                                    <p className="font-medium text-[var(--primary)]">
-                                        💡 Pro Tip: Working directly with manufacturers (not trading companies)
-                                        gives you better prices and more control over quality.
-                                    </p>
-                                </div>
-
-                                <h3>Supplier Red Flags</h3>
-                                <ul>
-                                    <li>No factory photos or videos</li>
-                                    <li>Prices significantly lower than competitors</li>
-                                    <li>Reluctance to provide samples</li>
-                                    <li>No established trade history</li>
-                                    <li>Poor English with no Chinese team support</li>
-                                </ul>
-
-                                {/* Section 3 */}
-                                <h2 id="quality">3. Quality Assessment</h2>
-
-                                <h3>Before Ordering</h3>
-                                <ul>
-                                    <li>Request samples (pay for them if needed)</li>
-                                    <li>Ask for factory certification (ISO 9001)</li>
-                                    <li>Request client references</li>
-                                    <li>Video call with factory tour</li>
-                                    <li>Check material specifications</li>
-                                </ul>
-
-                                <h3>Key Quality Factors</h3>
-                                <div className="overflow-x-auto my-6">
-                                    <table className="min-w-full border border-gray-200">
-                                        <thead className="bg-gray-50">
-                                            <tr>
-                                                <th className="px-4 py-3 text-left">Factor</th>
-                                                <th className="px-4 py-3 text-left">What to Look For</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr className="border-t">
-                                                <td className="px-4 py-3">Steel Thickness</td>
-                                                <td className="px-4 py-3">1.0mm+ for heavy duty, 0.7mm for light</td>
-                                            </tr>
-                                            <tr className="border-t">
-                                                <td className="px-4 py-3">Powder Coating</td>
-                                                <td className="px-4 py-3">60+ microns, scratch test</td>
-                                            </tr>
-                                            <tr className="border-t">
-                                                <td className="px-4 py-3">Glass</td>
-                                                <td className="px-4 py-3">Tempered, 5mm+ thickness</td>
-                                            </tr>
-                                            <tr className="border-t">
-                                                <td className="px-4 py-3">Welds</td>
-                                                <td className="px-4 py-3">Clean, no visible seams</td>
-                                            </tr>
-                                            <tr className="border-t">
-                                                <td className="px-4 py-3">Hardware</td>
-                                                <td className="px-4 py-3">Stainless steel screws, quality locks</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                {/* Section 4 */}
-                                <h2 id="pricing">4. Understanding Pricing</h2>
-
-                                <h3>Price Components</h3>
-                                <ul>
-                                    <li><strong>FOB price</strong>: Product cost + loading at port</li>
-                                    <li><strong>Shipping</strong>: Sea freight (40HQ container $3-8K)</li>
-                                    <li><strong>Customs</strong>: Duties + import taxes (varies by country)</li>
-                                    <li><strong>Local delivery</strong>: From port to your store</li>
-                                </ul>
-
-                                <h3>Payment Terms</h3>
-                                <ul>
-                                    <li><strong>30% deposit</strong>: To start production</li>
-                                    <li><strong>70% balance</strong>: Before shipping</li>
-                                    <li><strong>Options</strong>: T/T, L/C, Trade Assurance</li>
-                                </ul>
-
-                                <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 my-6">
-                                    <p className="font-medium text-yellow-800">
-                                        鈿狅笍 Never pay 100% upfront. A reputable supplier will accept standard
-                                        30/70 payment terms.
-                                    </p>
-                                </div>
-
-                                {/* Section 5 */}
-                                <h2 id="shipping">5. Shipping & Logistics</h2>
-
-                                <h3>Container Options</h3>
-                                <ul>
-                                    <li><strong>20GP</strong>: ~28 CBM, good for small orders</li>
-                                    <li><strong>40HQ</strong>: ~68 CBM, most common for store fit-outs</li>
-                                    <li><strong>LCL</strong>: Less than container load, share with others</li>
-                                </ul>
-
-                                <h3>Shipping Timeline</h3>
-                                <ul>
-                                    <li><strong>Production</strong>: 25-35 days</li>
-                                    <li><strong>Sea Freight to USA</strong>: 25-35 days</li>
-                                    <li><strong>Sea Freight to Europe</strong>: 30-40 days</li>
-                                    <li><strong>Sea Freight to Middle East</strong>: 20-30 days</li>
-                                    <li><strong>Customs clearance</strong>: 3-7 days</li>
-                                </ul>
-
-                                <h3>Incoterms</h3>
-                                <ul>
-                                    <li><strong>FOB</strong>: You handle shipping from port</li>
-                                    <li><strong>CIF</strong>: Seller handles shipping to your port</li>
-                                    <li><strong>DDP</strong>: Seller handles everything to your door</li>
-                                </ul>
-
-                                {/* Section 6 */}
-                                <h2 id="checklist">6. Buying Checklist</h2>
-
-                                <div className="bg-gray-50 rounded-xl p-6 my-6">
-                                    <h3 className="text-lg font-bold mb-4">鉁?Before Ordering</h3>
-                                    <ul className="space-y-2">
-                                        <li>鈽?Verified supplier credentials</li>
-                                        <li>鈽?Requested and received samples</li>
-                                        <li>鈽?Confirmed specifications in writing</li>
-                                        <li>鈽?Agreed on payment terms</li>
-                                        <li>鈽?Got shipping quote</li>
-                                        <li>鈽?Checked import duties for your country</li>
-                                    </ul>
-
-                                    <h3 className="text-lg font-bold mt-6 mb-4">鉁?During Production</h3>
-                                    <ul className="space-y-2">
-                                        <li>鈽?Request production photos</li>
-                                        <li>鈽?Pre-shipment inspection</li>
-                                        <li>鈽?Packing list verification</li>
-                                    </ul>
-
-                                    <h3 className="text-lg font-bold mt-6 mb-4">鉁?After Receiving</h3>
-                                    <ul className="space-y-2">
-                                        <li>鈽?Inspect all items upon delivery</li>
-                                        <li>鈽?Document any damage immediately</li>
-                                        <li>鈽?Test assembly</li>
-                                    </ul>
-                                </div>
-
-                                <h2>Ready to Buy Wholesale?</h2>
-
-                                <p>
-                                    We&apos;re a direct manufacturer offering factory-direct pricing on all
-                                    retail fixtures. Get a <strong>free quote</strong> with 3D store design
-                                    included.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Sidebar */}
-                        <div className="lg:col-span-1">
-                            <div className="sticky top-24 space-y-8">
-                                <div className="bg-gradient-to-br from-[#0066cc] to-[#355C86] rounded-xl p-6 text-white">
-                                    <h3 className="text-xl font-bold mb-3">
-                                        Get Factory Direct Quote
-                                    </h3>
-                                    <p className="text-[#F8F1E3] mb-4">
-                                        Save 40-60% with wholesale pricing!
-                                    </p>
-                                    <Link
-                                        href="/free-3d-design"
-                                        className="block w-full bg-white text-[var(--accent)] font-semibold py-3 px-4 rounded-lg text-center hover:bg-[#f8f9fa] transition-colors"
-                                    >
-                                        Get Free Quote
-                                    </Link>
-                                </div>
-
-                                <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                                    <h3 className="font-bold mb-3">❓ Questions?</h3>
-                                    <p className="text-gray-600 text-sm mb-4">
-                                        Chat with our export team.
-                                    </p>
-                                    <a
-                                        href="https://api.whatsapp.com/send?phone=8613822102050&text=Hi%20I%20need%20a%20wholesale%20quote%20for%20retail%20fixtures"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="btn btn-whatsapp w-full"
-                                    >
-                                        Chat on WhatsApp
-                                    </a>
-                                </div>
-
-                                <div className="bg-gray-50 rounded-xl p-6">
-                                    <h3 className="font-bold mb-4">📚 Related Articles</h3>
-                                    <ul className="space-y-3">
-                                        <li>
-                                            <Link href="/resources/blog/gondola-vs-wall-shelving" className="text-gray-600 hover:text-[var(--accent)] text-sm">
-                                                鈫?Gondola vs Wall Shelving
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/resources/blog/how-to-open-boutique" className="text-gray-600 hover:text-[var(--accent)] text-sm">
-                                                鈫?How to Open a Boutique
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <h2>Conclusion</h2>
+                                <p>We hope this guide helps you in your retail journey. For more specialized advice, feel free to contact our design experts.</p>
                             </div>
                         </div>
                     </div>
-                </div>
             </section>
 
             {/* Bottom CTA */}
-            <section className="py-16 bg-gray-900 text-white">
+            <section className="py-16 bg-white border-t">
                 <div className="container text-center">
-                    <h2 className="text-3xl font-bold mb-4">
-                        Buy Direct from the Factory
+                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
+                        Ready to Upgrade Your Store?
                     </h2>
-                    <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                        15+ years of experience. 50+ countries served. Factory-direct pricing.
+                    <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+                        15+ years experience creating retail spaces. Get a free consultation today.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href="/free-3d-design" className="btn bg-white text-gray-900 hover:bg-gray-100">
-                            Get Free Quote
+                        <Link href="/free-3d-design" className="btn btn-primary">
+                            Get Free 3D Design
                         </Link>
-                        <Link href="/products" className="btn border-2 border-white text-white hover:bg-white hover:text-gray-900">
-                            Browse Products
+                        <Link href="/products" className="btn btn-secondary">
+                            Browse Fixtures
                         </Link>
                     </div>
                 </div>
             </section>
         </article>
     );
-}
-
-
-
+};

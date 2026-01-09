@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "Products - Retail Display & Store Fixtures",
@@ -16,21 +17,22 @@ export const metadata: Metadata = {
     ],
 };
 
+// Order: Checkout Counters, Wall Shelving, Gondola Shelving, Island Display Table, Clothing Racks, Accessories
 const productCategories = [
     {
-        id: "gondola-shelving",
-        name: "Gondola Shelving",
+        id: "checkout-counters",
+        name: "Checkout Counters",
         description:
-            "Double-sided freestanding shelving units perfect for supermarkets, convenience stores, and retail environments. Available in various heights and widths.",
+            "Professional checkout and cash wrap counters designed for efficiency and customer flow. Customizable to match your store design.",
         features: [
-            "Single & double-sided options",
-            "Adjustable shelf heights",
-            "Heavy-duty steel construction",
-            "Multiple color finishes",
+            "Built-in storage",
+            "Cable management",
+            "Custom dimensions",
+            "Integrated displays",
         ],
-        priceRange: "From $85/bay",
-        image: "/images/gondola-shelving.jpg",
-        href: "/products/gondola-shelving",
+        priceRange: "From $350/unit",
+        image: "/images/products/Checkout-Counters/收银台001_25071204413944b8b-1.jpg",
+        href: "/products/checkout-counters",
     },
     {
         id: "wall-shelving",
@@ -44,22 +46,37 @@ const productCategories = [
             "Various bracket styles",
         ],
         priceRange: "From $45/unit",
-        image: "/images/wall-shelving.jpg",
+        image: "/images/products/wall-shelving/BG-001边柜.jpg",
         href: "/products/wall-shelving",
     },
     {
-        id: "display-cases",
-        name: "Display Cases & Showcases",
+        id: "gondola-shelving",
+        name: "Gondola Shelving",
         description:
-            "Premium glass display cases for jewelry, cosmetics, electronics, and high-value merchandise. Secure, elegant, and customizable.",
+            "Double-sided freestanding shelving units perfect for supermarkets, convenience stores, and retail environments. Available in various heights and widths.",
         features: [
-            "Tempered glass panels",
-            "LED lighting options",
-            "Lockable security",
-            "Custom sizes available",
+            "Single & double-sided options",
+            "Adjustable shelf heights",
+            "Heavy-duty steel construction",
+            "Multiple color finishes",
+        ],
+        priceRange: "From $85/bay",
+        image: "/images/products/gondola-shelving/中岛柜005-A_25071109085244b8b-1.jpg",
+        href: "/products/gondola-shelving",
+    },
+    {
+        id: "island-display-table",
+        name: "Island Display Table",
+        description:
+            "Elegant display tables for featured products and promotions. Perfect for showcasing new arrivals and seasonal items.",
+        features: [
+            "Various sizes available",
+            "Customizable finishes",
+            "Modular design",
+            "Premium materials",
         ],
         priceRange: "From $200/unit",
-        image: "/images/display-cases.jpg",
+        image: "/images/products/Island-Display-Table/LST-025流水台.jpg",
         href: "/products/display-cases",
     },
     {
@@ -74,38 +91,23 @@ const productCategories = [
             "Multiple finish options",
         ],
         priceRange: "From $65/unit",
-        image: "/images/clothing-racks.jpg",
+        image: "/images/products/clothing-racks/ZZ-004.jpg",
         href: "/products/clothing-racks",
     },
     {
-        id: "checkout-counters",
-        name: "Checkout Counters",
+        id: "accessories",
+        name: "Accessories",
         description:
-            "Professional checkout and cash wrap counters designed for efficiency and customer flow. Customizable to match your store design.",
+            "Versatile display accessories and retail fixtures. Complete your store setup with our range of hooks, signage, and display tools.",
         features: [
-            "Built-in storage",
-            "Cable management",
-            "Custom dimensions",
-            "Integrated displays",
+            "Display hooks",
+            "Signage holders",
+            "Mannequins",
+            "Retail accessories",
         ],
-        priceRange: "From $350/unit",
-        image: "/images/checkout-counters.jpg",
-        href: "/products/checkout-counters",
-    },
-    {
-        id: "custom-fixtures",
-        name: "Custom Fixtures",
-        description:
-            "Bespoke retail fixtures designed to your exact specifications. From concept to creation, we bring your unique vision to life.",
-        features: [
-            "Custom design service",
-            "3D visualization",
-            "Brand integration",
-            "Unique materials",
-        ],
-        priceRange: "Quote on request",
-        image: "/images/custom-fixtures.jpg",
-        href: "/products/custom-fixtures",
+        priceRange: "From $15/unit",
+        image: "/images/products/Versatile-Accessories/四层架-A1.jpg",
+        href: "/products/accessories",
     },
 ];
 
@@ -113,9 +115,9 @@ export default function ProductsPage() {
     return (
         <div className="pt-24">
             {/* Hero Section */}
-            <section className="bg-gray-50 py-16">
+            <section className="bg-white py-16">
                 <div className="container">
-                    <div className="max-w-3xl">
+                    <div className="max-w-3xl mx-auto text-center">
                         <h1 className="text-4xl md:text-5xl font-bold mb-6">
                             Retail Display Products
                         </h1>
@@ -123,7 +125,7 @@ export default function ProductsPage() {
                             Professional-grade store fixtures manufactured to international
                             standards. Factory direct pricing with worldwide shipping.
                         </p>
-                        <div className="flex flex-wrap gap-4">
+                        <div className="flex flex-wrap gap-4 justify-center">
                             <Link
                                 href="/free-3d-design"
                                 className="btn btn-primary"
@@ -152,9 +154,14 @@ export default function ProductsPage() {
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {productCategories.map((category) => (
                             <div key={category.id} className="card group">
-                                {/* Product Image Placeholder */}
-                                <div className="h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                                    <span className="text-6xl opacity-30">📦</span>
+                                {/* Product Image */}
+                                <div className="h-64 relative overflow-hidden">
+                                    <Image
+                                        src={category.image}
+                                        alt={category.name}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
                                 </div>
 
                                 <div className="p-6">
@@ -193,19 +200,19 @@ export default function ProductsPage() {
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-16 bg-gray-900 text-white">
+            {/* CTA Section - White background */}
+            <section className="py-16 bg-white border-t">
                 <div className="container text-center">
-                    <h2 className="text-3xl font-bold mb-4">
+                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
                         Not Sure What You Need?
                     </h2>
-                    <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                    <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
                         Share your store dimensions and requirements with us.
                         We&apos;ll create a custom 3D design showing exactly what products work best for your space.
                     </p>
                     <Link
                         href="/free-3d-design"
-                        className="btn bg-white text-gray-900 hover:bg-gray-100"
+                        className="btn btn-primary"
                     >
                         Get Free 3D Store Design
                     </Link>
@@ -214,5 +221,3 @@ export default function ProductsPage() {
         </div>
     );
 }
-
-

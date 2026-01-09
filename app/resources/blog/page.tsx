@@ -1,6 +1,7 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { BreadcrumbSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
     title: "Retail Display Blog - Store Design Tips & Industry Insights",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     ],
 };
 
-// Blog posts data - will be converted to CMS or MDX later
+// Blog posts data
 const blogPosts = [
     {
         slug: "how-to-design-cosmetics-store",
@@ -80,7 +81,7 @@ const blogPosts = [
         date: "2026-01-04",
         readTime: "14 min read",
         featured: false,
-        image: "/images/product-3.jpg",
+        image: "/images/blog/collectibles-store-design.png",
     },
     {
         slug: "toy-store-layout",
@@ -91,7 +92,7 @@ const blogPosts = [
         date: "2026-01-04",
         readTime: "12 min read",
         featured: false,
-        image: "/images/product-1.jpg",
+        image: "/images/blog/toy-store-layout.png",
     },
     {
         slug: "accessories-store-fixtures",
@@ -102,7 +103,7 @@ const blogPosts = [
         date: "2026-01-04",
         readTime: "11 min read",
         featured: false,
-        image: "/images/product-2.jpg",
+        image: "/images/blog/accessories-store-fixtures.png",
     },
     {
         slug: "gondola-vs-wall-shelving",
@@ -113,7 +114,7 @@ const blogPosts = [
         date: "2026-01-02",
         readTime: "8 min read",
         featured: false,
-        image: "/images/product-3.jpg",
+        image: "/images/blog/gondola-vs-wall-shelving.png",
     },
     {
         slug: "retail-fixtures-wholesale-guide",
@@ -124,7 +125,7 @@ const blogPosts = [
         date: "2026-01-01",
         readTime: "15 min read",
         featured: false,
-        image: "/images/product-1.jpg",
+        image: "/images/blog/retail-fixtures-wholesale-guide.png",
     },
 ];
 
@@ -133,9 +134,15 @@ export default function BlogPage() {
     const regularPosts = blogPosts.filter((post) => !post.featured);
 
     return (
-        <div className="pt-24">
+        <>
+            <BreadcrumbSchema items={[
+                { name: "Home", url: "https://goodokshop.com" },
+                { name: "Resources", url: "https://goodokshop.com/resources" },
+                { name: "Blog", url: "https://goodokshop.com/resources/blog" },
+            ]} />
+            <div className="pt-24">
             {/* Hero Section */}
-            <section className="bg-gray-50 py-16">
+            <section className="bg-white py-16 border-b">
                 <div className="container">
                     <div className="max-w-3xl">
                         <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -150,7 +157,7 @@ export default function BlogPage() {
             </section>
 
             {/* Featured Posts */}
-            <section className="py-16">
+            <section className="py-16 bg-white">
                 <div className="container">
                     <h2 className="text-2xl font-bold mb-8">Featured Articles</h2>
                     <div className="grid md:grid-cols-2 gap-8">
@@ -162,7 +169,7 @@ export default function BlogPage() {
                             >
                                 <article className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
                                     {/* Featured Image */}
-                                    <div className="h-48 bg-gray-200 overflow-hidden relative">
+                                    <div className="aspect-[4/3] bg-gray-200 overflow-hidden relative">
                                         <Image 
                                             src={post.image} 
                                             alt={post.title}
@@ -175,7 +182,7 @@ export default function BlogPage() {
 
                                     <div className="p-6">
                                         <div className="flex items-center gap-3 mb-3">
-                                            <span className="text-xs font-medium text-[var(--accent)] bg-[#f8f9fa] px-2 py-1 rounded">
+                                            <span className="text-xs font-medium text-[var(--accent)] bg-gray-100 px-2 py-1 rounded">
                                                 {post.category}
                                             </span>
                                             <span className="text-xs text-gray-500">{post.readTime}</span>
@@ -195,37 +202,48 @@ export default function BlogPage() {
                     </div>
                 </div>
             </section>
-
             {/* All Posts */}
-            <section className="py-16 bg-gray-50">
+            <section className="py-16 bg-white border-t">
                 <div className="container">
                     <h2 className="text-2xl font-bold mb-8">All Articles</h2>
-                    <div className="space-y-6">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {regularPosts.map((post) => (
                             <Link
                                 key={post.slug}
                                 href={`/resources/blog/${post.slug}`}
-                                className="group block"
+                                className="group h-full"
                             >
-                                <article className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-                                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                                        <div>
-                                            <div className="flex items-center gap-3 mb-2">
-                                                <span className="text-xs font-medium text-[var(--accent)] bg-[#f8f9fa] px-2 py-1 rounded">
-                                                    {post.category}
-                                                </span>
-                                                <span className="text-xs text-gray-500">{post.readTime}</span>
-                                            </div>
+                                <article className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100 h-full flex flex-col">
+                                    {/* Image */}
+                                    <div className="aspect-[4/3] bg-gray-200 overflow-hidden relative">
+                                        <Image
+                                            src={post.image}
+                                            alt={post.title}
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        />
+                                    </div>
 
-                                            <h3 className="text-lg font-bold group-hover:text-[var(--accent)] transition-colors">
-                                                {post.title}
-                                            </h3>
-
-                                            <p className="text-gray-600 text-sm mt-1">{post.excerpt}</p>
+                                    <div className="p-6 flex flex-col flex-1">
+                                        <div className="flex items-center gap-3 mb-3">
+                                            <span className="text-xs font-medium text-[var(--accent)] bg-gray-100 px-2 py-1 rounded">
+                                                {post.category}
+                                            </span>
+                                            <span className="text-xs text-gray-500">{post.readTime}</span>
                                         </div>
 
-                                        <div className="text-sm text-gray-400 md:text-right whitespace-nowrap">
-                                            {post.date}
+                                        <h3 className="text-xl font-bold mb-3 group-hover:text-[var(--accent)] transition-colors line-clamp-2">
+                                            {post.title}
+                                        </h3>
+
+                                        <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-1">{post.excerpt}</p>
+
+                                        <div className="flex items-center justify-between pt-4 border-t border-gray-100 mt-auto">
+                                            <span className="text-sm text-gray-400">{post.date}</span>
+                                            <span className="text-sm font-medium text-[var(--accent)] flex items-center gap-1 group-hover:gap-2 transition-all">
+                                                Read More →
+                                            </span>
                                         </div>
                                     </div>
                                 </article>
@@ -236,26 +254,24 @@ export default function BlogPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-16 bg-gray-900 text-white">
+            <section className="py-16 bg-white border-t">
                 <div className="container text-center">
-                    <h2 className="text-3xl font-bold mb-4">
+                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
                         Need Help With Your Store Design?
                     </h2>
-                    <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                    <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
                         Get a free 3D store design from our experts. Send us your store
                         dimensions and we&apos;ll create a custom layout within 24 hours.
                     </p>
                     <Link
                         href="/free-3d-design"
-                        className="btn bg-white text-gray-900 hover:bg-gray-100"
+                        className="btn btn-primary"
                     >
                         Get Free 3D Design
                     </Link>
                 </div>
             </section>
-        </div>
+            </div>
+        </>
     );
 }
-
-
-

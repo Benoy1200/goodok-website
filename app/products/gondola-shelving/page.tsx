@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import ProductMarquee from "@/components/ProductMarquee";
 
 export const metadata: Metadata = {
     title: "Gondola Shelving Wholesale | Double-Sided Retail Shelving | Goodok",
@@ -13,6 +14,22 @@ export const metadata: Metadata = {
         "retail gondola racks",
     ],
 };
+
+// 产品图片列表
+const productImages = [
+    "/images/products/gondola-shelving/CZ-003.jpg",
+    "/images/products/gondola-shelving/CZ-006.jpg",
+    "/images/products/gondola-shelving/Camera112_20211126021844215-6.jpg",
+    "/images/products/gondola-shelving/中岛柜004_25071109085244b8b-15.jpg",
+    "/images/products/gondola-shelving/中岛柜005-A_25071109085244b8b-1.jpg",
+    "/images/products/gondola-shelving/中岛柜006-A_25071109085244b8b-2.jpg",
+    "/images/products/gondola-shelving/中岛柜007_25071109085244b8b-3.jpg",
+    "/images/products/gondola-shelving/中岛柜009_25071109085244b8b-5.jpg",
+    "/images/products/gondola-shelving/中岛柜010A_25071109085244b8b-6.jpg",
+    "/images/products/gondola-shelving/中岛柜012_25071109085244b8b-12.jpg",
+    "/images/products/gondola-shelving/中岛柜013_25071109085244b8b-7.jpg",
+    "/images/products/gondola-shelving/中岛柜014_25071109085244b8b-8.jpg",
+];
 
 const features = [
     {
@@ -49,45 +66,37 @@ const specs = [
 export default function GondolaShelvingPage() {
     return (
         <div className="pt-24">
-            {/* Hero */}
-            <section className="bg-gradient-to-br from-[#004499] to-[#0066cc] text-white py-20">
+            {/* Hero - 白底居中标题 */}
+            <section className="bg-white py-16">
                 <div className="container">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <span className="text-[#F0E1C3] text-sm font-medium">Products / Gondola Shelving</span>
-                            <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
-                                Gondola Shelving
-                            </h1>
-                            <p className="text-xl text-[#F8F1E3] mb-8">
-                                The essential double-sided shelving system for supermarkets, convenience stores,
-                                and retail spaces. Factory-direct wholesale pricing.
-                            </p>
-                            <div className="flex flex-wrap gap-4">
-                                <Link href="/free-3d-design" className="btn bg-white text-[var(--primary)] hover:bg-[#f8f9fa]">
-                                    Get Free Quote
-                                </Link>
-                                <a
-                                    href="https://api.whatsapp.com/send?phone=8613822102050&text=Hi%20I%20need%20gondola%20shelving%20quote"
-                                    className="btn border-2 border-white text-white hover:bg-white hover:text-[var(--primary)]"
-                                >
-                                    WhatsApp Us
-                                </a>
-                            </div>
-                        </div>
-                        <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
-                            <div className="aspect-[4/3] bg-[#0066cc]/50 rounded-xl flex items-center justify-center">
-                                <span className="text-6xl">🏪</span>
-                            </div>
-                            <p className="text-center text-[#F4E7CF] mt-4 text-sm">
-                                [Product Image Placeholder]
-                            </p>
+                    <div className="max-w-3xl mx-auto text-center">
+                        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                            Gondola Shelving
+                        </h1>
+                        <p className="text-xl text-gray-600 mb-8">
+                            The essential double-sided shelving system for supermarkets, convenience stores,
+                            and retail spaces. Factory-direct wholesale pricing.
+                        </p>
+                        <div className="flex flex-wrap gap-4 justify-center">
+                            <Link href="/free-3d-design" className="btn btn-primary">
+                                Get Free Quote
+                            </Link>
+                            <a
+                                href="https://api.whatsapp.com/send?phone=8613822102050&text=Hi%20I%20need%20gondola%20shelving%20quote"
+                                className="btn btn-secondary"
+                            >
+                                WhatsApp Us
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
 
+            {/* 产品图片走马灯 - 3行 */}
+            <ProductMarquee images={productImages} productName="Gondola Shelving" />
+
             {/* Features */}
-            <section className="py-20">
+            <section className="py-20 bg-white">
                 <div className="container">
                     <h2 className="text-3xl font-bold text-center mb-12">
                         Key Features
@@ -105,70 +114,38 @@ export default function GondolaShelvingPage() {
             </section>
 
             {/* Specifications */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-20 bg-white border-t">
                 <div className="container">
                     <div className="max-w-3xl mx-auto">
                         <h2 className="text-3xl font-bold text-center mb-12">
                             Specifications
                         </h2>
-                        <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-                            <table className="w-full">
-                                <tbody>
-                                    {specs.map((spec, index) => (
-                                        <tr key={spec.label} className={index % 2 === 0 ? "bg-gray-50" : ""}>
-                                            <td className="px-6 py-4 font-medium">{spec.label}</td>
-                                            <td className="px-6 py-4 text-gray-600">{spec.value}</td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            {specs.map((spec) => (
+                                <div key={spec.label} className="flex justify-between py-3 border-b border-gray-200">
+                                    <span className="font-medium text-gray-900">{spec.label}</span>
+                                    <span className="text-gray-600">{spec.value}</span>
+                                </div>
+                            ))}
                         </div>
-                        <p className="text-center text-gray-500 mt-4 text-sm">
-                            * Custom sizes available upon request
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            {/* Use Cases */}
-            <section className="py-20">
-                <div className="container">
-                    <h2 className="text-3xl font-bold text-center mb-12">
-                        Perfect For
-                    </h2>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {[
-                            { name: "Supermarkets", icon: "🏪" },
-                            { name: "Convenience Stores", icon: "🏪" },
-                            { name: "Pharmacies", icon: "💊" },
-                            { name: "Grocery Stores", icon: "🥬" },
-                            { name: "Hardware Stores", icon: "🔧" },
-                            { name: "General Retail", icon: "🏬" },
-                        ].map((item) => (
-                            <div key={item.name} className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-                                <span className="text-3xl">{item.icon}</span>
-                                <span className="font-medium">{item.name}</span>
-                            </div>
-                        ))}
                     </div>
                 </div>
             </section>
 
             {/* CTA */}
-            <section className="py-20 bg-[#004499] text-white">
+            <section className="py-20 bg-white border-t">
                 <div className="container text-center">
-                    <h2 className="text-3xl font-bold mb-4">
-                        Get Wholesale Pricing
-                    </h2>
-                    <p className="text-[#F4E7CF] mb-8 max-w-2xl mx-auto">
-                        Factory-direct pricing. Free 3D store layout included with every quote.
+                    <h2 className="text-3xl font-bold mb-4">Ready to Order?</h2>
+                    <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+                        Get a free 3D store design and quote. Our team will help you find the perfect
+                        gondola shelving solution for your store.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href="/free-3d-design" className="btn bg-white text-[var(--primary)] hover:bg-[#f8f9fa]">
-                            Request Quote
+                    <div className="flex flex-wrap gap-4 justify-center">
+                        <Link href="/free-3d-design" className="btn btn-primary">
+                            Get Free 3D Design
                         </Link>
-                        <Link href="/products" className="btn border-2 border-white text-white hover:bg-white hover:text-[var(--primary)]">
-                            View All Products
+                        <Link href="/contact" className="btn btn-secondary">
+                            Contact Us
                         </Link>
                     </div>
                 </div>

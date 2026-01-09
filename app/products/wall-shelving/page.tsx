@@ -1,47 +1,63 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ProductMarquee from "@/components/ProductMarquee";
 
 export const metadata: Metadata = {
-    title: "Wall Shelving Systems | Wall-Mounted Retail Display | Goodok",
+    title: "Wall Shelving Systems | Space-Saving Retail Display | Goodok",
     description:
-        "Space-saving wall shelving systems for retail stores. Maximize vertical space with our modular wall-mounted display solutions.",
+        "Premium wall-mounted shelving systems for retail stores. Maximize your store space with our versatile wall display solutions.",
     keywords: [
         "wall shelving",
         "wall mounted shelving",
         "retail wall display",
-        "slatwall panels",
+        "store wall fixtures",
         "wall shelving systems",
     ],
 };
 
+const productImages = [
+    "/images/products/wall-shelving/BG-001边柜.jpg",
+    "/images/products/wall-shelving/BG-005边柜.jpg",
+    "/images/products/wall-shelving/BG-006边柜.jpg",
+    "/images/products/wall-shelving/BG-007边柜.jpg",
+    "/images/products/wall-shelving/BG-011边柜.jpg",
+    "/images/products/wall-shelving/BG-013边柜.jpg",
+    "/images/products/wall-shelving/BG-014边柜.jpg",
+    "/images/products/wall-shelving/wow HOME (4).jpg",
+    "/images/products/wall-shelving/wow HOME (11).jpg",
+    "/images/products/wall-shelving/wow HOME (12).jpg",
+    "/images/products/wall-shelving/靠墙高柜-A.jpg",
+    "/images/products/wall-shelving/靠墙高柜-B.jpg",
+];
+
 const features = [
     {
         title: "Space Saving",
-        description: "Maximize vertical space without taking floor area.",
-        icon: "📏",
+        description: "Maximize floor space by utilizing vertical wall areas.",
+        icon: "📐",
     },
     {
-        title: "Modular System",
-        description: "Mix and match components for custom configurations.",
-        icon: "🧩",
-    },
-    {
-        title: "Easy Install",
-        description: "Simple mounting system for quick installation.",
+        title: "Modular Design",
+        description: "Mix and match components to create custom configurations.",
         icon: "🔧",
     },
     {
-        title: "Multiple Styles",
-        description: "Slatwall, gridwall, and bracket options available.",
-        icon: "🎨",
+        title: "Easy Installation",
+        description: "Quick wall-mount system with adjustable brackets.",
+        icon: "⚡",
+    },
+    {
+        title: "Premium Finish",
+        description: "Powder-coated steel in multiple color options.",
+        icon: "✨",
     },
 ];
 
 const specs = [
-    { label: "Height", value: "Up to 3000mm" },
-    { label: "Width", value: "900mm - 1200mm per panel" },
-    { label: "Shelf Depth", value: "200mm - 400mm" },
-    { label: "Steel Thickness", value: "0.8mm - 1.5mm" },
+    { label: "Height", value: "1800mm - 2400mm" },
+    { label: "Width", value: "900mm - 1200mm" },
+    { label: "Depth", value: "300mm - 450mm" },
+    { label: "Steel Thickness", value: "0.8mm - 1.0mm" },
     { label: "Shelf Load", value: "30kg - 80kg per shelf" },
     { label: "Finish", value: "Powder Coated" },
 ];
@@ -50,48 +66,36 @@ export default function WallShelvingPage() {
     return (
         <div className="pt-24">
             {/* Hero */}
-            <section className="bg-gradient-to-br from-green-900 to-green-700 text-white py-20">
+            <section className="bg-white py-16">
                 <div className="container">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <span className="text-green-300 text-sm font-medium">Products / Wall Shelving</span>
-                            <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
-                                Wall Shelving
-                            </h1>
-                            <p className="text-xl text-green-100 mb-8">
-                                Maximize vertical space with our wall-mounted shelving systems.
-                                Perfect for boutiques, pharmacies, and specialty stores.
-                            </p>
-                            <div className="flex flex-wrap gap-4">
-                                <Link href="/free-3d-design" className="btn bg-white text-green-900 hover:bg-green-50">
-                                    Get Free Quote
-                                </Link>
-                                <a
-                                    href="https://api.whatsapp.com/send?phone=8613822102050&text=Hi%20I%20need%20wall%20shelving%20quote"
-                                    className="btn border-2 border-white text-white hover:bg-white hover:text-green-900"
-                                >
-                                    WhatsApp Us
-                                </a>
-                            </div>
-                        </div>
-                        <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
-                            <div className="aspect-[4/3] bg-green-800/50 rounded-xl flex items-center justify-center">
-                                <span className="text-6xl">📐</span>
-                            </div>
-                            <p className="text-center text-green-200 mt-4 text-sm">
-                                [Product Image Placeholder]
-                            </p>
+                    <div className="max-w-3xl mx-auto text-center">
+                        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                            Wall Shelving Systems
+                        </h1>
+                        <p className="text-xl text-gray-600 mb-8">
+                            Space-saving wall-mounted display systems that maximize your retail space.
+                            Perfect for boutiques, pharmacies, and specialty stores.
+                        </p>
+                        <div className="flex flex-wrap gap-4 justify-center">
+                            <Link href="/free-3d-design" className="btn btn-primary">
+                                Get Free Quote
+                            </Link>
+                            <a
+                                href="https://api.whatsapp.com/send?phone=8613822102050&text=Hi%20I%20need%20wall%20shelving%20quote"
+                                className="btn btn-secondary"
+                            >
+                                WhatsApp Us
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Features */}
-            <section className="py-20">
+            <ProductMarquee images={productImages} productName="Wall Shelving" />
+
+            <section className="py-20 bg-white">
                 <div className="container">
-                    <h2 className="text-3xl font-bold text-center mb-12">
-                        Key Features
-                    </h2>
+                    <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {features.map((feature) => (
                             <div key={feature.title} className="text-center p-6 bg-gray-50 rounded-xl">
@@ -104,70 +108,34 @@ export default function WallShelvingPage() {
                 </div>
             </section>
 
-            {/* Specifications */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-20 bg-white border-t">
                 <div className="container">
                     <div className="max-w-3xl mx-auto">
-                        <h2 className="text-3xl font-bold text-center mb-12">
-                            Specifications
-                        </h2>
-                        <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-                            <table className="w-full">
-                                <tbody>
-                                    {specs.map((spec, index) => (
-                                        <tr key={spec.label} className={index % 2 === 0 ? "bg-gray-50" : ""}>
-                                            <td className="px-6 py-4 font-medium">{spec.label}</td>
-                                            <td className="px-6 py-4 text-gray-600">{spec.value}</td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
+                        <h2 className="text-3xl font-bold text-center mb-12">Specifications</h2>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            {specs.map((spec) => (
+                                <div key={spec.label} className="flex justify-between py-3 border-b border-gray-200">
+                                    <span className="font-medium text-gray-900">{spec.label}</span>
+                                    <span className="text-gray-600">{spec.value}</span>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Types */}
-            <section className="py-20">
-                <div className="container">
-                    <h2 className="text-3xl font-bold text-center mb-12">
-                        Wall System Types
-                    </h2>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-gray-50 rounded-xl p-8 text-center">
-                            <span className="text-5xl mb-4 block">📋</span>
-                            <h3 className="text-xl font-bold mb-2">Slatwall</h3>
-                            <p className="text-gray-600">Versatile panels with horizontal grooves for various accessories.</p>
-                        </div>
-                        <div className="bg-gray-50 rounded-xl p-8 text-center">
-                            <span className="text-5xl mb-4 block">🔲</span>
-                            <h3 className="text-xl font-bold mb-2">Gridwall</h3>
-                            <p className="text-gray-600">Wire grid panels for modern, industrial aesthetics.</p>
-                        </div>
-                        <div className="bg-gray-50 rounded-xl p-8 text-center">
-                            <span className="text-5xl mb-4 block">📏</span>
-                            <h3 className="text-xl font-bold mb-2">Bracket System</h3>
-                            <p className="text-gray-600">Clean wall-mounted brackets with adjustable shelves.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section className="py-20 bg-green-900 text-white">
+            <section className="py-20 bg-white border-t">
                 <div className="container text-center">
-                    <h2 className="text-3xl font-bold mb-4">
-                        Get Your Custom Wall System
-                    </h2>
-                    <p className="text-green-200 mb-8 max-w-2xl mx-auto">
-                        Send us your wall dimensions and we'll create a custom layout.
+                    <h2 className="text-3xl font-bold mb-4">Ready to Order?</h2>
+                    <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+                        Get a free 3D store design and quote for your wall shelving needs.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href="/free-3d-design" className="btn bg-white text-green-900 hover:bg-green-50">
-                            Request Quote
+                    <div className="flex flex-wrap gap-4 justify-center">
+                        <Link href="/free-3d-design" className="btn btn-primary">
+                            Get Free 3D Design
                         </Link>
-                        <Link href="/products" className="btn border-2 border-white text-white hover:bg-white hover:text-green-900">
-                            View All Products
+                        <Link href="/contact" className="btn btn-secondary">
+                            Contact Us
                         </Link>
                     </div>
                 </div>

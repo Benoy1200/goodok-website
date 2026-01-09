@@ -1,5 +1,5 @@
 ﻿import type { Metadata } from "next";
-import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "Free 3D Store Design - Get Your Layout in 24 Hours",
@@ -82,28 +82,28 @@ export default function Free3DDesignPage() {
     return (
         <div className="pt-24">
             {/* Hero Section */}
-            <section className="gradient-hero py-20">
+            <section className="bg-white py-20 border-b">
                 <div className="container">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 px-4 py-2 rounded-full text-sm mb-6">
+                            <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm mb-6">
                                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
                                 100% Free - No Obligation
                             </div>
 
-                            <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+                            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
                                 Get Your FREE
-                                <span className="text-[#f8f9fa]"> 3D Store Design</span>
+                                <span className="text-[var(--accent)]"> 3D Store Design</span>
                             </h1>
 
                             <p className="text-xl text-gray-300 mb-8">
                                 Transform your empty space into a stunning retail environment.
-                                Our design team will create a complete 3D layout 鈥?delivered
+                                Our design team will create a complete 3D layout — delivered
                                 within 24 hours.
                             </p>
 
-                            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8">
-                                <h3 className="text-white font-semibold mb-4">
+                            <div className="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-200">
+                                <h3 className="text-gray-900 font-semibold mb-4">
                                     What You&apos;ll Get:
                                 </h3>
                                 <ul className="space-y-3">
@@ -115,7 +115,7 @@ export default function Free3DDesignPage() {
                                     ].map((item) => (
                                         <li
                                             key={item}
-                                            className="flex items-center gap-3 text-gray-200"
+                                            className="flex items-center gap-3 text-gray-700"
                                         >
                                             <svg
                                                 className="w-5 h-5 text-green-400 flex-shrink-0"
@@ -152,10 +152,18 @@ export default function Free3DDesignPage() {
                         {/* Visual placeholder for 3D preview */}
                         <div className="hidden lg:block">
                             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                                <div className="aspect-video bg-gradient-to-br from-[#004499]/50 to-[#0066cc]/50 rounded-xl flex items-center justify-center">
-                                    <div className="text-center">
-                                        <div className="text-6xl mb-4">🏪</div>
-                                        <p className="text-white/60">Your 3D Design Preview</p>
+                                <div className="aspect-video relative rounded-xl overflow-hidden shadow-2xl">
+                                    <Image 
+                                        src="/images/scenes/boutique-shop.jpg" 
+                                        alt="Professional 3D Store Design Example" 
+                                        fill 
+                                        className="object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                                        <div className="text-white">
+                                            <p className="font-bold text-lg">Real Project Example</p>
+                                            <p className="text-sm opacity-90">Boutique Store Design</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="mt-6 grid grid-cols-3 gap-4">
@@ -176,7 +184,7 @@ export default function Free3DDesignPage() {
             </section>
 
             {/* Benefits Section */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-20 bg-white">
                 <div className="container">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -237,7 +245,7 @@ export default function Free3DDesignPage() {
             </section>
 
             {/* What We Need From You */}
-            <section className="py-20 bg-gray-50">
+            <section className="py-20 bg-white">
                 <div className="container">
                     <div className="max-w-3xl mx-auto">
                         <div className="text-center mb-12">

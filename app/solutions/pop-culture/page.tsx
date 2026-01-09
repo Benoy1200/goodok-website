@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "Pop Culture Store Fixtures | Collectibles & Gaming Display | Goodok",
@@ -14,164 +15,122 @@ export const metadata: Metadata = {
     ],
 };
 
-const products = [
-    { name: "Glass Display Cases", desc: "For premium collectibles", icon: "🔐" },
-    { name: "Wall Shelving", desc: "Maximize vertical display", icon: "📐" },
-    { name: "Trading Card Displays", desc: "Secure card showcases", icon: "🃏" },
-    { name: "Themed Fixtures", desc: "Custom branded displays", icon: "🎨" },
-];
-
-// Store case studies for this industry
-const caseStudies = [
-    {
-        name: "Trendy Toys Store",
-        location: "Dubai, UAE",
-        description: "A 200銕?pop culture store featuring anime figures, trading cards, and gaming accessories.",
-        highlights: ["Custom LED showcases", "Interactive demo area", "Secure lockable displays"],
-        href: "/projects/trendy-toys-store",
-    },
-    {
-        name: "Anime Paradise",
-        location: "Singapore",
-        description: "Premium collectibles store with high-end display cases for limited edition figures.",
-        highlights: ["Glass tower displays", "Themed wall units", "Card display systems"],
-        href: "/projects/anime-paradise",
-    },
-];
-
 export default function PopCultureSolutionPage() {
     return (
         <div className="pt-24">
-            {/* Hero */}
-            <section className="bg-gradient-to-br from-[#004499] to-[#ff6b35] text-white py-20">
-                <div className="container">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <span className="text-white text-sm font-medium">Solutions / Pop Culture Store</span>
-                            <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
-                                Pop Culture Store
-                            </h1>
-                            <p className="text-xl text-white mb-8">
-                                Create the ultimate destination for anime fans, gamers, and collectors.
-                                Display solutions that protect and showcase valuable items.
-                            </p>
-                            <div className="flex flex-wrap gap-4">
-                                <Link href="/free-3d-design" className="btn bg-white text-[var(--primary)] hover:bg-[#f8f9fa]">
-                                    Get Free 3D Design
-                                </Link>
-                                <Link href="/contact" className="btn border-2 border-white text-white hover:bg-white hover:text-[var(--primary)]">
-                                    Contact Us
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
-                            <div className="aspect-[4/3] bg-[#0066cc]/50 rounded-xl flex items-center justify-center">
-                                <span className="text-6xl">🎬</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            {/* Hero Image */}
+            <section className="relative h-[50vh] overflow-hidden">
+                <Image
+                    src="/images/hero-bg.jpg"
+                    alt="Pop Culture Store"
+                    fill
+                    className="object-cover"
+                    priority
+                />
             </section>
 
-            {/* Case Studies */}
-            <section className="py-20">
-                <div className="container">
-                    <h2 className="text-3xl font-bold text-center mb-4">Store Case Studies</h2>
-                    <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                        See how we&apos;ve helped pop culture store owners create stunning retail spaces
-                    </p>
-                    <div className="grid md:grid-cols-2 gap-8">
-                        {caseStudies.map((study) => (
-                            <div key={study.name} className="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition">
-                                <div className="aspect-video bg-gradient-to-br from-[#f8f9fa] to-[#f8f9fa] flex items-center justify-center">
-                                    <span className="text-6xl">🏪</span>
-                                </div>
-                                <div className="p-6">
-                                    <div className="flex items-center justify-between mb-2">
-                                        <h3 className="text-xl font-bold">{study.name}</h3>
-                                        <span className="text-sm text-gray-500">{study.location}</span>
-                                    </div>
-                                    <p className="text-gray-600 mb-4">{study.description}</p>
-                                    <div className="flex flex-wrap gap-2 mb-4">
-                                        {study.highlights.map((h) => (
-                                            <span key={h} className="text-xs bg-[#f8f9fa] text-[var(--accent)] px-2 py-1 rounded">
-                                                {h}
-                                            </span>
-                                        ))}
-                                    </div>
-                                    {study.href !== "#" && (
-                                        <Link href={study.href} className="text-[var(--accent)] font-medium hover:underline">
-                                            View Project Details 鈫?
-                                        </Link>
-                                    )}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Products */}
-            <section className="py-20 bg-gray-50">
-                <div className="container">
-                    <h2 className="text-3xl font-bold text-center mb-12">
-                        Recommended Products
-                    </h2>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {products.map((product) => (
-                            <div key={product.name} className="bg-white rounded-xl p-6 text-center shadow-sm">
-                                <span className="text-4xl mb-4 block">{product.icon}</span>
-                                <h3 className="font-bold mb-2">{product.name}</h3>
-                                <p className="text-gray-600 text-sm">{product.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Features */}
-            <section className="py-20">
+            {/* Hero Content - Below Image */}
+            <section className="py-16 bg-white">
                 <div className="container">
                     <div className="max-w-3xl mx-auto text-center">
-                        <h2 className="text-3xl font-bold mb-8">Why Choose Us</h2>
+                        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+                            Pop Culture Store Fixtures
+                        </h1>
+                        <p className="text-xl text-gray-600 mb-8">
+                            Create the ultimate destination for anime fans, gamers, and collectors.
+                            Our display solutions protect and showcase valuable collectibles while creating
+                            an immersive shopping experience.
+                        </p>
+                        <div className="flex flex-wrap gap-4 justify-center">
+                            <a href="https://api.whatsapp.com/send?phone=8613822102050" className="btn btn-primary">
+                                Get Free 3D Design
+                            </a>
+                            <Link href="/contact" className="btn btn-secondary">
+                                Contact Us
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* What We Offer */}
+            <section className="py-20 bg-white">
+                <div className="container">
+                    <div className="max-w-3xl mx-auto">
+                        <h2 className="text-3xl font-bold mb-6">Complete Pop Culture Store Solutions</h2>
+                        <p className="text-gray-600 mb-8 leading-relaxed">
+                            Pop culture stores require specialized fixtures that balance security with visibility.
+                            From limited-edition action figures to rare trading cards, every item needs the right
+                            display to showcase its value and protect it from damage.
+                        </p>
+                        <p className="text-gray-600 mb-8 leading-relaxed">
+                            We understand the unique needs of collectibles retail. Our fixtures feature tempered
+                            glass cases with secure locking mechanisms, LED lighting that highlights product details,
+                            and modular designs that adapt to your changing inventory.
+                        </p>
+                        
+                        <h3 className="text-xl font-bold mb-4">Key Features for Pop Culture Stores:</h3>
+                        <ul className="space-y-3 text-gray-600">
+                            <li className="flex items-start gap-3">
+                                <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span><strong>Secure Glass Cases:</strong> Lockable display cases for high-value figures and graded cards</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span><strong>LED Lighting:</strong> Adjustable lighting to highlight product details without UV damage</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span><strong>Modular Wall Systems:</strong> Slatwall panels for flexible merchandise arrangement</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span><strong>Themed Displays:</strong> Custom branded fixtures to match your store identity</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span><strong>Card Display Systems:</strong> Specialized racks for trading cards and booster packs</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            {/* Why Choose Us */}
+            <section className="py-20 bg-white">
+                <div className="container">
+                    <div className="max-w-3xl mx-auto text-center">
+                        <h2 className="text-3xl font-bold mb-8">Why Store Owners Choose Us</h2>
                         <div className="grid md:grid-cols-3 gap-8">
                             <div>
                                 <span className="text-4xl mb-3 block">🔒</span>
-                                <h3 className="font-bold mb-2">Security</h3>
-                                <p className="text-gray-600 text-sm">Locking cases for high-value items</p>
+                                <h3 className="font-bold mb-2">Security First</h3>
+                                <p className="text-gray-600 text-sm">Lockable cases protect high-value collectibles from theft</p>
                             </div>
                             <div>
                                 <span className="text-4xl mb-3 block">💡</span>
-                                <h3 className="font-bold mb-2">Lighting</h3>
-                                <p className="text-gray-600 text-sm">LED lighting to highlight products</p>
+                                <h3 className="font-bold mb-2">Perfect Lighting</h3>
+                                <p className="text-gray-600 text-sm">LED strips highlight products without heat or UV damage</p>
                             </div>
                             <div>
                                 <span className="text-4xl mb-3 block">🎨</span>
-                                <h3 className="font-bold mb-2">Custom</h3>
-                                <p className="text-gray-600 text-sm">Themed designs for your brand</p>
+                                <h3 className="font-bold mb-2">Custom Themes</h3>
+                                <p className="text-gray-600 text-sm">Branded fixtures that match your store identity</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section className="py-20 bg-[#004499] text-white">
-                <div className="container text-center">
-                    <h2 className="text-3xl font-bold mb-4">
-                        Start Your Pop Culture Store
-                    </h2>
-                    <p className="text-[#F4E7CF] mb-8">
-                        Free 3D design within 24 hours. Factory-direct pricing.
-                    </p>
-                    <Link href="/free-3d-design" className="btn bg-white text-[var(--primary)] hover:bg-[#f8f9fa]">
-                        Get Started
-                    </Link>
                 </div>
             </section>
         </div>
     );
 }
-
-
-

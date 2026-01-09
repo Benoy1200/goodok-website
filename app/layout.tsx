@@ -21,10 +21,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.goodokshop.com"),
-  alternates: {
-    canonical: "/",
-  },
+  metadataBase: new URL("https://goodokshop.com"),
+  // alternates: {
+  //   canonical: "/",
+  // },
   title: {
     default: "Goodok Shopfitting | Retail Display & Store Fixture Manufacturer",
     template: "%s | Goodok Shopfitting",
@@ -46,16 +46,25 @@ export const metadata: Metadata = {
     title: "Goodok Shopfitting | Retail Display & Store Fixture Manufacturer",
     description:
       "Professional retail shelving, gondola racks & custom store fixtures manufacturer. Free 3D store design.",
-    url: "https://www.goodokshop.com",
+    url: "https://goodokshop.com",
     siteName: "Goodok Shopfitting",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Goodok Shopfitting",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Goodok Shopfitting | Retail Display & Store Fixture Manufacturer",
     description:
       "Professional retail shelving, gondola racks & custom store fixtures manufacturer.",
+    images: ["/images/og-image.jpg"],
   },
   robots: {
     index: true,

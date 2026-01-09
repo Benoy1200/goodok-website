@@ -21,13 +21,13 @@ export default function BoutiqueAccessoriesPage() {
                 <div className="container">
                     <div className="max-w-4xl mx-auto">
                         <Link href="/projects" className="text-[#f8f9fa] hover:text-white mb-4 inline-block">
-                            鈫?Back to Projects
+                            ← Back to Projects
                         </Link>
                         <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-4">
                             Goodok Shopfitting
                         </h1>
                         <p className="text-xl text-[#F8F1E3] mb-6">
-                            Tokyo, Japan 路 Fashion Boutique 路 120銕?
+                            Tokyo, Japan · Fashion Boutique · 120m²
                         </p>
                         <p className="text-lg text-[#F8F1E3]">
                             Fashion-forward boutique with elegant rose gold displays, glass accessory cases,
@@ -46,19 +46,19 @@ export default function BoutiqueAccessoriesPage() {
                             <div>
                                 <h3 className="text-xl font-semibold mb-4">Client Requirements</h3>
                                 <ul className="space-y-2 text-gray-600">
-                                    <li>鈥?Elegant aesthetic for luxury accessories</li>
-                                    <li>鈥?Rose gold theme throughout the store</li>
-                                    <li>鈥?Efficient use of 120銕?space</li>
-                                    <li>鈥?Premium positioning for high-end products</li>
+                                    <li>• Elegant aesthetic for luxury accessories</li>
+                                    <li>• Rose gold theme throughout the store</li>
+                                    <li>• Efficient use of 120m² space</li>
+                                    <li>• Premium positioning for high-end products</li>
                                 </ul>
                             </div>
                             <div>
                                 <h3 className="text-xl font-semibold mb-4">Our Solution</h3>
                                 <ul className="space-y-2 text-gray-600">
-                                    <li>鈥?Rose gold racks with elegant design</li>
-                                    <li>鈥?Glass accessory cases with LED lighting</li>
-                                    <li>鈥?Velvet displays for premium items</li>
-                                    <li>鈥?Modular shelving for easy reconfiguration</li>
+                                    <li>• Rose gold racks with elegant design</li>
+                                    <li>• Glass accessory cases with LED lighting</li>
+                                    <li>• Velvet displays for premium items</li>
+                                    <li>• Modular shelving for easy reconfiguration</li>
                                 </ul>
                             </div>
                         </div>

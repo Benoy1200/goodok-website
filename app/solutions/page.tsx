@@ -68,15 +68,14 @@ export default function SolutionsPage() {
     return (
         <div className="pt-24">
             {/* Hero */}
-            <section className="bg-gradient-to-br from-[#004499] to-[#0066cc] text-white py-20">
+            <section className="bg-white py-20 border-b">
                 <div className="container">
                     <div className="max-w-4xl mx-auto text-center">
-                        <span className="text-[#f8f9fa] text-sm font-medium">Solutions / All Solutions</span>
-                        <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
+                        <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-6 text-gray-900">
                             Industry-Specific Display Solutions
                         </h1>
-                        <p className="text-xl text-[#f8f1e3] mb-8">
-                            Every retail sector has unique requirements. We've developed specialized
+                        <p className="text-xl text-gray-600 mb-8">
+                            Every retail sector has unique requirements. We&apos;ve developed specialized
                             fixture solutions to ensure your store stands out and sells more.
                         </p>
                     </div>
@@ -125,12 +124,12 @@ export default function SolutionsPage() {
             </section>
 
             {/* CTA */}
-            <section className="py-20 bg-[#004499] text-white">
+            <section className="py-20 bg-white border-t">
                 <div className="container text-center">
-                    <h2 className="text-3xl font-bold mb-4">
+                    <h2 className="text-3xl font-bold mb-4 text-gray-900">
                         Not Sure Which Solution Fits Your Store?
                     </h2>
-                    <p className="text-[#f8f9fa] text-lg mb-8 max-w-2xl mx-auto">
+                    <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
                         Our team can help you identify the perfect display solutions for your specific
                         retail environment. Get a free consultation today.
                     </p>

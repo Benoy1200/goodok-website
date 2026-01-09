@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ClientTestimonials from "@/components/ClientTestimonials";
 import HeroCarousel from "@/components/HeroCarousel";
+import ProductImageCarousel from "@/components/ProductImageCarousel";
 
 export const metadata: Metadata = {
   title: {
@@ -15,40 +16,70 @@ export const metadata: Metadata = {
 // Product categories (6 products)
 const products = [
   {
-    name: "Gondola Shelving",
-    description: "Versatile double-sided shelving for supermarkets and retail stores",
-    href: "/products/gondola-shelving",
-    image: "/images/products/gondola-shelving.jpg",
+    name: "Checkout Counters",
+    description: "Modern checkout counters and POS systems for retail stores",
+    href: "/products/checkout-counters",
+    images: [
+      "/images/products/Checkout-Counters/Camera008_20220719090946233.jpg",
+      "/images/products/Checkout-Counters/SYT-009收银台.jpg",
+      "/images/products/Checkout-Counters/收银台001_25071204413944b8b-1.jpg",
+      "/images/products/Checkout-Counters/收银台005-弧形侧柜_25071204413944b8b-2.jpg"
+    ]
   },
   {
     name: "Wall Shelving",
     description: "Space-saving wall-mounted display systems",
     href: "/products/wall-shelving",
-    image: "/images/products/wall-shelving.jpg",
+    images: [
+      "/images/products/wall-shelving/BG-001边柜.jpg",
+      "/images/products/wall-shelving/BG-005边柜.jpg",
+      "/images/products/wall-shelving/BG-006边柜.jpg",
+      "/images/products/wall-shelving/BG-007边柜.jpg"
+    ]
   },
   {
-    name: "Display Cases",
-    description: "Glass showcases for jewelry, cosmetics, and premium products",
+    name: "Gondola Shelving",
+    description: "Versatile double-sided shelving for supermarkets and retail stores",
+    href: "/products/gondola-shelving",
+    images: [
+      "/images/products/gondola-shelving/Camera112_20211126021844215-6.jpg",
+      "/images/products/gondola-shelving/CZ-003.jpg",
+      "/images/products/gondola-shelving/CZ-006.jpg",
+      "/images/products/gondola-shelving/DM-11-挂摆中柜.jpg"
+    ]
+  },
+  {
+    name: "Island Display Table",
+    description: "Elegant display tables for featured products and promotions",
     href: "/products/display-cases",
-    image: "/images/products/display-cases.jpg",
+    images: [
+      "/images/products/Island-Display-Table/Camera008_20220714062421090-2.jpg",
+      "/images/products/Island-Display-Table/Camera008_20220714063054658-2.jpg",
+      "/images/products/Island-Display-Table/Camera008_20220714065430960.jpg",
+      "/images/products/Island-Display-Table/CC_2507110996bc81212-20.CC_Xdk.0000.jpg"
+    ]
   },
   {
     name: "Clothing Racks",
     description: "Elegant garment displays for boutiques and fashion stores",
     href: "/products/clothing-racks",
-    image: "/images/products/clothing-racks.jpg",
+    images: [
+      "/images/products/clothing-racks/1000中岛架.jpg",
+      "/images/products/clothing-racks/1200中岛架-1.jpg",
+      "/images/products/clothing-racks/1200中岛架.jpg",
+      "/images/products/clothing-racks/1300中岛架1.jpg"
+    ]
   },
   {
-    name: "Checkout Counters",
-    description: "Modern checkout counters and POS systems for retail stores",
-    href: "/products/checkout-counters", // Fixed fallback if needed
-    image: "/images/products/checkout-counters.jpg",
-  },
-  {
-    name: "Custom Fixtures",
-    description: "Bespoke solutions designed for your unique store concept",
-    href: "/products/custom-fixtures",
-    image: "/images/products/custom-fixtures.jpg",
+    name: "Accessories",
+    description: "Versatile display accessories and retail fixtures",
+    href: "/products/accessories",
+    images: [
+      "/images/products/Versatile-Accessories/DM-D-1-橱窗高标价牌.jpg",
+      "/images/products/Versatile-Accessories/DM-D-2-橱窗矮标价牌.jpg",
+      "/images/products/Versatile-Accessories/DM-D-4-帽子架.jpg",
+      "/images/products/Versatile-Accessories/ME48铁艺头枕架.jpg"
+    ]
   },
 ];
 
@@ -92,22 +123,6 @@ const solutions = [
   },
 ];
 
-// Hero stats
-const heroStats = [
-  { number: "500+", label: "Stores Delivered" },
-  { number: "15+", label: "Years Experience" },
-  { number: "50+", label: "Countries Served" },
-  { number: "24h", label: "3D Design Delivery" },
-];
-
-// About stats (Ujoy style - larger numbers)
-const aboutStats = [
-  { number: "15+", label: "Years of Excellence" },
-  { number: "15,000", label: "Square Meters Factory" },
-  { number: "500+", label: "Projects Completed" },
-  { number: "50+", label: "Countries Served" },
-];
-
 // FAQ data
 const faqs = [
   {
@@ -144,39 +159,13 @@ const faqs = [
   },
 ];
 
-// Why choose us features
-const features = [
-  {
-    title: "Free 3D Design",
-    description: "Get a professional 3D store layout within 24 hours. Visualize your dream store before ordering.",
-    icon: "🎯",
-  },
-  {
-    title: "Factory Direct Pricing",
-    description: "Cut out the middleman. Work directly with our manufacturing facility for the best prices.",
-    icon: "💰",
-  },
-  {
-    title: "Global Shipping",
-    description: "We ship to over 50 countries. Professional packing ensures safe delivery worldwide.",
-    icon: "🌍",
-  },
-  {
-    title: "Installation Support",
-    description: "Step-by-step installation guides and video tutorials. Remote support when you need it.",
-    icon: "🔧",
-  },
-];
-
 export default function Home() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
       <section className="h-[80vh] relative overflow-hidden">
-        {/* Background Carousel */}
         <HeroCarousel />
-
-        {/* Bottom content area */}
+        
         <div className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16 pb-8">
           <div className="container">
             <div className="flex flex-col items-center text-center gap-2 md:gap-3 max-w-3xl mx-auto">
@@ -207,50 +196,34 @@ export default function Home() {
             <p className="text-gray-600 text-lg">Tailored fixtures for every retail sector</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution) => (
               <Link
                 key={solution.name}
                 href={solution.href}
-                className="group relative h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+                className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
               >
-                {/* Background Image */}
-                <Image
-                  src={solution.image}
-                  alt={solution.name}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-300"></div>
-
-                {/* Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-md">{solution.name}</h3>
-                  <p className="text-gray-200 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0 delay-75">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={solution.image}
+                    alt={solution.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[var(--accent)] transition-colors">{solution.name}</h3>
+                  <p className="text-gray-600 text-sm">
                     {solution.description}
                   </p>
                 </div>
               </Link>
             ))}
           </div>
-
-          {/* View All Link */}
-          <div className="text-center mt-10">
-            <Link href="/solutions" className="inline-flex items-center gap-2 text-[var(--accent)] font-semibold hover:gap-3 transition-all">
-              View All Solutions
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
-
         </div>
       </section>
 
-
-      {/* Complete Store Display Solutions - Image Grid Style */}
+      {/* Complete Store Display Solutions - Updated with Carousel */}
       <section className="py-24 bg-[#f8f9fa]">
         <div className="container">
           <div className="text-center mb-12">
@@ -270,16 +243,8 @@ export default function Home() {
                 href={product.href}
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col hover:-translate-y-1"
               >
-                {/* Image Area */}
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500"></div>
-                </div>
+                {/* Image Carousel Area */}
+                <ProductImageCarousel images={product.images} alt={product.name} />
 
                 {/* Content Area */}
                 <div className="p-6 flex-1 flex flex-col">
@@ -302,7 +267,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials (Our Happy Clients style - Animated) */}
+      {/* Testimonials */}
       <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-12">
@@ -313,142 +278,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20 bg-[#f8f9fa]">
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Store Owners Choose Goodok
+              Frequently Asked Questions
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              We're not just a supplier - we're your partner in creating successful retail spaces.
+              Everything you need to know about working with us
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature) => (
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {faqs.map((faq) => (
               <div
-                key={feature.title}
-                className="bg-white border border-gray-100 rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+                key={faq.question}
+                className="bg-gray-50 rounded-2xl p-6 hover:shadow-md transition-shadow"
               >
-                <div className="w-16 h-16 bg-[var(--primary)]/10 rounded-full flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+                <h3 className="font-semibold text-gray-900 mb-3 flex items-start gap-3">
+                  <span className="text-[var(--accent)] text-lg">Q:</span>
+                  {faq.question}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed pl-7">
+                  {faq.answer}
+                </p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-
-
-      {/* FAQ Section (Two-column accordion style) */}
-      <section className="py-20 bg-[#f8f9fa]">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">Frequently Asked Questions</h2>
-            <p className="text-gray-600">We help you with every step of project</p>
-          </div>
-
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-6">
-              {faqs.map((faq, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-6 border border-gray-100"
-                >
-                  <details className="group">
-                    <summary className="flex justify-between items-center cursor-pointer list-none">
-                      <span className="font-semibold text-gray-900 pr-4">{faq.question}</span>
-                      <span className="text-[var(--accent)] group-open:rotate-180 transition-transform duration-300 bg-[#f8f9fa] p-1 rounded-full">
-                        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7" />
-                        </svg>
-                      </span>
-                    </summary>
-                    <p className="text-gray-600 mt-4 text-sm leading-relaxed pl-1 pt-2 border-t border-gray-50/50">
-                      {faq.answer}
-                    </p>
-                  </details>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <Link href="/faq" className="text-[var(--accent)] font-medium hover:underline">
-                View More FAQs →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form Section (Simplified dark style) */}
-      <section className="py-20 bg-gray-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#004499] to-[#004499]"></div>
-        </div>
-
-        <div className="container relative z-10">
-          <div className="max-w-xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Get a Free Consultation
-            </h2>
-            <p className="text-gray-400 mb-8">
-              Free store layout | Free store design ideas | Free project estimate
-            </p>
-
-            <form
-              action="https://formsubmit.co/henry879128@gmail.com"
-              method="POST"
-              className="space-y-4"
+          <div className="text-center mt-10">
+            <p className="text-gray-500 mb-4">Still have questions?</p>
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center gap-2 text-[var(--accent)] font-semibold hover:underline"
             >
-              <input type="hidden" name="_subject" value="New Inquiry from Goodok Website Homepage" />
-              <input type="hidden" name="_next" value="https://www.goodokshop.com/contact?success=true" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="table" />
-
-              <div>
-                <label className="block text-white font-medium mb-2">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--accent)] transition"
-                  placeholder="Your name"
-                />
-              </div>
-
-              <div>
-                <label className="block text-white font-medium mb-2">Email*</label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--accent)] transition"
-                  placeholder="your@email.com"
-                />
-              </div>
-
-              <div>
-                <label className="block text-white font-medium mb-2">Message*</label>
-                <textarea
-                  name="message"
-                  rows={4}
-                  required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[var(--accent)] transition resize-none"
-                  placeholder="Tell us about your project..."
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 rounded-lg transition-colors text-lg"
-              >
-                Get My Consultation Now
-              </button>
-            </form>
+              Contact us directly
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>

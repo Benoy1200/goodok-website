@@ -4,58 +4,56 @@ import { useEffect } from 'react';
 
 /**
  * Web Vitals 性能监测组件
- * 收集 LCP, FID, CLS 等关键指标
+ * 收集 LCP, INP, CLS 等关键指标
  */
 export function WebVitalsReporter() {
   useEffect(() => {
     // 动态加载 Web Vitals 库
     const loadWebVitals = async () => {
       try {
-        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
+        const webVitals = await import('web-vitals');
+
+        // 检查新版本API (v4+) 还是旧版本API
+        const onCLS = webVitals.onCLS || (webVitals as any).getCLS;
+        const onINP = webVitals.onINP || (webVitals as any).getFID;
+        const onFCP = webVitals.onFCP || (webVitals as any).getFCP;
+        const onLCP = webVitals.onLCP || (webVitals as any).getLCP;
+        const onTTFB = webVitals.onTTFB || (webVitals as any).getTTFB;
 
         // Cumulative Layout Shift - 视觉稳定性
-        getCLS((metric) => {
-          console.log('CLS:', metric);
-          // 可以发送到分析服务
-          if (typeof window !== 'undefined' && 'gtag' in window) {
-            (window as any).gtag('event', 'exception', {
-              description: `CLS: ${metric.value}`,
-              fatal: false,
-            });
-          }
-        });
+        if (onCLS) {
+          onCLS((metric: any) => {
+            console.log('CLS:', metric);
+          });
+        }
 
-        // First Input Delay - 交互响应速度
-        getFID((metric) => {
-          console.log('FID:', metric);
-          if (typeof window !== 'undefined' && 'gtag' in window) {
-            (window as any).gtag('event', 'page_view', {
-              metric_name: 'FID',
-              metric_value: metric.value,
-            });
-          }
-        });
+        // Interaction to Next Paint (替代 FID)
+        if (onINP) {
+          onINP((metric: any) => {
+            console.log('INP:', metric);
+          });
+        }
 
-        // First Contentful Paint - 首次内容绘制
-        getFCP((metric) => {
-          console.log('FCP:', metric);
-        });
+        // First Contentful Paint
+        if (onFCP) {
+          onFCP((metric: any) => {
+            console.log('FCP:', metric);
+          });
+        }
 
-        // Largest Contentful Paint - 最大内容绘制
-        getLCP((metric) => {
-          console.log('LCP:', metric);
-          if (typeof window !== 'undefined' && 'gtag' in window) {
-            (window as any).gtag('event', 'page_view', {
-              metric_name: 'LCP',
-              metric_value: metric.value,
-            });
-          }
-        });
+        // Largest Contentful Paint
+        if (onLCP) {
+          onLCP((metric: any) => {
+            console.log('LCP:', metric);
+          });
+        }
 
-        // Time to First Byte - 首字节时间
-        getTTFB((metric) => {
-          console.log('TTFB:', metric);
-        });
+        // Time to First Byte
+        if (onTTFB) {
+          onTTFB((metric: any) => {
+            console.log('TTFB:', metric);
+          });
+        }
       } catch (error) {
         console.error('Failed to load Web Vitals:', error);
       }
