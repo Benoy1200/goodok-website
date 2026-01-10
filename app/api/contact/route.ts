@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import type { Resend } from 'resend';
 
 export async function POST(request: Request) {
     try {
@@ -28,7 +27,7 @@ export async function POST(request: Request) {
 
         // 发送邮件给网站管理员
         const { data, error } = await resend.emails.send({
-            from: 'Goodok Website <noreply@goodokshop.com>',
+            from: 'Goodok Website <onboarding@resend.dev>',
             to: ['info@goodokshop.com'],
             replyTo: email,
             subject: `New Inquiry from ${name}`,
@@ -74,7 +73,7 @@ export async function POST(request: Request) {
 
         // 发送确认邮件给客户
         await resend.emails.send({
-            from: 'Goodok Shopfitting <noreply@goodokshop.com>',
+            from: 'Goodok Shopfitting <onboarding@resend.dev>',
             to: [email],
             subject: 'Thank you for contacting Goodok Shopfitting',
             html: `
