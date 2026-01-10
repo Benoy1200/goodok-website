@@ -1,24 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArticleSchema } from "@/components/schema";
+import { ArticleSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "Jewelry Store Display Ideas That Drive Sales | Goodok",
-    description: "Create stunning jewelry displays that capture attention and boost sales. Glass cases, lighting, and layout strategies.",
-    keywords: ["store design", "retail store design", "shop fixtures", "display solutions"],
+    title: "Jewelry Store Display Ideas: Glass Cases, Lighting & Layout Tips",
+    description: "Create stunning jewelry displays that sell. Glass cases ($200-$2000), LED lighting tips, security features, and layout strategies for fine jewelry stores.",
+    keywords: ["jewelry store display", "jewelry display cases", "jewelry store lighting", "jewelry shop design", "fine jewelry fixtures"],
 };
+
+const faqItems = [
+    {
+        question: "What are the best display cases for jewelry stores?",
+        answer: "For fine jewelry, use lockable glass showcases ($500-$2000) with LED lighting. Tower cases for rings, horizontal cases for necklaces, and wall-mounted cases for watches. Use tempered glass for security."
+    },
+    {
+        question: "What lighting is best for displaying jewelry?",
+        answer: "Use 3000K-4000K LED lights (warm-neutral) with 90+ CRI for accurate color. Combine ambient lighting with focused spotlights. Position lights at 30-45° angles to minimize glare and maximize sparkle."
+    },
+    {
+        question: "How do I secure displays in a jewelry store?",
+        answer: "Use lockable showcases with tempered glass, electronic locks for high-value cases, security cameras, and motion sensors. Position staff stations with clear sightlines to all display areas."
+    }
+];
 
 export default function JewelryStoreGuide() {
     return (
         <article className="pt-24">
             <ArticleSchema 
-                headline="Jewelry Store Display Ideas That Drive Sales"
+                headline="Jewelry Store Display Ideas: Glass Cases, Lighting & Layout Tips"
                 description="Create stunning jewelry displays that capture attention and boost sales. Glass cases, lighting, and layout strategies."
                 datePublished="2026-01-04"
                 author="Goodok Shopfitting"
                 image="/images/blog/blog_gondola_shelving_1767944001034.png"
             />
+            <FAQSchema items={faqItems} />
             {/* Hero */}
             <section className="bg-white pt-12 pb-8 border-b">
                 <div className="container">
@@ -33,7 +49,7 @@ export default function JewelryStoreGuide() {
                         </div>
 
                         <h1 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                            Jewelry Store Display Ideas That Drive Sales
+                            Jewelry Store Display Ideas: Glass Cases, Lighting & Layout Tips
                         </h1>
 
                         <p className="text-xl text-gray-600 mb-6 leading-relaxed">

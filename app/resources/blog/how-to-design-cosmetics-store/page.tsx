@@ -1,24 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArticleSchema } from "@/components/schema";
+import { ArticleSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "How to Design a Cosmetics Store: Complete Guide 2025 | Goodok",
-    description: "Learn everything about designing a successful cosmetics store, from layout planning to display fixtures selection and lighting optimization.",
-    keywords: ["store design", "retail store design", "shop fixtures", "display solutions"],
+    title: "How to Design a Cosmetics Store in 2026: Layout, Fixtures & Lighting",
+    description: "Design your cosmetics store for success. Learn essential layout tips, display fixtures ($200-$1500), lighting design, and merchandising strategies.",
+    keywords: ["cosmetics store design", "beauty store layout", "makeup store fixtures", "cosmetics display ideas", "beauty retail design"],
 };
+
+const faqItems = [
+    {
+        question: "How do I design a cosmetics store layout?",
+        answer: "Start with a welcoming entrance zone, place testers and bestsellers at eye level, create defined sections for skincare/makeup/fragrance, and ensure wide aisles (4+ feet) for browsing. Use mirrors throughout."
+    },
+    {
+        question: "What display fixtures work best for cosmetics?",
+        answer: "Glass display cases ($200-$800) for high-end products, LED-lit showcases for luxury items, wall-mounted slatwall for samples, and gondola shelving for mass-market items. Include testing stations."
+    },
+    {
+        question: "What lighting is best for a beauty store?",
+        answer: "Use 4000K-5000K color temperature for accurate color representation. Combine ambient lighting (general), task lighting (testing areas), and accent lighting (product highlights). Avoid harsh shadows."
+    }
+];
 
 export default function CosmeticsStoreGuide() {
     return (
         <article className="pt-24">
             <ArticleSchema 
-                headline="How to Design a Cosmetics Store: Complete Guide 2025"
+                headline="How to Design a Cosmetics Store: Complete Guide 2026"
                 description="Learn everything about designing a successful cosmetics store, from layout planning to display fixtures selection and lighting optimization."
                 datePublished="2026-01-04"
                 author="Goodok Shopfitting"
                 image="/images/blog/blog_display_cases_1767944020952.png"
             />
+            <FAQSchema items={faqItems} />
             {/* Hero */}
             <section className="bg-white pt-12 pb-8 border-b">
                 <div className="container">
@@ -33,7 +49,7 @@ export default function CosmeticsStoreGuide() {
                         </div>
 
                         <h1 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                            How to Design a Cosmetics Store: Complete Guide 2025
+                            How to Design a Cosmetics Store: Complete Guide 2026
                         </h1>
 
                         <p className="text-xl text-gray-600 mb-6 leading-relaxed">

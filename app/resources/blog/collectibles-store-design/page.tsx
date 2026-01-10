@@ -1,24 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArticleSchema } from "@/components/schema";
+import { ArticleSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "Collectibles Store Design Guide: Display & Layout Tips | Goodok",
-    description: "Complete guide to designing a collectibles store. Learn about display cases, lighting, security, and layout strategies for action figures and memorabilia.",
-    keywords: ["store design", "retail store design", "shop fixtures", "display solutions"],
+    title: "Collectibles Store Design: Display Cases, Layout & Security Tips",
+    description: "Design a collectibles store that protects and showcases. Glass cases for action figures, UV protection, security features, and layout strategies.",
+    keywords: ["collectibles store design", "action figure display cases", "memorabilia store", "collectibles shop fixtures", "hobby store design"],
 };
+
+const faqItems = [
+    {
+        question: "How do I display collectibles safely?",
+        answer: "Use UV-filtered glass cases to prevent fading, climate-controlled displays for vintage items, lockable cases for valuable pieces, and dust-proof enclosures. Keep items away from direct sunlight and heat sources."
+    },
+    {
+        question: "What display cases are best for action figures?",
+        answer: "Acrylic cases ($20-$100) for individual pieces, wall-mounted shelving for boxed figures, tower displays ($200-$800) for premium items, and slatwall with hooks for blister packs."
+    },
+    {
+        question: "How should I organize a collectibles store?",
+        answer: "Group by category (comics, figures, trading cards), then by franchise/brand. Place high-value items in secure glass cases at eye level, new arrivals near entrance, and trading card supplies near checkout."
+    }
+];
 
 export default function CollectiblesStoreGuide() {
     return (
         <article className="pt-24">
             <ArticleSchema 
-                headline="Collectibles Store Design Guide: Display & Layout Tips"
+                headline="Collectibles Store Design: Display Cases, Layout & Security Tips"
                 description="Complete guide to designing a collectibles store. Learn about display cases, lighting, security, and layout strategies for action figures and memorabilia."
                 datePublished="2026-01-04"
                 author="Goodok Shopfitting"
                 image="/images/blog/collectibles-store-design.png"
             />
+            <FAQSchema items={faqItems} />
             {/* Hero */}
             <section className="bg-white pt-12 pb-8 border-b">
                 <div className="container">
@@ -33,7 +49,7 @@ export default function CollectiblesStoreGuide() {
                         </div>
 
                         <h1 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                            Collectibles Store Design Guide: Display & Layout Tips
+                            Collectibles Store Design: Display Cases, Layout & Security Tips
                         </h1>
 
                         <p className="text-xl text-gray-600 mb-6 leading-relaxed">

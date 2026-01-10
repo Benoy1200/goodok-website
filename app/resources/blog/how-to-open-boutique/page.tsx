@@ -1,24 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArticleSchema } from "@/components/schema";
+import { ArticleSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "How to Open a Boutique: Complete Store Setup Guide 2025 | Goodok",
-    description: "Everything you need to know about opening a boutique store. From store design and fixtures to layout planning and merchandising strategies.",
-    keywords: ["store setup", "retail store design", "shop fixtures", "display solutions"],
+    title: "How to Open a Boutique in 2026: Startup Costs & Store Setup Guide",
+    description: "Open your dream boutique store. Learn startup costs ($30K-$150K), essential fixtures, layout tips, and merchandising strategies from industry experts.",
+    keywords: ["how to open a boutique", "boutique store startup", "clothing store setup", "boutique fixtures", "fashion retail design"],
 };
+
+const faqItems = [
+    {
+        question: "How much does it cost to open a boutique?",
+        answer: "A boutique startup typically costs $30,000-$150,000. This includes: lease/deposit ($5,000-$20,000), store fixtures ($5,000-$30,000), initial inventory ($10,000-$50,000), renovations ($5,000-$30,000), and working capital."
+    },
+    {
+        question: "What fixtures do I need for a boutique store?",
+        answer: "Essential boutique fixtures include: clothing racks ($50-$300 each), display tables, wall-mounted shelving, fitting room mirrors, a checkout counter, and mannequins. Budget $5,000-$30,000 for fixtures."
+    },
+    {
+        question: "What is the best layout for a boutique?",
+        answer: "Use a loop or racetrack layout that guides customers through the store. Place high-margin items at the front, create a 'power wall' on the right, and position fitting rooms at the back to maximize exposure time."
+    }
+];
 
 export default function BoutiqueGuide() {
     return (
         <article className="pt-24">
             <ArticleSchema 
-                headline="How to Open a Boutique: Complete Store Setup Guide 2025"
+                headline="How to Open a Boutique: Complete Store Setup Guide 2026"
                 description="Everything you need to know about opening a boutique store. From store design and fixtures to layout planning and merchandising strategies."
                 datePublished="2026-01-04"
                 author="Goodok Shopfitting"
                 image="/images/blog/blog_boutique_store_1767944053601.png"
             />
+            <FAQSchema items={faqItems} />
             {/* Hero */}
             <section className="bg-white pt-12 pb-8 border-b">
                 <div className="container">
@@ -33,7 +49,7 @@ export default function BoutiqueGuide() {
                         </div>
 
                         <h1 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                            How to Open a Boutique: Complete Store Setup Guide 2025
+                            How to Open a Boutique: Complete Store Setup Guide 2026
                         </h1>
 
                         <p className="text-xl text-gray-600 mb-6 leading-relaxed">

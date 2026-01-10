@@ -1,24 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArticleSchema } from "@/components/schema";
+import { ArticleSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "Gondola Shelving vs Wall Shelving: Which to Choose? | Goodok",
-    description: "A comprehensive comparison of gondola and wall shelving systems to help you make the right choice for your retail space.",
-    keywords: ["product guide", "retail store design", "shop fixtures", "display solutions"],
+    title: "Gondola vs Wall Shelving: Which Is Best for Your Store? [Comparison]",
+    description: "Gondola shelving: best for aisles, $150-$600/unit. Wall shelving: maximizes space, $80-$350. Compare pros, cons, and costs to choose the right system.",
+    keywords: ["gondola vs wall shelving", "retail shelving comparison", "store shelving types", "gondola shelving pros cons", "wall shelving benefits"],
 };
+
+const faqItems = [
+    {
+        question: "What is the difference between gondola and wall shelving?",
+        answer: "Gondola shelving is freestanding and double-sided, ideal for store aisles. Wall shelving mounts to walls, maximizing floor space. Gondola costs $150-$600/unit while wall shelving runs $80-$350."
+    },
+    {
+        question: "Which shelving type holds more products?",
+        answer: "Gondola shelving typically displays more products because it's double-sided. A 72\" tall gondola with 5 shelves on each side can hold twice as much as a single wall unit of the same height."
+    },
+    {
+        question: "Is wall shelving or gondola shelving cheaper?",
+        answer: "Wall shelving is generally cheaper at $80-$350 per unit, compared to gondola shelving at $150-$600. However, gondola's double-sided design may offer better value per product displayed."
+    }
+];
 
 export default function ShelvingComparisonGuide() {
     return (
         <article className="pt-24">
             <ArticleSchema 
-                headline="Gondola Shelving vs Wall Shelving: Which to Choose?"
+                headline="Gondola vs Wall Shelving: Which Is Best for Your Store?"
                 description="A comprehensive comparison of gondola and wall shelving systems to help you make the right choice for your retail space."
                 datePublished="2026-01-02"
                 author="Goodok Shopfitting"
                 image="/images/blog/gondola-vs-wall-shelving.png"
             />
+            <FAQSchema items={faqItems} />
             {/* Hero */}
             <section className="bg-white pt-12 pb-8 border-b">
                 <div className="container">

@@ -1,24 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArticleSchema } from "@/components/schema";
+import { ArticleSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "Kids Toy Store Layout Tips: Design for Fun & Sales | Goodok",
-    description: "Expert guide to toy store layout design. Learn how to create kid-friendly spaces that encourage exploration, engagement, and purchases.",
-    keywords: ["store layout", "retail store design", "shop fixtures", "display solutions"],
+    title: "Toy Store Layout Ideas: Kid-Friendly Design That Drives Sales",
+    description: "Design a toy store kids love and parents trust. Learn layout strategies, shelving heights (48\"-60\" for kids), safety tips, and display ideas that boost sales.",
+    keywords: ["toy store layout", "toy store design", "kids store fixtures", "toy shop display ideas", "children store design"],
 };
+
+const faqItems = [
+    {
+        question: "What is the best layout for a toy store?",
+        answer: "Use age-based zones (baby, toddler, kids, teens) with wide aisles (5+ feet) for strollers. Place interactive displays at kid height (36\"-48\"), high-margin items near checkout, and create a discovery zone for new products."
+    },
+    {
+        question: "How tall should shelving be in a toy store?",
+        answer: "Use 48\"-60\" tall shelving for kid-accessible areas (they can reach without climbing). Reserve 72\" tall units for adult-purchased items. Always anchor tall units to walls for safety."
+    },
+    {
+        question: "How do I make a toy store kid-friendly but safe?",
+        answer: "Round all fixture corners, use tempered glass for displays, avoid small parts at child height, ensure stable/anchored shelving, create clear sightlines for parent supervision, and use non-slip flooring."
+    }
+];
 
 export default function ToyStoreLayoutGuide() {
     return (
         <article className="pt-24">
             <ArticleSchema 
-                headline="Kids Toy Store Layout Tips: Design for Fun & Sales"
+                headline="Toy Store Layout Ideas: Kid-Friendly Design That Drives Sales"
                 description="Expert guide to toy store layout design. Learn how to create kid-friendly spaces that encourage exploration, engagement, and purchases."
                 datePublished="2026-01-04"
                 author="Goodok Shopfitting"
                 image="/images/blog/toy-store-layout.png"
             />
+            <FAQSchema items={faqItems} />
             {/* Hero */}
             <section className="bg-white pt-12 pb-8 border-b">
                 <div className="container">
@@ -33,7 +49,7 @@ export default function ToyStoreLayoutGuide() {
                         </div>
 
                         <h1 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                            Kids Toy Store Layout Tips: Design for Fun & Sales
+                            Toy Store Layout Ideas: Kid-Friendly Design That Drives Sales
                         </h1>
 
                         <p className="text-xl text-gray-600 mb-6 leading-relaxed">

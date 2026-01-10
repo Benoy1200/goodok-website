@@ -1,24 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArticleSchema } from "@/components/schema";
+import { ArticleSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "Toy Store Shelving Ideas: Maximize Display & Sales | Goodok",
-    description: "Discover the best shelving solutions for toy stores that maximize product visibility and create an engaging shopping experience for families.",
-    keywords: ["shelving guide", "retail store design", "shop fixtures", "display solutions"],
+    title: "Toy Store Shelving Ideas: Gondola, Wall & Display Solutions",
+    description: "Best shelving for toy stores: gondola ($150-$600), wall units ($80-$350), and specialty displays. Safety-rated options for kid-friendly environments.",
+    keywords: ["toy store shelving", "toy store gondola", "kids store shelving", "toy shop display", "retail shelving for toys"],
 };
+
+const faqItems = [
+    {
+        question: "What type of shelving is best for a toy store?",
+        answer: "Use gondola shelving for aisles ($150-$600), wall shelving for perimeter ($80-$350), and specialty racks for bikes/large items. Choose rounded corners and tip-resistant designs for safety."
+    },
+    {
+        question: "How tall should toy store shelving be?",
+        answer: "48\"-60\" for kid-accessible products (so they can see and reach safely). 72\" for parent-purchased items. Position impulse toys at 36\"-48\" (child eye level)."
+    },
+    {
+        question: "How do I organize shelves in a toy store?",
+        answer: "Group by age range or category. Place heavy/large boxes at bottom, lighter items higher. Use consistent shelf heights within sections. Position new arrivals and bestsellers at eye level."
+    }
+];
 
 export default function ToyStoreShelvingGuide() {
     return (
         <article className="pt-24">
             <ArticleSchema 
-                headline="Toy Store Shelving Ideas: Maximize Display & Sales"
+                headline="Toy Store Shelving Ideas: Gondola, Wall & Display Solutions"
                 description="Discover the best shelving solutions for toy stores that maximize product visibility and create an engaging shopping experience for families."
                 datePublished="2026-01-04"
                 author="Goodok Shopfitting"
                 image="/images/blog/blog_toy_store_1767944091805.png"
             />
+            <FAQSchema items={faqItems} />
             {/* Hero */}
             <section className="bg-white pt-12 pb-8 border-b">
                 <div className="container">
@@ -33,7 +49,7 @@ export default function ToyStoreShelvingGuide() {
                         </div>
 
                         <h1 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                            Toy Store Shelving Ideas: Maximize Display & Sales
+                            Toy Store Shelving Ideas: Gondola, Wall & Display Solutions
                         </h1>
 
                         <p className="text-xl text-gray-600 mb-6 leading-relaxed">

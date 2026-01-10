@@ -1,24 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArticleSchema } from "@/components/schema";
+import { ArticleSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "Retail Store Fixtures Wholesale: Complete Buying Guide | Goodok",
-    description: "Everything you need to know about buying retail fixtures wholesale, including supplier selection, pricing, and quality considerations.",
-    keywords: ["buying guide", "retail store design", "shop fixtures", "display solutions"],
+    title: "Retail Fixtures Wholesale: Save 30-50% Buying Factory Direct",
+    description: "Buy retail fixtures wholesale and save 30-50%. Compare China vs US suppliers, MOQ requirements, shipping costs, and quality considerations.",
+    keywords: ["retail fixtures wholesale", "wholesale store fixtures", "buy fixtures from China", "retail fixture suppliers", "store fixtures manufacturer"],
 };
+
+const faqItems = [
+    {
+        question: "How much can I save buying retail fixtures wholesale?",
+        answer: "Expect 30-50% savings vs retail prices. A full container order (20ft) typically saves 40%+ on gondola shelving, display cases, and other fixtures compared to buying locally in small quantities."
+    },
+    {
+        question: "What is the minimum order for wholesale fixtures?",
+        answer: "Most wholesale suppliers require minimum orders of $3,000-$10,000. For international orders, a 20ft container (~$8,000-$15,000 in fixtures) offers the best value per unit."
+    },
+    {
+        question: "Should I buy fixtures from China or locally?",
+        answer: "China offers 30-50% savings but requires larger orders and 4-8 weeks shipping. Local suppliers offer faster delivery (1-2 weeks) and smaller minimums but higher prices. Mix both for best results."
+    }
+];
 
 export default function WholesaleGuide() {
     return (
         <article className="pt-24">
             <ArticleSchema 
-                headline="Retail Store Fixtures Wholesale: Complete Buying Guide"
+                headline="Retail Fixtures Wholesale: Save 30-50% Buying Factory Direct"
                 description="Everything you need to know about buying retail fixtures wholesale, including supplier selection, pricing, and quality considerations."
                 datePublished="2026-01-01"
                 author="Goodok Shopfitting"
                 image="/images/blog/retail-fixtures-wholesale-guide.png"
             />
+            <FAQSchema items={faqItems} />
             {/* Hero */}
             <section className="bg-white pt-12 pb-8 border-b">
                 <div className="container">
@@ -33,7 +49,7 @@ export default function WholesaleGuide() {
                         </div>
 
                         <h1 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                            Retail Store Fixtures Wholesale: Complete Buying Guide
+                            Retail Fixtures Wholesale: Save 30-50% Buying Factory Direct
                         </h1>
 
                         <p className="text-xl text-gray-600 mb-6 leading-relaxed">

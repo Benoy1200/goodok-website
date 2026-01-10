@@ -1,24 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArticleSchema } from "@/components/schema";
+import { ArticleSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "Accessories Store Fixtures: Complete Display Guide | Goodok",
-    description: "Everything you need to know about accessories store fixtures. Learn about display stands, wall systems, and merchandising strategies.",
-    keywords: ["fixtures guide", "retail store design", "shop fixtures", "display solutions"],
+    title: "Accessories Store Fixtures: Display Stands, Racks & Wall Systems",
+    description: "Complete guide to accessories store fixtures. Slatwall systems ($50-$200), spinning racks ($100-$400), display stands, and merchandising strategies.",
+    keywords: ["accessories store fixtures", "jewelry display stands", "slatwall systems", "spinning display racks", "accessories shop design"],
 };
+
+const faqItems = [
+    {
+        question: "What fixtures are best for displaying accessories?",
+        answer: "Use spinning racks ($100-$400) for sunglasses/scarves, slatwall panels ($50-$200) for bags/belts, countertop displays for small items, and T-bar stands for necklaces. Mix heights for visual interest."
+    },
+    {
+        question: "How do I maximize space in a small accessories store?",
+        answer: "Use vertical displays: slatwall panels to ceiling, rotating fixtures, pegboard walls, and tiered countertop displays. Avoid floor clutter. Use mirrors to create visual depth."
+    },
+    {
+        question: "What's the best layout for an accessories store?",
+        answer: "Use a loop layout with impulse items at checkout, trending products at eye level (52\"-60\"), premium accessories in focal displays, and everyday items on lower shelves."
+    }
+];
 
 export default function AccessoriesFixturesGuide() {
     return (
         <article className="pt-24">
             <ArticleSchema 
-                headline="Accessories Store Fixtures: Complete Display Guide"
+                headline="Accessories Store Fixtures: Display Stands, Racks & Wall Systems"
                 description="Everything you need to know about accessories store fixtures. Learn about display stands, wall systems, and merchandising strategies."
                 datePublished="2026-01-04"
                 author="Goodok Shopfitting"
                 image="/images/blog/accessories-store-fixtures.png"
             />
+            <FAQSchema items={faqItems} />
             {/* Hero */}
             <section className="bg-white pt-12 pb-8 border-b">
                 <div className="container">
@@ -33,7 +49,7 @@ export default function AccessoriesFixturesGuide() {
                         </div>
 
                         <h1 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                            Accessories Store Fixtures: Complete Display Guide
+                            Accessories Store Fixtures: Display Stands, Racks & Wall Systems
                         </h1>
 
                         <p className="text-xl text-gray-600 mb-6 leading-relaxed">
