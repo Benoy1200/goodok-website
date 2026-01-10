@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "Retail Shelving Cost Guide 2026 | Pricing & Budget Tips | Goodok",
+    title: "Retail Shelving Cost 2026: $150-$5000 Complete Pricing Guide",
     description:
-        "Complete retail shelving cost breakdown. Learn how much gondola shelving, wall units, and display cases cost. Factory-direct pricing saves 30-50%.",
+        "How much does retail shelving cost? Gondola: $150-$600, Wall: $80-$350, Display Cases: $200-$1500. Save 30-50% with factory-direct pricing.",
     keywords: [
         "retail shelving cost",
         "gondola shelving price",
@@ -12,18 +13,45 @@ export const metadata: Metadata = {
         "retail fixtures cost",
         "shelving unit prices",
         "commercial shelving pricing",
+        "how much does retail shelving cost",
     ],
     openGraph: {
-        title: "Retail Shelving Cost Guide 2026 | Complete Pricing Breakdown",
+        title: "Retail Shelving Cost 2026: $150-$5000 Complete Pricing Guide",
         description:
-            "How much does retail shelving really cost? Get factory-direct pricing and save 30-50%.",
+            "How much does retail shelving cost? Get factory-direct pricing and save 30-50% on gondola shelving, wall units, and display cases.",
         type: "article",
     },
 };
 
+const faqItems = [
+    {
+        question: "How much does gondola shelving cost?",
+        answer: "Standard gondola shelving (36\" x 72\") costs $150-$600 per unit. Budget quality runs $150-$200, commercial grade $250-$400, and premium/heavy-duty $400-$600. Factory-direct pricing can save you 30-50%."
+    },
+    {
+        question: "What affects retail shelving prices?",
+        answer: "Key price factors include: material quality (steel thickness), finish options (powder coating, custom colors, wood grain), order quantity (bulk orders get 20-40% off), and customization requirements."
+    },
+    {
+        question: "How much should I budget for store shelving?",
+        answer: "For a 1,000 sq ft store: Budget setup costs $5,000-$10,000, standard setup $10,000-$20,000, and premium setup $20,000-$40,000+. Shelving typically represents 15-25% of your total fixture budget."
+    },
+    {
+        question: "How can I save money on retail fixtures?",
+        answer: "Save 30-50% by: 1) Buying factory-direct to skip middlemen, 2) Ordering in bulk (container loads save 40%+), 3) Choosing standard sizes instead of custom, 4) Bundling products together."
+    }
+];
+
 export default function RetailShelvingCostGuide() {
     return (
         <article className="pt-24">
+            <ArticleSchema 
+                headline="Retail Shelving Cost Guide 2026: Complete Pricing Breakdown"
+                description="How much does retail shelving cost? Complete pricing breakdown for gondola, wall, and display case shelving with factory-direct savings."
+                datePublished="2026-01-06"
+                author="Goodok Shopfitting"
+            />
+            <FAQSchema items={faqItems} />
             {/* Hero */}
             <section className="bg-gradient-to-br from-green-50 to-emerald-100 py-16">
                 <div className="container">

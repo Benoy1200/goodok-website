@@ -1,24 +1,40 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArticleSchema } from "@/components/schema";
+import { ArticleSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "How to Open a Pop Culture Store: Complete Guide 2025 | Goodok",
-    description: "Everything you need to know about opening a pop culture, collectibles, or trendy toys store. From store design to display fixtures.",
-    keywords: ["store design", "retail store design", "shop fixtures", "display solutions"],
+    title: "How to Open a Pop Culture Store in 2026: Complete Startup Guide",
+    description: "Everything you need to know about opening a pop culture, collectibles, or trendy toys store in 2026. Store design tips, display fixtures, startup costs, and location advice.",
+    keywords: ["how to open pop culture store", "collectibles store startup", "pop culture shop fixtures", "toy store design", "retail store design"],
 };
+
+const faqItems = [
+    {
+        question: "How much does it cost to open a pop culture store?",
+        answer: "A pop culture store startup typically costs $20,000-$100,000+ depending on size and location. This includes: lease deposit (1-3 months rent), store fixtures ($5,000-$25,000), initial inventory ($10,000-$50,000), and licenses/permits ($500-$2,000)."
+    },
+    {
+        question: "What display fixtures do I need for a collectibles store?",
+        answer: "Essential fixtures include: glass display cases for high-value items, wall shelving for boxed products, gondola shelving for aisle displays, slatwall panels for hanging items, and specialized racks for specific collectibles like Funko Pops or trading cards."
+    },
+    {
+        question: "What is the best location for a pop culture store?",
+        answer: "Ideal locations include: near movie theaters or entertainment venues, shopping malls with high foot traffic, downtown areas near other specialty retail, or college town shopping districts. Consider rent costs vs. foot traffic carefully."
+    }
+];
 
 export default function PopCultureStoreGuide() {
     return (
         <article className="pt-24">
             <ArticleSchema 
-                headline="How to Open a Pop Culture Store: Complete Guide 2025"
+                headline="How to Open a Pop Culture Store: Complete Guide 2026"
                 description="Everything you need to know about opening a pop culture, collectibles, or trendy toys store. From store design to display fixtures."
                 datePublished="2026-01-04"
                 author="Goodok Shopfitting"
                 image="/images/blog/blog_pop_culture_store_1767944072052.png"
             />
+            <FAQSchema items={faqItems} />
             {/* Hero */}
             <section className="bg-white pt-12 pb-8 border-b">
                 <div className="container">
@@ -33,7 +49,7 @@ export default function PopCultureStoreGuide() {
                         </div>
 
                         <h1 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                            How to Open a Pop Culture Store: Complete Guide 2025
+                            How to Open a Pop Culture Store: Complete Guide 2026
                         </h1>
 
                         <p className="text-xl text-gray-600 mb-6 leading-relaxed">

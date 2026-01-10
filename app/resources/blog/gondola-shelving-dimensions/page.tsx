@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArticleSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "Gondola Shelving Dimensions Guide | Standard Sizes & Specs | Goodok",
+    title: "Gondola Shelving Dimensions & Sizes: 48\" to 84\" Complete Guide",
     description:
-        "Complete guide to gondola shelving dimensions. Standard heights, widths, depths explained. Find the right size for your retail store layout.",
+        "Standard gondola shelving dimensions: Heights (48\", 54\", 60\", 72\", 84\"), Widths (24\", 36\", 48\"), Depths (16\"-25\"). Find your perfect size with our complete guide.",
     keywords: [
         "gondola shelving dimensions",
         "gondola shelf sizes",
@@ -12,18 +13,46 @@ export const metadata: Metadata = {
         "gondola unit specifications",
         "store shelving dimensions",
         "standard gondola sizes",
+        "gondola shelving height",
+        "gondola shelving width",
     ],
     openGraph: {
-        title: "Gondola Shelving Dimensions Guide | Standard Sizes Explained",
+        title: "Gondola Shelving Dimensions & Sizes: Complete Guide",
         description:
-            "Everything you need to know about gondola shelving sizes for your store.",
+            "Standard gondola shelving dimensions: Heights (48\"-84\"), Widths (24\"-48\"), Depths (16\"-25\"). Find the right size for your store.",
         type: "article",
     },
 };
 
+const faqItems = [
+    {
+        question: "What are standard gondola shelving dimensions?",
+        answer: "Standard gondola shelving dimensions are: Heights - 48\", 54\", 60\", 72\", 84\"; Widths - 24\", 36\", 48\"; Base Depths - 16\", 19\", 22\", 25\"; Shelf Depths - 8\", 10\", 12\", 16\", 19\", 22\"."
+    },
+    {
+        question: "What is the most common gondola shelf height?",
+        answer: "72\" (6 ft) is the most popular gondola height. It provides maximum display capacity with 5-6 shelves, ideal for supermarkets and larger retail stores."
+    },
+    {
+        question: "What is the standard gondola shelf width?",
+        answer: "36\" (3 ft) is the most common gondola width. It's versatile, works for most retail applications, and provides a good balance between display space and aisle width."
+    },
+    {
+        question: "How do I choose the right gondola size?",
+        answer: "Consider: 1) Your products - small items need 8-10\" shelf depth, large items need 19-22\"; 2) Your space - leave 42-48\" between gondolas for aisles; 3) Ceiling height - leave 12-18\" above tallest unit."
+    }
+];
+
 export default function GondolaShelvingDimensionsGuide() {
     return (
         <article className="pt-24">
+            <ArticleSchema 
+                headline="Gondola Shelving Dimensions: Complete Size Guide"
+                description="Standard gondola shelving dimensions explained. Heights, widths, and depths for all gondola sizes."
+                datePublished="2026-01-06"
+                author="Goodok Shopfitting"
+            />
+            <FAQSchema items={faqItems} />
             {/* Hero */}
             <section className="bg-gradient-to-br from-[#f8f9fa] to-[#f8f9fa] py-16">
                 <div className="container">
