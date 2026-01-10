@@ -18,6 +18,39 @@ export const metadata: Metadata = {
 // Blog posts data
 const blogPosts = [
     {
+        slug: "retail-store-startup-cost",
+        title: "Retail Store Startup Cost: Complete Budget Breakdown & Guide",
+        excerpt:
+            "Detailed breakdown of retail startup costs for 2026. From lease and licensing to store fixtures and inventory. Includes hidden costs to watch for.",
+        category: "Startup Guide",
+        date: "2026-01-10",
+        readTime: "15 min read",
+        featured: true,
+        image: "/images/blog/retail-startup-cost-hero.png",
+    },
+    {
+        slug: "new-vs-used-gondola-shelving",
+        title: "New vs Used Gondola Shelving: Which Should You Buy?",
+        excerpt:
+            "Compare pricing, quality, and pros/cons of new vs used gondola shelving. Learn how to inspect used fixtures and where to find liquidation deals.",
+        category: "Buying Guide",
+        date: "2026-01-10",
+        readTime: "12 min read",
+        featured: true,
+        image: "/images/blog/new-vs-used-gondola-hero.png",
+    },
+    {
+        slug: "card-shop-shelving-ideas",
+        title: "Card Shop Shelving Ideas: Display Guide for LGS Owners",
+        excerpt:
+            "Complete guide to card shop displays. From glass cases for high-value singles to gondola shelving for booster boxes and play area layout tips.",
+        category: "Niche Guide",
+        date: "2026-01-10",
+        readTime: "14 min read",
+        featured: false,
+        image: "/images/blog/card-shop-hero.png",
+    },
+    {
         slug: "how-to-design-cosmetics-store",
         title: "How to Design a Cosmetics Store: Complete Guide 2025",
         excerpt:
