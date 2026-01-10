@@ -1,19 +1,36 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import ProductMarquee from "@/components/ProductMarquee";
+import { ProductSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "Clothing Racks | Garment Display Systems | Goodok",
+    title: "Clothing Racks Wholesale: $50-$300 Garment Display Systems | Goodok",
     description:
-        "Professional clothing racks and garment display systems for boutiques and fashion stores. Modern designs that enhance your merchandise.",
+        "Buy clothing racks wholesale $50-$300. Round racks, 4-way racks, waterfall displays for boutiques and fashion stores. Factory-direct. Free 3D design.",
     keywords: [
         "clothing racks",
         "garment display",
         "fashion store fixtures",
         "boutique racks",
         "clothing display",
+        "clothing rack price",
     ],
 };
+
+const faqItems = [
+    {
+        question: "How much do clothing racks cost wholesale?",
+        answer: "Factory-direct clothing racks cost $50-$300. Basic round racks: $50-$100, 4-way racks: $80-$150, Premium waterfall displays: $150-$300."
+    },
+    {
+        question: "What types of clothing racks are available?",
+        answer: "We offer: Round racks, 4-way racks, waterfall displays, straight bars, Z-racks, and wall-mounted rails. All available in chrome, matte black, and custom colors."
+    },
+    {
+        question: "What is the load capacity of clothing racks?",
+        answer: "Standard racks hold 50-100kg. Heavy-duty racks hold 100-150kg. Steel thickness (1.0-1.5mm) and base weight determine capacity. All racks designed for commercial use."
+    }
+];
 
 const productImages = [
     "/images/products/clothing-racks/ZZ-004.jpg",
@@ -65,6 +82,13 @@ const specs = [
 export default function ClothingRacksPage() {
     return (
         <div className="pt-24">
+            <ProductSchema 
+                name="Clothing Racks"
+                description="Professional clothing racks and garment display systems for boutiques and fashion stores."
+                category="Retail Fixtures"
+                price="50"
+            />
+            <FAQSchema items={faqItems} />
             <section className="bg-white py-16">
                 <div className="container">
                     <div className="max-w-3xl mx-auto text-center">
@@ -136,6 +160,9 @@ export default function ClothingRacksPage() {
                         <Link href="/contact" className="btn btn-secondary">
                             Contact Us
                         </Link>
+                    </div>
+                    <div className="mt-8 text-sm text-gray-500">
+                        <p>Related guides: <Link href="/resources/blog/how-to-open-boutique" className="text-[var(--accent)] hover:underline">How to Open a Boutique</Link> | <Link href="/resources/blog/retail-shelving-cost-guide" className="text-[var(--accent)] hover:underline">Pricing Guide</Link></p>
                     </div>
                 </div>
             </section>

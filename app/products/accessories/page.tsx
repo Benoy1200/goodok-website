@@ -1,19 +1,36 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ProductMarquee from "@/components/ProductMarquee";
+import { ProductSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "Retail Accessories | Display Hooks & Fixtures | Goodok",
+    title: "Retail Accessories Wholesale: Hooks, Stands & Fixtures | Goodok",
     description:
-        "Complete range of retail accessories including display hooks, signage holders, mannequins, and store fixtures.",
+        "Complete retail accessories: display hooks ($2-$15), signage holders, mannequins, and store fixtures. Factory-direct pricing. Ships worldwide.",
     keywords: [
         "retail accessories",
         "display hooks",
         "store fixtures",
         "mannequins",
         "retail signage",
+        "retail accessories wholesale",
     ],
 };
+
+const faqItems = [
+    {
+        question: "What retail accessories do you offer?",
+        answer: "We offer: display hooks ($2-$15), signage holders, shelf dividers, price tag holders, mannequins, endcap displays, umbrella stands, and promotional stands."
+    },
+    {
+        question: "What is the minimum order for accessories?",
+        answer: "MOQ varies by item: Hooks (100 pcs), Signs (50 pcs), Stands (10 pcs). Mixed orders welcome. Contact us for custom requirements."
+    },
+    {
+        question: "Are accessories compatible with your shelving systems?",
+        answer: "Yes, all accessories are designed to work with our gondola and wall shelving systems. Universal fit options also available for third-party fixtures."
+    }
+];
 
 const productImages = [
     "/images/products/Versatile-Accessories/四层架-A1.jpg",
@@ -65,6 +82,13 @@ const specs = [
 export default function AccessoriesPage() {
     return (
         <div className="pt-24">
+            <ProductSchema 
+                name="Retail Accessories"
+                description="Complete range of retail accessories including display hooks, signage holders, and store fixtures."
+                category="Retail Fixtures"
+                price="2"
+            />
+            <FAQSchema items={faqItems} />
             <section className="bg-white py-16">
                 <div className="container">
                     <div className="max-w-3xl mx-auto text-center">
@@ -136,6 +160,9 @@ export default function AccessoriesPage() {
                         <Link href="/contact" className="btn btn-secondary">
                             Contact Us
                         </Link>
+                    </div>
+                    <div className="mt-8 text-sm text-gray-500">
+                        <p>Related guides: <Link href="/resources/blog/accessories-store-fixtures" className="text-[var(--accent)] hover:underline">Accessories Store Fixtures</Link> | <Link href="/resources/blog/retail-fixtures-wholesale-guide" className="text-[var(--accent)] hover:underline">Wholesale Guide</Link></p>
                     </div>
                 </div>
             </section>

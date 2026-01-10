@@ -1,19 +1,36 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ProductMarquee from "@/components/ProductMarquee";
+import { ProductSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "Checkout Counters | Cash Wrap Counter | Goodok",
+    title: "Checkout Counters Wholesale: $300-$1500 Cash Wrap | Goodok",
     description:
-        "Professional checkout counters for retail stores. Modern cash wrap designs with built-in storage and cable management.",
+        "Buy checkout counters wholesale $300-$1500. Modern cash wrap designs with storage and cable management. Custom sizes. Factory-direct. Ships worldwide.",
     keywords: [
         "checkout counter",
         "cash wrap counter",
         "retail checkout",
         "POS counter",
         "store checkout desk",
+        "checkout counter price",
     ],
 };
+
+const faqItems = [
+    {
+        question: "How much do checkout counters cost?",
+        answer: "Factory-direct checkout counters cost $300-$1500. Basic counters: $300-$500, Standard with storage: $500-$900, Premium custom: $900-$1500."
+    },
+    {
+        question: "Can checkout counters be customized?",
+        answer: "Yes, we offer full customization: dimensions, colors, materials (MDF/wood/steel), built-in storage, cable management holes, and branding options."
+    },
+    {
+        question: "What features are included in checkout counters?",
+        answer: "Standard features: built-in storage, cable management, adjustable shelves. Premium options: LED lighting, electronic locks, glass displays, and promotional panels."
+    }
+];
 
 const productImages = [
     "/images/products/Checkout-Counters/收银台001_25071204413944b8b-1.jpg",
@@ -65,6 +82,13 @@ const specs = [
 export default function CheckoutCountersPage() {
     return (
         <div className="pt-24">
+            <ProductSchema 
+                name="Checkout Counters"
+                description="Professional checkout and cash wrap counters for retail stores with storage and cable management."
+                category="Retail Fixtures"
+                price="300"
+            />
+            <FAQSchema items={faqItems} />
             <section className="bg-white py-16">
                 <div className="container">
                     <div className="max-w-3xl mx-auto text-center">
@@ -136,6 +160,9 @@ export default function CheckoutCountersPage() {
                         <Link href="/contact" className="btn btn-secondary">
                             Contact Us
                         </Link>
+                    </div>
+                    <div className="mt-8 text-sm text-gray-500">
+                        <p>Related guides: <Link href="/resources/blog/retail-shelving-cost-guide" className="text-[var(--accent)] hover:underline">Pricing Guide</Link> | <Link href="/resources/blog/retail-fixtures-wholesale-guide" className="text-[var(--accent)] hover:underline">Wholesale Guide</Link></p>
                     </div>
                 </div>
             </section>
