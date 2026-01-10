@@ -1,0 +1,484 @@
+{
+    "name": "【Reddit情报】关键词 → 搜索意图框架 → Reddit抓取 → AI分析 → 情报报告",
+    "nodes": [
+        {
+            "parameters": {},
+            "id": "node-manual-trigger",
+            "name": "手动触发工作流",
+            "type": "n8n-nodes-base.manualTrigger",
+            "typeVersion": 1,
+            "position": [240, 300]
+        },
+        {
+            "parameters": {
+                "values": {
+                    "string": [
+                        {
+                            "name": "keyword",
+                            "value": "gondola shelving"
+                        },
+                        {
+                            "name": "market_niche",
+                            "value": "retail shelving"
+                        }
+                    ]
+                },
+                "options": {}
+            },
+            "id": "node-set-keyword",
+            "name": "输入关键词",
+            "type": "n8n-nodes-base.set",
+            "typeVersion": 3.3,
+            "position": [460, 300],
+            "notes": "修改 keyword 和 market_niche 为你要研究的关键词"
+        },
+        {
+            "parameters": {
+                "agent": "conversationalAgent",
+                "promptType": "define",
+                "text": "核心关键词: {{ $json.keyword }}\n市场细分: {{ $json.market_niche }}\n\n请基于这个关键词，生成扩展的相关关键词列表（5-10个），包含：\n1. 长尾关键词变体\n2. 相关产品/服务词\n3. 用户常见问题词\n\n输出格式为JSON数组，例如：\n[\"keyword1\", \"keyword2\", \"keyword3\"]",
+                "options": {
+                    "systemMessage": "你是一个SEO关键词研究专家。你的任务是基于给定的核心关键词，生成相关的扩展关键词列表。只输出JSON数组，不要其他文字。"
+                }
+            },
+            "id": "node-expand-keywords",
+            "name": "AI: 拓展关键词",
+            "type": "@n8n/n8n-nodes-langchain.agent",
+            "typeVersion": 1.7,
+            "position": [680, 300]
+        },
+        {
+            "parameters": {
+                "model": "gpt-4o-mini",
+                "options": {}
+            },
+            "id": "node-llm-expand",
+            "name": "LLM模型 (关键词拓展)",
+            "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+            "typeVersion": 1,
+            "position": [620, 500],
+            "credentials": {
+                "openAiApi": {
+                    "id": "",
+                    "name": ""
+                }
+            }
+        },
+        {
+            "parameters": {
+                "jsCode": "// 搜索意图框架 - 来自 Reddit Intent Keyword Framework\nconst keyword = $('输入关键词').item.json.keyword;\nconst expandedKeywords = JSON.parse($input.first().json.output || '[]');\n\n// 6大搜索意图类别\nconst intentFramework = {\n  informational: {\n    name: '信息型意图',\n    modifiers: ['what is', 'how to', 'guide', 'tips', 'ideas', 'why', 'difference between', 'pros and cons']\n  },\n  commercial: {\n    name: '商业调研型',\n    modifiers: ['best', 'top', 'vs', 'alternative to', 'review', 'worth it', 'which one', 'experience with']\n  },\n  transactional: {\n    name: '交易型意图',\n    modifiers: ['where to buy', 'price', 'cost', 'cheap', 'affordable', 'for sale', 'discount']\n  },\n  painPoint: {\n    name: '痛点型意图',\n    modifiers: ['problem', 'help', 'difficult', 'cant', 'regret', 'fix', 'avoid', 'warning', 'scam']\n  },\n  socialProof: {\n    name: '社会证明型',\n    modifiers: ['recommend', 'anyone', 'should I', 'opinion', 'advice', 'feedback']\n  },\n  subredditTargeted: {\n    name: '特定社区',\n    subreddits: ['smallbusiness', 'Entrepreneur', 'retailhell', 'ecommerce', 'smallbusinessuk']\n  }\n};\n\n// 生成搜索查询\nconst searchQueries = [];\n\n// 为每个意图类别生成查询\nfor (const [intentKey, intent] of Object.entries(intentFramework)) {\n  if (intent.modifiers) {\n    // 每个意图取2个修饰词\n    const selectedModifiers = intent.modifiers.slice(0, 2);\n    for (const modifier of selectedModifiers) {\n      searchQueries.push({\n        intent_type: intent.name,\n        intent_key: intentKey,\n        query: `site:reddit.com \"${keyword}\" \"${modifier}\"`,\n        modifier: modifier,\n        keyword: keyword\n      });\n    }\n  } else if (intent.subreddits) {\n    // 特定社区搜索\n    for (const subreddit of intent.subreddits.slice(0, 2)) {\n      searchQueries.push({\n        intent_type: intent.name,\n        intent_key: intentKey,\n        query: `site:reddit.com/r/${subreddit} \"${keyword}\"`,\n        modifier: subreddit,\n        keyword: keyword\n      });\n    }\n  }\n}\n\nreturn searchQueries.map(q => ({ json: q }));"
+            },
+            "id": "node-generate-queries",
+            "name": "生成搜索意图查询",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [900, 300],
+            "notes": "套用搜索意图关键词框架，生成Reddit搜索查询"
+        },
+        {
+            "parameters": {
+                "batchSize": 1,
+                "options": {}
+            },
+            "id": "node-split-queries",
+            "name": "分批处理查询",
+            "type": "n8n-nodes-base.splitInBatches",
+            "typeVersion": 3,
+            "position": [1120, 300]
+        },
+        {
+            "parameters": {
+                "method": "GET",
+                "url": "https://serpapi.com/search.json",
+                "authentication": "genericCredentialType",
+                "genericAuthType": "httpQueryAuth",
+                "sendQuery": true,
+                "queryParameters": {
+                    "parameters": [
+                        {
+                            "name": "q",
+                            "value": "={{ $json.query }}"
+                        },
+                        {
+                            "name": "engine",
+                            "value": "google"
+                        },
+                        {
+                            "name": "num",
+                            "value": "10"
+                        }
+                    ]
+                },
+                "options": {}
+            },
+            "id": "node-search-google",
+            "name": "SerpAPI: Google搜索Reddit",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [1340, 300],
+            "credentials": {
+                "httpQueryAuth": {
+                    "id": "",
+                    "name": "SerpAPI"
+                }
+            },
+            "notes": "调用SerpAPI搜索 site:reddit.com"
+        },
+        {
+            "parameters": {
+                "amount": 2,
+                "unit": "seconds"
+            },
+            "id": "node-wait-rate-limit",
+            "name": "等待(避免限流)",
+            "type": "n8n-nodes-base.wait",
+            "typeVersion": 1.1,
+            "position": [1560, 300]
+        },
+        {
+            "parameters": {
+                "jsCode": "// 提取Reddit帖子链接和标题\nconst searchResults = $input.first().json;\nconst organicResults = searchResults.organic_results || [];\nconst intentInfo = $('分批处理查询').item.json;\n\nconst redditPosts = organicResults\n  .filter(r => r.link && r.link.includes('reddit.com'))\n  .slice(0, 5) // 每个意图最多5个帖子\n  .map(r => ({\n    title: r.title,\n    link: r.link,\n    snippet: r.snippet || '',\n    intent_type: intentInfo.intent_type,\n    intent_key: intentInfo.intent_key,\n    modifier: intentInfo.modifier,\n    keyword: intentInfo.keyword\n  }));\n\nreturn redditPosts.map(p => ({ json: p }));"
+            },
+            "id": "node-extract-reddit-links",
+            "name": "提取Reddit帖子链接",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [1780, 300]
+        },
+        {
+            "parameters": {
+                "method": "GET",
+                "url": "={{ $json.link }}.json",
+                "options": {
+                    "response": {
+                        "response": {
+                            "responseFormat": "json"
+                        }
+                    }
+                }
+            },
+            "id": "node-fetch-reddit-post",
+            "name": "抓取Reddit帖子内容",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [2000, 300],
+            "notes": "通过Reddit JSON API抓取帖子内容"
+        },
+        {
+            "parameters": {
+                "jsCode": "// 解析Reddit帖子内容\nconst response = $input.first().json;\nconst postInfo = $('提取Reddit帖子链接').item.json;\n\ntry {\n  const postData = response[0]?.data?.children?.[0]?.data || {};\n  const comments = response[1]?.data?.children || [];\n  \n  // 提取前10条评论\n  const topComments = comments\n    .filter(c => c.data && c.data.body)\n    .slice(0, 10)\n    .map(c => c.data.body)\n    .join('\\n---\\n');\n  \n  return [{\n    json: {\n      title: postData.title || postInfo.title,\n      selftext: postData.selftext || '',\n      score: postData.score || 0,\n      num_comments: postData.num_comments || 0,\n      subreddit: postData.subreddit || '',\n      top_comments: topComments,\n      link: postInfo.link,\n      intent_type: postInfo.intent_type,\n      intent_key: postInfo.intent_key,\n      modifier: postInfo.modifier,\n      keyword: postInfo.keyword\n    }\n  }];\n} catch (e) {\n  return [{\n    json: {\n      title: postInfo.title,\n      selftext: postInfo.snippet,\n      error: e.message,\n      link: postInfo.link,\n      intent_type: postInfo.intent_type,\n      keyword: postInfo.keyword\n    }\n  }];\n}"
+            },
+            "id": "node-parse-reddit-content",
+            "name": "解析Reddit内容",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [2220, 300]
+        },
+        {
+            "parameters": {
+                "mode": "combine",
+                "combineBy": "combineAll",
+                "options": {}
+            },
+            "id": "node-merge-all",
+            "name": "合并所有帖子",
+            "type": "n8n-nodes-base.merge",
+            "typeVersion": 2.1,
+            "position": [2440, 300]
+        },
+        {
+            "parameters": {
+                "agent": "conversationalAgent",
+                "promptType": "define",
+                "text": "我收集了以下Reddit讨论帖子，关于关键词【{{ $json.keyword }}】：\n\n{% for item in $input.all() %}\n## 帖子 {{ loop.index }}\n- 意图类型: {{ item.json.intent_type }}\n- 标题: {{ item.json.title }}\n- 内容: {{ item.json.selftext }}\n- 热门评论:\n{{ item.json.top_comments }}\n\n{% endfor %}\n\n请分析这些讨论，输出结构化的市场情报报告，包含：\n\n1. **痛点与场景归类** (pain_points)\n   - 用户遇到什么问题？\n   - 在什么场景下遇到的？\n   - 用户原话摘录\n\n2. **高频用词提取** (high_frequency_words)\n   - 用户描述问题/需求时常用的词汇\n   \n3. **常见反对意见** (objections)\n   - 用户对产品/服务的担忧\n   - 购买障碍\n\n4. **决策链路** (decision_journey)\n   - 用户从搜索到决策的过程\n\n5. **内容创意建议** (content_ideas)\n   - 基于真实用户语言的文章标题建议\n\n请以JSON格式输出。",
+                "options": {
+                    "systemMessage": "你是一个市场研究分析师，专门从Reddit社区讨论中提取用户洞察。你的分析要：\n1. 保留用户原话（英文）作为证据\n2. 识别高价值的痛点信号\n3. 提供可直接用于内容营销的建议\n\n输出格式为规范的JSON，确保可以被解析。"
+                }
+            },
+            "id": "node-ai-analyze",
+            "name": "AI: 分析Reddit讨论",
+            "type": "@n8n/n8n-nodes-langchain.agent",
+            "typeVersion": 1.7,
+            "position": [2660, 300]
+        },
+        {
+            "parameters": {
+                "model": "gpt-4o",
+                "options": {
+                    "temperature": 0.3
+                }
+            },
+            "id": "node-llm-analyze",
+            "name": "LLM模型 (分析)",
+            "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+            "typeVersion": 1,
+            "position": [2600, 500],
+            "credentials": {
+                "openAiApi": {
+                    "id": "",
+                    "name": ""
+                }
+            }
+        },
+        {
+            "parameters": {
+                "jsCode": "// 格式化输出报告\nconst analysisOutput = $input.first().json.output;\nconst keyword = $('输入关键词').item.json.keyword;\nconst timestamp = new Date().toISOString();\n\nlet analysis;\ntry {\n  // 尝试解析JSON\n  const jsonMatch = analysisOutput.match(/\\{[\\s\\S]*\\}/);\n  analysis = jsonMatch ? JSON.parse(jsonMatch[0]) : { raw: analysisOutput };\n} catch (e) {\n  analysis = { raw: analysisOutput, parse_error: e.message };\n}\n\nreturn [{\n  json: {\n    keyword: keyword,\n    timestamp: timestamp,\n    analysis: analysis,\n    pain_points: analysis.pain_points || [],\n    high_frequency_words: analysis.high_frequency_words || [],\n    objections: analysis.objections || [],\n    decision_journey: analysis.decision_journey || '',\n    content_ideas: analysis.content_ideas || [],\n    raw_output: analysisOutput\n  }\n}];"
+            },
+            "id": "node-format-output",
+            "name": "格式化输出报告",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [2880, 300]
+        },
+        {
+            "parameters": {
+                "operation": "append",
+                "documentId": {
+                    "__rl": true,
+                    "mode": "list",
+                    "value": ""
+                },
+                "sheetName": {
+                    "__rl": true,
+                    "mode": "list",
+                    "value": ""
+                },
+                "columns": {
+                    "mappingMode": "defineBelow",
+                    "value": {
+                        "关键词": "={{ $json.keyword }}",
+                        "时间戳": "={{ $json.timestamp }}",
+                        "痛点归类": "={{ JSON.stringify($json.pain_points) }}",
+                        "高频用词": "={{ $json.high_frequency_words.join(', ') }}",
+                        "常见反对意见": "={{ JSON.stringify($json.objections) }}",
+                        "决策链路": "={{ $json.decision_journey }}",
+                        "内容创意": "={{ JSON.stringify($json.content_ideas) }}"
+                    }
+                },
+                "options": {}
+            },
+            "id": "node-save-to-sheets",
+            "name": "保存到Google Sheets",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4.5,
+            "position": [3100, 300],
+            "credentials": {
+                "googleSheetsOAuth2Api": {
+                    "id": "",
+                    "name": ""
+                }
+            },
+            "notes": "保存分析结果到Google Sheets"
+        },
+        {
+            "parameters": {
+                "content": "## Reddit 市场情报挖掘工作流\n\n### 使用说明\n1. 修改「输入关键词」节点中的关键词\n2. 配置 SerpAPI 凭证\n3. 配置 OpenAI API 凭证\n4. 配置 Google Sheets 凭证\n5. 点击执行\n\n### 搜索意图框架\n- 信息型: what is, how to, tips...\n- 商业调研: best, vs, review...\n- 交易型: where to buy, price...\n- 痛点型: problem, help, regret... ⭐\n- 社会证明: recommend, anyone...",
+                "height": 380,
+                "width": 320,
+                "color": 7
+            },
+            "id": "node-sticky-note",
+            "name": "使用说明",
+            "type": "n8n-nodes-base.stickyNote",
+            "typeVersion": 1,
+            "position": [0, 200]
+        }
+    ],
+    "connections": {
+        "手动触发工作流": {
+            "main": [
+                [
+                    {
+                        "node": "输入关键词",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "输入关键词": {
+            "main": [
+                [
+                    {
+                        "node": "AI: 拓展关键词",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "LLM模型 (关键词拓展)": {
+            "ai_languageModel": [
+                [
+                    {
+                        "node": "AI: 拓展关键词",
+                        "type": "ai_languageModel",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "AI: 拓展关键词": {
+            "main": [
+                [
+                    {
+                        "node": "生成搜索意图查询",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "生成搜索意图查询": {
+            "main": [
+                [
+                    {
+                        "node": "分批处理查询",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "分批处理查询": {
+            "main": [
+                [
+                    {
+                        "node": "SerpAPI: Google搜索Reddit",
+                        "type": "main",
+                        "index": 0
+                    }
+                ],
+                [
+                    {
+                        "node": "合并所有帖子",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "SerpAPI: Google搜索Reddit": {
+            "main": [
+                [
+                    {
+                        "node": "等待(避免限流)",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "等待(避免限流)": {
+            "main": [
+                [
+                    {
+                        "node": "提取Reddit帖子链接",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "提取Reddit帖子链接": {
+            "main": [
+                [
+                    {
+                        "node": "抓取Reddit帖子内容",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "抓取Reddit帖子内容": {
+            "main": [
+                [
+                    {
+                        "node": "解析Reddit内容",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "解析Reddit内容": {
+            "main": [
+                [
+                    {
+                        "node": "分批处理查询",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "合并所有帖子": {
+            "main": [
+                [
+                    {
+                        "node": "AI: 分析Reddit讨论",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "LLM模型 (分析)": {
+            "ai_languageModel": [
+                [
+                    {
+                        "node": "AI: 分析Reddit讨论",
+                        "type": "ai_languageModel",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "AI: 分析Reddit讨论": {
+            "main": [
+                [
+                    {
+                        "node": "格式化输出报告",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "格式化输出报告": {
+            "main": [
+                [
+                    {
+                        "node": "保存到Google Sheets",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    },
+    "settings": {
+        "executionOrder": "v1"
+    },
+    "meta": {
+        "instanceId": ""
+    },
+    "tags": [
+        {
+            "name": "SEO",
+            "createdAt": "2026-01-10T12:00:00.000Z",
+            "updatedAt": "2026-01-10T12:00:00.000Z"
+        },
+        {
+            "name": "Reddit",
+            "createdAt": "2026-01-10T12:00:00.000Z",
+            "updatedAt": "2026-01-10T12:00:00.000Z"
+        },
+        {
+            "name": "市场调研",
+            "createdAt": "2026-01-10T12:00:00.000Z",
+            "updatedAt": "2026-01-10T12:00:00.000Z"
+        }
+    ]
+}
