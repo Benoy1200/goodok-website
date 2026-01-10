@@ -1,19 +1,36 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ProductMarquee from "@/components/ProductMarquee";
+import { ProductSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "Wall Shelving Systems | Space-Saving Retail Display | Goodok",
+    title: "Wall Shelving Wholesale: $80-$350 Space-Saving Retail Display | Goodok",
     description:
-        "Premium wall-mounted shelving systems for retail stores. Maximize your store space with our versatile wall display solutions.",
+        "Buy wall shelving wholesale $80-$350/unit. Wall-mounted retail display systems for boutiques, pharmacies, convenience stores. Free 3D design. Ships worldwide.",
     keywords: [
         "wall shelving",
         "wall mounted shelving",
         "retail wall display",
         "store wall fixtures",
         "wall shelving systems",
+        "wall shelving price",
     ],
 };
+
+const faqItems = [
+    {
+        question: "How much does wall shelving cost?",
+        answer: "Factory-direct wall shelving costs $80-$350 per unit depending on size and material. Basic slatwall: $80-$150, Standard units: $150-$250, Premium/custom: $250-$350."
+    },
+    {
+        question: "What are the standard wall shelving dimensions?",
+        answer: "Heights: 1800mm-2400mm (6-8 ft), Widths: 900mm-1200mm (3-4 ft), Depths: 300mm-450mm (12-18 in). Custom sizes available for any wall configuration."
+    },
+    {
+        question: "How is wall shelving installed?",
+        answer: "Wall shelving uses wall-mount brackets or rail systems. Professional installation recommended. We provide installation guides and hardware with every order."
+    }
+];
 
 const productImages = [
     "/images/products/wall-shelving/BG-001边柜.jpg",
@@ -65,6 +82,13 @@ const specs = [
 export default function WallShelvingPage() {
     return (
         <div className="pt-24">
+            <ProductSchema 
+                name="Wall Shelving"
+                description="Space-saving wall-mounted display systems for retail stores."
+                category="Retail Fixtures"
+                price="80"
+            />
+            <FAQSchema items={faqItems} />
             {/* Hero */}
             <section className="bg-white py-16">
                 <div className="container">
@@ -137,6 +161,9 @@ export default function WallShelvingPage() {
                         <Link href="/contact" className="btn btn-secondary">
                             Contact Us
                         </Link>
+                    </div>
+                    <div className="mt-8 text-sm text-gray-500">
+                        <p>Related guides: <Link href="/resources/blog/gondola-vs-wall-shelving" className="text-[var(--accent)] hover:underline">Gondola vs Wall Shelving</Link> | <Link href="/resources/blog/retail-shelving-cost-guide" className="text-[var(--accent)] hover:underline">Pricing Guide</Link></p>
                     </div>
                 </div>
             </section>

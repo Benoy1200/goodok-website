@@ -1,19 +1,36 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import ProductMarquee from "@/components/ProductMarquee";
+import { ProductSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "Display Cases & Island Tables | Glass Showcases | Goodok",
+    title: "Display Cases Wholesale: $200-$1500 Glass Showcases | Goodok",
     description:
-        "Premium display cases and island display tables for retail stores. Glass showcases for jewelry, cosmetics, and high-value merchandise.",
+        "Buy glass display cases wholesale $200-$1500. Island tables, jewelry showcases, cosmetics displays with LED lighting. Factory-direct. Ships worldwide.",
     keywords: [
         "display cases",
         "island display table",
         "glass showcase",
         "jewelry display",
         "retail display case",
+        "display case price",
     ],
 };
+
+const faqItems = [
+    {
+        question: "How much do glass display cases cost?",
+        answer: "Factory-direct display cases cost $200-$1500. Basic cases: $200-$400, LED-lit showcases: $400-$800, Premium jewelry cases: $800-$1500."
+    },
+    {
+        question: "What types of display cases are available?",
+        answer: "We offer: Island display tables, wall-mounted showcases, tower cases, counter displays, and custom cases. All available with LED lighting and security locks."
+    },
+    {
+        question: "Do display cases come with LED lighting?",
+        answer: "Yes, LED lighting is available on all cases. Options include: top-mount LED strips, under-shelf lighting, and adjustable spotlights. 3000K-5000K color temperatures."
+    }
+];
 
 const productImages = [
     "/images/products/Island-Display-Table/LST-025流水台.jpg",
@@ -65,6 +82,13 @@ const specs = [
 export default function DisplayCasesPage() {
     return (
         <div className="pt-24">
+            <ProductSchema 
+                name="Display Cases"
+                description="Premium glass display cases and island tables for retail stores."
+                category="Retail Fixtures"
+                price="200"
+            />
+            <FAQSchema items={faqItems} />
             <section className="bg-white py-16">
                 <div className="container">
                     <div className="max-w-3xl mx-auto text-center">
@@ -136,6 +160,9 @@ export default function DisplayCasesPage() {
                         <Link href="/contact" className="btn btn-secondary">
                             Contact Us
                         </Link>
+                    </div>
+                    <div className="mt-8 text-sm text-gray-500">
+                        <p>Related guides: <Link href="/resources/blog/jewelry-store-display-ideas" className="text-[var(--accent)] hover:underline">Jewelry Display Ideas</Link> | <Link href="/resources/blog/retail-shelving-cost-guide" className="text-[var(--accent)] hover:underline">Pricing Guide</Link></p>
                     </div>
                 </div>
             </section>

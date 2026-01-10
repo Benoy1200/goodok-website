@@ -1,19 +1,36 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import ProductMarquee from "@/components/ProductMarquee";
+import { ProductSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "Gondola Shelving Wholesale | Double-Sided Retail Shelving | Goodok",
+    title: "Gondola Shelving Wholesale: $150-$600 Factory-Direct | Goodok",
     description:
-        "Factory-direct gondola shelving for supermarkets and retail stores. Double-sided units, customizable sizes, and competitive wholesale pricing.",
+        "Buy gondola shelving wholesale from factory. Double-sided retail shelving $150-$600/unit. Supermarkets, convenience stores. Free 3D design. Ships worldwide.",
     keywords: [
         "gondola shelving",
         "gondola shelving wholesale",
         "double-sided shelving",
         "supermarket shelving",
         "retail gondola racks",
+        "gondola shelving price",
     ],
 };
+
+const faqItems = [
+    {
+        question: "How much does wholesale gondola shelving cost?",
+        answer: "Factory-direct gondola shelving costs $150-$600 per unit depending on size and finish. Full container orders save 30-50% vs local suppliers."
+    },
+    {
+        question: "What sizes are available for gondola shelving?",
+        answer: "Heights: 1200mm-2400mm (48\"-96\"), Widths: 600mm-1200mm (24\"-48\"), Depths: 300mm-500mm (12\"-20\"). Custom sizes available."
+    },
+    {
+        question: "What is the minimum order quantity?",
+        answer: "MOQ is typically 50-100 units for standard sizes. Sample orders available at higher per-unit cost. Full containers offer best pricing."
+    }
+];
 
 // 产品图片列表
 const productImages = [
@@ -66,6 +83,13 @@ const specs = [
 export default function GondolaShelvingPage() {
     return (
         <div className="pt-24">
+            <ProductSchema 
+                name="Gondola Shelving"
+                description="Double-sided retail shelving for supermarkets and convenience stores. Factory-direct wholesale pricing."
+                category="Retail Fixtures"
+                price="150"
+            />
+            <FAQSchema items={faqItems} />
             {/* Hero - 白底居中标题 */}
             <section className="bg-white py-16">
                 <div className="container">
@@ -147,6 +171,9 @@ export default function GondolaShelvingPage() {
                         <Link href="/contact" className="btn btn-secondary">
                             Contact Us
                         </Link>
+                    </div>
+                    <div className="mt-8 text-sm text-gray-500">
+                        <p>Related guides: <Link href="/resources/blog/gondola-shelving-dimensions" className="text-[var(--accent)] hover:underline">Gondola Dimensions Guide</Link> | <Link href="/resources/blog/gondola-vs-wall-shelving" className="text-[var(--accent)] hover:underline">Gondola vs Wall Shelving</Link> | <Link href="/resources/blog/retail-shelving-cost-guide" className="text-[var(--accent)] hover:underline">Pricing Guide</Link></p>
                     </div>
                 </div>
             </section>
