@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
     title: "Contact Us | Get a Free Quote | Goodok Shopfitting",
@@ -53,74 +54,7 @@ export default function ContactPage() {
                                     Your privacy is fully protected. We&apos;ll get back to you within 6 hours.
                                 </p>
 
-                                <form
-                                    action="https://formsubmit.co/info@goodokshop.com"
-                                    method="POST"
-                                >
-                                    {/* FormSubmit Configuration */}
-                                    <input type="hidden" name="_subject" value="New Inquiry from Goodok Website" />
-                                    <input type="hidden" name="_next" value="https://www.goodokshop.com/contact?success=true" />
-                                    <input type="hidden" name="_captcha" value="false" />
-                                    <input type="hidden" name="_template" value="table" />
-
-                                    <div className="mb-6">
-                                        <label
-                                            htmlFor="name"
-                                            className="block text-sm font-medium text-gray-700 mb-2"
-                                        >
-                                            Name
-                                        </label>
-                                        <input
-                                            type="text"
-                                            id="name"
-                                            name="name"
-                                            required
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition"
-                                            placeholder="Your name"
-                                        />
-                                    </div>
-
-                                    <div className="mb-6">
-                                        <label
-                                            htmlFor="email"
-                                            className="block text-sm font-medium text-gray-700 mb-2"
-                                        >
-                                            Email (Required)
-                                        </label>
-                                        <input
-                                            type="email"
-                                            id="email"
-                                            name="email"
-                                            required
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition"
-                                            placeholder="your@email.com"
-                                        />
-                                    </div>
-
-                                    <div className="mb-6">
-                                        <label
-                                            htmlFor="message"
-                                            className="block text-sm font-medium text-gray-700 mb-2"
-                                        >
-                                            Message (Required)
-                                        </label>
-                                        <textarea
-                                            id="message"
-                                            name="message"
-                                            rows={5}
-                                            required
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition resize-none"
-                                            placeholder="Tell us about your project, store dimensions, or any questions you have..."
-                                        ></textarea>
-                                    </div>
-
-                                    <button
-                                        type="submit"
-                                        className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
-                                    >
-                                        Quick Response
-                                    </button>
-                                </form>
+                                <ContactForm />
                             </div>
                         </div>
 
