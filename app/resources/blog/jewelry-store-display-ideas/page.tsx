@@ -96,14 +96,23 @@ export default function JewelryStoreGuide() {
                                 
                                 <h2>Design Tips</h2>
                                 <ul>
-                                    <li>Maximize vertical space with wall shelving.</li>
-                                    <li>Use gondola shelving for versatile aisle displays.</li>
-                                    <li>Ensure adequate lighting to highlight products.</li>
-                                    <li>Create a logical flow that guides customers through the store.</li>
+                                    <li>Use <Link href="/products/display-cases" className="text-[var(--accent)] hover:underline">glass display cases</Link> with LED lighting for maximum sparkle and security.</li>
+                                    <li>Install <Link href="/products/wall-shelving" className="text-[var(--accent)] hover:underline">wall-mounted display shelving</Link> for watches and accessories.</li>
+                                    <li>Position <Link href="/products/checkout-counters" className="text-[var(--accent)] hover:underline">checkout counters with display</Link> near the entrance for high-visibility items.</li>
+                                    <li>Ensure adequate lighting to highlight products - 3000K-4000K LED lights show true colors.</li>
+                                    <li>Create a logical flow that guides customers through the store with strategic fixture placement.</li>
+                                </ul>
+
+                                <h2>Recommended Display Fixtures</h2>
+                                <p>For a successful jewelry store, we recommend:</p>
+                                <ul>
+                                    <li><strong>Glass Display Cases:</strong> Lockable showcases with LED lighting for rings, necklaces, and bracelets. <Link href="/products/display-cases" className="text-[var(--accent)] hover:underline">View our display cases →</Link></li>
+                                    <li><strong>Wall Shelving:</strong> Elegant wall-mounted displays for watches and accessories. <Link href="/products/wall-shelving" className="text-[var(--accent)] hover:underline">Browse wall shelving →</Link></li>
+                                    <li><strong>Checkout Counters:</strong> Secure counters with integrated display for impulse purchases. <Link href="/products/checkout-counters" className="text-[var(--accent)] hover:underline">See checkout options →</Link></li>
                                 </ul>
 
                                 <h2>Conclusion</h2>
-                                <p>We hope this guide helps you in your retail journey. For more specialized advice, feel free to contact our design experts.</p>
+                                <p>We hope this guide helps you in your retail journey. For more specialized advice, feel free to contact our design experts or <Link href="/free-3d-design" className="text-[var(--accent)] hover:underline">get a free 3D jewelry store design</Link>.</p>
                             </div>
                         </div>
                     </div>

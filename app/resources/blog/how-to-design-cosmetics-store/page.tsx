@@ -96,14 +96,23 @@ export default function CosmeticsStoreGuide() {
                                 
                                 <h2>Design Tips</h2>
                                 <ul>
-                                    <li>Maximize vertical space with wall shelving.</li>
-                                    <li>Use gondola shelving for versatile aisle displays.</li>
-                                    <li>Ensure adequate lighting to highlight products.</li>
-                                    <li>Create a logical flow that guides customers through the store.</li>
+                                    <li>Maximize vertical space with <Link href="/products/wall-shelving" className="text-[var(--accent)] hover:underline">wall shelving</Link> for testing products and samples.</li>
+                                    <li>Use <Link href="/products/gondola-shelving" className="text-[var(--accent)] hover:underline">gondola shelving</Link> for versatile aisle displays of mass-market items.</li>
+                                    <li>Install <Link href="/products/display-cases" className="text-[var(--accent)] hover:underline">glass display cases</Link> for high-end skincare and premium cosmetics.</li>
+                                    <li>Ensure adequate lighting to highlight products - LED strips work great with our shelving systems.</li>
+                                    <li>Create a logical flow that guides customers through the store with strategic <Link href="/products/checkout-counters" className="text-[var(--accent)] hover:underline">checkout counter</Link> placement.</li>
+                                </ul>
+
+                                <h2>Recommended Fixtures</h2>
+                                <p>For a successful cosmetics store, we recommend:</p>
+                                <ul>
+                                    <li><strong>Wall Shelving:</strong> Perfect for displaying testers and samples at eye level. <Link href="/products/wall-shelving" className="text-[var(--accent)] hover:underline">View our wall shelving options →</Link></li>
+                                    <li><strong>Display Cases:</strong> Lockable glass cases protect high-value skincare products. <Link href="/products/display-cases" className="text-[var(--accent)] hover:underline">Browse display cases →</Link></li>
+                                    <li><strong>Accessories:</strong> Price tag holders, shelf dividers, and LED lights complete the look. <Link href="/products/accessories" className="text-[var(--accent)] hover:underline">See all accessories →</Link></li>
                                 </ul>
 
                                 <h2>Conclusion</h2>
-                                <p>We hope this guide helps you in your retail journey. For more specialized advice, feel free to contact our design experts.</p>
+                                <p>We hope this guide helps you in your retail journey. For more specialized advice, feel free to contact our design experts or <Link href="/free-3d-design" className="text-[var(--accent)] hover:underline">get a free 3D store design</Link>.</p>
                             </div>
                         </div>
                     </div>
