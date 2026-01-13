@@ -278,6 +278,94 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Resources & Guides - SEO Internal Links */}
+      <section className="py-20 bg-[#f8f9fa]">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Resources & Buying Guides
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Expert guides to help you make informed decisions about retail fixtures
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Core Article 1 - Main SEO Target */}
+            <Link 
+              href="/resources/blog/gondola-shelving-dimensions"
+              className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:-translate-y-1"
+            >
+              <div className="text-4xl mb-4">📐</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[var(--accent)] transition-colors">
+                Gondola Shelving Dimensions
+              </h3>
+              <p className="text-gray-600 text-sm mb-4">
+                Complete guide to standard heights (48&quot;-84&quot;), widths (24&quot;-48&quot;), and depths. Find the perfect size for your store.
+              </p>
+              <span className="text-[var(--accent)] font-semibold text-sm flex items-center gap-1">
+                Read Guide
+                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </Link>
+
+            {/* Core Article 2 */}
+            <Link 
+              href="/resources/blog/how-to-measure-gondola-shelving"
+              className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:-translate-y-1"
+            >
+              <div className="text-4xl mb-4">📏</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[var(--accent)] transition-colors">
+                How to Measure Shelving
+              </h3>
+              <p className="text-gray-600 text-sm mb-4">
+                Step-by-step measurement guide with diagrams. Avoid common mistakes and get accurate dimensions.
+              </p>
+              <span className="text-[var(--accent)] font-semibold text-sm flex items-center gap-1">
+                Read Guide
+                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </Link>
+
+            {/* Core Article 3 */}
+            <Link 
+              href="/resources/blog/gondola-shelving-buying-guide"
+              className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:-translate-y-1"
+            >
+              <div className="text-4xl mb-4">🛒</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[var(--accent)] transition-colors">
+                Complete Buying Guide
+              </h3>
+              <p className="text-gray-600 text-sm mb-4">
+                Types, pricing ($150-$800), installation tips, and where to buy. Make informed purchasing decisions.
+              </p>
+              <span className="text-[var(--accent)] font-semibold text-sm flex items-center gap-1">
+                Read Guide
+                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </Link>
+          </div>
+
+          <div className="text-center mt-10">
+            <Link 
+              href="/resources/blog" 
+              className="inline-flex items-center gap-2 text-[var(--accent)] font-semibold hover:underline"
+            >
+              View All Resources
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="container">
