@@ -14,6 +14,16 @@ const WhatsAppButton = dynamic(() => import("@/components/WhatsAppButton"), {
   ssr: true,
 });
 
+const TopBar = dynamic(() => import("@/components/layout/TopBar"), {
+  loading: () => null,
+  ssr: true,
+});
+
+const SideContactBar = dynamic(() => import("@/components/SideContactBar"), {
+  loading: () => null,
+  ssr: true,
+});
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -111,10 +121,12 @@ export default function RootLayout({
         {/* Web Vitals 性能监测 */}
         <WebVitalsReporter />
 
+        <TopBar />
         <Header />
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
+        <SideContactBar />
       </body>
     </html>
   );
