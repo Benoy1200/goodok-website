@@ -11,7 +11,9 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
         name: "",
         email: "",
         message: "",
+        website_url: "", // Honeypot field
     });
+    const [startTime] = useState<number>(Date.now()); // Time trap
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
     const [errorMessage, setErrorMessage] = useState("");
 
@@ -26,7 +28,11 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    ...formData,
+                    submission_time: Date.now(),
+                    start_time: startTime,
+                }),
             });
 
             const data = await response.json();
@@ -36,7 +42,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
             }
 
             setStatus("success");
-            setFormData({ name: "", email: "", message: "" });
+            setFormData({ name: "", email: "", message: "", website_url: "" });
             onSuccess?.();
         } catch (error) {
             setStatus("error");
@@ -138,6 +144,20 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition resize-none disabled:bg-gray-100"
                     placeholder="Tell us about your project, store dimensions, or any questions you have..."
                 ></textarea>
+            </div>
+
+            {/* Honeypot Field - Hidden from real users */}
+            <div className="absolute opacity-0 -z-10 w-0 h-0 overflow-hidden">
+                <label htmlFor="website_url">Website URL</label>
+                <input
+                    type="text"
+                    id="website_url"
+                    name="website_url"
+                    value={formData.website_url}
+                    onChange={handleChange}
+                    autoComplete="off"
+                    tabIndex={-1}
+                />
             </div>
 
             <button

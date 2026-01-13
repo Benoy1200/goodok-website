@@ -1,0 +1,166 @@
+RETAIL SHELVING & FIXTURE CALCULATOR
+Version 1.0 | Created by Goodok Shopfitting
+============================================
+
+Instructions: Enter your store dimensions to get recommendations for fixture quantities and estimated costs.
+
+============================================
+SECTION 1: STORE DIMENSIONS
+============================================
+Parameter,Your Value,Unit,Notes
+Store Length,50,feet,"Front to back"
+Store Width,30,feet,"Side to side"
+Total Square Footage,1500,sq ft,"Length × Width"
+Selling Floor %,75,%,"Exclude stockroom, office"
+Selling Floor Area,1125,sq ft,"Available for fixtures"
+Ceiling Height,10,feet,"For shelving height limits"
+
+============================================
+SECTION 2: STORE TYPE PRESETS
+============================================
+Store Type,Gondola Units,Wall Units,Display Cases,Checkout Counters,Est. Total Cost
+Convenience Store (800 sq ft),6,8,2,1,$8,500
+Small Boutique (1000 sq ft),4,10,4,1,$9,200
+General Retail (1500 sq ft),10,12,4,1,$14,500
+Pharmacy/Health (2000 sq ft),14,16,6,2,$21,000
+Large Retail (3000 sq ft),20,20,8,2,$32,000
+Grocery/Supermarket (5000 sq ft),40,30,4,4,$55,000
+
+============================================
+SECTION 3: GONDOLA SHELVING CALCULATOR
+============================================
+Parameter,Value,Notes
+Wall Perimeter,160,feet,"(Length + Width) × 2"
+Less: Entrance,10,feet,"Door width + clearance"
+Less: Stockroom Door,4,feet,""
+Less: Windows,12,feet,"Front windows"
+Available Wall Space,134,feet,"For wall shelving"
+,,,
+Center Aisle Width,4,feet,"Main traffic aisle"
+Secondary Aisle Width,3,feet,"Between gondolas"
+Gondola Length,4,feet,"Standard gondola width"
+,,,
+Recommended Gondola Runs,8,runs,"Based on floor space"
+Gondolas per Run,3,units,"Length of each run"
+Total Gondola Units Needed,24,units,""
+
+============================================
+SECTION 4: FIXTURE SPECIFICATIONS & PRICING
+============================================
+
+--- GONDOLA SHELVING ---
+Type,Width,Height,Depth,Shelves,Price (New),Price (Used),Notes
+Single-Sided Starter,48",72",18",5,$180,$90,"Against walls"
+Single-Sided Add-On,48",72",18",5,$140,$70,"Extends runs"
+Double-Sided Starter,48",72",36",10,$350,$175,"Island displays"
+Double-Sided Add-On,48",72",36",10,$280,$140,"Extends runs"
+Double-Sided Starter,48",84",36",12,$400,$200,"Tall version"
+End Cap,24",72",18",5,$120,$60,"Run end displays"
+
+--- WALL SHELVING ---
+Type,Width,Height,Shelves,Price (New),Price (Used),Notes
+Standard Wall Unit,48",84",7,$250,$125,"Most common"
+Standard Wall Unit,36",84",7,$200,$100,"Narrow spaces"
+Slatwall Panel,48",96",-,$85,$40,"With hardware"
+Pegboard Panel,48",96",-,$45,$25,"With hooks"
+
+--- DISPLAY CASES ---
+Type,Dimensions,Price (New),Price (Used),Notes
+Glass Display Case,48"×24"×38",$400,$200,"Counter height"
+Tower Display Case,24"×24"×72",$550,$275,"Tall showcase"
+Refrigerated Case,48"×30"×78",$1,800,$900,"For food/beverage"
+Jewelry Display Case,36"×20"×38",$350,$175,"Lockable"
+
+--- CHECKOUT ---
+Type,Width,Price (New),Price (Used),Notes
+Basic Checkout Counter,48",$800,$400,"With storage"
+L-Shaped Counter,72",$1,200,$600,"More workspace"
+Full Service Counter,96",$1,600,$800,"Multiple registers"
+
+============================================
+SECTION 5: YOUR FIXTURE ORDER
+============================================
+Item,Type,Qty,Unit Price,$,Total $,Notes
+Gondola,Double-Sided Starter,8,$350,$2,800,"Main floor"
+Gondola,Double-Sided Add-On,16,$280,$4,480,"Extend runs"
+Gondola,End Cap,8,$120,$960,"Run ends"
+Wall Unit,Standard 48"×84",12,$250,$3,000,"Perimeter"
+Display Case,Glass Counter,4,$400,$1,600,"High-value items"
+Checkout,L-Shaped Counter,1,$1,200,$1,200,""
+,,,,,
+SUBTOTAL Fixtures,,,,$14,040,""
+Shipping/Delivery (estimate),,,,$1,000,""
+Installation (if needed),,,,$500,""
+,,,,,
+TOTAL FIXTURE INVESTMENT,,,,$15,540,""
+
+============================================
+SECTION 6: SPACE PLANNING RULES OF THUMB
+============================================
+Guideline,Recommendation,Notes
+Aisle Width - Main,4-5 feet,"ADA compliant"
+Aisle Width - Secondary,3-4 feet,"Between gondolas"
+Fixture Height - Center,60-72 inches,"Visibility over displays"
+Fixture Height - Walls,84-96 inches,"Maximize vertical space"
+Decompression Zone,5-10 feet,"Open space at entrance"
+Checkout Area,100-150 sq ft,"Queue space included"
+Stockroom,15-20% of total,"Storage and receiving"
+Sales Floor Density,1 fixture per 50-75 sq ft,"Balance display vs flow"
+
+============================================
+SECTION 7: LAYOUT OPTIONS BY STORE SIZE
+============================================
+
+--- SMALL STORE (500-1000 sq ft) ---
+Zone,% of Space,Fixtures,Arrangement
+Entrance/Featured,15%,1-2 tables,"Open, inviting"
+Sales Floor,60%,4-6 gondolas,"Grid or free-flow"
+Wall Displays,15%,6-8 wall units,"Full perimeter"
+Checkout,10%,1 counter,"Near exit"
+
+--- MEDIUM STORE (1000-2000 sq ft) ---
+Zone,% of Space,Fixtures,Arrangement
+Entrance/Featured,10%,2-4 tables,"Promotional displays"
+Sales Floor,55%,8-14 gondolas,"Grid layout"
+Wall Displays,20%,10-16 wall units,"Full perimeter"
+Service Areas,5%,Display cases,"Near checkout"
+Checkout,10%,1-2 counters,"Clear queue path"
+
+--- LARGE STORE (2000-5000 sq ft) ---
+Zone,% of Space,Fixtures,Arrangement
+Entrance/Featured,8%,4-6 tables,"Destination displays"
+Sales Floor,55%,16-40 gondolas,"Racetrack layout"
+Wall Displays,20%,16-30 wall units,"Full perimeter"
+Service/Specialty,7%,6-10 cases,"Departments"
+Checkout,10%,2-4 counters,"Front of store"
+
+============================================
+SECTION 8: NEW VS USED COST COMPARISON
+============================================
+Scenario,New Cost,Used Cost,Savings,$,Savings %
+Small Store (800 sq ft),$8,500,$4,250,$4,250,50%
+Medium Store (1500 sq ft),$14,500,$7,250,$7,250,50%
+Large Store (3000 sq ft),$32,000,$16,000,$16,000,50%
+
+Used Fixture Quality Checklist:
+✓ Check for rust or corrosion
+✓ Ensure shelves are straight, not bowed
+✓ Verify all brackets and hardware included
+✓ Confirm color/finish matches
+✓ Inspect for scratches or damage
+✓ Test assembly before full order
+
+============================================
+NOTES
+============================================
+1. Prices are estimates - request quotes for exact pricing
+2. Consider future expansion when planning layout
+3. Mix new high-visibility pieces with used basics
+4. Factor in seasonal display changes
+5. Plan for 10% extra shelving for flexibility
+
+============================================
+GET A FREE CUSTOM QUOTE FOR YOUR STORE!
+Goodok Shopfitting - Quality Fixtures, Fair Prices
+🌐 www.goodokshop.com | 📧 info@goodokshop.com
+============================================

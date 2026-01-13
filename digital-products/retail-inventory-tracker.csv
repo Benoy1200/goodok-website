@@ -1,0 +1,109 @@
+RETAIL STORE INVENTORY TRACKER
+Version 1.0 | Created by Goodok Shopfitting
+============================================
+
+Instructions: Track your inventory, costs, and reorder points. Update regularly to maintain optimal stock levels.
+
+============================================
+INVENTORY SUMMARY DASHBOARD
+============================================
+Metric,Value,Notes
+Total SKUs,0,"Count of unique products"
+Total Units in Stock,0,"Sum of all quantities"
+Total Inventory Value,$0,"Sum of all cost values"
+Total Retail Value,$0,"Sum of all retail values"
+Low Stock Items,0,"Items below reorder point"
+Out of Stock Items,0,"Items with 0 quantity"
+Average Margin,0%,"Weighted average"
+
+============================================
+PRODUCT INVENTORY
+============================================
+SKU,Product Name,Category,Supplier,Cost Price ($),Retail Price ($),Margin (%),Qty in Stock,Reorder Point,Reorder Qty,Status,Location,Last Updated
+SKU001,"Sample Product A","Category 1","Supplier A",10.00,24.99,60%,25,10,50,"In Stock","Aisle 1, Shelf A","2024-01-01"
+SKU002,"Sample Product B","Category 1","Supplier A",15.00,34.99,57%,8,10,30,"Low Stock","Aisle 1, Shelf B","2024-01-01"
+SKU003,"Sample Product C","Category 2","Supplier B",5.00,12.99,62%,0,5,25,"Out of Stock","Aisle 2, Shelf A","2024-01-01"
+SKU004,"","","",0,0,0%,0,0,0,"","",""
+SKU005,"","","",0,0,0%,0,0,0,"","",""
+SKU006,"","","",0,0,0%,0,0,0,"","",""
+SKU007,"","","",0,0,0%,0,0,0,"","",""
+SKU008,"","","",0,0,0%,0,0,0,"","",""
+SKU009,"","","",0,0,0%,0,0,0,"","",""
+SKU010,"","","",0,0,0%,0,0,0,"","",""
+
+============================================
+CATEGORY SUMMARY
+============================================
+Category,Total SKUs,Total Units,Total Cost Value,Total Retail Value,Avg Margin
+Category 1,0,0,$0,$0,0%
+Category 2,0,0,$0,$0,0%
+Category 3,0,0,$0,$0,0%
+Category 4,0,0,$0,$0,0%
+Category 5,0,0,$0,$0,0%
+TOTALS,0,0,$0,$0,0%
+
+============================================
+SUPPLIER DIRECTORY
+============================================
+Supplier ID,Supplier Name,Contact Person,Phone,Email,Payment Terms,Min Order,Lead Time (Days),Notes
+SUP001,"Supplier A","John Smith","555-0100","john@suppliera.com","Net 30","$500","7",""
+SUP002,"Supplier B","Jane Doe","555-0200","jane@supplierb.com","Net 15","$300","5",""
+SUP003,"","","","","","","",""
+SUP004,"","","","","","","",""
+SUP005,"","","","","","","",""
+
+============================================
+REORDER ALERTS
+============================================
+SKU,Product Name,Current Qty,Reorder Point,Suggested Order Qty,Supplier,Est. Cost,Priority
+SKU002,"Sample Product B",8,10,30,"Supplier A",$450,"High"
+SKU003,"Sample Product C",0,5,25,"Supplier B",$125,"Urgent"
+"","","","","","","",""
+"","","","","","","",""
+"","","","","","","",""
+
+============================================
+PURCHASE ORDER LOG
+============================================
+PO Number,Date,Supplier,Total Items,Total Cost,Status,Expected Delivery,Received Date,Notes
+PO-001,"2024-01-01","Supplier A",50,$500,"Received","2024-01-08","2024-01-07",""
+PO-002,"2024-01-05","Supplier B",25,$125,"Pending","2024-01-12","",""
+"","","","","","","","",""
+"","","","","","","","",""
+"","","","","","","","",""
+
+============================================
+STOCK MOVEMENT LOG
+============================================
+Date,SKU,Product Name,Type,Quantity,Reason,Notes
+"2024-01-01","SKU001","Sample Product A","IN",50,"Purchase Order","PO-001"
+"2024-01-02","SKU001","Sample Product A","OUT",5,"Sale",""
+"2024-01-02","SKU001","Sample Product A","OUT",2,"Damaged","Shelf fell"
+"","","","","","",""
+"","","","","","",""
+"","","","","","",""
+
+============================================
+TIPS FOR INVENTORY MANAGEMENT
+============================================
+1. Conduct physical counts weekly or monthly
+2. Use ABC analysis (A=top 20%, B=next 30%, C=bottom 50%)
+3. Set reorder points based on lead time + safety stock
+4. Track shrinkage (theft, damage, admin errors) separately
+5. Review slow-moving items quarterly for markdowns
+
+============================================
+STATUS CODES
+============================================
+Code,Meaning,Action
+"In Stock","Quantity above reorder point","No action needed"
+"Low Stock","Quantity at or below reorder point","Reorder soon"
+"Out of Stock","Quantity is zero","Reorder immediately"
+"Discontinued","Product being phased out","Sell remaining stock"
+"On Order","Purchase order placed","Awaiting delivery"
+
+============================================
+NEED HELP ORGANIZING YOUR STORE?
+Quality fixtures make inventory management easier!
+🌐 www.goodokshop.com | 📧 info@goodokshop.com
+============================================

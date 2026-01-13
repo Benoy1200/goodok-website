@@ -1,0 +1,130 @@
+RETAIL STORE FINANCIAL PROJECTIONS
+Version 1.0 | Created by Goodok Shopfitting
+============================================
+
+Instructions: Fill in your estimates to project your store's financial performance over 12 months.
+
+============================================
+SECTION 1: REVENUE ASSUMPTIONS
+============================================
+Parameter,Value,Notes
+Average Transaction Value,$35,"Your target average sale"
+Transactions per Day (Month 1),15,"Conservative estimate for new store"
+Monthly Growth Rate,10%,"Expected month-over-month growth"
+Operating Days per Month,26,"Adjust for your schedule"
+Peak Season Multiplier,1.3,"Holiday months (Nov-Dec)"
+Slow Season Multiplier,0.8,"Slow months (Jan-Feb)"
+
+============================================
+SECTION 2: COST ASSUMPTIONS
+============================================
+Category,Monthly Amount ($),% of Revenue,Notes
+Cost of Goods Sold (COGS),0,45%,"Average product cost"
+Rent,2500,Fixed,"From your lease"
+Utilities,400,Fixed,"Electric, water, gas, internet"
+Payroll,4000,Fixed,"Including taxes"
+Insurance,125,Fixed,"Annual / 12"
+POS & Software,100,Fixed,"Monthly subscriptions"
+Marketing,300,2-5% of Revenue,"Ongoing promotion"
+Supplies,150,Fixed,"Bags, tags, cleaning"
+Maintenance,100,Fixed,"Repairs, upkeep"
+Loan Payment,0,Fixed,"If applicable"
+Other Expenses,200,Fixed,"Miscellaneous"
+
+============================================
+SECTION 3: 12-MONTH REVENUE PROJECTION
+============================================
+Month,Transactions/Day,Days,Total Transactions,Avg Sale,Gross Revenue,Seasonality,Adjusted Revenue
+Month 1,15,26,390,$35,$13,650,1.0,$13,650
+Month 2,17,26,429,$35,$15,015,0.8,$12,012
+Month 3,18,26,472,$35,$16,517,1.0,$16,517
+Month 4,20,26,519,$35,$18,168,1.0,$18,168
+Month 5,22,26,571,$35,$19,985,1.0,$19,985
+Month 6,24,26,628,$35,$21,984,1.0,$21,984
+Month 7,27,26,691,$35,$24,182,0.9,$21,764
+Month 8,29,26,760,$35,$26,600,0.9,$23,940
+Month 9,32,26,836,$35,$29,260,1.0,$29,260
+Month 10,35,26,920,$35,$32,186,1.0,$32,186
+Month 11,39,26,1012,$35,$35,405,1.3,$46,027
+Month 12,43,26,1113,$35,$38,945,1.3,$50,629
+TOTAL YEAR 1,,,,,,$306,122
+
+============================================
+SECTION 4: 12-MONTH PROFIT & LOSS PROJECTION
+============================================
+Month,Revenue,COGS (45%),Gross Profit,Fixed Costs,Variable Costs,Net Profit,Margin
+Month 1,$13,650,$6,143,$7,508,$7,875,$410,-$777,-5.7%
+Month 2,$12,012,$5,405,$6,607,$7,875,$360,-$1,628,-13.6%
+Month 3,$16,517,$7,433,$9,084,$7,875,$495,$714,4.3%
+Month 4,$18,168,$8,176,$9,993,$7,875,$545,$1,573,8.7%
+Month 5,$19,985,$8,993,$10,992,$7,875,$600,$2,517,12.6%
+Month 6,$21,984,$9,893,$12,091,$7,875,$660,$3,556,16.2%
+Month 7,$21,764,$9,794,$11,970,$7,875,$653,$3,442,15.8%
+Month 8,$23,940,$10,773,$13,167,$7,875,$718,$4,574,19.1%
+Month 9,$29,260,$13,167,$16,093,$7,875,$878,$7,340,25.1%
+Month 10,$32,186,$14,484,$17,702,$7,875,$966,$8,861,27.5%
+Month 11,$46,027,$20,712,$25,315,$7,875,$1,381,$16,059,34.9%
+Month 12,$50,629,$22,783,$27,846,$7,875,$1,519,$18,452,36.4%
+TOTAL,$306,122,$137,755,$168,367,$94,500,$9,184,$64,684,21.1%
+
+============================================
+SECTION 5: CASH FLOW PROJECTION
+============================================
+Month,Beginning Cash,Revenue,Total Expenses,Net Cash Flow,Ending Cash
+Month 0 (Startup),$30,000,-$88,850,-$88,850,-$58,850,-$58,850
+Month 1,-$58,850,$13,650,$14,427,-$777,-$59,627
+Month 2,-$59,627,$12,012,$13,640,-$1,628,-$61,255
+Month 3,-$61,255,$16,517,$15,803,$714,-$60,541
+Month 4,-$60,541,$18,168,$16,595,$1,573,-$58,968
+Month 5,-$58,968,$19,985,$17,468,$2,517,-$56,451
+Month 6,-$56,451,$21,984,$18,428,$3,556,-$52,895
+Month 7,-$52,895,$21,764,$18,322,$3,442,-$49,453
+Month 8,-$49,453,$23,940,$19,366,$4,574,-$44,879
+Month 9,-$44,879,$29,260,$21,920,$7,340,-$37,539
+Month 10,-$37,539,$32,186,$23,325,$8,861,-$28,678
+Month 11,-$28,678,$46,027,$29,968,$16,059,-$12,619
+Month 12,-$12,619,$50,629,$32,177,$18,452,$5,833
+
+============================================
+SECTION 6: BREAK-EVEN ANALYSIS
+============================================
+Metric,Value,Notes
+Total Fixed Costs (Monthly),$7,875,"Rent + Utilities + Payroll + etc."
+Gross Margin,55%,"1 - COGS %"
+Break-Even Revenue (Monthly),$14,318,"Fixed Costs / Gross Margin"
+Break-Even Transactions/Day,16,"At $35 avg sale, 26 days"
+Months to Break-Even,3,"Based on projections"
+
+============================================
+SECTION 7: SCENARIO ANALYSIS
+============================================
+Scenario,Avg Sale,Trans/Day Start,Growth Rate,Year 1 Revenue,Year 1 Profit,ROI
+Conservative,$30,12,8%,$210,000,$25,000,28%
+Base Case,$35,15,10%,$306,122,$64,684,73%
+Optimistic,$40,18,12%,$425,000,$120,000,135%
+
+============================================
+SECTION 8: KEY METRICS TO TRACK
+============================================
+Metric,Target,How to Calculate,Frequency
+Average Transaction Value,$35+,"Total Sales / # Transactions","Daily"
+Conversion Rate,20%+,"Buyers / Visitors","Weekly"
+Gross Margin,50%+,"(Revenue - COGS) / Revenue","Monthly"
+Inventory Turnover,6x/year,"COGS / Average Inventory","Monthly"
+Sales per Square Foot,$300+/year,"Annual Sales / Store Sq Ft","Quarterly"
+Customer Return Rate,40%+,"Repeat Customers / Total","Monthly"
+
+============================================
+NOTES & TIPS
+============================================
+1. Update projections monthly with actual data
+2. Track variances between projected and actual
+3. Adjust marketing spend based on ROI
+4. Plan for seasonal cash flow needs
+5. Build emergency fund equal to 3 months expenses
+
+============================================
+FINANCIAL PLANNING RESOURCES
+Save on fixtures to improve your margins!
+🌐 www.goodokshop.com | 📧 info@goodokshop.com
+============================================

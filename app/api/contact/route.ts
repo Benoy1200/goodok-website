@@ -15,7 +15,30 @@ export async function POST(request: Request) {
         const { Resend } = await import('resend');
         const resend: InstanceType<typeof Resend> = new Resend(process.env.RESEND_API_KEY);
 
-        const { name, email, message } = await request.json();
+        const { name, email, message, website_url, start_time } = await request.json();
+
+        // 🛡️ Anti-Spam Check 1: Honeypot (蜜罐)
+        if (website_url) {
+            console.log('Spam detected: Honeypot filled');
+            // Return success to fool the bot, but don't send anything
+            return NextResponse.json({ success: true, message: 'Message sent' });
+        }
+
+        // 🛡️ Anti-Spam Check 2: Time Trap (时间陷阱)
+        // If submission happens too fast (< 2 seconds), it's likely a bot
+        const currentTime = Date.now();
+        if (start_time && (currentTime - start_time < 2000)) {
+            console.log('Spam detected: Too fast submission', currentTime - start_time);
+            return NextResponse.json({ success: true, message: 'Message sent' });
+        }
+
+        // 🛡️ Anti-Spam Check 3: Content Logic (简单的内容逻辑校验)
+        // Check for random strings (e.g. "sSRGbfFyypIRMUYezlCvw")
+        // Rule: If message is single word > 15 chars, or message contains no spaces but is long
+        if (message.length > 20 && !message.includes(' ')) {
+             console.log('Spam detected: Random string message');
+             return NextResponse.json({ success: true, message: 'Message sent' });
+        }
 
         // 验证必填字段
         if (!name || !email || !message) {
