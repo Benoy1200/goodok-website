@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArticleSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
@@ -195,6 +196,21 @@ export default function GondolaShelvingDimensionsGuide() {
                                     placed above 72&quot; see 40-60% lower pick rates due to reach limitations.
                                 </p>
 
+                                {/* Height Comparison Infographic */}
+                                <div className="my-8 not-prose">
+                                    <div className="relative w-full aspect-[16/10] rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                                        <Image 
+                                            src="/images/blog/gondola-height-comparison.png"
+                                            alt="Gondola Shelving Height Comparison Chart - 48 inch to 84 inch with human scale reference"
+                                            fill
+                                            className="object-contain bg-white"
+                                        />
+                                    </div>
+                                    <p className="text-sm text-gray-500 text-center mt-2">
+                                        Standard gondola heights compared with human scale (5&apos;6&quot;)
+                                    </p>
+                                </div>
+
                                 <h3>48&quot; (4 ft) - Low Profile</h3>
                                 <ul>
                                     <li><strong>Best for:</strong> Checkout areas, promotional islands, impulse displays</li>
@@ -277,6 +293,21 @@ export default function GondolaShelvingDimensionsGuide() {
                                     can vary by level—typically deeper at bottom, shallower at top for better 
                                     visibility and reach.
                                 </p>
+
+                                {/* Depth Options Infographic */}
+                                <div className="my-8 not-prose">
+                                    <div className="relative w-full aspect-[16/12] rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                                        <Image 
+                                            src="/images/blog/gondola-depth-options.png"
+                                            alt="Gondola Shelving Depth Options - 16 inch to 24 inch with product examples"
+                                            fill
+                                            className="object-contain bg-white"
+                                        />
+                                    </div>
+                                    <p className="text-sm text-gray-500 text-center mt-2">
+                                        Recommended shelf depths by product type
+                                    </p>
+                                </div>
 
                                 <div className="overflow-x-auto my-6">
                                     <table className="min-w-full border border-gray-200">
