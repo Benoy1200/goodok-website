@@ -3,9 +3,9 @@ import Link from "next/link";
 import { ArticleSchema, FAQSchema } from "@/components/schema";
 
 export const metadata: Metadata = {
-    title: "Retail Shelving Cost 2026: $150-$5000 Complete Pricing Guide",
+    title: "Retail Shelving Cost 2026: Budget $5K-$40K for 1000 sq ft Store",
     description:
-        "How much does retail shelving cost? Gondola: $150-$600, Wall: $80-$350, Display Cases: $200-$1500. Save 30-50% with factory-direct pricing.",
+        "How much does retail shelving cost? Budget store: $5K-$10K, Standard: $10K-$20K, Premium: $20K-$40K. Gondola $150-$600/unit. Save 30-50% factory-direct.",
     keywords: [
         "retail shelving cost",
         "gondola shelving price",
@@ -14,11 +14,12 @@ export const metadata: Metadata = {
         "shelving unit prices",
         "commercial shelving pricing",
         "how much does retail shelving cost",
+        "1000 sq ft store shelving cost",
     ],
     openGraph: {
-        title: "Retail Shelving Cost 2026: $150-$5000 Complete Pricing Guide",
+        title: "Retail Shelving Cost 2026: Budget $5K-$40K for 1000 sq ft Store",
         description:
-            "How much does retail shelving cost? Get factory-direct pricing and save 30-50% on gondola shelving, wall units, and display cases.",
+            "How much does retail shelving cost? Complete budget breakdown for 1000 sq ft stores. Save 30-50% with factory-direct pricing.",
         type: "article",
     },
 };

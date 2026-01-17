@@ -4,6 +4,9 @@ import Image from "next/image";
 import ClientTestimonials from "@/components/ClientTestimonials";
 import HeroCarousel from "@/components/HeroCarousel";
 import ProductImageCarousel from "@/components/ProductImageCarousel";
+import TrustBar from "@/components/TrustBar";
+import ServiceProcess from "@/components/ServiceProcess";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 export const metadata: Metadata = {
   title: {
@@ -188,6 +191,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trust Stats Bar */}
+      <TrustBar />
+
+      {/* Service Process - How We Work */}
+      <ServiceProcess />
+
       {/* Industry Solutions - Image Grid */}
       <section className="py-24 bg-white">
         <div className="container">
@@ -266,6 +275,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Why Choose Us */}
+      <WhyChooseUs />
 
       {/* Testimonials */}
       <section className="py-20 bg-white">
