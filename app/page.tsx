@@ -173,10 +173,10 @@ export default function Home() {
           <div className="container">
             <div className="flex flex-col items-center text-center gap-2 md:gap-3 max-w-3xl mx-auto">
               <h1 className="text-2xl md:text-3xl font-bold text-outline-white animate-fadeInUp opacity-0" style={{ animationDelay: '0.1s' }}>
-                Professional Retail Display Solutions
+                Turn Your Empty Space into a Top-Selling Store in 20 Days
               </h1>
               <p className="text-gray-300 text-sm md:text-base animate-fadeInUp opacity-0" style={{ animationDelay: '0.3s' }}>
-                Free 3D Design · Factory Direct · Global Shipping
+                Free 3D Design in 24H · Factory Direct · Global Shipping
               </p>
               <div className="animate-fadeInUp opacity-0" style={{ animationDelay: '0.5s' }}>
                 <Link

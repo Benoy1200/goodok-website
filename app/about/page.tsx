@@ -14,7 +14,7 @@ export default function AboutPage() {
                 {/* Image 1: Office Team */}
                 <div className="relative aspect-[2/3] overflow-hidden">
                     <Image
-                        src="/images/about/office-team.jpg"
+                        src="/images/about/office-team.webp"
                         alt="Goodok professional team"
                         fill
                         priority
@@ -25,7 +25,7 @@ export default function AboutPage() {
                 {/* Image 2: Factory Workshop */}
                 <div className="relative aspect-[2/3] overflow-hidden">
                     <Image
-                        src="/images/about/factory-workshop.jpg"
+                        src="/images/about/factory-workshop.webp"
                         alt="Goodok factory workshop"
                         fill
                         className="object-cover"
@@ -35,7 +35,7 @@ export default function AboutPage() {
                 {/* Image 3: Warehouse */}
                 <div className="relative aspect-[2/3] overflow-hidden">
                     <Image
-                        src="/images/about/warehouse.jpg"
+                        src="/images/about/warehouse.webp"
                         alt="Goodok warehouse"
                         fill
                         className="object-cover"

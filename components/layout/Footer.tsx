@@ -22,6 +22,7 @@ const footerLinks = {
         { name: "About Us", href: "/about" },
         { name: "Blog", href: "/resources/blog" },
         { name: "Contact", href: "/contact" },
+        { name: "Payment & Security", href: "/payment-security" },
     ],
 };
 
@@ -113,10 +114,26 @@ export default function Footer() {
 
             {/* Copyright */}
             <div className="border-t border-gray-200 py-8">
-                <div className="container flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className="container flex flex-col md:flex-row justify-between items-center gap-6">
                     <p className="text-gray-500 text-sm">
                         © {new Date().getFullYear()} Goodok Shopfitting. All rights reserved.
                     </p>
+                    
+                    {/* Payment Icons */}
+                    <div className="flex items-center gap-4">
+                        <span className="text-gray-400 text-xs">We Accept:</span>
+                        <div className="flex items-center gap-3">
+                            {/* PayPal */}
+                            <div className="bg-gray-100 px-3 py-1.5 rounded text-xs font-bold text-blue-600">PayPal</div>
+                            {/* Visa */}
+                            <div className="bg-gray-100 px-3 py-1.5 rounded text-xs font-bold text-blue-800">VISA</div>
+                            {/* Mastercard */}
+                            <div className="bg-gray-100 px-3 py-1.5 rounded text-xs font-bold text-orange-600">MC</div>
+                            {/* Trade Assurance */}
+                            <div className="bg-orange-100 px-3 py-1.5 rounded text-xs font-bold text-orange-700">Trade Assurance</div>
+                        </div>
+                    </div>
+                    
                     <div className="flex gap-6 text-sm">
                         <Link href="/privacy" className="text-gray-500 hover:text-gray-900">Privacy Policy</Link>
                         <Link href="/terms" className="text-gray-500 hover:text-gray-900">Terms of Service</Link>

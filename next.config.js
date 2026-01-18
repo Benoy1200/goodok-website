@@ -18,6 +18,9 @@ const nextConfig = {
     disableStaticImages: false,
   },
 
+  // 启用 Gzip 压缩
+  compression: true,
+
   // 头部优化
   headers: async () => {
     return [
