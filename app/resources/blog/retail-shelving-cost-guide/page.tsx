@@ -347,6 +347,11 @@ export default function RetailShelvingCostGuide() {
                                     <h3 className="font-bold mb-4">?? Related Guides</h3>
                                     <ul className="space-y-3">
                                         <li>
+                                            <Link href="/tools/convenience-store-cost-calculator" className="text-emerald-600 hover:text-emerald-700 text-sm font-medium">
+                                                🧮 Mini Mart Setup Estimator (Free)
+                                            </Link>
+                                        </li>
+                                        <li>
                                             <Link href="/resources/blog/gondola-vs-wall-shelving" className="text-gray-600 hover:text-green-600 text-sm">
                                                 Gondola vs Wall Shelving
                                             </Link>

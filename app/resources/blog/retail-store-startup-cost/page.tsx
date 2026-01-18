@@ -372,6 +372,11 @@ export default function RetailStoreStartupCost() {
                                     <li><strong>Inventory:</strong> $25,000 - $50,000</li>
                                     <li><strong>Total Startup:</strong> $80,000 - $180,000</li>
                                 </ul>
+                                <p>
+                                    <Link href="/tools/convenience-store-cost-calculator" className="text-[var(--accent)] hover:underline">
+                                        👉 Try our 5-minute Mini Mart Setup Estimator →
+                                    </Link>
+                                </p>
 
                                 <h3>Jewelry Store (500 sq ft)</h3>
                                 <ul>
@@ -542,6 +547,11 @@ export default function RetailStoreStartupCost() {
                                 <div className="bg-gray-50 rounded-xl p-6">
                                     <h3 className="font-bold mb-4">📚 Related Guides</h3>
                                     <ul className="space-y-3">
+                                        <li>
+                                            <Link href="/tools/convenience-store-cost-calculator" className="text-emerald-600 hover:text-emerald-700 text-sm font-medium">
+                                                🧮 Mini Mart Setup Estimator (Free Tool)
+                                            </Link>
+                                        </li>
                                         <li>
                                             <Link href="/resources/blog/gondola-shelving-buying-guide" className="text-gray-600 hover:text-[var(--accent)] text-sm">
                                                 Gondola Shelving Buying Guide
