@@ -115,7 +115,7 @@ export default function ProjectsPage() {
                         Get a free 3D design and consultation for your store. We've helped hundreds of store owners create stunning retail spaces.
                     </p>
                     <Link href="/free-3d-design" className="btn bg-[#004499] text-white hover:bg-[#0066cc]">
-                        Get Free 3D Design
+                        Get Free Layout Design
                     </Link>
                 </div>
             </section>

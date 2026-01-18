@@ -117,6 +117,7 @@ export default function NewVsUsedGondolaShelving() {
                                         <li>• <strong>Savings potential:</strong> 50-70% off retail with liquidation purchases</li>
                                         <li>• <strong>Key risk:</strong> Compatibility issues when mixing brands</li>
                                     </ul>
+                                    <p className="text-xs text-gray-500 mt-3 italic">* Prices are typical ranges. Actual costs vary by condition and source.</p>
                                 </div>
 
                                 {/* TOC */}

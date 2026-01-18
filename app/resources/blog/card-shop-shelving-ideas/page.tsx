@@ -117,6 +117,7 @@ export default function CardShopShelvingIdeas() {
                                         <li>• <strong>Slatwall panels</strong> work best for accessories and impulse items</li>
                                         <li>• Keep <strong>play space</strong> separate but visible from the retail area</li>
                                     </ul>
+                                    <p className="text-xs text-gray-500 mt-3 italic">* Prices are typical ranges. Actual costs vary by specifications and order quantity.</p>
                                 </div>
 
                                 {/* TOC */}

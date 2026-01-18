@@ -116,6 +116,7 @@ export default function GondolaShelvingBuyingGuide() {
                                         <li>• Quality steel gondolas last <strong>15-25 years</strong> with proper use</li>
                                         <li>• Factory-direct buying saves <strong>30-50%</strong> vs retail distributors</li>
                                     </ul>
+                                    <p className="text-xs text-gray-500 mt-3 italic">* Prices are typical ranges. Actual costs vary by specifications and order quantity.</p>
                                 </div>
 
                                 {/* TOC */}
@@ -242,6 +243,10 @@ export default function GondolaShelvingBuyingGuide() {
                                         </tbody>
                                     </table>
                                 </div>
+
+                                <p className="text-sm text-gray-500 italic mb-4">
+                                    <strong>Note:</strong> Prices shown are typical ranges and vary based on specifications, order quantity, and customization. Contact us for an exact quote.
+                                </p>
 
                                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r my-6">
                                     <p className="text-green-800">

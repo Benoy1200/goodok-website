@@ -86,7 +86,7 @@ export default function PopCultureSolutionPage() {
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <a href="https://api.whatsapp.com/send?phone=8613822102050" className="btn btn-primary">
-                                    Get Free 3D Design
+                                    Get Free Layout Design
                                 </a>
                                 <a href="#case-studies" className="btn btn-secondary bg-white/20 border-white text-white hover:bg-white hover:text-gray-900">
                                     View Real Cases

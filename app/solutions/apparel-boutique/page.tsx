@@ -71,18 +71,29 @@ const painPoints = [
 export default function ApparelBoutiquePage() {
   return (
     <div className="pt-24">
-      {/* Hero Banner */}
-      <section className="relative h-[50vh] min-h-[400px] bg-gradient-to-br from-rose-900 via-pink-800 to-slate-900 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/scenes/boutique-shop.jpg')] bg-cover bg-center opacity-30" />
-        <div className="relative container h-full flex items-center">
-          <div className="max-w-3xl">
-            <span className="inline-block px-4 py-2 bg-rose-500/20 text-rose-300 rounded-full text-sm font-medium mb-4">
+      {/* Hero Banner - Image on top, text below */}
+      <section>
+        {/* Hero Image */}
+        <div className="relative h-[40vh] min-h-[300px] overflow-hidden">
+          <Image
+            src="/images/scenes/boutique-shop.jpg"
+            alt="Apparel boutique display fixtures"
+            fill
+            priority
+            className="object-cover"
+          />
+        </div>
+        
+        {/* Hero Text - Centered, no background */}
+        <div className="container py-12 text-center">
+          <div className="max-w-3xl mx-auto">
+            <span className="inline-block px-4 py-2 bg-rose-100 text-rose-700 rounded-full text-sm font-medium mb-4">
               Fashion Retail Solutions
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Apparel Boutique Display Solutions
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-600 mb-8">
               Create a stunning shopping experience with our premium clothing store fixtures. 
               Elegant designs that showcase your fashion collection beautifully.
             </p>
@@ -90,7 +101,7 @@ export default function ApparelBoutiquePage() {
               href="/free-3d-design"
               className="btn btn-accent text-lg px-8 py-4"
             >
-              Get Free 3D Design
+              Get Free Layout Design
             </Link>
           </div>
         </div>

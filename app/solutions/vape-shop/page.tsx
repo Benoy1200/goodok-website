@@ -21,7 +21,7 @@ const featuredProducts = [
   {
     name: "LED Display Cases",
     description: "Secure glass cases with integrated LED lighting for showcasing premium vape products",
-    image: "/images/products/display-cases/Camera008_20220714062421090-2.jpg",
+    image: "/images/products/Island-Display-Table/Camera008_20220714062421090-2.jpg",
     badge: "Anti-Theft",
   },
   {
@@ -75,18 +75,29 @@ const painPoints = [
 export default function VapeShopPage() {
   return (
     <div className="pt-24">
-      {/* Hero Banner */}
-      <section className="relative h-[50vh] min-h-[400px] bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/scenes/pop-culture.jpg')] bg-cover bg-center opacity-30" />
-        <div className="relative container h-full flex items-center">
-          <div className="max-w-3xl">
-            <span className="inline-block px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium mb-4">
+      {/* Hero Banner - Image on top, text below */}
+      <section>
+        {/* Hero Image */}
+        <div className="relative h-[40vh] min-h-[300px] overflow-hidden">
+          <Image
+            src="/images/scenes/pop-culture.jpg"
+            alt="Vape shop display fixtures"
+            fill
+            priority
+            className="object-cover"
+          />
+        </div>
+        
+        {/* Hero Text - Centered, no background */}
+        <div className="container py-12 text-center">
+          <div className="max-w-3xl mx-auto">
+            <span className="inline-block px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium mb-4">
               Specialized Solutions
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Vape & Smoke Shop Display Solutions
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-600 mb-8">
               Professional fixtures designed for vape shops, smoke shops, and CBD stores. 
               Maximize product visibility while ensuring security.
             </p>
@@ -94,7 +105,7 @@ export default function VapeShopPage() {
               href="/free-3d-design"
               className="btn btn-accent text-lg px-8 py-4"
             >
-              Get Free 3D Design
+              Get Free Layout Design
             </Link>
           </div>
         </div>

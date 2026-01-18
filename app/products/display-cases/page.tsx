@@ -95,9 +95,12 @@ export default function DisplayCasesPage() {
                         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
                             Display Cases & Island Tables
                         </h1>
-                        <p className="text-xl text-gray-600 mb-8">
+                        <p className="text-xl text-gray-600 mb-4">
                             Premium glass display cases and island display tables for jewelry,
                             cosmetics, and high-value merchandise. Elegant and secure.
+                        </p>
+                        <p className="text-sm text-gray-500 mb-8">
+                            <span className="font-medium">Typical range: $200-$1500.</span> Prices vary based on specifications. Contact us for exact quote.
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center">
                             <Link href="/free-3d-design" className="btn btn-primary">
@@ -155,7 +158,7 @@ export default function DisplayCasesPage() {
                     </p>
                     <div className="flex flex-wrap gap-4 justify-center">
                         <Link href="/free-3d-design" className="btn btn-primary">
-                            Get Free 3D Design
+                            Get Free Layout Design
                         </Link>
                         <Link href="/contact" className="btn btn-secondary">
                             Contact Us

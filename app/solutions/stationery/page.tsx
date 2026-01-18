@@ -43,7 +43,7 @@ export default function StationerySolutionPage() {
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center">
                             <a href="https://api.whatsapp.com/send?phone=8613822102050" className="btn btn-primary">
-                                Get Free 3D Design
+                                Get Free Layout Design
                             </a>
                             <Link href="/contact" className="btn btn-secondary">
                                 Contact Us

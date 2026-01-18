@@ -117,6 +117,7 @@ export default function RetailStoreStartupCost() {
                                         <li>• <strong>Minimum Viable Budget:</strong> $30,000-$50,000 (bare bones)</li>
                                         <li>• <strong>Hidden Costs to Add:</strong> +15-25% buffer</li>
                                     </ul>
+                                    <p className="text-xs text-gray-500 mt-3 italic">* Prices are typical ranges. Actual costs vary by location, store type, and specifications.</p>
                                 </div>
 
                                 {/* TOC */}

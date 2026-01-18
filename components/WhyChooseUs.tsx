@@ -3,8 +3,8 @@ import React from 'react';
 export default function WhyChooseUs() {
   const cards = [
     {
-      title: "Free 3D Design",
-      desc: "Visualize your store before spending a dime. Our expert designers provide professional layouts and 3D renderings completely free of charge.",
+      title: "Free Store Design",
+      desc: "Visualize your store floor plan before spending a dime. Our expert designers provide professional store layout and product zoning completely free of charge.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />

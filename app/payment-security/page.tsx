@@ -265,7 +265,7 @@ export default function PaymentSecurityPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/free-3d-design" className="btn btn-primary text-lg px-8 py-4">
-              Get Free 3D Design
+              Get Free Layout Design
             </Link>
             <Link href="/contact" className="btn btn-secondary text-lg px-8 py-4">
               Contact Sales

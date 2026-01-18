@@ -127,7 +127,7 @@ export default function SupermarketRetrofitPage() {
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link href="/free-3d-design" className="btn bg-white text-green-900 hover:bg-green-50">
-                            Get Free 3D Design
+                            Get Free Layout Design
                         </Link>
                         <Link href="/contact" className="btn border-2 border-white text-white hover:bg-white hover:text-green-900">
                             Contact Us

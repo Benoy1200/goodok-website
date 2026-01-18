@@ -95,9 +95,12 @@ export default function CheckoutCountersPage() {
                         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
                             Checkout Counters
                         </h1>
-                        <p className="text-xl text-gray-600 mb-8">
+                        <p className="text-xl text-gray-600 mb-4">
                             Professional checkout and cash wrap counters designed for efficiency
                             and customer flow. Customizable to match your store design.
+                        </p>
+                        <p className="text-sm text-gray-500 mb-8">
+                            <span className="font-medium">Typical range: $300-$1500.</span> Prices vary based on specifications. Contact us for exact quote.
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center">
                             <Link href="/free-3d-design" className="btn btn-primary">
@@ -155,7 +158,7 @@ export default function CheckoutCountersPage() {
                     </p>
                     <div className="flex flex-wrap gap-4 justify-center">
                         <Link href="/free-3d-design" className="btn btn-primary">
-                            Get Free 3D Design
+                            Get Free Layout Design
                         </Link>
                         <Link href="/contact" className="btn btn-secondary">
                             Contact Us

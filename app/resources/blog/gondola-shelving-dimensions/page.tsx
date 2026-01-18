@@ -110,6 +110,7 @@ export default function GondolaShelvingDimensionsGuide() {
                                         <li>• Proper sizing can increase merchandising space by <strong>15-25%</strong> without expanding floor area</li>
                                         <li>• Double-sided units require <strong>32"-48" combined depth</strong> plus ADA-compliant aisle width</li>
                                     </ul>
+                                    <p className="text-xs text-gray-500 mt-3 italic">* Specifications may vary by manufacturer. Contact us for exact product details.</p>
                                 </div>
 
                                 {/* TOC */}

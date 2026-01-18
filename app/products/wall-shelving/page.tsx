@@ -96,9 +96,12 @@ export default function WallShelvingPage() {
                         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
                             Wall Shelving Systems
                         </h1>
-                        <p className="text-xl text-gray-600 mb-8">
+                        <p className="text-xl text-gray-600 mb-4">
                             Space-saving wall-mounted display systems that maximize your retail space.
                             Perfect for boutiques, pharmacies, and specialty stores.
+                        </p>
+                        <p className="text-sm text-gray-500 mb-8">
+                            <span className="font-medium">Typical range: $80-$350/unit.</span> Prices vary based on specifications. Contact us for exact quote.
                         </p>
                         <div className="flex flex-wrap gap-4 justify-center">
                             <Link href="/free-3d-design" className="btn btn-primary">
@@ -156,7 +159,7 @@ export default function WallShelvingPage() {
                     </p>
                     <div className="flex flex-wrap gap-4 justify-center">
                         <Link href="/free-3d-design" className="btn btn-primary">
-                            Get Free 3D Design
+                            Get Free Layout Design
                         </Link>
                         <Link href="/contact" className="btn btn-secondary">
                             Contact Us

@@ -160,6 +160,39 @@ const blogPosts = [
         featured: false,
         image: "/images/blog/retail-fixtures-wholesale-guide.png",
     },
+    {
+        slug: "gondola-shelving-dimensions",
+        title: "Gondola Shelving Dimensions: Complete Size Guide",
+        excerpt:
+            "Complete guide to standard heights (48\"-84\"), widths (24\"-48\"), and depths. Find the perfect size for your store.",
+        category: "Product Guide",
+        date: "2025-12-20",
+        readTime: "10 min read",
+        featured: false,
+        image: "/images/blog/gondola-height-comparison.png",
+    },
+    {
+        slug: "how-to-measure-gondola-shelving",
+        title: "How to Measure Gondola Shelving: Step-by-Step Guide",
+        excerpt:
+            "Step-by-step measurement guide with diagrams. Avoid common mistakes and get accurate dimensions for your retail space.",
+        category: "How-To Guide",
+        date: "2025-12-18",
+        readTime: "8 min read",
+        featured: false,
+        image: "/images/blog/gondola-depth-options.png",
+    },
+    {
+        slug: "gondola-shelving-buying-guide",
+        title: "Gondola Shelving Buying Guide: Types, Pricing & Tips",
+        excerpt:
+            "Types, pricing ($150-$800), installation tips, and where to buy. Make informed purchasing decisions for your store.",
+        category: "Buying Guide",
+        date: "2025-12-15",
+        readTime: "12 min read",
+        featured: false,
+        image: "/images/blog/retail-fixtures-comparison.png",
+    },
 ];
 
 export default function BlogPage() {
@@ -300,7 +333,7 @@ export default function BlogPage() {
                         href="/free-3d-design"
                         className="btn btn-primary"
                     >
-                        Get Free 3D Design
+                        Get Free Layout Design
                     </Link>
                 </div>
             </section>

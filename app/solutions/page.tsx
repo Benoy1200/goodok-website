@@ -138,7 +138,7 @@ export default function SolutionsPage() {
                             href="/free-3d-design"
                             className="btn btn-primary text-lg px-8 py-4"
                         >
-                            Get Free 3D Design
+                            Get Free Layout Design
                         </Link>
                         <Link
                             href="/contact"

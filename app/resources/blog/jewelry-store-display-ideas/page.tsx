@@ -129,7 +129,7 @@ export default function JewelryStoreGuide() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link href="/free-3d-design" className="btn btn-primary">
-                            Get Free 3D Design
+                            Get Free Layout Design
                         </Link>
                         <Link href="/products" className="btn btn-secondary">
                             Browse Fixtures

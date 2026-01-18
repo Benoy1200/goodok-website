@@ -127,7 +127,7 @@ export default function BoutiqueAccessoriesPage() {
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link href="/free-3d-design" className="btn bg-white text-[var(--primary)] hover:bg-[#f8f9fa]">
-                            Get Free 3D Design
+                            Get Free Layout Design
                         </Link>
                         <Link href="/contact" className="btn border-2 border-white text-white hover:bg-white hover:text-[var(--primary)]">
                             Contact Us

@@ -151,8 +151,12 @@ export default function RetailShelvingCostGuide() {
                                     </table>
                                 </div>
 
+                                <p className="text-sm text-gray-500 italic mb-4">
+                                    <strong>Note:</strong> Prices are typical ranges and vary by specifications, quantity, and customization. Contact us for exact quote.
+                                </p>
+
                                 <p className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                                    ?? <strong>Pro Tip:</strong> Factory-direct pricing is typically 30-50% lower
+                                    💡 <strong>Pro Tip:</strong> Factory-direct pricing is typically 30-50% lower
                                     than retail distributors. That&apos;s our specialty.
                                 </p>
 
