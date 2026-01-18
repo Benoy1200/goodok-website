@@ -21,32 +21,38 @@ const featuredProducts = [
     description: "Elegant glass cases for showcasing premium beauty products and skincare",
     image: "/images/products/Island-Display-Table/Camera008_20220714065430960.jpg",
     badge: "Popular",
+    link: "/products/display-cases",
   },
   {
     name: "Wall Display Systems",
     description: "Organized wall units for nail polish, beauty products, and retail items",
     image: "/images/products/wall-shelving/BG-006边柜.jpg",
     badge: "Best Seller",
+    link: "/products/wall-shelving",
   },
   {
     name: "Product Shelving",
     description: "Versatile shelving for displaying beauty supplies and accessories",
     image: "/images/products/gondola-shelving/DM-11-挂摆中柜.jpg",
+    link: "/products/gondola-shelving",
   },
   {
     name: "Reception Counters",
     description: "Professional front desk solutions with retail display integration",
     image: "/images/products/Checkout-Counters/收银台005-弧形侧柜_25071204413944b8b-2.jpg",
+    link: "/products/checkout-counters",
   },
   {
     name: "Accessory Displays",
     description: "Specialized fixtures for jewelry, hair accessories, and small items",
     image: "/images/products/Versatile-Accessories/ME48铁艺头枕架.jpg",
+    link: "/products/accessories",
   },
   {
     name: "Island Display Tables",
     description: "Featured tables for promotional products and new arrivals",
     image: "/images/products/Island-Display-Table/CC_2507110996bc81212-20.CC_Xdk.0000.jpg",
+    link: "/products/gondola-shelving",
   },
 ];
 
@@ -136,29 +142,34 @@ export default function BeautySalonPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProducts.map((product) => (
-              <div
+              <Link
+                href={product.link}
                 key={product.name}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 block group"
               >
                 <div className="relative aspect-[4/3]">
                   <Image
                     src={product.image}
                     alt={product.name}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   {product.badge && (
-                    <span className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="absolute top-4 right-4 bg-pink-600 text-white px-3 py-1 rounded-full text-xs font-medium z-10">
                       {product.badge}
                     </span>
                   )}
+                  {/* Overlay for better clickability hint */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-pink-700 transition-colors">
+                    {product.name} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                  </h3>
                   <p className="text-gray-600 text-sm">{product.description}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -176,7 +187,7 @@ export default function BeautySalonPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/free-3d-design" className="btn btn-accent text-lg px-8 py-4">
-              Start Free Design
+              Get Free Layout Design
             </Link>
             <Link href="/contact" className="btn bg-white/10 hover:bg-white/20 text-white text-lg px-8 py-4">
               Contact Sales

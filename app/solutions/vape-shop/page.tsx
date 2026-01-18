@@ -23,34 +23,40 @@ const featuredProducts = [
     description: "Secure glass cases with integrated LED lighting for showcasing premium vape products",
     image: "/images/products/Island-Display-Table/Camera008_20220714062421090-2.jpg",
     badge: "Anti-Theft",
+    link: "/products/display-cases",
   },
   {
     name: "Blister Pack Hooks",
     description: "Heavy-duty hooks designed for hanging vape cartridges and accessories",
     image: "/images/products/Versatile-Accessories/DM-D-1-橱窗高标价牌.jpg",
     badge: "Best Seller",
+    link: "/products/accessories",
   },
   {
     name: "Countertop Displays",
     description: "Point-of-sale displays for impulse purchase items near checkout",
     image: "/images/products/Checkout-Counters/SYT-009收银台.jpg",
     badge: "New",
+    link: "/products/checkout-counters",
   },
   // General items (80%)
   {
     name: "Wall Shelving Units",
     description: "Customizable wall-mounted shelves for maximum product visibility",
     image: "/images/products/wall-shelving/BG-001边柜.jpg",
+    link: "/products/wall-shelving",
   },
   {
     name: "Gondola Shelving",
     description: "Double-sided freestanding shelves for center floor displays",
     image: "/images/products/gondola-shelving/Camera112_20211126021844215-6.jpg",
+    link: "/products/gondola-shelving",
   },
   {
     name: "Checkout Counters",
     description: "Professional POS counters with built-in storage and display areas",
     image: "/images/products/Checkout-Counters/Camera008_20220719090946233.jpg",
+    link: "/products/checkout-counters",
   },
 ];
 
@@ -140,29 +146,34 @@ export default function VapeShopPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProducts.map((product) => (
-              <div
+              <Link
+                href={product.link}
                 key={product.name}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 block group"
               >
                 <div className="relative aspect-[4/3]">
                   <Image
                     src={product.image}
                     alt={product.name}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   {product.badge && (
-                    <span className="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-medium z-10">
                       {product.badge}
                     </span>
                   )}
+                  {/* Overlay for better clickability hint */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-700 transition-colors">
+                    {product.name} <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                  </h3>
                   <p className="text-gray-600 text-sm">{product.description}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -180,7 +191,7 @@ export default function VapeShopPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/free-3d-design" className="btn btn-accent text-lg px-8 py-4">
-              Start Free Design
+              Get Free Layout Design
             </Link>
             <Link href="/contact" className="btn bg-white/10 hover:bg-white/20 text-white text-lg px-8 py-4">
               Contact Sales
