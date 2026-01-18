@@ -10,7 +10,8 @@ interface FormData {
     storeSize: "under-50sqm" | "50-100sqm" | "100-200sqm" | "200sqm-plus";
     region: "us" | "middle-east" | "africa" | "sea" | "other";
     storeType: "mini-mart" | "gas-station" | "independent-grocery" | "liquor-vape";
-    productFocus: string[]; // 最多选2个
+    floorPlan: "yes" | "no";
+    productFocus: string[]; // 最多选3个
     refrigeration: "yes" | "no" | "not-sure";
 }
 
@@ -57,6 +58,15 @@ const productFocusOptions = [
     { id: "daily-groceries", label: "Daily Groceries" },
     { id: "alcohol", label: "Alcohol / Tobacco" },
     { id: "frozen", label: "Frozen Foods" },
+    { id: "vape", label: "Vape & E-cigarettes" },
+    { id: "toys-gifts", label: "Toys & Gifts" },
+    { id: "household", label: "Household / Pet" },
+    { id: "hot-food", label: "Hot Food / Coffee" },
+];
+
+const floorPlanOptions = [
+    { id: "yes", label: "Yes, I have a floor plan (CAD/PDF/Hand drawings)" },
+    { id: "no", label: "No, I just have the dimensions" },
 ];
 
 const refrigerationOptions = [
@@ -73,6 +83,8 @@ const costTrapsByScenario = {
     refrigerationUnderestimate: "⚠️ Underestimating refrigeration costs — coolers often cost 2-3x more than shelves",
     liquorDisplayCost: "⚠️ Standard shelves for liquor — premium displays boost sales 20-40%",
     noContingency: "⚠️ No contingency budget — always add 15-20% for unexpected costs",
+    vapeSecurity: "⚠️ Vape theft is high — consider lockable glass cases ($200+ each)",
+    hotFoodElectrical: "⚠️ Hot food requires extra electrical work — often costs $1,500+ more than expected",
 };
 
 // ============================================
@@ -107,8 +119,10 @@ const calculateLeadScore = (formData: FormData): number => {
     // 冷藏设备
     if (formData.refrigeration === "yes") score += 15;
     
-    // 酒类产品
+    // 酒类和特殊产品
     if (formData.productFocus.includes("alcohol")) score += 15;
+    if (formData.productFocus.includes("vape")) score += 20;
+    if (formData.productFocus.includes("hot-food")) score += 10;
     
     return score; // 0-120
 };
@@ -123,6 +137,7 @@ export default function ConvenienceStoreCostCalculator() {
         storeSize: "50-100sqm",
         region: "us",
         storeType: "mini-mart",
+        floorPlan: "no",
         productFocus: ["snacks-drinks"],
         refrigeration: "not-sure",
     });
@@ -204,7 +219,13 @@ export default function ConvenienceStoreCostCalculator() {
         }
         
         if (productFocus.includes("alcohol") || storeType === "liquor-vape") {
-            costTraps.splice(2, 1, costTrapsByScenario.liquorDisplayCost);
+            costTraps.push(costTrapsByScenario.liquorDisplayCost);
+        }
+        if (productFocus.includes("vape")) {
+            costTraps.push(costTrapsByScenario.vapeSecurity);
+        }
+        if (productFocus.includes("hot-food")) {
+            costTraps.push(costTrapsByScenario.hotFoodElectrical);
         }
         
         // 生成计划ID
@@ -219,7 +240,7 @@ export default function ConvenienceStoreCostCalculator() {
             budgetRange: { min: budgetMin, max: budgetMax },
             budgetLevel,
             shelfBreakdown,
-            costTraps: costTraps.slice(0, 3),
+            costTraps: costTraps.slice(0, 5),
             planId,
         });
     };
@@ -237,7 +258,7 @@ export default function ConvenienceStoreCostCalculator() {
             const currentFocus = prev.productFocus;
             if (currentFocus.includes(productId)) {
                 return { ...prev, productFocus: currentFocus.filter(f => f !== productId) };
-            } else if (currentFocus.length < 2) {
+            } else if (currentFocus.length < 3) {
                 return { ...prev, productFocus: [...currentFocus, productId] };
             }
             return prev; // 已选2个，不允许再选
@@ -260,12 +281,14 @@ export default function ConvenienceStoreCostCalculator() {
             .map(p => productFocusOptions.find(opt => opt.id === p)?.label)
             .filter(Boolean)
             .join(", ");
+        const floorPlanLabel = floorPlanOptions.find(f => f.id === formData.floorPlan)?.label || formData.floorPlan;
         const refrigerationLabel = refrigerationOptions.find(r => r.id === formData.refrigeration)?.label || formData.refrigeration;
         
         const message = `Hi, I just used Goodok's Calculator for a ${storeSizeLabel} store.
 
 Here's my plan:
 • Store type: ${storeTypeLabel}
+• Floor Plan: ${floorPlanLabel}
 • Products: ${productLabels}
 • Refrigeration: ${refrigerationLabel}
 • Budget range: ${formatCurrency(result.budgetRange.min)} - ${formatCurrency(result.budgetRange.max)}
@@ -402,11 +425,41 @@ I'd like to:
                                 </div>
                             </div>
 
-                            {/* 字段4: 产品类型（最多选2个） */}
+                            {/* 字段4: 平面图 */}
                             <div className="mb-8">
                                 <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
                                     <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm">4</span>
-                                    Product Focus <span className="text-sm font-normal text-gray-500">(pick up to 2)</span>
+                                    Do you have a floor plan?
+                                </h2>
+                                <div className="grid md:grid-cols-2 gap-3">
+                                    {floorPlanOptions.map((option) => (
+                                        <label
+                                            key={option.id}
+                                            className={`flex items-center gap-3 p-4 border rounded-lg cursor-pointer transition-all ${
+                                                formData.floorPlan === option.id
+                                                    ? "border-blue-500 bg-blue-50"
+                                                    : "border-gray-200 hover:border-gray-300"
+                                            }`}
+                                        >
+                                            <input
+                                                type="radio"
+                                                name="floorPlan"
+                                                value={option.id}
+                                                checked={formData.floorPlan === option.id}
+                                                onChange={(e) => setFormData({ ...formData, floorPlan: e.target.value as FormData["floorPlan"] })}
+                                                className="w-4 h-4 text-blue-600"
+                                            />
+                                            <span className="text-gray-700">{option.label}</span>
+                                        </label>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* 字段5: 产品类型（最多选2个） */}
+                            <div className="mb-8">
+                                <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+                                    <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm">5</span>
+                                    Product Focus <span className="text-sm font-normal text-gray-500">(pick up to 3)</span>
                                 </h2>
                                 <div className="grid md:grid-cols-2 gap-3">
                                     {productFocusOptions.map((option) => (
@@ -415,7 +468,7 @@ I'd like to:
                                             className={`flex items-center gap-3 p-4 border rounded-lg cursor-pointer transition-all ${
                                                 formData.productFocus.includes(option.id)
                                                     ? "border-blue-500 bg-blue-50"
-                                                    : formData.productFocus.length >= 2 && !formData.productFocus.includes(option.id)
+                                                    : formData.productFocus.length >= 3 && !formData.productFocus.includes(option.id)
                                                         ? "border-gray-200 opacity-50 cursor-not-allowed"
                                                         : "border-gray-200 hover:border-gray-300"
                                             }`}
@@ -424,7 +477,7 @@ I'd like to:
                                                 type="checkbox"
                                                 checked={formData.productFocus.includes(option.id)}
                                                 onChange={() => handleProductFocusChange(option.id)}
-                                                disabled={formData.productFocus.length >= 2 && !formData.productFocus.includes(option.id)}
+                                                disabled={formData.productFocus.length >= 3 && !formData.productFocus.includes(option.id)}
                                                 className="w-5 h-5 text-blue-600 rounded focus:ring-blue-500"
                                             />
                                             <span className="text-gray-700">{option.label}</span>
@@ -433,10 +486,10 @@ I'd like to:
                                 </div>
                             </div>
 
-                            {/* 字段5: 冷藏设备 */}
+                            {/* 字段6: 冷藏设备 */}
                             <div className="mb-8">
                                 <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
-                                    <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm">5</span>
+                                    <span className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm">6</span>
                                     Refrigeration Needed?
                                 </h2>
                                 <div className="grid md:grid-cols-3 gap-3">

@@ -178,13 +178,27 @@ export default function Home() {
               <p className="text-gray-300 text-sm md:text-base animate-fadeInUp opacity-0" style={{ animationDelay: '0.3s' }}>
                 Free Store Layout Design in 24H · Factory Direct · Global Shipping
               </p>
-              <div className="animate-fadeInUp opacity-0" style={{ animationDelay: '0.5s' }}>
+              <div className="flex flex-col items-center gap-6 animate-fadeInUp opacity-0" style={{ animationDelay: '0.5s' }}>
                 <Link
-                  href="/free-3d-design"
-                  className="btn btn-accent px-6 py-3 whitespace-nowrap hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300"
+                  href="/resources/tools/convenience-store-cost-calculator"
+                  className="btn btn-accent px-8 py-4 text-lg font-bold whitespace-nowrap hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300 rounded-full"
                 >
-                  Get Free Layout Design
+                  Get Your Store Setup Plan (5 min)
                 </Link>
+                
+                {/* Trust Badge */}
+                <div className="flex items-center gap-2 bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
+                  <div className="flex -space-x-2">
+                    {[1, 2, 3, 4].map((i) => (
+                      <div key={i} className="w-6 h-6 rounded-full bg-gray-200 border-2 border-black overflow-hidden relative">
+                         <div className="absolute inset-0 bg-gray-300" />
+                      </div>
+                    ))}
+                  </div>
+                  <span className="text-white text-xs font-medium">
+                    Trusted by 500+ Retail Owners in US & EU
+                  </span>
+                </div>
               </div>
             </div>
           </div>

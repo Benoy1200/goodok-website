@@ -38,7 +38,7 @@ export default function WhatsAppButton() {
     };
 
     const handleSend = () => {
-        const text = message.trim() || "Hi, I need help with retail fixtures";
+        const text = message.trim() || "Hi, I'd like to get your product catalog and price list. My store type is ____";
         const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 
         // GA4 Event: WhatsApp message sent (conversion event)
@@ -148,7 +148,7 @@ export default function WhatsAppButton() {
                 {/* Hover tooltip - only show when dialog is closed */}
                 {!isOpen && (
                     <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 bg-white px-4 py-2 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 whitespace-nowrap">
-                        <span className="text-sm font-medium text-gray-700">Chat with us!</span>
+                        <span className="text-sm font-bold text-[#075E54]">Get Catalog & Price List</span>
                         <div className="absolute right-full top-1/2 -translate-y-1/2 border-8 border-transparent border-r-white"></div>
                     </div>
                 )}
